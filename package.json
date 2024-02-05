@@ -1,7 +1,11 @@
 {
-  "name": "namefi",
+  "name": "namefi-storybook",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20 < 21",
+    "npm": ">=10 < 11"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +13,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@types/jest": "^29.5.11",
@@ -28,6 +33,7 @@
     "@storybook/react": "^7.6.12",
     "@storybook/react-vite": "^7.6.12",
     "@storybook/test": "^7.6.12",
+    "@storybook/test-runner": "^0.16.0",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
