@@ -15,7 +15,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
-    "chromatic": "npx chromatic --project-token=chpt_cea2b35ef1ab1c8"
+    "chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}",
+    "chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
+    "chromatic": "npm run chromatic:incremental"
   },
   "dependencies": {
     "@types/jest": "^29.5.11",

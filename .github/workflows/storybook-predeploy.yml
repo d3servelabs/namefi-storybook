@@ -32,8 +32,9 @@ jobs:
         # ⚠️ Pick one of these, matching the package manager for your project
         run: npm ci
 
-      - name: Publish to Chromatic
+      - name: Publish to Chromatic (only changed)
         uses: chromaui/action@latest
         with:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          onlyChanged: true
