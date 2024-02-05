@@ -51,8 +51,51 @@ export const Home = () => {
                   <button className='opacity-20'>Finished</button>
                </div>
             </div>
-            <div className='w-full h-[275px]  '>
-
+            <div className='w-full h-[275px] flex flex-col justify-between '>
+                <div className='flex justify-between w-full h-[24px] font-["Roboto_Mono"] font-normal text-white '>
+                    <p className=' text-[1em] tracking-[0.05em]'>[Register]</p>
+                    <p className=' text-[1em] tracking-[0.05em]'>namifi.com</p>
+                    <div className='w-[207px] h-full flex items-center justify-between '>
+                        <img className='w-[19px]' src="/assets/globe.svg" alt="globe image" role='img' />
+                        <p className='text-[#c6eedb] text-sm'>Waiting on registrar</p>
+                    </div>
+                </div>
+                <div className='flex justify-between w-full h-[24px] font-["Roboto_Mono"] font-normal text-white '>
+                    <p className=' text-[1em] tracking-[0.05em]'>[Register]</p>
+                    <p className=' text-[1em] tracking-[0.05em]'>namifi.com</p>
+                    <div className='w-[207px] h-full flex items-center justify-between '>
+                        <img className='w-[19px]' src="/assets/globe.svg" alt="globe image" role='img' />
+                        <p className='text-[#c6eedb] text-sm'>Waiting on registrar</p>
+                    </div>
+                </div>
+                <div className='flex justify-between w-full h-[24px] font-["Roboto_Mono"] font-normal text-white '>
+                    <p className=' text-[1em] tracking-[0.05em]'>[Burn NFT]</p>
+                    <p className=' text-[1em] tracking-[0.05em]'>namifi.com</p>
+                    <div className='w-[207px] h-full flex items-center justify-between '>
+                        <img className='w-full' src="/assets/frames.svg" alt="frames image" role='img' />
+                    </div>
+                </div>
+                <div className='flex justify-between w-full h-[24px] font-["Roboto_Mono"] font-normal text-white '>
+                    <p className=' text-[1em] tracking-[0.05em]'>[Mint NFT]</p>
+                    <p className=' text-[1em] tracking-[0.05em]'>abrac...fa.com</p>
+                    <div className='w-[207px] h-full flex items-center justify-between '>
+                        <img className='w-full' src="/assets/frames.svg" alt="frames image" role='img' />
+                    </div>
+                </div>
+                <div className='flex justify-between w-full h-[24px] font-["Roboto_Mono"] font-normal text-white '>
+                    <p className=' text-[1em] tracking-[0.05em]'>[Transfer]</p>
+                    <p className=' text-[1em] tracking-[0.05em]'>abrac...fa.com</p>
+                    <div className='w-[207px] h-full flex items-center justify-between '>
+                        <img className='w-full' src="/assets/frames.svg" alt="frames image" role='img' />
+                    </div>
+                </div>
+                <div className='flex justify-between w-full h-[24px] font-["Roboto_Mono"] font-normal text-white '>
+                    <p className=' text-[1em] tracking-[0.05em] w-[110px] '>[List]</p>
+                    <p className=' text-[1em] tracking-[0.05em] self-center '>abrac...fa.com</p>
+                    <div className='w-[207px] h-full flex items-center justify-between '>
+                        <img className='w-full' src="/assets/frames.svg" alt="frames image" role='img' />
+                    </div>
+                </div>
             </div>
           </div>
       </div>

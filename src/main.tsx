@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <Homepage4 /> */}
     {/* <Homepage5 /> */}
     {/* <Homepage6 /> */}
-    {/* <HomePage10 /> */}
-    <Homepage8 />
+    <HomePage10 />
+    {/* <Homepage8 /> */}
   </React.StrictMode>,
 )

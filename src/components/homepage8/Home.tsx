@@ -11,7 +11,7 @@ export const Home = () => {
                 <form className='relative w-full flex items-center bg-white rounded-[85px] overflow-hidden'>
                     <label className='w-full h-[64.29px]'>
                         <input 
-                        className='focus:border-[#48E59B] rounded-[85px] text-[#313131] focus:border-2 w-full h-full text-[21px] font-medium font-["Roboto_Mono"] tracking-[0.02em] px-5 border-0 outline-0 ' type="text" placeholder='Type in a domain' />
+                        className='focus:border-[#48E59B] rounded-[85px] text-[#313131] focus:border-2 w-full h-full text-[21px] font-medium font-["Roboto_Mono"] tracking-[0.02em] px-5 border-0 outline-0 ' type="text" placeholder='Type in another domain' />
                     </label>
                     <button style={{
                     }} className=" absolute right-1 w-[55.29px] h-[55.29px] rounded-full flex justify-center items-center" type='submit'><img className="w-[20.57px]" src="/assets/lens.svg" alt="search icon" role="img" /></button>
