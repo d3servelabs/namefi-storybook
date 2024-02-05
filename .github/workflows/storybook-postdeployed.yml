@@ -1,4 +1,4 @@
-name: Storybook Tests
+name: Storybook Tests (Post-Deployment)
 on: deployment_status
 jobs:
   test:
