@@ -17,11 +17,11 @@ export default meta;
 type Story = StoryObj<typeof meta>; 
 
 export const WalletConnected: Story = {
-  args: { 
-    user: {
-      name: 'Abdul',
-    },
+  args: {
+      userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
   },
 };
 
-export const WalletNotConnected: Story = {};
+export const WalletNotConnected: Story = {
+  args:{}
+};
