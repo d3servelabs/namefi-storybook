@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { Ownership } from '../Ownership'
 
 export const Home = () => {
+
+    const [isVisible, setIsVisible] = useState(false)
+
+    const pswdRef = useRef<HTMLInputElement>(null!)
+
+    function checkPassword() {
+        if (pswdRef.current.type === 'password') {
+            pswdRef.current.type = 'text'
+        } else{
+            pswdRef.current.type = 'password'
+        }
+        setIsVisible(!isVisible)
+    }
   return (
     <section className='relative min-h-screen py-24'>
         <div className=' w-full h-auto flex justify-center items-center gap-36 relative mb-20'>
@@ -46,9 +59,14 @@ export const Home = () => {
                         <p className='text-sm font-medium tracking-[0.05em] text-[#48E59B] '>Auth-Code</p>
                         <form className='relative w-full h-[55px] bg-[#313131] rounded-[10px] px-[10px] '>
                             <label className='w-full h-full'>
-                                <input type="password" className='w-[80%] h-full outline-0 bg-inherit text-[15px] font-["Roboto_Mono"] font-medium tracking-[0.02em] text-white' placeholder='****************'  />
+                                <input ref={pswdRef} type="password" className='w-[80%] h-full outline-0 bg-inherit text-[15px] font-["Roboto_Mono"] font-medium tracking-[0.02em] text-white' placeholder='****************'  />
                             </label>
-                            <button className='absolute right-5 top-[17px] ' type='button'><img src="/assets/Eye.svg" alt="Eye image" role='img' /></button>
+                            <button onClick={checkPassword} className='absolute right-5 top-[17px] ' type='button'>
+                                {
+                                    isVisible ? <img src="/assets/show-password.svg" alt="Eye image" role='img' />:
+                                    <img src="/assets/Eye.svg" alt="Eye image" role='img' />
+                                }
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -78,16 +96,16 @@ export const Home = () => {
                             </div>
                         </div>
                         <div className='w-[187px] h-[143px] flex flex-col justify-between '>
-                            <p className='text-[16px] font-semibold tracking-[0.05em] text-white '>Privacy and Security</p>
+                            <p className='text-[16px] font-semibold tracking-[0.05em] text-white '>Privacy and security</p>
                             <div className='w-full h-[99.6px] flex flex-col justify-between '>
                                 <div className='h-[21.6px] w-[126.6px] flex justify-between items-center '>
                                     <img src="/assets/Done.svg" alt="done image" role='img' />
-                                    <p className='font-medium text-sm tracking-[0.05em] text-[#C6EEDB]'>Whois Privacy</p>
+                                    <p className='font-medium text-sm tracking-[0.05em] text-[#C6EEDB]'>WHOIS privacy</p>
                                 </div>
                                 <div className='h-[60px] w-full flex flex-col justify-between '>
                                     <div className='w-full h-[24px] flex justify-between items-center '>
                                         <img src="/assets/toggle.svg" alt="toggle image" role='img' />
-                                        <p className='font-medium text-sm tracking-[0.05em] text-[#48E59B] '>EasyENS·™️ Enabled</p>
+                                        <p className='font-medium text-sm tracking-[0.05em] text-[#48E59B] '>EasyENS·™️ enabled</p>
                                     </div>
                                     <div className='w-full h-[24px] flex gap-[8px] items-center '>
                                         <img src="/assets/toggle.svg" alt="toggle image" role='img' />
@@ -97,7 +115,7 @@ export const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <a className='font-normal text-[12px] text-[#C6EEDB] tracking-[0.05em] underline '>Manage DNS Records</a>
+                    <a className='font-normal text-[12px] text-[#C6EEDB] tracking-[0.05em] underline '>Manage DNS records</a>
                 </div>
           </div>
       </div>
