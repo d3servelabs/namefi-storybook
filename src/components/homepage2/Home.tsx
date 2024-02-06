@@ -1,20 +1,12 @@
 import React from 'react'
+import { Tile } from '../Tile'
 import { Ownership } from '../Ownership'
 
 export const Home = () => {
   return (
     <section className='relative min-h-screen py-24'>
         <div className='w-full h-auto flex justify-center items-center gap-36 relative mb-40'>
-          <div className='relative rounded-[20px] p-7 bg-black flex flex-col justify-start items-center gap-[130px] w-[400px] h-[400px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
-              <div className='flex w-full h-[30px] items-center justify-between'>
-                  <img className='w-[118px]' src="/assets/Available.svg" alt="svg img" />
-                  <button className='relative block'>
-                      <img className='w-[30px]' src="/assets/Cart.svg" alt="cart image" role='img' />
-                      <img className='w-[25px] absolute -top-3 -right-3' src="/assets/Plus.svg" alt="Plus image" role='img' />
-                  </button>
-              </div>
-              <h3 className='text-white font-semibold text-[28px] tracking-[0.1em]'>namefi.com</h3>
-          </div>
+          <Tile />
           <div className='relative flex flex-col justify-between w-[359px] h-[359px]'>
             <div className='h-[246px] w-full flex flex-col justify-between'>
                 <div className='h-[107px] w-full '>
