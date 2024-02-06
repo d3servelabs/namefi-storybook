@@ -6,7 +6,7 @@ import '../index.css'
 import '../App.css'
 
 const meta = {
-  title: 'Components/Homepage3',
+  title: 'Pages/Homepage3',
   component: Homepage3,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
