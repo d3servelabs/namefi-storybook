@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Flow1 } from "../components/flow/flow1";
+import { Flow1 } from "./Flow1";
 
 const meta = {
     title: 'Flows/Flow1',
