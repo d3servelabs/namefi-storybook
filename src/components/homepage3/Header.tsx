@@ -1,5 +1,5 @@
 import React from "react"
-
+ 
 export const Header = () => {
   return (
     <header className="cont header relative h-[80px] pl-6 pr-[10px] lg:rounded-[50px] ">
