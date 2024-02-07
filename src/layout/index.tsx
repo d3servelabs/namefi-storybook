@@ -1,5 +1,5 @@
-import {Header} from "../components/homepage1/Header";
-import HomePage1 from "../HomePage1";
+import {Header} from "./Header";
+import HomePage from "../stories/Pages/Home/HomePage";
 
 export function PageLayout({children}){
 
