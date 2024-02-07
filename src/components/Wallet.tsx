@@ -1,12 +1,13 @@
 import React from 'react'
 
-type User = {
-  name: string;
-};
-interface HeaderProps {
-  user?: User;
+
+interface AppProps {
+  user: {
+    name: string
+  }
 }
-export const Wallet = ({user}:HeaderProps) => {
+
+export const Wallet = ({user}:AppProps) => {
   return (
     <nav className="relative flex items-center h-[60px] w-[440px] gap-5 ">
         {user &&
