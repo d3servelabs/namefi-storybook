@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Headers = () => {
+export const Headers = ({}) => {
   return (
     <header className="cont header relative h-[80px] pl-6 pr-[10px] lg:rounded-[50px] ">
         <div className="relative w-full h-full m-0 flex justify-between items-center">
