@@ -13,12 +13,12 @@ import { Homepage8 } from './HomePage8.js'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {/* <HomePage1 /> */}
-    {/* <HomePage2 /> */}
+    <HomePage2 />
     {/* <Homepage3 /> */}
     {/* <Homepage4 /> */}
     {/* <Homepage5 /> */}
     {/* <Homepage6 /> */}
     {/* <HomePage10 /> */}
-    <Homepage8 />
+    {/* <Homepage8 /> */}
   </React.StrictMode>,
 )

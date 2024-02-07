@@ -4,7 +4,7 @@
     width: 100%;
     /* min-height: 100vh; */
   }
-  .cont{
+  .namefi-cont{
     margin-inline: auto;
     width: min(1200px, 100%);
   }
@@ -12,26 +12,8 @@
     margin-inline: auto;
     width: min(1728px, 100%);
   }
-  .header{
+  .namefi-header{
     background: linear-gradient(0deg, #21212180, #21212180),linear-gradient(185.03deg, #f1fff84d -86.83%, #defff000 223.83%);
-  }
-  .input{
-    background-position: 96% 50%;
-    font-family: Nunito;
-font-size: 14px;
-font-weight: 800;
-line-height: 19px;
-letter-spacing: 0.1em;
-text-align: center;
-color: #ffffffcc;
-font-family: Roboto Mono;
-font-size: 21px;
-font-weight: 500;
-line-height: 27px;
-letter-spacing: 0.02em;
-text-align: left;
-/* color: #fffffff2; */background: #ffffffcc;
-
   }
  
   @media screen and (min-width: 1024px) {
