@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { DomainAvailableCard as DomainCardComponent } from '../../components/DomainAvailableCard';
 
 const meta = {
-  title: 'Components/DomainCardComponent',
+  title: 'Components/DomainAvailableCard',
   component: DomainCardComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],

@@ -30,7 +30,7 @@ export const Content: Story = {
       onYearsChanged: ()=>{}
     },
     ownedDomainsProps: {
-      tlds: ['.eth', '.btc'],
+      tlds: ['.eth', '.btc'], 
       domains: [
         {domainName:'namefi2024.com'},
         {domainName:'namefi.net'},
