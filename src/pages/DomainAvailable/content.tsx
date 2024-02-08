@@ -1,14 +1,14 @@
 import React, {ReactNode} from 'react'
-import {DomainCard, DomainCardProps} from '../../components/DomainCard'
+import {DomainAvailableCard, DomainAvailableCardProps} from '../../components/DomainAvailableCard'
 import {
     DomainAvailableRegisterForm,
     DomainAvailableRegisterFormProps
 } from "../DomainAvailable/DomainAvailableRegisterForm";
 import {OwnedDomainsGrid, OwnedDomainsGridProps} from "../../components/OwnedDomainsGrid";
 
-
+   
 type DomainAvailableContentProps = {
-    domainCardProps: DomainCardProps
+    domainCardProps: DomainAvailableCardProps
     registerFormProps: DomainAvailableRegisterFormProps,
     ownedDomainsProps?: OwnedDomainsGridProps,
 }
@@ -16,7 +16,7 @@ export const DomainAvailableContent = ({domainCardProps, registerFormProps, owne
     return (
         <section className='relative min-h-screen py-24'>
             <div className='w-full h-auto flex justify-center items-center gap-36 relative mb-40'>
-                <DomainCard {...domainCardProps}/>
+                <DomainAvailableCard {...domainCardProps}/>
                 <DomainAvailableRegisterForm {...registerFormProps} />
             </div>
             {!!ownedDomainsProps &&

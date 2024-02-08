@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {HomePageContent} from '@pages/home/content';
+// import {HomePageContent} from '@pages/home/content';
+import { HomePageContent } from '../../../pages/home/content';
 import '../../../index.css'
 import '../../../App.css'
 

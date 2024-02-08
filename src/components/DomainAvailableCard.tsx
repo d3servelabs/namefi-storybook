@@ -1,7 +1,7 @@
 import React from "react";
 
-export type DomainCardProps = { domainName?:string, loading?:boolean}
-export const DomainCard = (props:DomainCardProps) => {
+export type DomainAvailableCardProps = { domainName?:string, loading?:boolean}
+export const DomainAvailableCard = (props:DomainAvailableCardProps) => {
   return (
     <div className="relative rounded-[20px] p-7 bg-black flex flex-col justify-start items-center gap-[130px] w-[400px] h-[400px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]">
       <div className="flex w-full h-[30px] items-center justify-between">
@@ -9,7 +9,7 @@ export const DomainCard = (props:DomainCardProps) => {
         <button className="relative block">
           <img
             className="w-[30px]"
-            src="/assets/Cart.svg"
+            src="/assets/Cart.svg" 
             alt="cart image"
             role="img"
           />

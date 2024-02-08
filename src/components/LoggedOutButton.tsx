@@ -3,11 +3,11 @@ import React from 'react'
 interface LoggedOutButtonProps {
     userAddress,
     shortUserAddress,
-    onSignOut: () => any,
-    onLogin: () => any
+    onSignOut?: () => any,
+    onLogin?: () => any
 }
 
-export const LoggedOutButton = ({shortUserAddress, userAddress, onSignOut, onLogin}) => {
+export const LoggedOutButton = ({shortUserAddress, userAddress, onSignOut, onLogin}:LoggedOutButtonProps) => {
   return (
     <button
         className="relative flex items-center justify-between gap-3 rounded-[32px] p-[8px] bg-[#111] h-[60px]">
@@ -17,7 +17,7 @@ export const LoggedOutButton = ({shortUserAddress, userAddress, onSignOut, onLog
         <p className="text-white text-base font-medium font-['Roboto_Mono']">{shortUserAddress}</p>
         <img onClick={userAddress ? onSignOut : onLogin}
                 src={userAddress ? "/assets/download.svg" : "/assets/arrow-right1.svg"}
-                className='w-[44px] min-w-[44px]' alt="download image" role='svg'/>
+                className='max-w-[44px]' alt="download image" role='svg'/>
     </button>
   )
 }
