@@ -1,20 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-// import { within, userEvent, expect } from '@storybook/test';
 
-import {Homepage4} from './Homepage4';
-import '../../index.css'
-import '../../App.css'
+import {FullPage as FullPageStory} from './FullPage';
+import '../../../index.css'
+import '../../../App.css'
 
 const meta = {
-  title: 'Pages/Homepage4',
-  component: Homepage4,
+  title: 'Pages/DomainOwned/FullPage',
+  component: FullPageStory,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Homepage4>;
+} satisfies Meta<typeof FullPageStory>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Home: Story = {}
+export const FullPage: Story = {}

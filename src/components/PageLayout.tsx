@@ -1,10 +1,10 @@
 import React from 'react'
-import { Headers } from './Header'
+import { Header } from './Header'
 
 export const PageLayout = ({children, includeSearchBar}) => {
   return (
     <div>
-        <Headers includeSearchBar={includeSearchBar}  />
+        <Header includeSearchBar={includeSearchBar}  />
         <main>
             {children}
         </main>
