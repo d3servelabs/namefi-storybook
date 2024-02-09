@@ -17,4 +17,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const FullPage: Story = {}
+export const FullPage: Story = {
+  args: {
+    domainAvailableProps: {
+      domainCardProps: {
+        domainName: 'namefi.io'
+      },
+      registerFormProps:{
+        years:1,
+        price: 71,
+        onRegisterClicked: ()=>{},
+        onYearsChanged: ()=>{}
+      }
+    }
+  }
+}

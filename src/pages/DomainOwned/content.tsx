@@ -1,16 +1,16 @@
 import React from 'react'
 import { OwnedDomainsGrid } from '../../components/OwnedDomainsGrid'
-import { DomainOwnedCard, DomainOwnedCardProps } from '@components/DomainOwnedCard'
+import { DomainCard, DomainCardProps } from '../../components/DomainCard'
 import { OwnedDomainOwner } from './OwnedDomainOwner'
 
-interface DomainOwnedContentProps {
-    domainCardProps: DomainOwnedCardProps
+export type DomainOwnedContentProps = {
+    domainCardProps: DomainCardProps
 }
 export const DomainOwnedContent = ({domainCardProps}: DomainOwnedContentProps) => {
   return (
     <section className='relative min-h-screen py-24'>
         <div className=' w-full h-auto flex justify-center items-center gap-36 relative mb-20'>
-          <DomainOwnedCard {...domainCardProps} />
+          <DomainCard {...domainCardProps} />
           <OwnedDomainOwner />
       </div>
         <OwnedDomainsGrid tlds={['.eth', '.btc']}
