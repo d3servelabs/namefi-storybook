@@ -1,12 +1,12 @@
-import {useMemo} from "react"
-import { HeaderSearchBar } from "./HeaderSearchBar"
+import { HeaderSearchBar, HeaderSearchBarProps } from "./HeaderSearchBar"
 import { UserAuthState, UserAuthStateProps } from "./UserAuthState"
 
-type HeaderProps = {
+export type HeaderProps = {
         includeSearchBar?:boolean,
-        authStateProps?: UserAuthStateProps
+        authStateProps?: UserAuthStateProps,
+        headerSearchProps?: HeaderSearchBarProps
     }
-export const Header = ({includeSearchBar, authStateProps }: HeaderProps) => {
+export const Header = ({includeSearchBar, authStateProps, headerSearchProps }: HeaderProps) => {
    
 
     return (
@@ -15,7 +15,7 @@ export const Header = ({includeSearchBar, authStateProps }: HeaderProps) => {
                 <div className="relative flex items-center gap-[6rem]">
                     <img src="/assets/namefi.svg" width={90} alt="logo" role="svg"/>
                 </div>
-                {includeSearchBar && <HeaderSearchBar />}
+                {includeSearchBar && <HeaderSearchBar {...headerSearchProps} />}
                 <UserAuthState {...authStateProps} />
             </nav>
         </header>

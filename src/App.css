@@ -13,6 +13,7 @@
     width: min(1728px, 100%);
   }
   .namefi-header{
+    /* background: #111111b3; */
     background: linear-gradient(0deg, #21212180, #21212180),linear-gradient(185.03deg, #f1fff84d -86.83%, #defff000 223.83%);
   }
  

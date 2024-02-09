@@ -1,15 +1,16 @@
 import '../../../App.css'
 import React from 'react'
 import { DomainAvailableContent, DomainAvailableContentProps } from '../../../pages/DomainAvailable/content'
-import { PageLayout } from '../../../components/PageLayout'
+import { PageLayout, PageLayoutProps } from '../../../components/PageLayout'
 
 interface FullPageProps {
-  domainAvailableProps: DomainAvailableContentProps
+  domainAvailableProps: DomainAvailableContentProps,
+  pageLayoutProps: PageLayoutProps
 }
-export const FullPage = ({domainAvailableProps}: FullPageProps) => {
+export const FullPage = ({domainAvailableProps, pageLayoutProps}: FullPageProps) => {
   return (
     <div className='containers bg-[#111] relative pt-10'>
-          <PageLayout includeSearchBar={true}>
+          <PageLayout {...pageLayoutProps} >
               <DomainAvailableContent {...domainAvailableProps} />
           </PageLayout>
     </div>

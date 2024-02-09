@@ -1,10 +1,14 @@
 import React from 'react'
-import { Header } from './Header'
+import { Header, HeaderProps } from './Header'
+export type PageLayoutProps = {
+  headerProps: HeaderProps,
+  children
+}
 
-export const PageLayout = ({children, includeSearchBar}) => {
+export const PageLayout = ({children, headerProps}: PageLayoutProps) => {
   return (
     <div>
-        <Header includeSearchBar={includeSearchBar}  />
+        <Header {...headerProps}  />
         <main>
             {children}
         </main>

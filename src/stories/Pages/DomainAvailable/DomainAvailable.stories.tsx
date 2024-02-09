@@ -19,7 +19,17 @@ type Story = StoryObj<typeof meta>;
 
 export const FullPage: Story = {
   args: {
+    pageLayoutProps: {
+      headerProps: {
+        includeSearchBar: true,
+        headerSearchProps: {
+          placeholderText: 'Search another domain'
+        }
+      },
+      children: null
+    },
     domainAvailableProps: {
+      
       domainCardProps: {
         domainName: 'namefi.io'
       },
@@ -28,7 +38,7 @@ export const FullPage: Story = {
         price: 71,
         onRegisterClicked: ()=>{},
         onYearsChanged: ()=>{}
-      }
+      },
     }
   }
 }

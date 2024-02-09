@@ -22,6 +22,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Content: Story = {
   args: {
+    
     domainCardProps:{ domainName:'namefi.io'},
     registerFormProps:{
       years:1,

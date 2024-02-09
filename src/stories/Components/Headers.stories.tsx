@@ -28,7 +28,11 @@ export const LoggedIn: Story = {
    authStateProps: {
       balance: 20.134,
       userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-   }
+   },
+   headerSearchProps: {
+    placeholderText: 'Search another domain'
+   },
+   includeSearchBar: true
  }
 };
 

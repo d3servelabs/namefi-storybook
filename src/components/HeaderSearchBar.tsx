@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface HeaderSearchBarProps {
+export type HeaderSearchBarProps = {
     placeholderText?: string
     searchValue?: string,
     onSearchValueChanged?: (value:string)=>any,
