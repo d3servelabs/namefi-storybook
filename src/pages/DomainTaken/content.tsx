@@ -3,7 +3,7 @@ import { OwnedDomainsGrid } from '../../components/OwnedDomainsGrid'
 import { DomainCard, DomainCardProps } from '../../components/DomainCard'
 import { DomainTakenOwner, DomainTakenOwnerProps } from './DomainTakenOwner'
 
-type DomainTakenContentProps = {
+export type DomainTakenContentProps = {
   domainCardProps: DomainCardProps
   domainOwnerProps: DomainTakenOwnerProps,
 }

@@ -1,16 +1,17 @@
 import '../../../App.css'
 import React from 'react'
-import { DomainTakenContent } from '../../../pages/DomainTaken/content'
-import { PageLayout } from '../../../components/PageLayout'
+import { DomainTakenContent, DomainTakenContentProps } from '../../../pages/DomainTaken/content'
+import { PageLayout, PageLayoutProps } from '../../../components/PageLayout'
 
-export const FullPage = () => {
+interface FullPageProps {
+  domainTakenProps: DomainTakenContentProps,
+  pageLayoutProps: PageLayoutProps
+}
+export const FullPage = ({domainTakenProps, pageLayoutProps}: FullPageProps) => {
   return (
     <div className='containers bg-[#111] relative pt-8'>
-        <PageLayout includeSearchBar={true}>
-            <DomainTakenContent domainCardProps={{
-                  domainName: undefined,
-                  loading: undefined
-              }} />
+        <PageLayout {...pageLayoutProps}>
+            <DomainTakenContent {...domainTakenProps} />
         </PageLayout>
     </div>
   )

@@ -1,11 +1,11 @@
 import React from 'react'
-import {OwnedDomainTile, OwnedDomainTileProps} from './OwnedDomainTile'
+import {DomainTile, DomainTileProps} from './DomainTile'
 
 export type OwnedDomainsGridProps = {
     loading?:boolean,
     tlds: string[],
     onTldClicked?: (tld:string)=>any;
-    domains?: Partial<OwnedDomainTileProps>[]
+    domains?: Partial<DomainTileProps>[]
 }
 export const OwnedDomainsGrid = ({domains,tlds, onTldClicked}: OwnedDomainsGridProps) => {
     return (
@@ -28,7 +28,7 @@ export const OwnedDomainsGrid = ({domains,tlds, onTldClicked}: OwnedDomainsGridP
                     domains?.map((data, x) =>
                         {
                             if(data.domainName){
-                                return <OwnedDomainTile key={data.domainName} domainName={data.domainName}/>
+                                return <DomainTile key={data.domainName} domainName={data.domainName}/>
                             }
                         }
                     )

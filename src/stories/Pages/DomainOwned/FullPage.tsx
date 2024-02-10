@@ -1,16 +1,17 @@
 import React from 'react'
 import { DomainOwnedContent, DomainOwnedContentProps } from '../../../pages/DomainOwned/content'
 import '../../../App.css'
-import { PageLayout } from '../../../components/PageLayout'
+import { PageLayout, PageLayoutProps } from '../../../components/PageLayout'
 
 interface FullPageProps {
-  domainOwnedProps: DomainOwnedContentProps
+  domainOwnedProps: DomainOwnedContentProps,
+  pageLayoutProps: PageLayoutProps
 }
 
-export const FullPage = ({domainOwnedProps}: FullPageProps) => {
+export const FullPage = ({domainOwnedProps, pageLayoutProps}: FullPageProps) => {
   return (
     <div className='containers bg-[#111] relative pt-8'>
-        <PageLayout includeSearchBar={true}>
+        <PageLayout {...pageLayoutProps}>
             <DomainOwnedContent {...domainOwnedProps} />
         </PageLayout>
     </div>
