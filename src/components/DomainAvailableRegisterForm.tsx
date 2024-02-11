@@ -1,3 +1,4 @@
+import { Button, ButtonProps } from "@components/Button";
 import React from "react";
 
 export type DomainAvailableRegisterFormProps = {
@@ -6,9 +7,13 @@ export type DomainAvailableRegisterFormProps = {
     years: number,
     onYearsChanged: (value: number) => any,
     onRegisterClicked: () => any,
+    buttonProps?: ButtonProps;
+    userAddress
 }
 
 export function DomainAvailableRegisterForm({
+                                                userAddress = ' ',
+                                                buttonProps,
                                                 onYearsChanged,
                                                 onRegisterClicked, price=72, isPriceLoading, years=2
                                             }: DomainAvailableRegisterFormProps) {
@@ -50,11 +55,10 @@ export function DomainAvailableRegisterForm({
                 </div>
             </div>
             <div>
-                <button
-                    className='block border flex items-center gap-[12px] rounded-[80px] text-white py-[12px] px-[24px] '>
-                    <span className='font-["Roboto_Mono"] text-lg font-normal '>Connect Wallet to Register</span> <img
-                    className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img'/>
-                </button>
+                <Button {...buttonProps} >
+                <span className='font-["Roboto_Mono"] text-lg font-normal '>{userAddress && 'Connect Wallet to '}Register</span> <img
+                    className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img'/>                                
+                </Button>
             </div>
         </div>
     </>

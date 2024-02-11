@@ -3,7 +3,7 @@ import {DomainCard, DomainCardProps} from '../../components/DomainCard'
 import {
     DomainAvailableRegisterForm,
     DomainAvailableRegisterFormProps
-} from "../DomainAvailable/DomainAvailableRegisterForm";
+} from "../../components/DomainAvailableRegisterForm";
 import {OwnedDomainsGrid, OwnedDomainsGridProps} from "../../components/OwnedDomainsGrid";
 
    

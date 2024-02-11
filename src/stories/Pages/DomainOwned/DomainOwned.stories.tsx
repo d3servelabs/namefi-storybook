@@ -18,14 +18,20 @@ type Story = StoryObj<typeof meta>;
 
 export const FullPage: Story = {
   args: {
+    pageLayoutProps: {
+      headerProps: {
+        includeSearchBar: true,
+        headerSearchProps: {
+          placeholderText: 'Search another domain'
+        }
+      },
+      children: null
+    },
     domainOwnedProps: {
+      
       domainCardProps: {
-        loading: false,
-        userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-        domainName: 'namefi.eth',
-        isOwned: true,
-        isOwnedOrTaken: true
-      }
+        domainName: 'namefi.io'
+      },
     }
   }
 }

@@ -28,7 +28,8 @@ export const Content: Story = {
       years:1,
       price: 71,
       onRegisterClicked: ()=>{},
-      onYearsChanged: ()=>{}
+      onYearsChanged: ()=>{},
+      userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4'
     },
     ownedDomainsProps: {
       tlds: ['.eth', '.btc'], 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Buttons } from './Buttons'
+import { Buttons } from './Button'
 export const Flow1 = () => {
   return (
     <div className='relative w-[544px] h-[350px] bg-[#333] flex flex-col justify-between  '>

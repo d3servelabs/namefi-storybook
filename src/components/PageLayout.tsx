@@ -4,7 +4,7 @@ export type PageLayoutProps = {
   headerProps: HeaderProps,
   children
 }
-
+ 
 export const PageLayout = ({children, headerProps}: PageLayoutProps) => {
   return (
     <div>

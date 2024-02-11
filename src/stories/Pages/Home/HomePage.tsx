@@ -3,13 +3,16 @@ import '../../../App.css'
 // import { HomePageContent } from '@pages/home/content'
 import { HomePageContent } from '../../../pages/home/content'
 // import { PageLayout } from '@components/PageLayout'
-import { PageLayout } from '../../../components/PageLayout'
+import { PageLayout, PageLayoutProps } from '../../../components/PageLayout'
 
-function HomePage() {
+interface HomePageProps {
+  pageLayoutProps: PageLayoutProps
+}
+function HomePage({pageLayoutProps}: HomePageProps) {
 
   return (
     <div className='containers bg-[#111] relative pt-8'>
-          <PageLayout includeSearchBar={false}>
+          <PageLayout {...pageLayoutProps}>
             <HomePageContent />
           </PageLayout>
     </div>
