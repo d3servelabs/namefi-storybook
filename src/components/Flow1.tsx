@@ -1,6 +1,9 @@
 import React from 'react'
-import { Buttons } from './Button'
-export const Flow1 = () => {
+import { Button, ButtonProps } from './Button'
+interface FlowProps {
+    buttonProps: ButtonProps
+}
+export const Flow1 = ({buttonProps}: FlowProps) => {
   return (
     <div className='relative w-[544px] h-[350px] bg-[#333] flex flex-col justify-between  '>
         <div className='w-full h-[119px] flex flex-col justify-between '>
@@ -18,7 +21,7 @@ export const Flow1 = () => {
                 <p className='font-normal text-sm text-[#c6eedb] '>You can now close off and check back later.</p>
             </div>
             <div>
-                <Buttons label='Import another one' color='white' />
+                <Button {...buttonProps}  />
             </div>
         </div>
     </div>
