@@ -33,10 +33,16 @@ export const FullPage: Story = {
       domainCardProps: {
         domainName: 'namefi.io'
       },
-      domainOwnerProps:{
+      domainMessageProps:{
         isLoading: false,
-        ownerAddress: null
+        ownerAddress: null,
+        buttonProps: {
+          label: '',
+          children: null,
+          onClick: () => {}
+        }
       },
+      
     }
   }
 }

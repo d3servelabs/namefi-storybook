@@ -7,7 +7,7 @@ export type DomainAvailableRegisterFormProps = {
     years: number,
     onYearsChanged: (value: number) => any,
     onRegisterClicked: () => any,
-    buttonProps?: ButtonProps;
+    buttonProps: ButtonProps;
     userAddress
 }
 
@@ -56,8 +56,7 @@ export function DomainAvailableRegisterForm({
             </div>
             <div>
                 <Button {...buttonProps} >
-                <span className='font-["Roboto_Mono"] text-lg font-normal '>{userAddress && 'Connect Wallet to '}Register</span> <img
-                    className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img'/>                                
+                    {userAddress && 'Connect Wallet to '}Register                               
                 </Button>
             </div>
         </div>

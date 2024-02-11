@@ -38,7 +38,11 @@ export const FullPage: Story = {
         price: 71,
         onRegisterClicked: ()=>{},
         onYearsChanged: ()=>{},
-        userAddress: ''
+        userAddress: '',
+        buttonProps: {
+          label: '',
+          onClick: () => {}
+        }
       },
     }
   }

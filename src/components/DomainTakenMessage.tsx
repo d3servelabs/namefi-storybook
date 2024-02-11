@@ -1,12 +1,13 @@
+import { Button, ButtonProps } from '@components/Button'
 import React from 'react'
 
-export type DomainTakenOwnerProps = {
+export type DomainTakenMessageProps = {
     isLoading: boolean
     ownerAddress,
-
+    buttonProps: ButtonProps
 }
 
-export const DomainTakenOwner = ({isLoading, ownerAddress}: DomainTakenOwnerProps) => {
+export const DomainTakenMessage = ({isLoading, ownerAddress, buttonProps}: DomainTakenMessageProps) => {
   return (
     <div className='relative flex flex-col justify-between w-[415px] h-[230px]'>
         <div className='h-[118px] w-full flex flex-col justify-between'>
@@ -16,7 +17,9 @@ export const DomainTakenOwner = ({isLoading, ownerAddress}: DomainTakenOwnerProp
             </div>
             <button className='w-[248px] flex items-center justify-between'> <span className='text-[16px] font-normal tracking-[0.05em] underline text-[#C6EEDB]'>I own this domain elsewhere</span> <img className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img' /></button>
         </div>
-        <button className='w-[231px] h-[48px] border flex items-center justify-between rounded-[80px] text-white px-[24px] '><span className='font-["Roboto_Mono"] text-lg font-normal '>Connect Wallet</span> <img className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img' /></button>
+        <Button {...buttonProps}>
+            Connect Wallet
+        </Button>
     </div>
   )
 }

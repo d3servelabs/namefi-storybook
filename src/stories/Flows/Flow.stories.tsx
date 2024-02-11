@@ -15,4 +15,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>
 
-export const Flow: Story = {}
+export const Flow: Story = {
+    args: {
+        buttonProps: {
+            onClick: () => {},
+            label: ''
+        }
+    }
+}

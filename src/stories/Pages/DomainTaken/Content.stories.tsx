@@ -22,9 +22,14 @@ type Story = StoryObj<typeof meta>;
 export const Content: Story = {
   args: {
     domainCardProps:{ domainName:'namefi.io'},
-    domainOwnerProps:{
+    domainMessageProps:{
       isLoading: false,
-      ownerAddress: null
+      ownerAddress: null,
+      buttonProps: {
+        label: '',
+        children: null,
+        onClick: () => {}
+      }
     },
   },
 }
