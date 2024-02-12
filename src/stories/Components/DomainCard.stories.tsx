@@ -1,10 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { DomainCard } from "@components/DomainCard";
+import moment from "moment";
 
 const meta = {
     title: 'Components/DomainCard',
     component: DomainCard,
     tags: ['autodocs'],
+    argTypes: {
+        onSettingsClicked: {action: 'onSettingsClicked'}
+    },
     parameters: {
         layout: 'centered'
     }
@@ -13,30 +17,34 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>
 
-export const OwnedDomainCard: Story = {
-    args: {
-        domainName: 'namefi.eth',
-        userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-        loading: false,
-        isOwned: true,
-        isOwnedOrTaken: true
-    }
-}
+
 export const DomainAvailableCard: Story = {
     args: {
         domainName: 'namefi.io',
-        userAddress: '',
-        loading: false,
-        isAvailable: true,
-        isOwnedOrTaken: false
+        status: 'AVAILABLE',
     }
 }
+
 export const DomainTakenCard: Story = {
     args: {
         domainName: 'namefi.com',
-        userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-        loading: false,
-        isTaken: true,
-        isOwnedOrTaken: true
+        ownerAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
+        status: 'TAKEN',
+        showOwner:true,
+        showExpiration:true,
+        expirationDate: moment().add(1, 'year').toDate(),
     }
 }
+
+export const OwnedDomainCard: Story = {
+    args: {
+        domainName: 'namefi.eth',
+        ownerAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
+        status: 'TAKEN',
+        showOwner:true,
+        sameOwner: true,
+        showExpiration:true,
+        expirationDate: moment().add(1, 'year').toDate(),
+    }
+}
+
