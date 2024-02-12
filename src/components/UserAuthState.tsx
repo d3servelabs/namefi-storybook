@@ -2,10 +2,11 @@ import React, { useMemo } from 'react'
 import { LoadingButton } from './LoadingButton'
 import { LoggedOutButton } from './LoggedOutButton'
 import {ShortAddress} from "@components/ShortAddress";
+import { Balance, BalanceProps } from './Balance';
 
 export type UserAuthStateProps = Partial<
     {
-        balance: number,
+        balanceProps: BalanceProps,
         userAddress,
         userLoading,
         balanceLoading,
@@ -15,30 +16,19 @@ export type UserAuthStateProps = Partial<
     }>
 
 
-export const UserAuthState = ({balance, userAddress, userLoading, balanceLoading, onLogin, onSignOut, onNetworkClicked}: UserAuthStateProps) => {
-
-    const [truncatedBalance, balanceFractions] = useMemo(() => {
-        if (balance !== undefined && balance !== null) {
-            return balance.toFixed(2).split('.')
-        }
-        return [undefined, undefined]
-    }, [balance])
-
-
-
-
+export const UserAuthState = ({balanceProps, userAddress, userLoading, balanceLoading, onLogin, onSignOut, onNetworkClicked}: UserAuthStateProps) => {
 
   return (
-    <div className="relative flex items-center h-[60px] max-w-[440px] gap-5 ">
-        {userAddress && truncatedBalance &&
-            <div className="h-full w-[150px] flex justify-between items-center ">
+    <div className="relative flex items-center h-[60px] max-w-[440px] gap-3 ">
+            <div className="h-full max-w-[150px] flex justify-between gap-3 items-center ">
+                {userAddress &&
+                    <Balance {...balanceProps} />
+                }
                 <button>
                     <img className="w-[20px]" src="/assets/bells.svg" alt="bells image" role="img"/>
                 </button>
-                <p className="text-lg text-white tracking-[0.02em] font-medium ">
-                    {truncatedBalance}.<span className="text-sm">{balanceFractions}</span> $NFSC</p>
+            
             </div>
-        }
         {
             userLoading || balanceLoading ? (<>
                 <LoadingButton />

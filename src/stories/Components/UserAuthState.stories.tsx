@@ -23,7 +23,6 @@ export const LoggedOut: Story = {}
 
 export const LoggedIn: Story = {
     args:{
-      balance: 20.134,
       userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
     }
 };
