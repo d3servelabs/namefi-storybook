@@ -55,8 +55,9 @@ export function DomainAvailableRegisterForm({
                 </div>
             </div>
             <div>
-                <Button {...buttonProps} >
-                    {userAddress && 'Connect Wallet to '}Register                               
+                <Button {...buttonProps} img={<img className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img' />} >
+                    {userAddress && 'Connect Wallet to '}Register    
+                                               
                 </Button>
             </div>
         </div>
