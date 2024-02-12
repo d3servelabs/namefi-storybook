@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { LoadingButton } from './LoadingButton'
 import { LoggedOutButton } from './LoggedOutButton'
+import {ShortAddress} from "@components/ShortAddress";
 
 export type UserAuthStateProps = Partial<
     {
@@ -23,13 +24,8 @@ export const UserAuthState = ({balance, userAddress, userLoading, balanceLoading
         return [undefined, undefined]
     }, [balance])
 
-    
-    const shortUserAddress = useMemo(() => {
-        if (!userAddress) return <>Connect Wallet</>
-        return <>{userAddress.slice(0, 7)}
-            &bull;&bull;&bull;&bull;
-            {userAddress?.slice(37, 42)}</>
-    }, [userAddress]);
+
+
 
 
   return (
@@ -48,7 +44,7 @@ export const UserAuthState = ({balance, userAddress, userLoading, balanceLoading
                 <LoadingButton />
 
             </>) : (<>
-                <LoggedOutButton shortUserAddress={shortUserAddress} userAddress={userAddress} onSignOut={onSignOut} onLogin={onLogin} />
+                <LoggedOutButton shortUserAddress={userAddress? <ShortAddress address={userAddress}/> : <>Connect Wallet</>} userAddress={userAddress} onSignOut={onSignOut} onLogin={onLogin} />
             </>)
         }
 
