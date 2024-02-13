@@ -15,7 +15,7 @@ const meta = {
     },
 }satisfies Meta<typeof UserAuthState>
 
-export default meta;
+export default meta; 
 
 type Story = StoryObj<typeof meta>
 
@@ -29,5 +29,10 @@ export const LoggedIn: Story = {
 export const Loading: Story = {
     args:{
       userLoading: true
+    }
+   };
+   export const NetworkError: Story = {
+    args:{
+      networkError: true
     }
    };

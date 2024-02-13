@@ -4,10 +4,10 @@ import React from "react";
 export type DomainAvailableRegisterFormProps = {
     isPriceLoading?: boolean,
     price?: number,
-    years: number,
+    years?: number,
     onYearsChanged: (value: number) => any,
     onRegisterClicked: () => any,
-    buttonProps: ButtonProps;
+    buttonProps?: ButtonProps;
     userAddress
 }
 
@@ -18,9 +18,7 @@ export function DomainAvailableRegisterForm({
                                                 onRegisterClicked, price=72, isPriceLoading, years=2
                                             }: DomainAvailableRegisterFormProps) {
 
-    return <>
-
-        <div className='relative flex flex-col justify-between w-[450px] h-[270px]'>
+    return (
             <div className='h-[175px] w-full flex flex-col justify-between'>
                 <div className="w-full h-[59px] ">
                     <p className="text-[21px] text-white font-semibold tracking-[0.05em]"> Register a new domain.</p>
@@ -54,13 +52,6 @@ export function DomainAvailableRegisterForm({
                     
                 </div>
             </div>
-            <div>
-                <Button {...buttonProps} img={<img className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img' />} >
-                    {userAddress && 'Connect Wallet to '}Register    
-                                               
-                </Button>
-            </div>
-        </div>
-    </>
+        )
 
 }

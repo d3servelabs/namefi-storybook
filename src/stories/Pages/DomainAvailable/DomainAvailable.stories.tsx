@@ -28,22 +28,29 @@ export const FullPage: Story = {
       },
       children: null
     },
-    domainAvailableProps: {
-      
+    
+    domainAvailableContentProps: {
+      ownedDomainsProps: {
+          onTldClicked: () => {},
+      },
       domainCardProps: {
-        domainName: 'namefi.io'
+        
+        domainName: 'namefi.io',
+        status: 'AVAILABLE',
+        loading: false,
+        showExpiration: true,
+        expirationDate: new Date(),
+        
       },
-      registerFormProps:{
-        years:1,
-        price: 71,
-        onRegisterClicked: ()=>{},
-        onYearsChanged: ()=>{},
-        userAddress: '',
-        buttonProps: {
-          label: '',
-          onClick: () => {}
-        }
-      },
+      domainAvailableProps: {
+        domainAvailableRegisterFormProps: {
+          userAddress: '',
+          onRegisterClicked: () => {},
+          onYearsChanged: () => {},
+          
+        },
+        userAddress: ''
+      }
     }
   }
 }

@@ -4,14 +4,14 @@ import { DomainAvailableContent, DomainAvailableContentProps } from '../../../pa
 import { PageLayout, PageLayoutProps } from '../../../components/PageLayout'
 
 interface FullPageProps {
-  domainAvailableProps: DomainAvailableContentProps,
+  domainAvailableContentProps: DomainAvailableContentProps,
   pageLayoutProps: PageLayoutProps
 }
-export const FullPage = ({domainAvailableProps, pageLayoutProps}: FullPageProps) => {
+export const FullPage = ({domainAvailableContentProps, pageLayoutProps}: FullPageProps) => {
   return (
     <div className='containers bg-[#111] relative pt-10'>
           <PageLayout {...pageLayoutProps} >
-              <DomainAvailableContent {...domainAvailableProps} />
+              <DomainAvailableContent {...domainAvailableContentProps} />
           </PageLayout>
     </div>
   )

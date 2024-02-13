@@ -22,18 +22,28 @@ type Story = StoryObj<typeof meta>;
 
 export const Content: Story = {
   args: {
-    
-    domainCardProps:{ domainName:'namefi.io'},
-    registerFormProps:{
-      years:1,
-      price: 71,
-      onRegisterClicked: ()=>{},
-      onYearsChanged: ()=>{},
-      userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-      buttonProps: {
-        label: '',
-        onClick: () => {}
+    domainAvailableProps: {
+      userAddress: '',
+      domainAvailableRegisterFormProps: {
+        onRegisterClicked: () => {},
+        onYearsChanged: () => {},
+        years:1,
+        price: 71,
+        userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
+        buttonProps: {
+          label: '',
+          onClick: () => {}
+        }
       }
+    },
+
+    domainCardProps: {
+      domainName: 'namefi.io',
+      status: 'AVAILABLE',
+      loading: false,
+      showExpiration: true,
+      expirationDate: new Date(),
+      
     },
     ownedDomainsProps: {
       tlds: ['.eth', '.btc'], 

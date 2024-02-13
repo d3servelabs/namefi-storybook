@@ -3,6 +3,7 @@ import { LoadingButton } from './LoadingButton'
 import { LoggedOutButton } from './LoggedOutButton'
 import {ShortAddress} from "@components/ShortAddress";
 import { Balance, BalanceProps } from './Balance';
+import { WrongNetworkButton } from './WrongNetworkButton';
 
 export type UserAuthStateProps = Partial<
     {
@@ -10,13 +11,14 @@ export type UserAuthStateProps = Partial<
         userAddress,
         userLoading,
         balanceLoading,
+        networkError: boolean,
         onSignOut: () => any,
         onLogin: () => any
         onNetworkClicked: () => any
     }>
 
 
-export const UserAuthState = ({balanceProps, userAddress, userLoading, balanceLoading, onLogin, onSignOut, onNetworkClicked}: UserAuthStateProps) => {
+export const UserAuthState = ({balanceProps, userAddress, userLoading, balanceLoading, networkError, onLogin, onSignOut, onNetworkClicked}: UserAuthStateProps) => {
 
   return (
     <div className="relative flex items-center h-[60px] max-w-[440px] gap-3 ">
@@ -33,6 +35,8 @@ export const UserAuthState = ({balanceProps, userAddress, userLoading, balanceLo
             userLoading || balanceLoading ? (<>
                 <LoadingButton />
 
+            </>) :networkError ? ( <>
+            <WrongNetworkButton />
             </>) : (<>
                 <LoggedOutButton shortUserAddress={userAddress? <ShortAddress address={userAddress}/> : <>Connect Wallet</>} userAddress={userAddress} onSignOut={onSignOut} onLogin={onLogin} />
             </>)

@@ -3,7 +3,7 @@ import {DomainTile, DomainTileProps} from './DomainTile'
 
 export type OwnedDomainsGridProps = {
     loading?:boolean,
-    tlds: string[],
+    tlds?: string[],
     onTldClicked?: (tld:string)=>any;
     domains?: Partial<DomainTileProps>[]
 }
@@ -17,7 +17,7 @@ export const OwnedDomainsGrid = ({domains,tlds, onTldClicked}: OwnedDomainsGridP
                     className='flex font-["Roboto_Mono"] justify-between w-[144px] h-[22px] text-[#c6eedb] text-[1em] font-medium tracking-[0.05em] '>
                     <p>DNS</p>
                     {
-                        tlds.map((tld)=>(
+                        tlds?.map((tld)=>(
                             <p key={tld} className='opacity-20' onClick={()=>onTldClicked?.(tld)}>{tld}</p>
                         ))
                     }

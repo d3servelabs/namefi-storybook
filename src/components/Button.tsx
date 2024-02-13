@@ -1,11 +1,11 @@
 import React from 'react'
 
-export type ButtonProps = {
-    label?: string;
-    onClick: () => any;
-    children?: any;
-    img?: any
-}
+export type ButtonProps = Partial<{
+  label?: string;
+  onClick: () => any;
+  children?: any;
+  img?: any
+}>
 export const Button = ({children, img, label, onClick}: ButtonProps) => {
   return (
     <div className='m-0 p-0 relative'>
