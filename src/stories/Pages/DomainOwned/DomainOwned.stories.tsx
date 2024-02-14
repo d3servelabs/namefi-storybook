@@ -28,16 +28,39 @@ export const FullPage: Story = {
       },
       children: null
     },
+    
     domainOwnedProps: {
-      
+      ownedDomainsProps: {
+        domainTileProps: {
+          domainName: 'namefi.io',
+          status: 'TAKEN',
+          sameOwner: true,
+          loading: false,
+          showExpiration: true,
+          expirationDate: moment().add(1, 'year').toDate(),
+        },
+        tlds: ['.eth', '.btc'], 
+        domains: [
+          {domainName:'namefi2024.com'},
+          {domainName:'namefi.net'},
+          {domainName:'namefi.ai'},
+          {domainName:'namefi2024.com'},
+          {domainName:'namefi.net'},
+          {domainName:'namefi.ai'},
+        ]
+      },
       domainCardProps: {
+        
         domainName: 'namefi.io',
-        status: 'AVAILABLE',
+        status: 'TAKEN',
         loading: false,
         showExpiration: true,
+        showOwner: true,
+        sameOwner: true,
         expirationDate: moment().add(1, 'year').toDate(),
         
       },
+      
     }
   }
 }

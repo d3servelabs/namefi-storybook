@@ -18,5 +18,7 @@ export const Button1: Story = {
     args: {
         label: 'Register another one',
         onClick: () => {},
+        backgroundColor: '#111',
+        borderColor: '#fff'
     }
 }

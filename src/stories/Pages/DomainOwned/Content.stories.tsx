@@ -22,10 +22,31 @@ type Story = StoryObj<typeof meta>;
 
 export const Content: Story = {
   args: {
+    ownedDomainsProps: {
+      domainTileProps: {
+        domainName: 'namefi.io',
+        status: 'TAKEN',
+        sameOwner: true,
+        loading: false,
+        showExpiration: true,
+        expirationDate: moment().add(1, 'year').toDate(),
+      },
+      tlds: ['.eth', '.btc'], 
+      domains: [
+        {domainName:'namefi2024.com'},
+        {domainName:'namefi.net'},
+        {domainName:'namefi.ai'},
+        {domainName:'namefi2024.com'},
+        {domainName:'namefi.net'},
+        {domainName:'namefi.ai'},
+      ]
+    },
     domainCardProps: {
       domainName: 'namefi.io',
-      status: 'AVAILABLE',
+      status: 'TAKEN',
       loading: false,
+      showOwner: true,
+      sameOwner: true,
       showExpiration: true,
       expirationDate: moment().add(1, 'year').toDate(),
       

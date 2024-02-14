@@ -1,12 +1,15 @@
 import React from 'react'
 import { Home } from '../../pages/homepage8/Home'
 import '../../App.css'
-import { PageLayout } from '../../components/PageLayout'
+import { PageLayout, PageLayoutProps } from '../../components/PageLayout'
 
-export const Homepage8 = () => {
+interface HomePageProps {
+  pageLayoutProps: PageLayoutProps
+}
+export const Homepage8 = ({pageLayoutProps}: HomePageProps) => {
   return (
     <div className='containers bg-[#111] relative pt-8'>
-        <PageLayout includeSearchBar={false}>
+        <PageLayout {...pageLayoutProps}>
           <Home />
         </PageLayout>
     </div>

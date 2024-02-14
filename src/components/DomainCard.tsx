@@ -21,7 +21,7 @@ export type DomainCardProps =
 
 export const DomainCard = (props: DomainCardProps) => {
 
-    const {showOwner, sameOwner, ownerAddress, onSettingsClicked} = useMemo(() => {
+    const {showOwner, sameOwner, ownerAddress, onSettingsClicked} = useMemo(() => { 
         if (props.status === 'TAKEN') {
             return {
                 showOwner: props.showOwner,

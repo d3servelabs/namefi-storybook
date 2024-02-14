@@ -1,9 +1,10 @@
+import { Button } from '@components/Button'
 import React from 'react'
 
 export const OwnedDomainOwner = () => {
     return (
-        <div className='relative flex flex-col items-start w-[434px] h-[347.5px]'>
-            <div className='h-[306px] w-full flex flex-col justify-between '>
+        <div className='relative flex flex-col justify-center items-center w-[434px] h-[361.5px]'>
+            <div className='h-full w-full flex flex-col justify-between '>
                 <div className='h-[187px] flex flex-col justify-between'>
                     <div className='w-full h-[107px] pt-[48px] '>
                         <p className='font-semibold text-white text-[21px] tracking-[0.05em]'>You own this domain. </p>
@@ -15,12 +16,11 @@ export const OwnedDomainOwner = () => {
                         <button className='border-0 outline-0 '><img src="/assets/listicon.svg" alt="list icon" role='img' /></button>
                     </div>
                 </div>
-                <div className='w-full h-[71px] flex flex-col items-start justify-between '>
+                <div className='w-full h-[130px] flex flex-col items-start '>
                     <p className='font-normal text-sm tracking-[0.05em] text-[#d9d9d9] '>View on</p>
-                    <div className='w-full h-[43px] flex items-center gap-[12px]'>
-                        <button className='px-[25px] h-[43px] rounded-[25px] border-[#797979] border-[1.5px] outline-none flex items-center font-["Roboto_Mono"] font-normal text-lg text-[#ffffffcc]'>Blur.io</button>
-                        <button className='px-[25px] h-[43px] rounded-[25px] border-[#797979] border-[1.5px] outline-none flex items-center font-["Roboto_Mono"] font-normal text-lg text-[#ffffffcc]'>Blur.io</button>
-                        <button className='px-[25px] h-[43px] rounded-[25px] border-[#797979] border-[1.5px] outline-none flex items-center font-["Roboto_Mono"] font-normal text-lg text-[#ffffffcc]'>X2Y2</button>
+                    <div className='w-full h-[98px] flex flex-wrap items-center gap-3'>
+                        {['Blur.io','X2Y2', 'Looksrare', 'Opensea'].map(msg => <Button backgroundColor='#1C1C1C' borderColor='#79797980'>{msg}</Button> )
+                        }
                     </div>
                 </div>
             </div>
