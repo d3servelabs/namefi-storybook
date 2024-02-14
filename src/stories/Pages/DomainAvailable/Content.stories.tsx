@@ -3,6 +3,7 @@ import '../../../index.css'
 import '../../../App.css'
 import {DomainAvailableContent} from "../../../pages/DomainAvailable/content";
 import {OwnedDomainsGrid} from "@components/OwnedDomainsGrid";
+import moment from "moment";
 
 const meta = {
   title: 'Pages/DomainAvailable/Content',
@@ -30,7 +31,7 @@ export const Content: Story = {
         years:1,
         price: 71,
         userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-        buttonProps: {
+        connectButtonProps: {
           label: '',
           onClick: () => {}
         }
@@ -42,10 +43,17 @@ export const Content: Story = {
       status: 'AVAILABLE',
       loading: false,
       showExpiration: true,
-      expirationDate: new Date(),
+      expirationDate: moment().add(1, 'year').toDate(),
       
     },
     ownedDomainsProps: {
+      domainTileProps: {
+        domainName: 'namefi.io',
+        status: 'AVAILABLE',
+        loading: false,
+        showExpiration: true,
+        expirationDate: moment().add(1, 'year').toDate(),
+      },
       tlds: ['.eth', '.btc'], 
       domains: [
         {domainName:'namefi2024.com'},

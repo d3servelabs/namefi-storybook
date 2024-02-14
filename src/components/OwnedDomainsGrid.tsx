@@ -5,9 +5,10 @@ export type OwnedDomainsGridProps = {
     loading?:boolean,
     tlds?: string[],
     onTldClicked?: (tld:string)=>any;
-    domains?: Partial<DomainTileProps>[]
+    domains?: Partial<DomainTileProps>[];
+    domainTileProps: DomainTileProps
 }
-export const OwnedDomainsGrid = ({domains,tlds, onTldClicked}: OwnedDomainsGridProps) => {
+export const OwnedDomainsGrid = ({domains,tlds, domainTileProps, onTldClicked}: OwnedDomainsGridProps) => {
     return (
         <div className='w-[1200px] m-auto flex flex-col gap-12'>
             <div
@@ -28,7 +29,7 @@ export const OwnedDomainsGrid = ({domains,tlds, onTldClicked}: OwnedDomainsGridP
                     domains?.map((data, x) =>
                         {
                             if(data.domainName){
-                                return <DomainTile key={data.domainName} domainName={data.domainName}/>
+                                return <DomainTile key={data.domainName} domainName={data.domainName} {...domainTileProps} />
                             }
                         }
                     )

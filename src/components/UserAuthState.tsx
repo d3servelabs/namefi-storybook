@@ -4,6 +4,7 @@ import { LoggedOutButton } from './LoggedOutButton'
 import {ShortAddress} from "@components/ShortAddress";
 import { Balance, BalanceProps } from './Balance';
 import { WrongNetworkButton } from './WrongNetworkButton';
+import { NotificationBell } from './NotificationBell';
 
 export type UserAuthStateProps = Partial<
     {
@@ -24,12 +25,11 @@ export const UserAuthState = ({balanceProps, userAddress, userLoading, balanceLo
     <div className="relative flex items-center h-[60px] max-w-[440px] gap-3 ">
             <div className="h-full max-w-[150px] flex justify-between gap-3 items-center ">
                 {userAddress &&
-                    <Balance {...balanceProps} />
+                    <>  
+                        <Balance {...balanceProps} />
+                        <NotificationBell />
+                    </>
                 }
-                <button>
-                    <img className="w-[20px]" src="/assets/bells.svg" alt="bells image" role="img"/>
-                </button>
-            
             </div>
         {
             userLoading || balanceLoading ? (<>

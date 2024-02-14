@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
 import {DomainTakenContent} from "../../../pages/DomainTaken/content";
+import moment from "moment";
 
 const meta = { 
   title: 'Pages/DomainTaken/Content',
@@ -21,7 +22,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Content: Story = {
   args: {
-    domainCardProps:{ domainName:'namefi.io'},
+    domainCardProps: {
+      domainName: 'namefi.io',
+      status: 'AVAILABLE',
+      loading: false,
+      showExpiration: true,
+      expirationDate: moment().add(1, 'year').toDate(),
+      
+    },
     domainMessageProps:{
       isLoading: false,
       ownerAddress: null,

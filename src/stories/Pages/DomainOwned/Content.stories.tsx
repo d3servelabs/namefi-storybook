@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
 import {DomainOwnedContent} from "../../../pages/DomainOwned/content";
+import moment from "moment";
 
 const meta = { 
   title: 'Pages/DomainOwned/Content',
@@ -22,11 +23,12 @@ type Story = StoryObj<typeof meta>;
 export const Content: Story = {
   args: {
     domainCardProps: {
-        loading: false,
-        userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-        domainName: 'namefi.eth',
-        isOwned: true,
-        isOwnedOrTaken: true
-    }
+      domainName: 'namefi.io',
+      status: 'AVAILABLE',
+      loading: false,
+      showExpiration: true,
+      expirationDate: moment().add(1, 'year').toDate(),
+      
+    },
   }
 }

@@ -34,7 +34,7 @@ export const DomainTakenCard: Story = {
         showExpiration:true,
         expirationDate: moment().add(1, 'year').toDate(),
     }
-}
+} 
 
 export const OwnedDomainCard: Story = {
     args: {

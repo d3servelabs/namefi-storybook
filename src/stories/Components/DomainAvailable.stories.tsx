@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 
 export const DomainAvailableWalletConnected: Story = {
     args: {
-        buttonProps: {
+        connectButtonProps: {
             label: '',
             onClick: () => {},
             
@@ -34,7 +34,7 @@ export const DomainAvailableWalletConnected: Story = {
 }
 export const DomainAvailableNotConnected: Story = {
     args: {
-        buttonProps: {
+        connectButtonProps: {
             label: '',
             onClick: () => {},           
         },
@@ -51,7 +51,7 @@ export const DomainAvailableNotConnected: Story = {
 }
 export const DomainAvailableSetForNow: Story = {
     args: {
-        buttonProps: {
+        connectButtonProps: {
             label: '',
             onClick: () => {},           
         },

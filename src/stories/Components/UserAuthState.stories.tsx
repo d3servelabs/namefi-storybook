@@ -24,15 +24,19 @@ export const LoggedOut: Story = {}
 export const LoggedIn: Story = {
     args:{
       userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
+      onLogin: () => false,
+      
     }
 };
 export const Loading: Story = {
     args:{
-      userLoading: true
+      userLoading: true,
+      onLogin: () => false
     }
    };
    export const NetworkError: Story = {
     args:{
-      networkError: true
+      networkError: true,
+      onLogin: () => false
     }
    };

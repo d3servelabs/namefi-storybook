@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {FullPage as FullPageComponent} from './FullPage';
 import '../../../index.css'
 import '../../../App.css'
+import moment from "moment";
 
 const meta = {
   title: 'Pages/DomainTaken/FullPage',
@@ -31,7 +32,12 @@ export const FullPage: Story = {
     domainTakenProps: {
       
       domainCardProps: {
-        domainName: 'namefi.io'
+        domainName: 'namefi.io',
+        status: 'AVAILABLE',
+        loading: false,
+        showExpiration: true,
+        expirationDate: moment().add(1, 'year').toDate(),
+        
       },
       domainMessageProps:{
         isLoading: false,

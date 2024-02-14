@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-// import { within, userEvent, expect } from '@storybook/test';
+import moment from "moment";
 
 import {FullPage as FullPageComponent} from './FullPage';
 import '../../../index.css'
@@ -32,6 +32,13 @@ export const FullPage: Story = {
     domainAvailableContentProps: {
       ownedDomainsProps: {
           onTldClicked: () => {},
+          domainTileProps: {
+            domainName: 'namefi.io',
+            status: 'AVAILABLE',
+            loading: false,
+            showExpiration: true,
+            expirationDate: moment().add(1, 'year').toDate(),
+          }
       },
       domainCardProps: {
         
@@ -39,7 +46,7 @@ export const FullPage: Story = {
         status: 'AVAILABLE',
         loading: false,
         showExpiration: true,
-        expirationDate: new Date(),
+        expirationDate: moment().add(1, 'year').toDate(),
         
       },
       domainAvailableProps: {
