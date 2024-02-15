@@ -1,9 +1,9 @@
 import React from 'react'
-export type FlowNumberingProps = {
+export type FlowStepProps = {
     text?: string;
     isFocused: boolean;
 }
-export const FlowNumbering = ({text = '1',isFocused}: FlowNumberingProps) => {
+export const FlowStep = ({text = '1',isFocused}: FlowStepProps) => {
   return (
     <div className='relative w-[28px] flex justify-center items-center h-[28px] border-2 border-[#0A4429] rounded-full overflow-hidden'
         style={{

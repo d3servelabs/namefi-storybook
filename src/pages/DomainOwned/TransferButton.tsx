@@ -29,7 +29,7 @@ export const TransferButton = (props: TransferButtonProps) => {
         <Button
             onClick={onClick}
             borderWidth='1px'
-            img={<img className='w-[21px]' src={status === 'TRANSFERRING'? (done? '/assets/Done.svg': '/assets/Update.svg'): '/assets/transfer.svg'} role='img' />} >{status === 'TRANSFERRING'? (done ? 'Done': 'Transferring'): 'Transfer'}</Button>
+            img={<img className='w-[21px]' src={status === 'TRANSFERRING'? (done? '/assets/Done.svg': '/assets/Update.svg'): '/assets/transfer.svg'} role='img' />} >{status === 'TRANSFERRING'? (done ? 'Done': 'Transferring...'): 'Transfer'}</Button>
     </div>
   )
 }

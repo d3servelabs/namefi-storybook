@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CodeInputComponent } from "@components/CodeInputComponent";
+import { CodeInputField } from "@components/CodeInputField";
 const meta = {
-    title: 'Components/CodeInputComponent',
-    component: CodeInputComponent,
+    title: 'Components/CodeInputField',
+    component: CodeInputField,
     parameters: {
         layout: 'centered'
     },
     tags: ['autodocs'],
     
-}satisfies Meta<typeof CodeInputComponent>
+}satisfies Meta<typeof CodeInputField>
 
 export default meta;
 type Story = StoryObj<typeof meta>

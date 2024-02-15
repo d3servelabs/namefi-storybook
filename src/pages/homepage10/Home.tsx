@@ -1,5 +1,4 @@
 import React from 'react'
-import { OwnedDomainsGrid } from '../../components/OwnedDomainsGrid'
 
 export const Home = () => {
   return (
@@ -99,15 +98,7 @@ export const Home = () => {
             </div>
           </div>
       </div>
-        <OwnedDomainsGrid tlds={['.eth', '.btc']}
-                          domains={[
-                              {domainName: 'namefi2024.com'},
-                              {domainName: 'namefi.net'},
-                              {domainName: 'namefi.ai'},
-                              {domainName: 'namefi2024.com'},
-                              {domainName: 'namefi.net'},
-                              {domainName: 'namefi.ai'},
-                          ]}/>
+
     </section>
   )
 }

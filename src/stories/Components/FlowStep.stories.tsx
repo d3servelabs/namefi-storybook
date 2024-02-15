@@ -1,20 +1,20 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { FlowNumbering } from "@components/FlowNumbering";
+import { FlowStep } from "@components/FlowStep";
 
 const meta = {
-    title: 'Components/FlowNumbering',
-    component: FlowNumbering,
+    title: 'Components/FlowStep',
+    component: FlowStep,
     parameters: {
         layout: 'centered'
     },
     tags: ['autodocs'],
     
-}satisfies Meta<typeof FlowNumbering>
+}satisfies Meta<typeof FlowStep>
 
 export default meta;
 type Story = StoryObj<typeof meta>
 
-export const FlowNumberingStory: Story = {
+export const FlowStepStory: Story = {
     args: {
         text: '2',
         isFocused: true

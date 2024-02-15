@@ -1,8 +1,7 @@
 import React from 'react'
 import { UnlockButton } from './UnlockButton'
 import { TransferButton } from './TransferButton'
-import { FlowNumbering } from '@components/FlowNumbering'
-import { CodeInputComponent } from '@components/CodeInputComponent'
+import { FlowStep } from '@components/FlowStep'
 import { WalletInput } from './WalletInput'
 import { ProgressBar } from './ProgressBar'
 
@@ -10,7 +9,7 @@ export type TransferProps = {
     unlocked?: boolean;
     isTransferring?: boolean;
     progressWidth: number;
-    domainName: string
+    domainName?: string
 }
 
 export const Transfer = ({unlocked, isTransferring, progressWidth, domainName }: TransferProps) => {
@@ -22,10 +21,10 @@ export const Transfer = ({unlocked, isTransferring, progressWidth, domainName }:
     style={{justifyContent: unlocked ?'space-between': 'space-evenly'}}>
         <div className='w-full h-[59px] flex flex-col justify-between '>
             <h4 className='font-semibold text-[21px] tracking-[0.05em] text-white '>
-                {isTransferring ? `'Transferring your${domainName} NFT.` : 'Transfer domain to another wallet. '}
+                {progressWidth !== 100 ?(isTransferring ? `'Transferring your ${domainName} NFT.` : 'Transfer domain to another wallet. '): 'Congratulations! '}
             </h4>
             <p className='font-normal text-sm tracking-[0.04em] text-[#C6EEDB] '>
-                {unlocked ?(isTransferring? 'Take a ☕, your domain will arrive in the destinated wallet soon.':'NFT unlocked, ready for Transfer!'):  'Unlock your NFT Lock for Transfer.'} 
+                {progressWidth !== 100 ?(unlocked ?(isTransferring? 'Take a ☕, your domain will arrive in the destinated wallet soon.':'NFT unlocked, ready for Transfer!'):  'Unlock your NFT Lock for Transfer.'): 'Your domain is now with wallet ending in d393.'} 
             </p>
         </div>
         {
@@ -40,8 +39,8 @@ export const Transfer = ({unlocked, isTransferring, progressWidth, domainName }:
             before:top-[14px]
             before:opacity-10
             before:-z-1'>
-                <FlowNumbering text='1' isFocused={!unlocked? true : false} />
-                <FlowNumbering text='2' isFocused={unlocked? true : false} />
+                <FlowStep text='1' isFocused={!unlocked? true : false} />
+                <FlowStep text='2' isFocused={unlocked? true : false} />
             </div>
             <div className='relative w-full h-[48px] flex justify-center gap-12 '>
                 <div style={{opacity: unlocked ? 0.3 : 1}}>

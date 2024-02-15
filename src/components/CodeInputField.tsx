@@ -11,7 +11,7 @@ export type InputComponentProps = {
     onSearchValueClicked?: (value: string) => any
 }
 
-export const CodeInputComponent = ({ rightImg, backgroundColor, inputType, errorMesg, searchValue, onClick, onSearchClicked, onSearchValueClicked}: InputComponentProps) => {
+export const CodeInputField = ({ rightImg, backgroundColor, inputType, errorMesg, searchValue, onClick, onSearchClicked, onSearchValueClicked}: InputComponentProps) => {
 
     const [isVisible, setIsVisible] = useState(false)
 

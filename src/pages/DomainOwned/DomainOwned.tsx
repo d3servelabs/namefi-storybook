@@ -8,8 +8,8 @@ export type DomainCardProps = {
 export const DomainOwned = (props: DomainCardProps) => {
   return (
     <div className='relative flex flex-col justify-center items-center w-[434px] h-[361.5px]'>
-        {/* <View /> */}
-        <Transfer />
+        <View />
+        {/* <Transfer /> */}
     </div>
   )
 }
