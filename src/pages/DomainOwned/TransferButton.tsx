@@ -3,12 +3,13 @@ import React, { useMemo } from 'react'
 
 export type TransferButtonProps = {
     transferText?: string 
+    onClick?: () => any;
 } & (
     {
-        done: boolean
-        status: 'TRANSFERRING'
+        done: boolean;
+        status?: 'TRANSFERRING'
     } | {
-        status: 'TRANSFER'
+        status?: 'TRANSFER'
     }
 )
 
@@ -16,18 +17,19 @@ export const TransferButton = (props: TransferButtonProps) => {
 
     const {done} = useMemo(() => {
         if (props.status === 'TRANSFERRING') {
-            return {
+            return { 
                 done: props.done
             }
         }
         return {}
     }, [props])
-    const {status, transferText} = props
+    const {status, transferText, onClick} = props
   return (
     <div className='relative'>
         <Button
+            onClick={onClick}
             borderWidth='1px'
-            img={<img className='w-[21px]' src={status === 'TRANSFERRING'? (done? '/assets/Done.svg': '/assets/Update.svg'): '/assets/transfer.svg'} role='img' />} >{transferText}</Button>
+            img={<img className='w-[21px]' src={status === 'TRANSFERRING'? (done? '/assets/Done.svg': '/assets/Update.svg'): '/assets/transfer.svg'} role='img' />} >{status === 'TRANSFERRING'? (done ? 'Done': 'Transferring'): 'Transfer'}</Button>
     </div>
   )
 }

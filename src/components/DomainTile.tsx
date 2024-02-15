@@ -46,7 +46,9 @@ export const DomainTile = (props: DomainTileProps) => {
         <div className='w-[117px] h-full  '>
             {
               !sameOwner ? 
-                  <img className="w-[88px]" src="/assets/Available.svg" alt="is-available image" role="img" />:
+                <p className='font-["Zilla_Slab_Highlight"] text-lg font-bold tracking-[0.1em] '>
+                    <span className='text-[#48E59B]'>Available</span>
+                </p>:
                   <div className="w-full h-full flex justify-between">
                       <button className='border-0 outline-0 w-[33px] '><img src="/assets/transfericon.svg" alt="transfer icon" role='img' /></button>
                       <button className='border-0 outline-0 w-[33px] '><img src="/assets/borrowicon.svg" alt="borrow icon" role='img' /></button>

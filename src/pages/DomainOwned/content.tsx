@@ -1,7 +1,7 @@
 import React from 'react'
 import { OwnedDomainsGrid, OwnedDomainsGridProps } from '../../components/OwnedDomainsGrid'
 import { DomainCard, DomainCardProps } from '../../components/DomainCard'
-import { OwnedDomainOwner  } from './View'
+import { View  } from './View'
 
 export type DomainOwnedContentProps = {
     domainCardProps: DomainCardProps;
@@ -12,7 +12,7 @@ export const DomainOwnedContent = ({domainCardProps, ownedDomainsProps}: DomainO
     <section className='relative min-h-screen py-24'>
         <div className=' w-full h-auto flex justify-center items-center gap-36 relative mb-20'>
           <DomainCard {...domainCardProps} />
-          <OwnedDomainOwner />
+          <View />
       </div>
         <OwnedDomainsGrid {...ownedDomainsProps}/>
     </section>

@@ -24,7 +24,7 @@ export const Home = () => {
                         <p className='text-[#ededed] text-sm font-bold tracking-[0.1em] '>Mar 01 2025</p>
                       </div>
                   </div>
-              </div>
+              </div> 
           </div>
           <div className='relative flex flex-col justify-between py-[64px] w-[415px] h-[347px]'>
               <div className='h-[59px] flex flex-col justify-between'>
