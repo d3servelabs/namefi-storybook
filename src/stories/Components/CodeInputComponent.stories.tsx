@@ -15,20 +15,20 @@ type Story = StoryObj<typeof meta>
 
 export const NotSubmitted: Story = {
     args: {
-        searchValue: '',
+        value: '',
         status: 'NOTSUBMITTED'
     }
 }
 export const SubmittedWithError: Story = {
     args: {
-        searchValue: '',
+        value: '',
         status: 'SUBMITTED',
         incorrectAuthCode: true,
     }
 }
 export const SubmittedWithoutError: Story = {
     args: {
-        searchValue: '',
+        value: '',
         status: 'SUBMITTED',
         incorrectAuthCode: false
     }
