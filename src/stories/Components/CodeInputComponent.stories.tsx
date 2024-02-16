@@ -13,10 +13,15 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>
 
-export const CodeInput: Story = {
+export const Submitted: Story = {
     args: {
-        inputType: 'password',
-        backgroundColor: 'red',
-        errorMesg: 'error-code'
+        searchValue: '',
+        status: 'NOTSUBMITTED'
+    }
+}
+export const NotSubmitted: Story = {
+    args: {
+        searchValue: '',
+        status: 'SUBMITTED'
     }
 }
