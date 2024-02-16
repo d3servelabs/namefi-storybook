@@ -1,6 +1,6 @@
 import React from 'react'
 export type FlowStepProps = {
-    text?: string;
+    text?: React.ReactNode;
     isFocused: boolean;
 }
 export const FlowStep = ({text = '1',isFocused}: FlowStepProps) => {
