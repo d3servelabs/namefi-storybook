@@ -18,6 +18,7 @@ export const TransferStory : Story = {
     args: {
       unlocked: false,
       progressWidth: 30,
-      domainName: 'doodle.com'
+      domainName: 'doodle.com',
+        receiverAddress: '0xB5856d4598c919834913b8656ebc15a64d3C7836'
     }
 }

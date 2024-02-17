@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from "clsx";
 
 export type ButtonProps = Partial<{
   label?: string;
@@ -7,14 +8,19 @@ export type ButtonProps = Partial<{
   img?: any
   borderColor: string;
   backgroundColor: string;
-  borderWidth: string
+  borderWidth: string;
+  disabled: boolean
+  buttonProps?: React.ComponentPropsWithRef<'button'>
 }>
-export const Button = ({children, img, label, borderWidth, onClick, backgroundColor, borderColor}: ButtonProps) => {
+export const Button = ({children, img, label, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled}: ButtonProps) => {
   return (
-    <div className='m-0 p-0 relative'>
-        <button 
+    <div className={clsx('m-0 p-0 relative', disabled && 'opacity-30')}>
+        <button
+            {...(buttonProps || {})}
+            disabled={disabled}
           onClick={onClick}
-          className='block border-[1.5px] flex items-center gap-[12px] rounded-[80px] text-white py-[10px] px-[25px] '
+            aria-disabled={disabled}
+          className={clsx('block border-[1.5px] flex items-center gap-[12px] rounded-[80px] text-white py-[10px] px-[25px] ', disabled && 'cursor-not-allowed')}
           type='button'
           style={{
             backgroundColor,
