@@ -16,6 +16,7 @@ type Story = StoryObj<typeof meta>
 
 export const Progress: Story = {
     args: {
-        progressWidth: 30
+        progressWidth: 30,
+        isLoading: false
     }
 }

@@ -5,6 +5,7 @@ import { Button } from '@components/Button';
 import clsx from 'clsx';
 import { StepDiagram } from '@pages/DomainOwned/StepDiagram';
 import { ShortAddress } from '@components/ShortAddress';
+import { NamefiBrandText } from '@components/NamefiBrandText';
 
 export type TransferProps = {
 	unlocked?: boolean;
@@ -59,9 +60,9 @@ export const Transfer = ({
 			className="relative w-[434px] h-[350px] px-0 flex flex-col justify-evenly "
 			style={{ justifyContent: unlocked ? 'space-between' : 'space-evenly' }}>
 			<div className="w-full h-[59px] flex flex-col justify-between ">
-				<h4 className="font-semibold text-[21px] tracking-[0.05em] text-white ">
+				<h4 className="font-semibold text-[21px] tracking-[0.05em] text-[#d9d9d9] ">
 					{transferNotInitiated && 'Transfer domain to another wallet.'}
-					{isTransferring && `'Transferring your ${domainName} NFT.`}
+					{isTransferring && <>Transferring your <NamefiBrandText text={domainName} fontSize={'21px'} color={"d9d9d9"} /> NFT.</>}
 					{isTransferFinished && 'Congratulations!'}
 				</h4>
 				<p className="font-normal text-sm tracking-[0.04em] text-[#C6EEDB] ">
@@ -81,6 +82,7 @@ export const Transfer = ({
 			{unlocked && transferNotInitiated && <WalletInput inputValue={receiverAddress} />}
 			{(isTransferring || isTransferFinished) && (
 				<ProgressBar
+					isLoading={isTransferring}
 					progressWidth={isTransferFinished ? 100 : progressWidth}
 					domainName={domainName}
 				/>

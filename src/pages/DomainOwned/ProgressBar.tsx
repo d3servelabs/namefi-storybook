@@ -1,15 +1,16 @@
 import React from 'react'
+import clsx from 'clsx'
 
 export type ProgressBarProps = {
     progressWidth: number;
     domainName?: string;
+    isLoading?: boolean;
 }
-export const ProgressBar = ({progressWidth = 0, domainName = 'namefi.com'}: ProgressBarProps) => {
+export const ProgressBar = ({progressWidth = 0, domainName = 'namefi.com', isLoading}: ProgressBarProps) => {
   return (
     <div className='relative w-[434px] h-[49px] flex flex-col justify-between '>
-        <div className='w-full h-[3px] rounded-[3px] bg-[#48e59b33] overflow-hidden '>
-            <div className='w-full h-full rounded-[3px] bg-[#71E0AC] duration-300'
-                style={{width: `${progressWidth}%`}}>
+        <div className='relative w-full h-[3px] rounded-[3px] bg-[#48e59b33] overflow-hidden '>
+            <div className={clsx(isLoading ? 'w-40 animate-loading absolute h-full rounded-[3px] bg-[#71E0AC]' : 'absolute w-full h-full rounded-[3px] bg-[#71E0AC]')}>
             </div>
         </div>
         <div className='relative h-[24px] flex items-center gap-2 '>
