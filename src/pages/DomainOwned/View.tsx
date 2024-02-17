@@ -19,9 +19,9 @@ export const View = () => {
             <div className='w-full h-[130px] flex flex-col items-start gap-3 '>
                 <p className='font-normal text-sm tracking-[0.05em] text-[#d9d9d9] '>View on</p>
                 <div className='w-full max-h-[98px] flex flex-wrap items-center gap-3'>
-                    <RedirectLinkButton linkName='Opensea' linkUrl='Opensea.com' />
-                    <RedirectLinkButton linkName='Looksrare' linkUrl='#' />
-                    <RedirectLinkButton linkName='X2Y2' linkUrl='#' />
+                    <RedirectLinkButton linkName={'Opensea'} linkUrl={'Opensea.com'} />
+                    <RedirectLinkButton linkName={'Looksrare'} linkUrl={'#'} />
+                    <RedirectLinkButton linkName={'X2Y2'} linkUrl={'#'} />
                 </div>
             </div>
         </div>

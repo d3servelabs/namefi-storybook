@@ -4,6 +4,7 @@ import { TransferButton } from './TransferButton'
 import { FlowStep } from '@components/FlowStep'
 import { WalletInput } from './WalletInput'
 import { ProgressBar } from './ProgressBar'
+import { NamefiBrandText } from '@components/NamefiBrandText'
 
 export type TransferProps = {
     unlocked?: boolean;
@@ -20,8 +21,8 @@ export const Transfer = ({unlocked, isTransferring, progressWidth, domainName }:
     <div className='relative w-[434px] h-[350px] px-0 flex flex-col justify-evenly '
     style={{justifyContent: unlocked ?'space-between': 'space-evenly'}}>
         <div className='w-full h-[59px] flex flex-col justify-between '>
-            <h4 className='font-semibold text-[21px] tracking-[0.05em] text-white '>
-                {progressWidth !== 100 ?(isTransferring ? `'Transferring your ${domainName} NFT.` : 'Transfer domain to another wallet. '): 'Congratulations! '}
+            <h4 className='font-semibold text-[21px] tracking-[0.05em] text-[#d6d6d6] '>
+                {progressWidth !== 100 ?(isTransferring ? `Transferring your ${ <NamefiBrandText color={'#d6d6d6'} fontSize={'21px'} text={'domainName'} /> } NFT.` : 'Transfer domain to another wallet. '): 'Congratulations! '}
             </h4>
             <p className='font-normal text-sm tracking-[0.04em] text-[#C6EEDB] '>
                 {progressWidth !== 100 ?(unlocked ?(isTransferring? 'Take a ☕, your domain will arrive in the destinated wallet soon.':'NFT unlocked, ready for Transfer!'):  'Unlock your NFT Lock for Transfer.'): 'Your domain is now with wallet ending in d393.'} 
