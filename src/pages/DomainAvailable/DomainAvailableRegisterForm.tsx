@@ -1,4 +1,5 @@
 import { Button, ButtonProps } from "@components/Button";
+import { NamefiBrandText } from "@components/NamefiBrandText";
 import React from "react";
 
 export type DomainAvailableRegisterFormProps = {
@@ -22,10 +23,10 @@ export function DomainAvailableRegisterForm({
             <div className='h-[175px] w-full flex flex-col justify-between'>
                 <div className="w-full h-[59px] ">
                     <p className="text-[21px] text-white font-semibold tracking-[0.05em]"> Register a new domain.</p>
-                    <p className="text-sm text-[#c6eedb] font-normal tracking-[0.05em]">We will mint a Namefi NFT to your connected wallet.</p>
+                    <p className="text-sm text-[#c6eedb] font-normal tracking-[0.05em]">We will mint a <NamefiBrandText color='#d9d9d9' fontSize='14px' text=' Namefi' /> NFT to your connected wallet.</p>
                 </div>
                 <div className="h-[80px] w-full flex items-center justify-between ">
-                    <div className='h-full w-[169px] flex flex-col justify-between'>
+                    {/* <div className='h-full w-[169px] flex flex-col justify-between'>
                         <p className='text-sm font-light text-[#999] '>Current Price:</p>
                         <div
                             className='block w-full h-[55px] font-normal font-["Roboto_Mono"] text-white flex justify-between'>
@@ -36,7 +37,7 @@ export function DomainAvailableRegisterForm({
                             <img className='w-[18px] self-end' src="/assets/notification.svg" alt="notification image"
                                 role='img'/>
                         </div>
-                    </div>
+                    </div> */}
                     <div className='h-full w-[245px] flex flex-col justify-between '>
                         <p className='text-sm font-light text-[#999] '>Register for:</p>
                         <div className='h-[55px] flex items-center justify-between '>

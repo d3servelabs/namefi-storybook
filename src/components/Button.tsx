@@ -9,10 +9,11 @@ export type ButtonProps = Partial<{
   borderColor: string;
   backgroundColor: string;
   borderWidth: string;
+  color: string
   disabled: boolean
   buttonProps?: React.ComponentPropsWithRef<'button'>
 }>
-export const Button = ({children, img, label, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled}: ButtonProps) => {
+export const Button = ({children, img, label, color, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled}: ButtonProps) => {
   return (
     <div className={clsx('m-0 p-0 relative', disabled && 'opacity-30')}>
         <button
@@ -25,7 +26,8 @@ export const Button = ({children, img, label, borderWidth, onClick, backgroundCo
           style={{
             backgroundColor,
             borderColor,
-            borderWidth
+            borderWidth,
+            color
           }} >
             {label}
             <span className='font-["Roboto_Mono"] text-lg font-normal '>{children}</span>

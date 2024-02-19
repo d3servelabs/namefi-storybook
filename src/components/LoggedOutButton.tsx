@@ -16,8 +16,8 @@ export const LoggedOutButton = ({shortUserAddress, userAddress, onSignOut, onLog
         backgroundColor={userAddress ? '#111' : '#111111b3'} 
         authStateLogo={<img src="/assets/ETH-Network.svg" alt="eth logo" role="img"/>}
         rightArrowImg={<img onClick={userAddress ? onSignOut : onLogin}
-                    src={userAddress ? "/assets/download.svg" : "/assets/arrow-right1.svg"}
-                    className={userAddress ? 'max-w-[44px]': 'max-w-[22px]'} alt="download image" role='svg'/>} 
+                    src={userAddress ? "/assets/disconnect.svg" : "/assets/arrow-right1.svg"}
+                    className={userAddress ? 'max-w-[44px]': 'max-w-[22px]'} alt="disconnect image" role='svg'/>} 
      >
         {userAddress? shortUserAddress: 'Connect Wallet'}
     </UserAuthStateButton>

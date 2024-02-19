@@ -3,7 +3,7 @@ import { WalletInput } from './WalletInput';
 import { ProgressBar } from './ProgressBar';
 import { Button } from '@components/Button';
 import clsx from 'clsx';
-import { StepDiagram } from '@pages/DomainOwned/StepDiagram';
+import { StepDiagram } from '@components/StepDiagram';
 import { ShortAddress } from '@components/ShortAddress';
 import { NamefiBrandText } from '@components/NamefiBrandText';
 
@@ -34,7 +34,7 @@ export type TransferProps = {
 
 export const Transfer = ({
 	unlocked,
-	progressWidth,
+	progressWidth, 
 	domainName,
 	onUnlockClick,
 	onTransferClicked,
@@ -82,7 +82,7 @@ export const Transfer = ({
 			{unlocked && transferNotInitiated && <WalletInput inputValue={receiverAddress} />}
 			{(isTransferring || isTransferFinished) && (
 				<ProgressBar
-					isLoading={isTransferring}
+					isLoading={isTransferring }
 					progressWidth={isTransferFinished ? 100 : progressWidth}
 					domainName={domainName}
 				/>

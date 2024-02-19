@@ -9,13 +9,13 @@ export const StepDiagram = memo<StepDiagramProps>(
             <div
                 className="relative h-[28px] w-[234px] flex justify-between items-center
             before:absolute
-            before:w-[211px]
+            before:w-[100%]
             before:h-[1.5px]
             before:bg-[#c6eedb]
             before:top-[14px]
             before:opacity-10
             before:-z-1">
-                {Array(stepCount)
+                {Array(stepCount) 
                     .fill(0)
                     .map((_, index) => {
                         return (
