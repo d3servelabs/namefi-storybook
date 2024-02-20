@@ -2,20 +2,19 @@ import React from 'react'
 import clsx from "clsx";
 
 export type ButtonProps = Partial<{
-  label?: string;
   onClick: () => any;
   children?: any;
-  img?: any
   borderColor: string;
   backgroundColor: string;
   borderWidth: string;
   color: string
   disabled: boolean
   buttonProps?: React.ComponentPropsWithRef<'button'>
+    className?:string,
 }>
-export const Button = ({children, img, label, color, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled}: ButtonProps) => {
+export const Button = ({children, color, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled,className, }: ButtonProps) => {
   return (
-    <div className={clsx('m-0 p-0 relative', disabled && 'opacity-30')}>
+    <div className={clsx('m-0 p-0 relative', disabled && 'opacity-30',className)}>
         <button
             {...(buttonProps || {})}
             disabled={disabled}
@@ -29,10 +28,13 @@ export const Button = ({children, img, label, color, borderWidth, onClick, backg
             borderWidth,
             color
           }} >
-            {label}
-            <span className='font-["Roboto_Mono"] text-lg font-normal '>{children}</span>
-             {img}
+            {children}
         </button>
     </div>
   )
 }
+
+export const ButtonText = ({className, children}:{className?:string, children: React.ReactNode})=>{
+    return <span className={clsx('font-["Roboto_Mono"] text-lg font-normal ', className)}>{children}</span>
+}
+Button.Text = ButtonText

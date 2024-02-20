@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {Button} from '../../components/Button'
+import {Button} from '@components/Buttons/Button'
 
 const meta = {
-    title: 'Components/Button',
+    title: 'Components/Buttons/BaseButton',
     component: Button,
     parameters: {
         layout: 'centered'
@@ -14,11 +14,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>
 
-export const Button1: Story = {
+export const Default: Story = {
     args: {
-        label: 'Register another one',
         onClick: () => {},
         backgroundColor: '#111',
-        borderColor: '#fff'
+        borderColor: '#fff',
+        children: <Button.Text>Button</Button.Text>
     }
 }
