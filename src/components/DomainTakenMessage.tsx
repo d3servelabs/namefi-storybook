@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@components/Button'
+import { Button, ButtonProps } from '@components/Buttons/Button'
 import React from 'react'
 
 export type DomainTakenMessageProps = {

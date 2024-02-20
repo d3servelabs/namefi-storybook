@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonProps } from '@components/Button'
+import { Button, ButtonProps } from '@components/Buttons/Button'
 import { DomainAvailableRegisterForm, DomainAvailableRegisterFormProps } from './DomainAvailableRegisterForm'
 import { SetForNow } from './SetForNow'
 export type DomainAvailableProps = {

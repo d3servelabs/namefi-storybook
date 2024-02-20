@@ -1,5 +1,5 @@
 import { Balance, BalanceProps } from '@components/Balance'
-import { Button } from '@components/Button'
+import { Button } from '@components/Buttons/Button'
 import React from 'react'
 
 export type DomainCreditCardProps = {
