@@ -18,7 +18,7 @@ export const Cart = ({checkedOut, signInError, ...props}: CartProps) => {
 
     const isConnectWalletError = useMemo(() => 
         checkedOut && props.isConnectWalletError
-    , [checkedOut, props.isConnectWallet])
+    , [checkedOut, props.isConnectWalletError])
   return (
     <>
         { isConnectWallet ?
@@ -80,7 +80,7 @@ export const Cart = ({checkedOut, signInError, ...props}: CartProps) => {
                                 }
                             </div>
                             { isConnectWalletError &&
-                                <div className='relative w-full'>
+                                <div className='relative w-full flex justify-end pr-24'>
                                     <p className='font-normal font-primary text-warning text-xs '>Failed to connect wallet, please try again.</p>
                                 </div>
                             }

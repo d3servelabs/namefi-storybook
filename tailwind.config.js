@@ -28,7 +28,7 @@ module.exports = {
       keyframes: {
         loading: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(274px)' },
+          '100%': { transform: 'translateX(100%)' },
         },
         dissolve: {
           '0%': {

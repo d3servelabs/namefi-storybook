@@ -31,7 +31,7 @@ export const Home = () => {
                           </div>
                       </div>
                   </div>
-                  <div className=' '>
+                  <div className=' '> 
                       <p className='font-["Roboto_Mono"] font-normal text-white text-sm tracking-[0.05em]'>Beta Version</p>
                   </div>
               </div>
@@ -58,7 +58,7 @@ export const Home = () => {
                         <img className='w-[19px]' src="/assets/globe.svg" alt="globe image" role='img' />
                         <p className='text-[#c6eedb] text-sm'>Waiting on registrar</p>
                     </div>
-                </div>
+                </div> 
                 <div className='flex justify-between w-full h-[24px] font-["Roboto_Mono"] font-normal text-white '>
                     <p className=' text-[1em] tracking-[0.05em]'>[Register]</p>
                     <p className=' text-[1em] tracking-[0.05em]'>namifi.com</p>

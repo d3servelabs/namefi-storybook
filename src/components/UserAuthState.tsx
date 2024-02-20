@@ -14,7 +14,7 @@ export type UserAuthStateProps = Partial<
         balanceLoading,
         networkError: boolean,
         onSignOut: () => any,
-        onLogin: () => any
+        onLogin: () => any 
         onNetworkClicked: () => any
     }>
 
@@ -26,7 +26,12 @@ export const UserAuthState = ({balanceProps, userAddress, userLoading, balanceLo
             <div className="h-full max-w-[150px] flex justify-between gap-3 items-center ">
                 {userAddress &&
                     <>  
-                        <Balance {...balanceProps} />
+                        { balanceProps?.balance &&
+                            <div className='flex items-center gap-2'>
+                                <Balance {...balanceProps} />
+                                <p className='font-primary font-medium tracking-wide text-sm text-white '>$NFSC</p>
+                            </div>
+                        }
                         <NotificationBell />
                     </>
                 }

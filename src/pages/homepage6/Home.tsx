@@ -110,7 +110,7 @@ export const Home = () => {
                                         <p className='font-medium text-sm tracking-[0.05em] text-[#48E59B] '>EPP Lock</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <a className='font-normal text-[12px] text-[#C6EEDB] tracking-[0.05em] underline '>Manage DNS records</a>

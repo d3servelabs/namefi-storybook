@@ -7,7 +7,7 @@ export type HeaderProps = {
         headerSearchProps?: HeaderSearchBarProps
     }
 export const Header = ({includeSearchBar, authStateProps, headerSearchProps }: HeaderProps) => {
-   
+    
 
     return (
         <header className="namefi-cont namefi-header relative h-[80px] pl-6 pr-[10px] lg:rounded-[50px] ">
