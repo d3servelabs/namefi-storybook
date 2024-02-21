@@ -34,6 +34,7 @@ export default [
 			typescript({ tsconfig: './tsconfig.lib.json' }),
 			postcss({
 				extensions: ['.css'],
+				extract: true,  // extracts all css to 'dist/styles.css'
 			}),
 		],
 	},
