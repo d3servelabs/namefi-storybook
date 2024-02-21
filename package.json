@@ -19,8 +19,7 @@
     "chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}",
     "chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
     "chromatic": "npm run chromatic:full",
-    "bump": "npm version patch && git push --follow-tags",
-    "publish": "npm publish"
+    "bump": "npm version patch && git push --follow-tags"
   },
   "dependencies": {
     "@radix-ui/themes": "^2.0.3",
