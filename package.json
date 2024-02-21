@@ -23,10 +23,13 @@
     "@radix-ui/themes": "^2.0.3",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.14",
+    "@uidotdev/usehooks": "^2.4.1",
+    "@web3uikit/icons": "^1.1.2",
     "clsx": "^2.1.0",
     "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

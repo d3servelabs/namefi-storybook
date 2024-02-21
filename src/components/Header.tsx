@@ -1,5 +1,5 @@
 import { HeaderSearchBar, HeaderSearchBarProps } from "./HeaderSearchBar"
-import { UserAuthState, UserAuthStateProps } from "./UserAuthState"
+import { UserAuthState, UserAuthStateProps } from "./UserAuthState/UserAuthState"
 
 export type HeaderProps = {
         includeSearchBar?:boolean,
