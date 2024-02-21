@@ -1,7 +1,6 @@
 {
-  "name": "namefi-storybook",
-  "private": true,
-  "version": "1.0.0",
+  "name": "@namefi/storybook",
+  "version": "2.0.0",
   "engines": {
     "node": ">=20 < 21",
     "npm": ">=10 < 11"
@@ -17,7 +16,8 @@
     "test-storybook": "test-storybook",
     "chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}",
     "chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
-    "chromatic": "npm run chromatic:full"
+    "chromatic": "npm run chromatic:full",
+    "build:lib": "tsc --outDir dist"
   },
   "dependencies": {
     "@radix-ui/themes": "^2.0.3",
@@ -58,5 +58,8 @@
     "storybook": "^7.6.13",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.8"
-  }
+  },
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "types": "dist/index.d.ts"
 }
