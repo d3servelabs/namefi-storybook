@@ -49,20 +49,20 @@ export const DomainCard = (props: DomainCardProps) => {
             className='relative rounded-[20px] p-6 bg-black flex flex-col justify-between items-center w-[400px] h-[400px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
             <div className='flex w-full h-[30px] items-center justify-between'>
                 <p>
-                    {status==='TAKEN'? (sameOwner ?<NamefiBrandText fontSize={'24px'} color={'#FEF556'} text={'You Own This'} /> : <NamefiBrandText fontSize={'24px'} color={'#FF3C3C'} text={'Taken'} /> ) : <NamefiBrandText fontSize={'24px'} color={'#48E59B'} text={'Available'} /> }
+                    {status==='TAKEN'? (sameOwner ?<NamefiBrandText fontSize={'24px'} color={'#FEF556'} text={'You Own This'} /> : <NamefiBrandText fontSize={'24px'} color={'#3488FC'} text={'Taken'} /> ) : <NamefiBrandText fontSize={'24px'} color={'#48E59B'} text={'Available'} /> }
                 </p>
                 <button className='relative block' onClick={onSettingsClicked}>
                     { sameOwner &&  <img className='w-[30px]' src="/assets/Gear.svg" alt="Gear image" role='img'/>}
                 </button>
             </div>
-            <h3 className='text-white font-semibold text-[28px] tracking-[0.1em]'>{domainName}</h3>
+            <h3 className='text-white font-semibold text-[28px] tracking-widest'>{domainName}</h3>
             <div className='w-full h-[36px] flex justify-between '>
                 <div className='w-full h-full flex justify-between '>
                     <div className='min-w-[106px] h-full'>
                         {showOwner && !!ownerAddress &&
                             <>
-                                <p className='text-[#acacac] text-xs tracking-[0.1em] '>Owned by</p>
-                                <p className='text-[#ededed] text-sm tracking-[0.1em] '><ShortAddress address={ownerAddress}/></p>
+                                <p className='text-[#acacac] text-xs tracking-widest '>Owned by</p>
+                                <p className='text-[#ededed] text-sm tracking-widest '><ShortAddress address={ownerAddress}/></p>
                             </>
                         }
                     </div>
@@ -70,9 +70,9 @@ export const DomainCard = (props: DomainCardProps) => {
                         {showExpiration && !!expirationDate &&
                             <>
                                 <img className='w-[36.75px]' src="/assets/lock.svg" alt="lock image" role='img'/>
-                                <div className='w-[99px]'>
-                                    <p className='text-[#acacac] text-[11px] font-bold tracking-[0.1em] '>Expires on</p>
-                                    <p className='text-[#ededed] text-sm font-bold tracking-[0.1em] '>{moment(expirationDate).format('MMM DD YYYY')}</p>
+                                <div className='w-[99px] font-secondary'>
+                                    <p className='text-[#acacac] text-[11px] font-extrabold tracking-widest '>Expires on</p>
+                                    <p className='text-[#ededed] text-sm font-extrabold tracking-widest '>{moment(expirationDate).format('MMM DD YYYY')}</p>
                                 </div>
                             </>
                         }

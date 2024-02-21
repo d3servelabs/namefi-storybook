@@ -1,4 +1,4 @@
-import { Button } from '@components/Button'
+import { Button } from '@components/Buttons/Button'
 import React from 'react'
 import { RedirectLinkButton } from '@components/RedirectLinkButton'
 

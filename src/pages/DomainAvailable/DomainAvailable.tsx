@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonProps } from '@components/Button'
+import { Button, ButtonProps, ButtonText } from '@components/Buttons/Button'
 import { DomainAvailableRegisterForm, DomainAvailableRegisterFormProps } from './DomainAvailableRegisterForm'
 import { SetForNow } from './SetForNow'
 export type DomainAvailableProps = {
@@ -19,8 +19,9 @@ export const DomainAvailable = ({registerAotherOne, domainAvailableRegisterFormP
           <SetForNow />
         }
         <div>
-            <Button {...connectButtonProps} img={!registerAotherOne && <img className='w-[15px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img' />} >
-                {registerAotherOne ? 'Register another one': (userAddress ? 'Connect Wallet to Register': 'Register')}
+            <Button {...connectButtonProps}>
+                <ButtonText>Add to cart</ButtonText>
+                <img className='w-[25px]' src="/assets/arrow-right1.svg" alt="arrow-right" role='img' />
             </Button>
         </div>
     </div>

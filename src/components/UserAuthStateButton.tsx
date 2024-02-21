@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react'
 
-export type UserAuthStateButtonProps = Partial<{
+export type UserAuthStateButtonProps = Partial<{ 
     children;
     authStateLogo;
     rightArrowImg; 

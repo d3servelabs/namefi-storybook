@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Roboto Mono', 'Serif'],
+        secondary: ['Nunito', 'Serif']
       },
       colors: {
         warning: '#FF3C3C',

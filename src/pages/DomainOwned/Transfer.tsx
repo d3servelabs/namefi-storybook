@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { WalletInput } from './WalletInput';
 import { ProgressBar } from './ProgressBar';
-import { Button } from '@components/Button';
+import { Button, ButtonText } from '@components/Buttons/Button';
 import clsx from 'clsx';
 import { StepDiagram } from '@components/StepDiagram';
 import { ShortAddress } from '@components/ShortAddress';
@@ -95,22 +95,25 @@ export const Transfer = ({
 					<Button
 						disabled={unlocked}
 						onClick={onUnlockClick}
-						borderWidth="1px"
-						img={
-							<img
-								className="w-[21px]"
-								src={unlocked ? '/assets/Done.svg' : '/assets/Unlock.svg'}
-								role="img"
-							/>
-						}>
-						Unlock
+						borderWidth="1px">
+						<ButtonText>Unlock</ButtonText>
+						<img
+							className="w-[21px]"
+							src={unlocked ? '/assets/Done.svg' : '/assets/Unlock.svg'}
+							role="img" />
 					</Button>
 
 					<Button
 						disabled={!unlocked}
 						onClick={onTransferClicked}
-						borderWidth="1px"
-						img={
+						borderWidth="1px">
+						<ButtonText>
+						{isTransferFinished
+							? 'Done'
+							: isTransferring
+							? 'Transferring...'
+							: 'Transfer'}
+						</ButtonText>
 							<img
 								alt={'transfer-status'}
 								className={clsx('w-5', isTransferring && 'animate-spin')}
@@ -122,12 +125,6 @@ export const Transfer = ({
 										: '/assets/transfer.svg'
 								}
 							/>
-						}>
-						{isTransferFinished
-							? 'Done'
-							: isTransferring
-							? 'Transferring...'
-							: 'Transfer'}
 					</Button>
 				</div>
 			</div>

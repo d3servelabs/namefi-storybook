@@ -1,4 +1,4 @@
-import { Button } from '@components/Button'
+import { Button } from '@components/Buttons/Button'
 import { Checkbox } from '@components/Checkbox'
 import React from 'react'
 

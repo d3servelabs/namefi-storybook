@@ -7,7 +7,7 @@ export type OwnedDomainsGridProps = {
     onTldClicked?: (tld:string)=>any;
     domains?: Partial<DomainTileProps>[];
     domainTileProps: DomainTileProps
-}
+} 
 export const OwnedDomainsGrid = ({domains,tlds, domainTileProps, onTldClicked}: OwnedDomainsGridProps) => {
     return (
         <div className='w-[1200px] m-auto flex flex-col gap-12'>

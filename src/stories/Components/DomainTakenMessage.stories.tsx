@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {DomainTakenMessage} from '../../components/DomainTakenMessage';
+import {DomainTakenMessage} from '../../pages/DomainTaken/DomainTakenMessage';
 import '../../index.css'
 import '../../App.css'
 

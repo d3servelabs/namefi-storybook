@@ -1,5 +1,5 @@
 import { Balance, BalanceProps } from '@components/Balance'
-import { Button } from '@components/Button'
+import { SolidButton } from '@components/Buttons/SolidButton';
 import React from 'react'
 
 export type DomainCreditCardProps = {
@@ -12,12 +12,7 @@ export const DomainCreditCard = ({balanceProps, userName}: DomainCreditCardProps
     <div className='relative rounded-[20px] flex flex-col justify-between items-end w-[493px] h-[361px]'>
               <div className='w-full h-[48px] flex items-center justify-between'>
                   <p className='font-bold text-[21px] text-[#d9d9d9] tracking-[0.05em] '>Your Credit</p>
-                  <Button
-                    backgroundColor='#48E59B'
-                    color='#232c27'
-                    borderWidth='0'
-                    img={<img className='w-[21px]' src="/assets/arrow-right2.svg" alt="arrow right" role='img' />} 
-                    >Claim</Button>
+                    <SolidButton >Claim <img className='w-[21px]' src="/assets/arrow-right2.svg" alt="arrow right" role='img' /></SolidButton>
               </div>
               <div className='flex flex-col w-[459px] h-[289px] p-7 rounded-[20px] border border-[#C6EEDB] items-end justify-between'>
                   <div className='w-full h-[64px] flex justify-between items-center  '>

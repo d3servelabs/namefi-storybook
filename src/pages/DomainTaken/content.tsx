@@ -1,7 +1,7 @@
 import React from 'react'
 import { OwnedDomainsGrid, OwnedDomainsGridProps } from '../../components/OwnedDomainsGrid'
 import { DomainCard, DomainCardProps } from '../../components/DomainCard'
-import { DomainTakenMessage, DomainTakenMessageProps } from '../../components/DomainTakenMessage'
+import { DomainTakenMessage, DomainTakenMessageProps } from './DomainTakenMessage'
 
 export type DomainTakenContentProps = {
   domainCardProps: DomainCardProps
@@ -18,4 +18,4 @@ export const DomainTakenContent = ({domainCardProps, domainMessageProps, ownedDo
       <OwnedDomainsGrid {...ownedDomainsProps}/>
     </section>
   )
-}
+} 
