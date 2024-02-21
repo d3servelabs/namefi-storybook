@@ -28,3 +28,6 @@ lib
 .env
 .env.*
 *.env 
+
+# static storybook files
+storybook-static
