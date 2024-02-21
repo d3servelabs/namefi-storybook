@@ -31,11 +31,11 @@ export default [
 			peerDepsExternal(),
 			resolve(),
 			commonjs(),
-			typescript({ tsconfig: './tsconfig.lib.json' }),
 			postcss({
 				extensions: ['.css'],
 				extract: true,  // extracts all css to 'dist/styles.css'
 			}),
+			typescript({ tsconfig: './tsconfig.lib.json' }),
 		],
 	},
 	{
