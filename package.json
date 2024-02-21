@@ -8,7 +8,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:vite && npm run build:types",
+    "build:vite": "vite build",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist/types --project tsconfig.lib.json",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -16,8 +18,7 @@
     "test-storybook": "test-storybook",
     "chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}",
     "chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
-    "chromatic": "npm run chromatic:full",
-    "build:lib": "tsc --outDir dist"
+    "chromatic": "npm run chromatic:full"
   },
   "dependencies": {
     "@radix-ui/themes": "^2.0.3",
@@ -32,6 +33,7 @@
     "tailwind-merge": "^2.2.1",
     "typescript": "^5.3.3"
   },
+  "license":"UNLICENSED",
   "devDependencies": {
     "@storybook/addon-designs": "^7.0.9",
     "@storybook/addon-essentials": "^7.6.13",
