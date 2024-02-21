@@ -27,7 +27,6 @@ export default [
 				sourcemap: true,
 			},
 		],
-		external: ['@uidotdev/useHooks'],
 		plugins: [
 			peerDepsExternal(),
 			resolve(),
