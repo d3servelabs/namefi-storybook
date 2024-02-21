@@ -1,6 +1,6 @@
 {
   "name": "@namefi/storybook",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "engines": {
     "node": ">=20 < 21",
     "npm": ">=10 < 11"
