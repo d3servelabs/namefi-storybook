@@ -1,7 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react';
-import '../../index.css';
 import { AppLayoutFooterLink } from './AppLayoutFooterLink';
-
 
 type AppLayoutFooterProps = React.ComponentProps<'div'> & {
 	links:
