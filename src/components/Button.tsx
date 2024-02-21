@@ -11,7 +11,7 @@ export type ButtonProps = Partial<{
   borderWidth: string;
   color: string
   disabled: boolean
-  buttonProps?: React.ComponentPropsWithRef<'button'>
+  buttonProps?: React.ComponentPropsWithRef<'button'> 
 }>
 export const Button = ({children, img, label, color, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled}: ButtonProps) => {
   return (

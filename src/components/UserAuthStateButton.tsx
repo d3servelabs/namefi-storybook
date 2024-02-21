@@ -17,10 +17,10 @@ export const UserAuthStateButton = ({children, backgroundColor, onClick, authSta
         {backgroundColor}
         }
     >
-        <div className="block w-[48px] min-w-[48px] h-[48px] bg-[#7d7d7d] rounded-full ">
+        <div className="block w-[48px] min-w-[48px] h-[48px] bg-[#7d7d7d] rounded-full  ">
             {authStateLogo}
         </div>
-        <p className="text-white text-base font-medium font-primary">{children}</p>
+        <p className="text-white text-base font-medium font-primary ">{children}</p>
         {rightArrowImg}
     </button>
   )
