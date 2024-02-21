@@ -13,9 +13,9 @@
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-
 		"jsx": "react-jsx",
 		"declaration": true,
+		"outDir": "dist",
 		"noImplicitAny": false,
 		"baseUrl": ".",
 		"paths": {
@@ -38,9 +38,8 @@
 		}
 	},
 	"include": [
-		"src/components/HeaderSearchBar.tsx", 
-		"src/components/AppLayout/AppLayoutFooter.tsx",
-		"src/components/AppLayout/AppLayoutFooterLink.tsx",
+		"src/index.ts",
+		"src/components/HeaderSearchBar.tsx",
 		"src/styles", "src/assets", "src/vite.config.js"
 	],
 	"references": [{ "path": "./tsconfig.node.json" }]

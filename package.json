@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "npm run build:vite && npm run build:types",
     "build:vite": "vite build",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist/types --project tsconfig.lib.json",
+    "build:types": "tsc --emitDeclarationOnly --project tsconfig.lib.json",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
