@@ -5,7 +5,9 @@
     "node": ">=20 < 21",
     "npm": ">=10 < 11"
   },
-  "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -70,8 +72,5 @@
     "storybook": "^7.6.13",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.8"
-  },
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts"
+  }
 }
