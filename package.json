@@ -1,6 +1,6 @@
 {
   "name": "@namefi/storybook",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "engines": {
     "node": ">=20 < 21",
     "npm": ">=10 < 11"
@@ -33,7 +33,7 @@
     "tailwind-merge": "^2.2.1",
     "typescript": "^5.3.3"
   },
-  "license":"UNLICENSED",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@storybook/addon-designs": "^7.0.9",
     "@storybook/addon-essentials": "^7.6.13",
