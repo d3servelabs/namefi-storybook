@@ -20,6 +20,7 @@
     "chromatic": "npm run chromatic:full"
   },
   "dependencies": {
+    "@radix-ui/themes": "^2.0.3",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.14",
     "clsx": "^2.1.0",
