@@ -18,7 +18,9 @@
     "test-storybook": "test-storybook",
     "chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}",
     "chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
-    "chromatic": "npm run chromatic:full"
+    "chromatic": "npm run chromatic:full",
+    "bump": "npm version patch && git push --follow-tags",
+    "publish": "npm publish"
   },
   "dependencies": {
     "@radix-ui/themes": "^2.0.3",
