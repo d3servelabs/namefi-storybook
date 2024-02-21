@@ -15,7 +15,7 @@
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"jsx": "react-jsx",
+		"jsx": "react",
 		"declaration": true,
 		"declarationDir": "lib",
 		"noImplicitAny": false,
