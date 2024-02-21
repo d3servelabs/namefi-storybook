@@ -25,8 +25,8 @@ export const Default: Story = {
 					links={
 						<>
 							<AppLayoutFooterLink href={'#'}>Contact Us</AppLayoutFooterLink>
-							<AppLayoutFooterLink href={'#'}>Contact Us</AppLayoutFooterLink>
-							<AppLayoutFooterLink href={'#'}>Contact Us</AppLayoutFooterLink>
+							<AppLayoutFooterLink href={'#'}>Private Terms</AppLayoutFooterLink>
+							<AppLayoutFooterLink href={'#'}>Terms & Conditions</AppLayoutFooterLink>
 						</>
 					}
 				/>
