@@ -41,9 +41,9 @@ export const Content: Story = {
     },
     dashBoardProps: {
         domainCreditProps: {
-            balanceProps: {
-                balance: 100.23
-            }
+            // balanceProps: {
+            //     balance: 100.23
+            // }
         },
         userName: ''
     }

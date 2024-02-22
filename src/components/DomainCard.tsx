@@ -45,11 +45,14 @@ export const DomainCard = (props: DomainCardProps) => {
 
 
     return (
-        <div
-            className='relative rounded-[20px] p-6 bg-black flex flex-col justify-between items-center w-[400px] h-[400px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
+        <div className='relative rounded-[20px] p-6 bg-black flex flex-col justify-between items-center w-[400px] h-[400px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
             <div className='flex w-full h-[30px] items-center justify-between'>
                 <p>
-                    {status==='TAKEN'? (sameOwner ?<NamefiBrandText fontSize={'24px'} color={'#FEF556'} text={'You Own This'} /> : <NamefiBrandText fontSize={'24px'} color={'#3488FC'} text={'Taken'} /> ) : <NamefiBrandText fontSize={'24px'} color={'#48E59B'} text={'Available'} /> }
+                    {status==='TAKEN'? 
+                        (sameOwner ?<NamefiBrandText fontSize={'24px'} color={'#FEF556'} text={'You Own This'} /> :
+                                 <NamefiBrandText fontSize={'24px'} color={'#3488FC'} text={'Taken'} /> ) : 
+                                 <NamefiBrandText fontSize={'24px'} color={'#48E59B'} text={'Available'} /> 
+                    }
                 </p>
                 <button className='relative block' onClick={onSettingsClicked}>
                     { sameOwner &&  <img className='w-[30px]' src="/assets/Gear.svg" alt="Gear image" role='img'/>}

@@ -18,7 +18,7 @@ export const Balance = ({balance, approxBalance=false, fontSizeP, fontSizeSpan, 
         return [undefined, undefined]
     }, [balance])
 
-  return (
+  return ( 
    <> 
         {
             truncatedBalance &&<> <p className="text-lg text-white tracking-wide font-normal font-primary "

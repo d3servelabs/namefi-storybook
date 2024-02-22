@@ -3,7 +3,7 @@ import React from "react";
 export const DiscordIcon = React.memo<{className}>(({className})=>{
     return <svg className={className} width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="30" cy="30" r="30" fill="#342C2C"/>
-        <g clipPath="url(#clip0_102_845)">
+        <g clipPath="url(#clip0_102_845)"> 
             <mask id="mask0_102_845" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="10" y="10" width="41" height="41">
                 <path d="M50.625 10.625H10.625V50.625H50.625V10.625Z" fill="white"/>
             </mask>
