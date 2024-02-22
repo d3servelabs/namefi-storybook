@@ -1,7 +1,42 @@
+
+const colors = require('tailwindcss/colors');
+
+/**
+ * @template T
+ * @param {number} start
+ * @param {number} stop
+ * @param {number} step
+ * @param {(value:number,index:number)=>T} converter
+ * @returns {T[]}
+ */
+const arrayRange = (start, stop, step, converter) =>
+    Array.from(
+        { length: ((stop - start) / step) + 1 },
+        (value, index) =>{
+          const output = start + index * step;
+          if(!converter) return output;
+          else return converter(output,index)
+        }
+    );
+
+const grayscale = Object.fromEntries(
+    Array(99)
+        .fill(0)
+        .map((value, index, array) => [index + 1, `${index + 1}%`]),
+);
+
+const borderRadius = Object.fromEntries(
+    arrayRange(0,100,1,(output)=> ([`rounded-${output}`,`${(output/4).toPrecision(2)}rem`]))
+);
+const fontSize = Object.fromEntries(
+    arrayRange(0,100,1,(output)=> ([`text-${output}`,`${(output/4).toPrecision(2)}rem`]))
+);
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      borderRadius,fontSize,
       fontFamily: {
         primary: ['Roboto Mono', 'Serif'],
         secondary: ['Nunito', 'Serif'],
@@ -54,6 +89,7 @@ module.exports = {
         'loading': 'loading 1s ease-in-out infinite alternate',
         'dissolve': 'dissolve 0.2s linear 1'
       },
+
     },
   },
   plugins: [],
