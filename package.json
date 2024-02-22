@@ -36,6 +36,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-designs": "^7.0.9",

@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
+import image from '@rollup/plugin-image';
 
 // This is required to read package.json file when
 // using Native ES modules in Node.js
@@ -36,6 +37,7 @@ export default [
 				extract: true,  // extracts all css to 'dist/styles.css'
 			}),
 			typescript({ tsconfig: './tsconfig.lib.json' }),
+			image(),
 		],
 	},
 	{
