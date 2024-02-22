@@ -1,7 +1,5 @@
-import { AppLayoutFooter } from './components/AppLayout/AppLayoutFooter';
-import { AppLayoutFooterLink } from './components/AppLayout/AppLayoutFooterLink';
-import { Logo } from './components/Logo';
-
+import { BaseLayoutFooter } from '@components/Layouts/BaseLayout/BaseLayoutFooter';
+import { BaseLayoutFooterLink } from '@components/Layouts/BaseLayout/BaseLayoutFooterLink';
 import './index.css';
 
-export { AppLayoutFooter, AppLayoutFooterLink };
+export { BaseLayoutFooter, BaseLayoutFooterLink };
