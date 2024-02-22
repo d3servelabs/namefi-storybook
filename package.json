@@ -24,8 +24,6 @@
   },
   "dependencies": {
     "@radix-ui/themes": "^2.0.3",
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.11.14",
     "@uidotdev/usehooks": "^2.4.1",
     "@web3uikit/icons": "^1.1.2",
     "clsx": "^2.1.0",
@@ -54,6 +52,8 @@
     "@storybook/test": "^7.6.13",
     "@storybook/test-runner": "^0.16.0",
     "@storybook/theming": "^7.6.13",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.14",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
