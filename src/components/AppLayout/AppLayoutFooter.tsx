@@ -2,6 +2,7 @@ import React, { ReactElement, ReactNode } from 'react';
 import { AppLayoutFooterLink } from './AppLayoutFooterLink';
 import { Logo } from '../Logo';
 
+
 type AppLayoutFooterProps = React.ComponentProps<'div'> & {
 	links:
 		| ReactNode
@@ -17,7 +18,7 @@ export function AppLayoutFooter({ links }: AppLayoutFooterProps) {
 					<Logo></Logo>
 				</div>
 				<div className="text-neutral-300 text-base text-[16px] font-normal font-['Roboto'] leading-relaxed tracking-tight">
-					D3SERVE LABS, Inc. All Rights Reserved.
+					Built by D3SERVE LABS Inc.
 				</div>
 			</div>
 			<div className="flex flex-row flex-wrap justify-center gap-4 lg:justify-end items-start lg:gap-12 ">
