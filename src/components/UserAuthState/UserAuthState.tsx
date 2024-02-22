@@ -1,8 +1,11 @@
 import React, { useMemo } from 'react';
-import { ShortAddress } from './ShortAddress';
-import { UserAuthStateTile, UserAuthStateAction, UserAuthStateNetwork, UserAuthStateLabel } from './UserAuthStateTile';
+import { ShortAddress } from '../ShortAddress';
+import { UserAuthStateTile } from './Tile/UserAuthStateTile';
 import { Popover } from '@radix-ui/themes';
-import { UserAuthStateDropDown } from './UserAuthStateDropDown';
+import { UserAuthStateDropDown } from './Dropdown/UserAuthStateDropDown';
+import {UserAuthStateTileLabel} from "@components/UserAuthState/Tile/UserAuthStateTileLabel";
+import {UserAuthStateTileNetwork} from "@components/UserAuthState/Tile/UserAuthStateTileNetwork";
+import {UserAuthStateTileAction} from "@components/UserAuthState/Tile/UserAuthStateTileAction";
 
 export type UserAuthStateProps = Partial<{
 	userAddress;
@@ -29,7 +32,7 @@ export const UserAuthState = ({
 				<Popover.Trigger>
 					<UserAuthStateTile backgroundColor={userAddress ? '#111' : '#111111b3'}>
 						<UserAuthStateTile.Network network={1} onClick={onNetworkClicked} />
-						<UserAuthStateLabel>
+						<UserAuthStateTile.Label>
 							{userLoading || balanceLoading ? (
 								'Loading...'
 							) : networkError ? (
@@ -39,8 +42,8 @@ export const UserAuthState = ({
 							) : (
 								'Connect Wallet'
 							)}
-						</UserAuthStateLabel>
-						<UserAuthStateAction>
+						</UserAuthStateTile.Label>
+						<UserAuthStateTile.Action>
 							{userLoading || balanceLoading || networkError ? (
 								<img
 									className="w-[22px]"
@@ -62,11 +65,15 @@ export const UserAuthState = ({
 									role="svg"
 								/>
 							)}
-						</UserAuthStateAction>
+						</UserAuthStateTile.Action>
 					</UserAuthStateTile>
 				</Popover.Trigger>
 				<Popover.Content>
-					<UserAuthStateDropDown />
+					<UserAuthStateDropDown>
+						<UserAuthStateDropDown.Header userAddress={userAddress} loading={userLoading}/>
+						<UserAuthStateDropDown.Body/>
+						<UserAuthStateDropDown.Footer/>
+					</UserAuthStateDropDown>
 				</Popover.Content>
 			</Popover.Root>
 		</>

@@ -2,7 +2,9 @@
 	"compilerOptions": {
 		"target": "ESNext",
 		"useDefineForClassFields": true,
+		"outDir": "lib",
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		
 		"allowJs": false,
 		"skipLibCheck": true,
 		"esModuleInterop": false,
@@ -13,8 +15,9 @@
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"jsx": "react-jsx",
+		"jsx": "react",
 		"declaration": true,
+		"declarationDir": "lib",
 		"noImplicitAny": false,
 		"baseUrl": ".",
 		"paths": {
@@ -36,6 +39,13 @@
 
 		}
 	},
-	"include": ["src"],
+	"include": [
+		"src/index.ts",
+		"src/index.css",
+		"src/components/AppLayout/AppLayoutFooter.tsx",
+		"src/components/AppLayout/AppLayoutFooterLink.tsx",
+		"src/styles", "src/assets", "src/vite.config.js"
+	],
+	"exclude": ["node_modules", "lib", "dist"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
