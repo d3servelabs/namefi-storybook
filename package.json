@@ -55,6 +55,8 @@
     "@storybook/theming": "^7.6.13",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.14",
+    "@svgr/rollup": "^8.1.0",
+    "vite-plugin-svgr": "^4.2.0",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",

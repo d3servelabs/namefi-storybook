@@ -32,6 +32,9 @@
 			],
 			"@stories/*": [
 				"src/stories/*"
+			],
+			"@utils/*": [
+				"src/utils/*"
 			]
 
 		}

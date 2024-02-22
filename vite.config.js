@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from "path";
+import svgr from "vite-plugin-svgr";
 
 
 // https://vitejs.dev/config/
@@ -14,6 +15,7 @@ export default defineConfig({
       '@assets': path.resolve(__dirname,"./src/assets"),
       '@pages': path.resolve(__dirname,"./src/pages"),
       '@stories': path.resolve(__dirname,"./src/stories"),
+      '@utils': path.resolve(__dirname,"./src/utils"),
     }
   },
   build: {
@@ -24,6 +26,9 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ["react"],
+      plugins:[
+        svgr(),
+      ],
       output: {
         globals: {
           'react': 'React'
