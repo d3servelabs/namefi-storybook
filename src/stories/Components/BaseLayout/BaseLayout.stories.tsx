@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BaseLayoutFooter } from '@components/Layouts/BaseLayout/BaseLayoutFooter';
-import { BaseLayoutFooterLink } from '@components/Layouts/BaseLayout/BaseLayoutFooterLink';
-import { BaseLayoutRoot } from '@components/Layouts/BaseLayout/BaseLayoutRoot';
-import { UserAuthState } from '@components/UserAuthState/UserAuthState';
-import { BaseLayoutHeader } from '@components/Layouts/BaseLayout/BaseLayoutHeader';
-import { BaseLayoutBody } from '@components/Layouts/BaseLayout/BaseLayoutBody';
+import  BaseLayoutFooter from '@components/Layouts/BaseLayout/BaseLayoutFooter';
+import  BaseLayoutFooterLink from '@components/Layouts/BaseLayout/BaseLayoutFooterLink';
+import  BaseLayoutRoot from '@components/Layouts/BaseLayout/BaseLayoutRoot';
+import  {UserAuthState} from '@components/UserAuthState/UserAuthState';
+import  BaseLayoutHeader from '@components/Layouts/BaseLayout/BaseLayoutHeader';
+import  BaseLayoutBody from '@components/Layouts/BaseLayout/BaseLayoutBody';
 
-const meta: Meta<typeof BaseLayout> = {
+const meta: Meta<typeof BaseLayoutRoot> = {
 	title: 'Components/Layouts/BaseLayout',
-	component: BaseLayout,
+	component: BaseLayoutRoot,
 	parameters: {
 		layout: 'fullscreen',
 		backgrounds: {
@@ -25,7 +25,7 @@ export const Default: Story = {
 	render: () => {
 		return (
 			<div className={'w-full h-full min-h-[720px]'}>
-				<BaseLayout
+				<BaseLayoutRoot
 					className={'min-h-[720px]'}
 					header={<BaseLayoutHeader endSlot={<UserAuthState />} />}
 					footer={
@@ -46,7 +46,7 @@ export const Default: Story = {
 					<BaseLayoutBody>
 &nbsp;
 					</BaseLayoutBody>
-				</BaseLayout>
+				</BaseLayoutRoot>
 			</div>
 		);
 	},
