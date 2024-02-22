@@ -13,7 +13,7 @@ export function AppLayoutFooter({ links }: AppLayoutFooterProps) {
 		<div className="w-full min-h-[100px] bg-neutral-800 rounded-tl-[2rem] rounded-tr-[2rem] grid items-center justify-center lg:justify-between grid-cols-1 lg:grid-cols-2 px-[clamp(2rem,6.25vw,7.5rem)]">
 			<div className="justify-start items-center gap-6 flex">
 				<div className="flex-col justify-start items-start gap-9 inline-flex">
-					<div className="text-white text-3xl font-bold font-['Zilla Slab Highlight'] tracking-[3px]">
+					<div className="text-white text-3xl font-bold font-['Zilla_Slab_Highlight'] tracking-[3px]">
 						Namefi
 					</div>
 				</div>

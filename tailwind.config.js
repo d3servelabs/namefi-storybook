@@ -1,6 +1,5 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  prefix: 'nfui-',
   theme: {
     extend: {
       fontFamily: {
