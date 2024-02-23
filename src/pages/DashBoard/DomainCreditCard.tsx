@@ -1,13 +1,14 @@
 import { Balance, BalanceProps } from '@components/Balance'
 import { SolidButton } from '@components/Buttons/SolidButton';
 import React from 'react'
-import { DashboardBalance } from './DashboardBalance';
+import { DashboardBalance, DashboardBalanceProps } from './DashboardBalance';
 
 export type DomainCreditCardProps = {
-    userName?: string
+    userName?: string;
+    dashboardBalanceProps?: DashboardBalanceProps
 }
 
-export const DomainCreditCard = ({userName}: DomainCreditCardProps) => {
+export const DomainCreditCard = ({userName, dashboardBalanceProps}: DomainCreditCardProps) => { 
   return (
     <div className='relative rounded-[20px] flex flex-col justify-between items-end w-[493px] h-[361px]'>
               <div className='w-full h-[48px] flex items-center justify-between'>
@@ -22,7 +23,7 @@ export const DomainCreditCard = ({userName}: DomainCreditCardProps) => {
                     <div className='w-full h-[75px] '>
                         <div className='h-full w-[255px] flex justify-between items-start '>
                             <div className='w-[125px] h-full flex flex-col pt-3 '>
-                                <DashboardBalance />
+                                <DashboardBalance {...dashboardBalanceProps}/>
                             </div>
                             <div className='h-[59.2px] w-[114px] flex items-center gap-[8px]'>
                                 <p className='font-["Roboto_Mono"] font-normal text-white text-[25.4px] tracking-[0.05em]'>$NFSC</p>

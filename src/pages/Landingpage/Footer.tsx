@@ -37,11 +37,11 @@ export const Footer = () => {
             </div>
             <nav className='w-full flex justify-between items-center'>
                 <p className='font-normal text-base tracking-wide text-[#d6d6d6] '>D3SERVE LABS, Inc. All Rights Reserved.</p>
-                <ul className='flex gap-12 '>
-                    <li>About us</li>
-                    <li>Career</li>
-                    <li>Contact us</li>
-                    <li>Terms and conditions</li>
+                <ul className='flex gap-12 text-[#d6d6d6] tracking-wide text-lg font-normal '>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
                 </ul>
             </nav>
         </div>

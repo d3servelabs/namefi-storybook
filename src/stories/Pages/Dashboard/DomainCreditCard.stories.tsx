@@ -5,8 +5,9 @@ import { DomainCreditCard } from '@pages/DashBoard/DomainCreditCard';
 import moment from "moment";
 
 const meta = {
-  title: 'Pages/Dashboard',
+  title: 'Pages/Dashboard/DomainCreditCard',
   component: DomainCreditCard,
+  tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -22,10 +23,12 @@ type Story = StoryObj<typeof meta>;
 
 export const DomainCreditCardStory: Story = { 
   args: {
+    userName: 'Vitalik.eth',
+    dashboardBalanceProps: {
       balanceProps: {
-        balance: 100.234
-      },
-    userName: 'Vitalik.eth'
+        balance: 100.23
+      }
+    }
   }
  
 }

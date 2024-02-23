@@ -3,7 +3,7 @@ import {DomainTile, DomainTileProps} from './DomainTile'
 
 export type OwnedDomainsGridProps = {
     loading?:boolean,
-    tlds?: string[],
+    tlds?: string[], 
     onTldClicked?: (tld:string)=>any;
     domains?: Partial<DomainTileProps>[];
     domainTileProps: DomainTileProps

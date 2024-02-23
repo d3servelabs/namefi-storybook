@@ -1,11 +1,7 @@
 import React, { useMemo } from "react";
 import { NamefiBrandText } from "./NamefiBrandText";
 
-// export interface DomainTileProps {
-//   key: string;
-//   domainName: string;
-//   isAvailable?: boolean
-// }
+
 export type DomainTileProps =
     {
         key?: string;
@@ -13,7 +9,7 @@ export type DomainTileProps =
         loading?: boolean,
         showExpiration?: boolean,
         expirationDate?: Date,
-    } & (
+    } & ( 
     {
         sameOwner?: boolean,
         onAddClicked?: ()=> any;

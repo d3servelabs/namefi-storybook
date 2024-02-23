@@ -17,4 +17,4 @@ export const CartStory: Story = {
     args: {
         cartItems: 2
     }
-}
+} 

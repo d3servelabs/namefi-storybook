@@ -1,11 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../../index.css'
-import '../../../App.css'
 import { Dashboard } from '@pages/DashBoard/DashBoard';
 import moment from "moment";
 
 const meta = {
-  title: 'Pages/Dashboard/Content',
+  title: 'Pages/Dashboard',
   component: Dashboard,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
@@ -23,11 +21,9 @@ type Story = StoryObj<typeof meta>;
 export const Content: Story = { 
   args: {
     domainCreditProps: {
-      balanceProps: {
-        balance: 100.234
-      }
     },
-    userName: 'Vitalik.eth'
+    userName: 'Vitalik.eth',
+    
   }
  
 }

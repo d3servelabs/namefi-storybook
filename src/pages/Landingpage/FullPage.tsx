@@ -21,7 +21,7 @@ export const FullPage = () => {
     const [prev, setPrev] = useState(0)
   return (
     <div className='w-full bg-black-1000 flex flex-col justify-center items-center gap-[100px] pt-10'>
-        <div className='w-full h-screen flex flex-col justify-between items-center'>
+        <div className='w-full h-screen flex flex-col justify-between items-center pb-10'>
             <Header />
             <div className='w-full flex flex-col justify-between items-center h-[320px]'>
                 <h1 className='text-white tracking-wider text-[64px] font-bold font-third '>Trading domains on chain.</h1>

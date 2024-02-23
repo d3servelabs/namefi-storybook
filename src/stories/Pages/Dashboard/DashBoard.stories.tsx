@@ -2,11 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
 import { Dashboard } from '@pages/DashBoard/DashBoard';
-import { FullPage as FullPageComponent } from './Fullpage';
-import moment from "moment";
+import { FullPage as FullPageComponent,  } from './Fullpage';
 
 const meta = {
-  title: 'Pages/Dashboard/Fullpage',
+  title: 'Pages/Dashboard',
   component: FullPageComponent,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
@@ -21,7 +20,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Content: Story = { 
+export const FullPage: Story = { 
   args: {
     pageLayoutProps: {
         
@@ -32,18 +31,12 @@ export const Content: Story = {
             },
             authStateProps: {
                 userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-                // balanceProps: { 
-                //     balance: 100.23
-                // }
             }
           },
           children: null
     },
     dashBoardProps: {
         domainCreditProps: {
-            // balanceProps: {
-            //     balance: 100.23
-            // }
         },
         userName: ''
     }

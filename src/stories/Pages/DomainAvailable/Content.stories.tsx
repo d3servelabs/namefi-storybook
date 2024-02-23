@@ -32,7 +32,6 @@ export const Content: Story = {
         price: 71,
         userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
         connectButtonProps: {
-          label: '',
           onClick: () => {}
         }
       }
