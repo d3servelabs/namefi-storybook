@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Roboto Mono', 'Serif'],
-        secondary: ['Nunito', 'Serif']
+        secondary: ['Nunito', 'Serif'],
+        third: ['Roboto Flex', 'Serif'],
       },
       colors: {
         warning: '#FF3C3C',
@@ -19,10 +20,12 @@ module.exports = {
           300: '#C6EEDB',
           dark: '#232C27',
           black: '#111111',
-          blue: '#70A8F4'
+          blue: '#70A8F4',
+          green: '#48E59B'
         },
         black: {
           200: '#d9d9d9cc',
+          400: '#797979',
           500: '#D9D9D9',
           600: '#313131e6',
           700: '#111111b3',

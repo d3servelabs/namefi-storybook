@@ -1,15 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card2 as DomainCardComponent } from '@pages/Landingpage/DomainCard';
+import { FullPage as FullPageComponent } from '@pages/Landingpage/FullPage';
+import '../../../index.css'
+import '../../../App.css'
+
 const meta = {
   title: 'Pages/Landingpage',
-  component: DomainCardComponent,
+  component: FullPageComponent,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    layout: 'fullscreen',
   },
-} satisfies Meta<typeof DomainCardComponent>;
+} satisfies Meta<typeof FullPageComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Card2: Story = {}
+export const FullPage: Story = {}

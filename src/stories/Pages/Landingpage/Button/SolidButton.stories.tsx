@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card2 as DomainCardComponent } from '@pages/Landingpage/DomainCard';
+import { SolidButton as SolidButtonComponent } from '@pages/Landingpage/SolidButton';
 const meta = {
-  title: 'Pages/Landingpage',
-  component: DomainCardComponent,
+  title: 'Pages/Landingpage/Button',
+  component: SolidButtonComponent,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
-} satisfies Meta<typeof DomainCardComponent>;
+} satisfies Meta<typeof SolidButtonComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Card2: Story = {}
+export const SolidButton: Story = {}

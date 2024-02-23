@@ -1,15 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Subscription as SubscriptionComponent } from '@pages/Landingpage/Subscription';
+import { Footer as FooterComponent } from '@pages/Landingpage/Footer';
+
 const meta = {
   title: 'Pages/Landingpage',
-  component: SubscriptionComponent,
+  component: FooterComponent,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
-} satisfies Meta<typeof SubscriptionComponent>;
+} satisfies Meta<typeof FooterComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Subscription: Story = {}
+export const Footer: Story = {}

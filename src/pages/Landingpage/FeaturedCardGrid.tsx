@@ -2,12 +2,13 @@ import React from 'react'
 import { FasterIcon } from './icons/FasterIcon'
 import { SaferIcon } from './icons/SaferIcon'
 import { DefiIcon } from './icons/DEfiIcon'
+import { NamefiBrandText } from '@components/NamefiBrandText'
 
 export const FeaturedCardGrid = () => {
 
     const cardContent = [
         {
-            label: 'FASTER', 
+            label: 'FASTER',  
             text:['transact in secs, not weeks', 'sellers get paid faster', 'buyers get domains faster'],
             img: <FasterIcon className={''} />
         },
@@ -23,8 +24,13 @@ export const FeaturedCardGrid = () => {
         }
     ]
   return (
-    <div className='block relative w-[1230px] h-[736px] rounded-[20px] flex justify-center items-end bg-black-900 '>
-        <div className='relative pb-6 flex gap-5'>
+    <div className='block relative w-[1230px] h-[736px] rounded-[20px] flex flex-col justify-between py-14 items-center bg-black-900 bg-red-400 '>
+        <div className='w-[368px] h-[58px] font-bold tracking-wider flex justify-between self-start '>
+            <NamefiBrandText text={'Namefi'} color='#48e59b' fontSize='48px' />
+            <p className=' text-4xl text-primary-500 '>Features</p>
+
+        </div>
+        <div className='relative flex gap-5'>
             {
                 cardContent.map(data => <div key={data.label} 
                     className='relative w-[350px] h-[460px] rounded-3xl p-2.5 bg-[#ffffffe6] hover:bg-white'>
