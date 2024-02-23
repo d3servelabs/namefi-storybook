@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AppLayoutFooter } from '@components/AppLayout/AppLayoutFooter';
 import { AppLayoutFooterLink } from '@components/AppLayout/AppLayoutFooterLink';
+import allModes from '../../../../../.storybook/mode';
 
 const meta: Meta<typeof AppLayoutFooter> = {
 	title: 'Components/AppLayout/Footer',
@@ -9,6 +10,13 @@ const meta: Meta<typeof AppLayoutFooter> = {
 		layout: 'fullscreen',
 		backgrounds: {
 			default: 'light',
+		},
+		chromatic: {
+			//🔶 Test each story for ArticleCard in two modes
+			modes: {
+			  "light mobile": allModes["light mobile"],
+			  "dark desktop": allModes["dark desktop"],
+			},
 		},
 	},
 	tags: ['autodocs'],
@@ -20,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	render: () => {
 		return (
-			<div className={'w-full'}>
+			<div className={'w-full'}> {'XXX'}
 				<AppLayoutFooter
 					links={
 						<>

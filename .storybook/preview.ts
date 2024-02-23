@@ -13,6 +13,20 @@ const customViewports = {
       height: '1080px',
     },
   },
+  mediumDesktop: {
+    name: 'Medium Desktop',
+    styles: {
+      width: '992px',
+      height: '768px',
+    },
+  },
+  iphone14ProMaxPortrait: {
+    name: 'iPhone 14 Pro Max Portrait',
+    styles: {
+      width: '428px',
+      height: '926px',
+    },
+  },
 };
 const preview: Preview = {
   parameters: {
