@@ -1,5 +1,31 @@
 export const allModes = {
-    small: { name: "Small", styles: { width: "640px", height: "900px" } },
-    medium: { name: "Medium", styles: { width: "768px", height: "900px" } },
-    large: { name: "Large", styles: { width: "1024px", height: "900px" } },
-};
+    mobile: {
+      viewport: "small",
+    },
+    desktop: {
+      viewport: "large",
+    },
+    dark: {
+      backgrounds: { value: "#1E293B" },
+      theme: "dark",
+    },
+    light: {
+      backgrounds: { value: "#fff" },
+      theme: "light",
+    },
+    "dark desktop": {
+      backgrounds: { value: "#1E293B" },
+      theme: "dark",
+      viewport: "large",
+    },
+    "dark iphone": {
+        backgrounds: { value: "#1E293B" },
+        theme: "dark",
+        viewport: "iphone14ProMaxPortrait",
+    },
+    "light mobile": {
+      backgrounds: { value: "#fff" },
+      theme: "light",
+      viewport: "small",
+    },
+  };

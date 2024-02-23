@@ -12,10 +12,11 @@ const meta: Meta<typeof AppLayoutFooter> = {
 			default: 'light',
 		},
 		chromatic: {
-			//🔶 Test each story for ArticleCard in two modes
 			modes: {
-				mobile: allModes["small"],
-				desktop: allModes["large"],
+				"light mobile": allModes["light mobile"],
+				"dark desktop": allModes["dark desktop"],
+				"dark iphone": allModes["dark iphone"],
+				"1200px": { viewport: 1200 },
 			},
 		},
 	},
@@ -28,7 +29,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	render: () => {
 		return (
-			<div className={'w-full'}> {'XXX'}
+			<div className={'w-full'}>
 				<AppLayoutFooter
 					links={
 						<>
