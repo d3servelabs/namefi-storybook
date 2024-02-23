@@ -1,5 +1,5 @@
 import { Button, ButtonText } from '@components/Buttons/Button'
-import React from 'react'
+import React from 'react' 
 
 
 
@@ -14,7 +14,7 @@ export const BaseButton = ({children}: {children?: React.ReactNode}) => {
 export const SolidButton = ({children}: {children?: React.ReactNode}) => {
   return (
     <Button borderWidth='0' className='inline-block bg-primary-700 hover:bg-primary-500 rounded-full' >
-      <ButtonText className=' text-brand-dark text-base'>{children}</ButtonText>
+      <ButtonText className=' text-[#232C27] text-base'>{children}</ButtonText>
     </Button>
   )
 }

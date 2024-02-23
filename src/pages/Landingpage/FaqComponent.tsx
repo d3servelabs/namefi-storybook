@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { BaseButton, SolidButton } from './SolidButton'
 import clsx from 'clsx'
+import { NamefiBrandText } from '@components/NamefiBrandText'
 
 
 export const FaqComponent = () => {
@@ -18,7 +19,7 @@ export const FaqComponent = () => {
             before:bg-border-500
             before:left-0
             before:bottom-0 '> 
-            <span className='font-semibold text-[21px] tracking-widest '>How does Namefi work?</span> 
+            <span className='font-semibold text-[21px] tracking-widest '>How does <NamefiBrandText text='Namefi' color='' fontSize='21px'  /> work?</span> 
             <img src={height? "/assets/pin.svg": "/assets/pin-fill.svg"} alt="pin icon" />
          </button>
         <div className={clsx(' overflow-hidden flex flex-col gap-5 duration-200', height && 'duration-200 max-h-[0]')}>

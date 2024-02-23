@@ -24,7 +24,7 @@ export const FeaturedCardGrid = () => {
         }
     ]
   return (
-    <div className='block relative w-[1230px] h-[736px] rounded-[20px] flex flex-col justify-between py-14 items-center bg-black-900 bg-red-400 '>
+    <div className='block relative w-[1230px] h-[736px] rounded-[20px] flex flex-col justify-between py-14 items-center bg-[#24242480] '>
         <div className='w-[368px] h-[58px] font-bold tracking-wider flex justify-between self-start '>
             <NamefiBrandText text={'Namefi'} color='#48e59b' fontSize='48px' />
             <p className=' text-4xl text-primary-500 '>Features</p>

@@ -18,7 +18,7 @@ export const Subscription = ({}) => {
                 before:w-4
                 before:h-4
                 before:-right-6
-                before:-top-[0.6px]
+                before:-top-[0.6px]F
                 group-hover:before:-right-8
                 
                  '>Join Waitlist</span>
