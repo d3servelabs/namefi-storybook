@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AppLayoutFooter } from '@components/AppLayout/AppLayoutFooter';
 import { AppLayoutFooterLink } from '@components/AppLayout/AppLayoutFooterLink';
-import allModes from '../../../../../.storybook/mode';
+import { allModes } from '../../../../../.storybook/mode';
 
 const meta: Meta<typeof AppLayoutFooter> = {
 	title: 'Components/AppLayout/Footer',
@@ -14,8 +14,8 @@ const meta: Meta<typeof AppLayoutFooter> = {
 		chromatic: {
 			//🔶 Test each story for ArticleCard in two modes
 			modes: {
-			  "light mobile": allModes["light mobile"],
-			  "dark desktop": allModes["dark desktop"],
+				mobile: allModes["small"],
+				desktop: allModes["large"],
 			},
 		},
 	},

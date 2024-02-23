@@ -1,29 +1,5 @@
-
-const allModes = {
-    mobile: {
-      viewport: "iPhone 14 Pro Max Portrait",
-    },
-    desktop: {
-      viewport: "PC Monitor Full HD",
-    },
-    dark: {
-      backgrounds: { value: "#1E293B" },
-      theme: "dark",
-    },
-    light: {
-      backgrounds: { value: "#fff" },
-      theme: "light",
-    },
-    "dark desktop": {
-      backgrounds: { value: "#1E293B" },
-      theme: "dark",
-      viewport: "PC Monitor Full HD",
-    },
-    "light mobile": {
-      backgrounds: { value: "#fff" },
-      theme: "light",
-      viewport: "iPhone 14 Pro Max Portrait",
-    },
-  };
-
-export default allModes;
+export const allModes = {
+    small: { name: "Small", styles: { width: "640px", height: "900px" } },
+    medium: { name: "Medium", styles: { width: "768px", height: "900px" } },
+    large: { name: "Large", styles: { width: "1024px", height: "900px" } },
+};
