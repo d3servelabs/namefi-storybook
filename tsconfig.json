@@ -21,11 +21,11 @@
 			"@pages/*": [
 				"src/pages/*"
 			],
-			"@components/*": [
-				"src/components/*"
-			],
 			"@icons": [
 				"src/components/icons/*"
+			],
+			"@components/*": [
+				"src/components/*"
 			],
 			"@styles/*": [
 				"src/styles/*"
