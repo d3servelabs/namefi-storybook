@@ -13,6 +13,7 @@ export type ButtonProps = Partial<{
     className?:string,
 }>
 export const Button = ({children, color, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled,className, }: ButtonProps) => {
+  
   return (
     <div className={clsx('m-0 p-0 relative', disabled && 'opacity-30',className)}>
         <button

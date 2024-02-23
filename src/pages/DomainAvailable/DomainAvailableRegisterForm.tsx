@@ -9,7 +9,7 @@ export type DomainAvailableRegisterFormProps = {
     onYearsChanged: (value: number) => any,
     onRegisterClicked: () => any,
     connectButtonProps?: ButtonProps;
-    userAddress
+    userAddress 
 }
 
 export function DomainAvailableRegisterForm({
