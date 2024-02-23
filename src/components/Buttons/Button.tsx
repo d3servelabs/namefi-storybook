@@ -1,42 +1,49 @@
-import React from 'react'
-import clsx from "clsx";
-import {cn} from "@utils/cn";
+import React from 'react';
+import { cn } from '@utils/cn';
+import { ButtonLoadingContent } from '@components/Buttons/ButtonLoadingContent';
+import {ButtonText} from "@components/Buttons/ButtonText";
 
-export type ButtonProps = Partial<{
-  onClick: () => any;
-  children?: any;
-  borderColor: string;
-  backgroundColor: string;
-  borderWidth: string;
-  color: string
-  disabled: boolean
-  buttonProps?: React.ComponentPropsWithRef<'button'>
-    className?:string,
-}>
-export const Button = ({children, color, borderWidth, onClick, backgroundColor, borderColor,buttonProps,disabled,className, }: ButtonProps) => {
-  
-  return (
-    <div className={cn('m-0 p-0 relative text-lg ', disabled && 'opacity-30',className)}>
-        <button
-            {...(buttonProps || {})}
-            disabled={disabled}
-          onClick={onClick}
-            aria-disabled={disabled}
-          className={cn('block border-[1.5px] w-full items-center gap-[12px] rounded-[80px] py-[10px] px-[25px]  ', disabled && 'cursor-not-allowed')}
-          type='button'
-          style={{
-            backgroundColor,
-            borderColor,
-            borderWidth,
-            color
-          }} >
-            {children}
-        </button>
-    </div>
-  )
-}
+export type ButtonProps = React.ComponentPropsWithRef<'button'> &
+	Partial<{
+		borderColor: string;
+		backgroundColor: string;
+		borderWidth: string;
+		color: string;
+		loading?: boolean;
+		loadingContent?: React.ReactNode;
+	}>;
+export const Button = Object.assign(React.forwardRef<HTMLButtonElement,ButtonProps>(({
+	loading,
+	loadingContent,
+	children,
+	color,
+	borderWidth,
+	backgroundColor,
+	borderColor,
+	disabled,
+	className,
+	...props
+},ref) => {
+	return (
+		<button
+			ref={ref}
+			{...(props || {})}
+			type="button"
+			disabled={disabled}
+			aria-disabled={disabled}
+			className={cn(
+				'flex items-center justify-center ring-[.1em] ring-white w-full gap-[.75em] rounded-full py-[0.625em] px-[1.625em] text-lg ',
+				disabled && 'cursor-not-allowed opacity-30',
+				className,
+			)}
+			style={props.style}>
+			{loading
+				? loadingContent ?? <ButtonLoadingContent>Loading...</ButtonLoadingContent>
+				: children}
+		</button>
+	);
+}),{
+	Text: ButtonText,
+	LoadingContent: ButtonLoadingContent,
+});
 
-export const ButtonText = ({className, children}:{className?:string, children: React.ReactNode})=>{
-    return <span className={clsx('font-primary text-lg font-normal text-white ', className)}>{children}</span>
-}
-Button.Text = ButtonText

@@ -1,5 +1,6 @@
-import { Button, ButtonProps, ButtonText } from '@components/Buttons/Button'
+import { Button, ButtonProps } from '@components/Buttons/Button'
 import React from 'react'
+import {ButtonText} from "@components/Buttons/ButtonText";
 
 export type DomainTakenMessageProps = {
     isLoading: boolean

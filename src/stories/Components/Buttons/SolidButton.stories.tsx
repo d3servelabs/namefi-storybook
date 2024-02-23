@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {SolidButton as Component} from "@components/Buttons/SolidButton";
-import {Button, ButtonText} from "@components/Buttons/Button";
+import {Button} from "@components/Buttons/Button";
 import {ButtonLoadingContent} from "@components/Buttons/LoadingButton";
+import {ButtonText} from "@components/Buttons/ButtonText";
 
 const meta = {
     title: 'Components/Buttons/BaseButton/Variants',

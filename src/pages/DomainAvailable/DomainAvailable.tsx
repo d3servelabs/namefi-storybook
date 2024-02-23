@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button, ButtonProps, ButtonText } from '@components/Buttons/Button'
+import { Button, ButtonProps } from '@components/Buttons/Button'
 import { DomainAvailableRegisterForm, DomainAvailableRegisterFormProps } from './DomainAvailableRegisterForm'
 import { SetForNow } from './SetForNow'
+import {ButtonText} from "@components/Buttons/ButtonText";
 export type DomainAvailableProps = {
     userAddress,
     isDomainTaken?: boolean

@@ -3,8 +3,9 @@ import {
 	LoadingButton as Component,
 	ButtonLoadingContent,
 } from '@components/Buttons/LoadingButton';
-import { Button, ButtonText } from '@components/Buttons/Button';
+import { Button } from '@components/Buttons/Button';
 import {ArrowRight} from "@components/icons/ArrowRight";
+import {ButtonText} from "@components/Buttons/ButtonText";
 
 const meta = {
 	title: 'Components/Buttons/BaseButton/Variants',
