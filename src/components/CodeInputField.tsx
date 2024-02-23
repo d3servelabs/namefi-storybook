@@ -3,11 +3,11 @@ import clsx from 'clsx';
 
 export type InputComponentProps = {
 	incorrectAuthCode?: boolean;
-	onPasteClicked: () => any;
+	onPasteClicked?: () => any;
 	onSubmit?: () => any;
-	value: string;
+	value?: string;
 	onValueChanged?: (value: string) => any;
-	status: 'SUBMITTED' | 'NOTSUBMITTED';
+	status?: 'SUBMITTED' | 'NOTSUBMITTED';
 };
 
 export const CodeInputField = ({
