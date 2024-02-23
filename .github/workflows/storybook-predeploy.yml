@@ -35,11 +35,11 @@ jobs:
         # ⚠️ Pick one of these, matching the package manager for your project
         run: npm ci
       - name: build storybook
-        run: npm run build-storybook
+        run: npm run build-storybook --webpack-stats-json --output-dir $BUILD_DIR
       - name: Publish to Chromatic
         uses: chromaui/action@latest
         with:
-          storybookBuildDir: "storybook-static"
+          storybookBuildDir: ${{ env.BUILD_DIR }}
           onlyChanged: true # 👈 Required option to enable TurboSnap
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
