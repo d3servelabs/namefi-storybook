@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import moment from "moment";
+import { deterministicMoment } from '@stories/consts';
 
 import {FullPage as FullPageComponent} from './FullPage';
 import '../../../index.css'
@@ -37,7 +37,7 @@ export const FullPage: Story = {
             status: 'AVAILABLE',
             loading: false,
             showExpiration: true,
-            expirationDate: moment().add(1, 'year').toDate(),
+            expirationDate: deterministicMoment.add(1, 'year').toDate(),
           }
       },
       domainCardProps: {
@@ -46,7 +46,7 @@ export const FullPage: Story = {
         status: 'AVAILABLE',
         loading: false,
         showExpiration: true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
         
       },
       domainAvailableProps: {

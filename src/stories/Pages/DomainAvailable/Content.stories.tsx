@@ -3,7 +3,7 @@ import '../../../index.css'
 import '../../../App.css'
 import {DomainAvailableContent} from "../../../pages/DomainAvailable/content";
 import {OwnedDomainsGrid} from "@components/OwnedDomainsGrid";
-import moment from "moment";
+import { deterministicMoment } from '@stories/consts';
 
 const meta = {
   title: 'Pages/DomainAvailable/Content',
@@ -43,7 +43,7 @@ export const Content: Story = {
       status: 'AVAILABLE',
       loading: false,
       showExpiration: true,
-      expirationDate: moment().add(1, 'year').toDate(),
+      expirationDate: deterministicMoment.add(1, 'year').toDate(),
       
     },
     ownedDomainsProps: {
@@ -52,7 +52,7 @@ export const Content: Story = {
         status: 'AVAILABLE',
         loading: false,
         showExpiration: true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
       },
       tlds: ['.eth', '.btc'], 
       domains: [

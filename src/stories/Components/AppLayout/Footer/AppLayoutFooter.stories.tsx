@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { AppLayoutFooter } from '@components/AppLayout/AppLayoutFooter';
 import { AppLayoutFooterLink } from '@components/AppLayout/AppLayoutFooterLink';
+import { allModes } from '../../../../../.storybook/mode';
 
 const meta: Meta<typeof AppLayoutFooter> = {
 	title: 'Components/AppLayout/Footer',
@@ -9,6 +10,14 @@ const meta: Meta<typeof AppLayoutFooter> = {
 		layout: 'fullscreen',
 		backgrounds: {
 			default: 'light',
+		},
+		chromatic: {
+			modes: {
+				"light mobile": allModes["light mobile"],
+				"dark desktop": allModes["dark desktop"],
+				"dark iphone": allModes["dark iphone"],
+				"1200px": { viewport: 1200 },
+			},
 		},
 	},
 	tags: ['autodocs'],

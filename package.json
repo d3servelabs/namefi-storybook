@@ -1,6 +1,6 @@
 {
-  "name": "@namefi/storybook",
-  "version": "2.0.14",
+  "name": "@namefi/ui",
+  "version": "2.0.18",
   "engines": {
     "node": ">=20 < 21",
     "npm": ">=10 < 11"
@@ -17,15 +17,13 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
-    "chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}",
+    "chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}  --force-rebuild",
     "chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
     "chromatic": "npm run chromatic:full",
     "bump": "npm version patch && git push --follow-tags"
   },
   "dependencies": {
     "@radix-ui/themes": "^2.0.3",
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.11.14",
     "@uidotdev/usehooks": "^2.4.1",
     "@web3uikit/icons": "^1.1.2",
     "clsx": "^2.1.0",
@@ -38,6 +36,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-designs": "^7.0.9",
@@ -54,11 +53,13 @@
     "@storybook/test": "^7.6.13",
     "@storybook/test-runner": "^0.16.0",
     "@storybook/theming": "^7.6.13",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.14",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.17",
-    "chromatic": "^10.7.1",
+    "chromatic": "^11.0.0",
     "eslint": "^8.55.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",

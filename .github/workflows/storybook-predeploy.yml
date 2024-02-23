@@ -38,5 +38,7 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@latest
         with:
+          # chromatic incremental 
+          onlyChanged: true # 👈 Required option to enable TurboSnap
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
