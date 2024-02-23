@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <div className='w-full bg-[#24242480] flex justify-center items-center py-5 rounded-t-[30px] '>
         <div className='w-[1200px] h-[243px] flex flex-col justify-between'>
-            <div className='w-full h-[134px] flex flex-col justify-between bg-red-400 '>
+            <div className='w-full h-[134px] flex flex-col justify-between '>
                 <div className='w-full flex justify-between items-center '>
                     <p className='font-bold tracking-widest '>
                         <NamefiBrandText text='Namefi' fontSize='32px' color='white' />

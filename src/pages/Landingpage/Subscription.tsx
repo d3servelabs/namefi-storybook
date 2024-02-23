@@ -1,6 +1,10 @@
 import React from 'react'
 
-export const Subscription = () => {
+export type SubscriptionProps = {
+
+}
+
+export const Subscription = ({}) => {
   return (
     <form className='relative block w-[575px] h-[56px] rounded-full font-third peer '>
         <label className='relative w-full group'>

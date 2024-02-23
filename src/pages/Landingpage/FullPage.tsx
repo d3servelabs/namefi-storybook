@@ -6,6 +6,7 @@ import { PoweredBy } from './PoweredBy'
 import { FeaturedCardGrid } from './FeaturedCardGrid'
 import { Supporting } from './Supporting'
 import { BackedBy } from './BackedBy'
+import { Footer } from './Footer'
 
 export const FullPage = () => {
   return (
@@ -27,7 +28,7 @@ export const FullPage = () => {
         <div className='w-[1200px] bg-red-400 h-[670px] '>
 
         </div>
-
+        <Footer />
     </div>
   )
 }
