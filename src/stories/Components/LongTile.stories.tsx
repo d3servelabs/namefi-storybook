@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { DomainTile } from '../../components/DomainTile';
-import moment from "moment";
+import { deterministicMoment } from '@stories/consts';
 
 const meta = {
   title: 'Components/LongTile',
@@ -36,7 +36,7 @@ export const OwnedDomainTile: Story = {
         status: 'TAKEN',
         showExpiration:true,
         sameOwner: true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
     }
 };
 export const TakenDomainTile: Story = {
@@ -47,6 +47,6 @@ export const TakenDomainTile: Story = {
         status: 'TAKEN',
         sameOwner: false,
         showExpiration:false,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
     }
 };

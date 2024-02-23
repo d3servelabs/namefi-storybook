@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
 import {DomainTakenContent} from "../../../pages/DomainTaken/content";
-import moment from "moment";
+import { deterministicMoment } from '@stories/consts';
 
 const meta = { 
   title: 'Pages/DomainTaken/Content',
@@ -29,7 +29,7 @@ export const Content: Story = {
         sameOwner: false,
         loading: false,
         showExpiration: true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
       },
       tlds: ['.eth', '.btc'], 
       domains: [
@@ -46,7 +46,7 @@ export const Content: Story = {
       status: 'AVAILABLE',
       loading: false,
       showExpiration: true,
-      expirationDate: moment().add(1, 'year').toDate(),
+      expirationDate: deterministicMoment.add(1, 'year').toDate(),
       
     },
     domainMessageProps:{

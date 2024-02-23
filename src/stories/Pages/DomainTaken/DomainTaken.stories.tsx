@@ -4,7 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {FullPage as FullPageComponent} from './FullPage';
 import '../../../index.css'
 import '../../../App.css'
-import moment from "moment";
+import { deterministicMoment } from '@stories/consts';
+
 
 const meta = {
   title: 'Pages/DomainTaken/FullPage',
@@ -37,7 +38,7 @@ export const FullPage: Story = {
           sameOwner: false,
           loading: false,
           showExpiration: true,
-          expirationDate: moment().add(1, 'year').toDate(),
+          expirationDate: deterministicMoment.add(1, 'year').toDate(),
         },
         tlds: ['.eth', '.btc'], 
         domains: [
@@ -54,7 +55,7 @@ export const FullPage: Story = {
         status: 'AVAILABLE',
         loading: false,
         showExpiration: true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
         
       },
       domainMessageProps:{

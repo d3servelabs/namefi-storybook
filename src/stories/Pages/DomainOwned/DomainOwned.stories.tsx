@@ -3,7 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {FullPage as FullPageStory} from './FullPage';
 import '../../../index.css'
 import '../../../App.css'
-import moment from "moment";
+import { deterministicMoment } from '@stories/consts';
+
 
 const meta = {
   title: 'Pages/DomainOwned/FullPage',
@@ -37,7 +38,7 @@ export const FullPage: Story = {
           sameOwner: true,
           loading: false,
           showExpiration: true,
-          expirationDate: moment().add(1, 'year').toDate(),
+          expirationDate: deterministicMoment.add(1, 'year').toDate(),
         },
         tlds: ['.eth', '.btc'], 
         domains: [
@@ -57,7 +58,7 @@ export const FullPage: Story = {
         showExpiration: true,
         showOwner: true,
         sameOwner: true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
         
       },
       

@@ -17,6 +17,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>
 
+// TODO: change date to deterministic date.
+const deterministicDate = new Date('2022-12-12');
+const deterministicMoment = moment(deterministicDate);
 
 export const DomainAvailableCard: Story = {
     args: {
@@ -32,7 +35,7 @@ export const DomainTakenCard: Story = {
         status: 'TAKEN',
         showOwner:true,
         showExpiration:true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
     }
 } 
 
@@ -44,7 +47,7 @@ export const OwnedDomainCard: Story = {
         showOwner:true,
         sameOwner: true,
         showExpiration:true,
-        expirationDate: moment().add(1, 'year').toDate(),
+        expirationDate: deterministicMoment.add(1, 'year').toDate(),
     }
 }
 
