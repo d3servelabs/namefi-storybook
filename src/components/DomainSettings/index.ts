@@ -7,3 +7,5 @@ export {default as DomainSettingsNormalButton} from './SettingsCard/DomainSettin
 export {default as DomainSettingsExpirationDate} from './SettingsCard/DomainSettingsExpirationDate'
 export {default as DomainSettingsLeftSection} from './SettingsCard/DomainSettingsLeftSection'
 export {default as DomainSettingsRightSection} from './SettingsCard/DomainSettingsRightSection'
+export {default as DomainSettingsTwoSectionLayout} from './SettingsCard/DomainSettingsTwoSectionLayout'
+export {default as DomainSettingsWebViewCaption} from './SettingsCard/DomainSettingsWebViewCaption'
