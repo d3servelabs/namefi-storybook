@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function AppLayoutFooterLink({children, href}) {
+export default function BaseLayoutFooterLink({children, href}) {
     return (
         <a
             href={href}

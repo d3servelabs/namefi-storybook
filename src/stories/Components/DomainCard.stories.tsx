@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { DomainCard } from "@components/DomainCard";
 import moment from "moment";
+import { deterministicMoment } from "@stories/consts";
 
 const meta = {
     title: 'Components/DomainCard',
@@ -17,9 +18,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>
 
-// TODO: change date to deterministic date.
-const deterministicDate = new Date('2022-12-12');
-const deterministicMoment = moment(deterministicDate);
 
 export const DomainAvailableCard: Story = {
     args: {

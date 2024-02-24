@@ -13,8 +13,8 @@ import { CaretRight } from './icons/CaretRight'
 import { NamefiBrandText } from '@components/NamefiBrandText'
 import { Message1, Message2 } from './AssetsMessage'
 import clsx from 'clsx'
-import { ButtonText } from '@components/Buttons/Button'
 import { FaqComponent } from './FaqComponent'
+import {ButtonText} from "@components/Buttons/ButtonText";
 
 export type FullPageProps = {
     featuredCardProps: FeaturedCardGridProps

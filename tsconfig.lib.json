@@ -42,11 +42,12 @@
 	"include": [
 		"src/index.ts",
 		"src/index.css",
-		"src/components/AppLayout/AppLayoutFooter.tsx",
-		"src/components/AppLayout/AppLayoutFooterLink.tsx",
 		"src/components/Logo.tsx",
 		"src/styles", "src/assets", "src/vite.config.js",
 		"src/custom.d.ts",
+		"src/components/Layouts/BaseLayout/BaseLayoutFooter.tsx",
+		"src/components/Layouts/BaseLayout/BaseLayoutFooterLink.tsx",
+		"src/styles", "src/assets", "src/vite.config.js"
 	],
 	"exclude": ["node_modules", "lib", "dist"],
 	"references": [{ "path": "./tsconfig.node.json" }]

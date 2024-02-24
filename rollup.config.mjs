@@ -5,6 +5,7 @@ import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 import image from '@rollup/plugin-image';
+import svgr from '@svgr/rollup'
 
 // This is required to read package.json file when
 // using Native ES modules in Node.js
@@ -29,6 +30,7 @@ export default [
 			},
 		],
 		plugins: [
+			svgr({icon:true}),
 			peerDepsExternal(),
 			resolve(),
 			commonjs(),
