@@ -22,9 +22,9 @@ const grayscale = Object.fromEntries(
 );
 
 const baseUnit = Object.fromEntries(
-	arrayRange(0, 25, 0.25, (output) => [output, `${(output / 4).toFixed(4)}rem`]),
+	arrayRange(0, 100, 0.25, (output) => [output, `${(output / 4).toFixed(4)}rem`]),
 );
-
+console.log(baseUnit)
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
