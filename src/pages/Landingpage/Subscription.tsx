@@ -7,7 +7,7 @@ export type SubscriptionProps = {
 
 export const Subscription = ({emailValue, onEmailValueChanged}: SubscriptionProps) => {
   return (
-    <form className='relative block w-[575px] h-[56px] rounded-full font-third peer '>
+    <form className='relative block w-[480px] xl:w-[575px] h-[56px] rounded-full font-third peer '>
         <label className='relative w-full group'>
             <input 
             value={emailValue}
@@ -33,7 +33,7 @@ export const Subscription = ({emailValue, onEmailValueChanged}: SubscriptionProp
 
 export const SubscriptionFooter = ({emailValue, onEmailValueChanged}: SubscriptionProps) => {
   return (
-    <form className='relative block w-[575px] h-[56px] rounded-full peer font-third '>
+    <form className='relative block w-[480px] xl:w-[575px] h-[56px] rounded-full peer font-third '>
         <label className='relative w-full group'>
             <input 
               value={emailValue}

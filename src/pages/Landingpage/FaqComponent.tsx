@@ -9,7 +9,7 @@ export const FaqComponent = () => {
   const [height, setHeight] = useState(true)
 
   return (
-    <div className='relative w-[825px] px-[33px] border-[1.5px] border-brand-200 rounded-2xl hover:border-primary-500 duration-300'>
+    <div className='relative w-[700px] xl:w-[825px] px-[33px] border-[1.5px] border-brand-200 rounded-2xl hover:border-primary-500 duration-300'>
         <button 
           onClick={() => setHeight(!height)}
           className=' relative w-full flex items-center justify-between h-[80px] text-brand-200 hover:text-white duration-300

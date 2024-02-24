@@ -3,7 +3,7 @@ import React from 'react'
 export type NamefiBrandTextProps = {
     text: string;
     color: string;
-    fontSize: string;
+    fontSize?: string;
 }
 export const NamefiBrandText = ({text, color, fontSize}) => {
   return (

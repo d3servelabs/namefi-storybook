@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
-import { Dashboard } from '@pages/DashBoard/DashBoard';
-import { FullPage as FullPageComponent,  } from './Fullpage';
+import { FullPage as FullPageComponent  } from './Fullpage';
 
 const meta = {
   title: 'Pages/Dashboard',

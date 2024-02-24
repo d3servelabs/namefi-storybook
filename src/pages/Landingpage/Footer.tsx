@@ -9,7 +9,7 @@ import { TelegramIcon } from './icons/TelegramIcon'
 export const Footer = () => {
   return (
     <div className='w-full bg-[#24242480] flex justify-center items-center py-5 rounded-t-[30px] '>
-        <div className='w-[1200px] h-[243px] flex flex-col justify-between'>
+        <div className='w-[960px] xl:w-[1200px] h-[243px] flex flex-col justify-between'>
             <div className='w-full h-[134px] flex flex-col justify-between '>
                 <div className='w-full flex justify-between items-center '>
                     <p className='font-bold tracking-widest '>
@@ -37,7 +37,7 @@ export const Footer = () => {
             </div>
             <nav className='w-full flex justify-between items-center'>
                 <p className='font-normal text-base tracking-wide text-[#d6d6d6] '>D3SERVE LABS, Inc. All Rights Reserved.</p>
-                <ul className='flex gap-12 text-[#d6d6d6] tracking-wide text-lg font-normal '>
+                <ul className='flex gap-8 xl:gap-12 text-[#d6d6d6] tracking-wide text-lg font-normal '>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Career</a></li>
                     <li><a href="#">Contact us</a></li>

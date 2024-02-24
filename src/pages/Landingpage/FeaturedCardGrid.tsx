@@ -14,13 +14,13 @@ export type FeaturedCardGridProps = {
 export const FeaturedCardGrid = ({cardContent}: FeaturedCardGridProps) => {
 
   return (
-    <div className='block relative w-[1230px] h-[736px] rounded-[20px] flex flex-col justify-between py-14 items-center bg-[#24242480] '>
+    <div className='block relative w-full xl:w-[1230px] min-h-[736px] rounded-[20px] flex flex-col justify-between gap-32 py-14 items-center bg-[#24242480] '>
         <div className='w-[368px] h-[58px] font-bold tracking-wider flex justify-between self-start '>
             <NamefiBrandText text={'Namefi'} color='#48e59b' fontSize='48px' />
             <p className=' text-4xl text-primary-500 '>Features</p>
 
         </div>
-        <div className='relative flex gap-5'>
+        <div className='relative flex flex-wrap justify-center gap-5'>
             {
                 cardContent?.map(data => <div key={data.label} 
                     className='relative w-[350px] h-[460px] rounded-3xl p-2.5 bg-[#ffffffe6] hover:bg-white'>

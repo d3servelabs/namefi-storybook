@@ -7,7 +7,7 @@ export const Card1 = () => {
 
 
     return (
-        <div className='relative bg-black-1000 rounded-[20px] p-6 bg-black flex flex-col justify-between items-center w-[500px] h-[500px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
+        <div className='relative bg-black-1000 rounded-[20px] p-6 bg-black flex flex-col justify-between items-center w-[400px] h-[400px] xl:w-[500px] xl:h-[500px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
             <div className='flex w-full h-[30px] items-center justify-between'>
                 <p>
                     <NamefiBrandText fontSize={'24px'} color={'#3488FC'} text={'Taken'} />
@@ -35,8 +35,8 @@ export const Card1 = () => {
 
 export const Card2 = () => {
     return( 
-        <div className='w-[508px] h-[500px] flex justify-center items-end pb-9 drop-shadow-[0px_0px_15px_rgba(202,202,202,0.25)] '>
-            <div className='relative rounded-[20px] pl-12 pr-10 py-6 flex flex-col justify-between items-end w-[508px] h-[320px] bg-black-1000  '>
+        <div className='w-[408px] h-[400px] xl:w-[508px] xl:h-[500px] flex justify-center items-end pb-9 drop-shadow-[0px_0px_15px_rgba(202,202,202,0.25)] '>
+            <div className='relative rounded-[20px] pl-12 pr-10 py-6 flex flex-col justify-between items-end w-full h-[320px] bg-black-1000  '>
                   <div className='w-full h-[70px] flex justify-between items-center  '>
                         <div className='w-[205px] h-12 flex items-center justify-between '>
                             <img className='w-12' src="/assets/maskuser.svg" alt="maskuser" />
