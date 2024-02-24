@@ -1,18 +1,17 @@
 import React from 'react';
-
-import {ButtonText} from "@components/Buttons/ButtonText";
+import { UpdateIcon } from '@radix-ui/react-icons';
 
 export const ButtonLoadingContent = ({
-                                         className,
-                                         children,
-                                     }: {
-    className?: string;
-    children: React.ReactNode;
+	className,
+	children,
+}: {
+	className?: string;
+	children: React.ReactNode;
 }) => {
-    return (
-        <>
-            <ButtonText className={className}>{children}</ButtonText>{' '}
-            <RefreshIcon className={'animate-spin'}/>
-        </>
-    );
+	return (
+		<>
+			{children}
+			<UpdateIcon className={'animate-spin text-emerald-400 w-5 h-5'}  />
+		</>
+	);
 };
