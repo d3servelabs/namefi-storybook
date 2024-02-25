@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UserAuthStateTile } from '@components/UserAuthState/Tile/UserAuthStateTile';
 import { UserAuthStateTileLabel } from '@components/UserAuthState/Tile/UserAuthStateTileLabel';
-import { ShortAddress } from '@components/ShortAddress';
+import  ShortAddress  from '@components/ShortAddress';
 import { UserAuthStateTileAction } from '@components/UserAuthState/Tile/UserAuthStateTileAction';
 import React from 'react';
 

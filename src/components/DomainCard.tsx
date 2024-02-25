@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react'
 import moment from "moment";
-import {ShortAddress} from "@components/ShortAddress";
+import ShortAddress from "@components/ShortAddress";
 import { NamefiBrandText } from './NamefiBrandText';
 
 export type DomainCardProps =

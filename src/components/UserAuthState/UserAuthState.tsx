@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { ShortAddress } from '../ShortAddress';
+import  ShortAddress  from '../ShortAddress';
 import { UserAuthStateTile } from './Tile/UserAuthStateTile';
 import { Popover } from '@radix-ui/themes';
 import { UserAuthStateDropDown } from './Dropdown/UserAuthStateDropDown';

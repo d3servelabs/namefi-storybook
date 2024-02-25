@@ -4,7 +4,7 @@ import { ProgressBar } from './ProgressBar';
 import { Button } from '@components/Buttons/Button';
 import clsx from 'clsx';
 import { StepDiagram } from '@components/StepDiagram';
-import { ShortAddress } from '@components/ShortAddress';
+import  ShortAddress  from '@components/ShortAddress';
 import { NamefiBrandText } from '@components/NamefiBrandText';
 import {ButtonText} from "@components/Buttons/ButtonText";
 
