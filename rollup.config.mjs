@@ -11,6 +11,8 @@ import svgr from '@svgr/rollup'
 // using Native ES modules in Node.js
 // https://rollupjs.org/command-line-interface/#importing-package-json
 import { createRequire } from 'node:module';
+import alias from "@rollup/plugin-alias";
+import path from "path";
 const requireFile = createRequire(import.meta.url);
 const packageJson = requireFile('./package.json');
 
@@ -30,6 +32,17 @@ export default [
 			},
 		],
 		plugins: [
+			alias({
+				entries: [
+					{find:'@', replacement:path.resolve(__dirname, './src')},
+					{find:'@icons', replacement: path.resolve(__dirname, './src/components/icons')},
+					{find:'@components', replacement: path.resolve(__dirname, './src/components')},
+					{find:'@assets', replacement: path.resolve(__dirname, './src/assets')},
+					{find:'@pages', replacement: path.resolve(__dirname, './src/pages')},
+					{find:'@stories', replacement: path.resolve(__dirname, './src/stories')},
+					{find:'@utils', replacement: path.resolve(__dirname, './src/utils')},
+				]
+			}),
 			svgr({icon:true}),
 			peerDepsExternal(),
 			resolve(),
