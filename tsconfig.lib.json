@@ -24,6 +24,9 @@
 			"@pages/*": [
 				"src/pages/*"
 			],
+			"@icons": [
+				"src/components/icons/*"
+			],
 			"@components/*": [
 				"src/components/*"
 			],
@@ -35,6 +38,9 @@
 			],
 			"@stories/*": [
 				"src/stories/*"
+			],
+			"@utils/*": [
+				"src/utils/*"
 			]
 
 		}
