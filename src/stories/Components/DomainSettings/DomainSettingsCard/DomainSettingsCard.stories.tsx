@@ -1,30 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import moment from 'moment';
-import {
-	DomainSettingsCardRoot,
-	DomainSettingsCopyAddress,
-	DomainSettingsDangerButton,
-	DomainSettingsExpirationDate,
-	DomainSettingsLeftSection,
-	DomainSettingsNormalButton,
-	DomainSettingsRightSection,
-	DomainSettingsToggle,
-	DomainSettingsWebView,
-	DomainSettingsTwoSectionLayout,
-	DomainSettingsWebViewCaption,
-} from '@components/DomainSettings';
-import DomainSettingsTitle from "@components/DomainSettings/SettingsCard/DomainSettingsTitle";
+import DomainSettings from '@components/DomainSettings';
 import YearCounter from "@components/YearCounter";
 import {useCallback, useState} from "react";
 
 const meta = {
 	title: 'Components/DomainSettings/SettingsCard',
-	component: DomainSettingsCardRoot,
+	component: DomainSettings.Card.Root,
 	parameters: {
 		layout: 'centered',
 	},
 	tags: ['autodocs'],
-} satisfies Meta<typeof DomainSettingsCardRoot>;
+} satisfies Meta<typeof DomainSettings.Card.Root>;
 
 export default meta;
 
@@ -51,66 +38,66 @@ export const Default: Story = {
 		);
 
 		return (
-			<DomainSettingsCardRoot>
-				<DomainSettingsTwoSectionLayout>
-					<DomainSettingsLeftSection>
-						<DomainSettingsTitle>
+			<DomainSettings.Card.Root>
+				<DomainSettings.Card.TwoSectionLayout>
+					<DomainSettings.Card.LeftSection>
+						<DomainSettings.Card.Title>
 							Settings
-						</DomainSettingsTitle>
+						</DomainSettings.Card.Title>
 
 						<div className={'flex flex-col items-center mb-4'}>
-							<DomainSettingsToggle className={'max-w-[18.75rem] mx-auto mb-1'}>
+							<DomainSettings.Card.Toggle className={'max-w-[18.75rem] mx-auto mb-1'}>
 								AutoPark™️
-							</DomainSettingsToggle>
-							<DomainSettingsWebView
+							</DomainSettings.Card.Toggle>
+							<DomainSettings.Card.WebView
 								src={`https://${domainName}`}
 								className={'mx-auto'}
 							/>
-							<DomainSettingsWebViewCaption>
+							<DomainSettings.Card.WebViewCaption>
 								Your domain is parked For Sale.
-							</DomainSettingsWebViewCaption>
+							</DomainSettings.Card.WebViewCaption>
 						</div>
 
-						<DomainSettingsToggle className={'max-w-[18.75rem] mx-auto mb-1'}>
+						<DomainSettings.Card.Toggle className={'max-w-[18.75rem] mx-auto mb-1'}>
 							AutoENS™️
-						</DomainSettingsToggle>
-						<DomainSettingsCopyAddress
+						</DomainSettings.Card.Toggle>
+						<DomainSettings.Card.CopyAddress
 							address={'0x1b0f291c8fFebE891886351CDfF8A304a840C8Ad'}
 						/>
-					</DomainSettingsLeftSection>
+					</DomainSettings.Card.LeftSection>
 
-					<DomainSettingsRightSection>
+					<DomainSettings.Card.RightSection>
 						<div>
-							<DomainSettingsToggle>AutoRenew™️</DomainSettingsToggle>
-							<DomainSettingsExpirationDate
+							<DomainSettings.Card.Toggle>AutoRenew™️</DomainSettings.Card.Toggle>
+							<DomainSettings.Card.ExpirationDate
 								date={moment(new Date()).add(1, 'year').toDate()}
 							/>
 							{
 								!!years? <>
 									<YearCounter onYearsChanged={setYears} years={years}/>
 
-									<DomainSettingsNormalButton className={'mb-12'} loading={isExtending} onClick={handleExtend}>
+									<DomainSettings.Card.NormalButton className={'mb-12'} loading={isExtending} onClick={handleExtend}>
 										Confirm Extend
-									</DomainSettingsNormalButton>
+									</DomainSettings.Card.NormalButton>
 								</>
 									:(
-										<DomainSettingsNormalButton className={'mb-12'} onClick={()=>setYears(1)}>
+										<DomainSettings.Card.NormalButton className={'mb-12'} onClick={()=>setYears(1)}>
 											Extend Now
-										</DomainSettingsNormalButton>
+										</DomainSettings.Card.NormalButton>
 									)
 							}
 
 
 						</div>
-						<DomainSettingsNormalButton className={'mb-12'}>
+						<DomainSettings.Card.NormalButton className={'mb-12'}>
 							Manage DNS Settings
-						</DomainSettingsNormalButton>
-						<DomainSettingsDangerButton className={'mt-auto'}>
+						</DomainSettings.Card.NormalButton>
+						<DomainSettings.Card.DangerButton className={'mt-auto'}>
 							Export Domain
-						</DomainSettingsDangerButton>
-					</DomainSettingsRightSection>
-				</DomainSettingsTwoSectionLayout>
-			</DomainSettingsCardRoot>
+						</DomainSettings.Card.DangerButton>
+					</DomainSettings.Card.RightSection>
+				</DomainSettings.Card.TwoSectionLayout>
+			</DomainSettings.Card.Root>
 		);
 	},
 };
