@@ -4,5 +4,11 @@ import OwnedDomains from '@components/OwnedDomains';
 import DomainSettings from '@components/DomainSettings';
 import './index.css';
 
-export * from '@components/index';
+export {
+    ShortAddress,
+    BreadCrumbs,
+    NamefiBrandText,
+    NetworkLogo,
+    YearCounter,
+} from '@components/index';
 export { BaseLayout,UserAuthState,OwnedDomains,DomainSettings };
