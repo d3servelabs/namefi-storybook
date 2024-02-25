@@ -9,7 +9,7 @@ First make sure you are authenticated to NPM
 
 ```sh
 npm run bump # bump a patch version and push to git
-yarn build:lib
+npm run build:lib
 npm login
 npm run publish
 ```
@@ -17,7 +17,7 @@ npm run publish
 In client side do
 
 ```sh
-yarn upgrade @namefi/ui
+npx npm-upgrade @namefi/ui
 ```
 
 ## Reference
