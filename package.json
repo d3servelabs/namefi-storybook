@@ -45,6 +45,7 @@
 		"bump": "npm version patch && git push --follow-tags"
 	},
 	"dependencies": {
+		"@emotion/styled": "^11.11.0",
 		"@radix-ui/react-icons": "^1.3.0",
 		"@radix-ui/themes": "^2.0.3",
 		"@uidotdev/usehooks": "^2.4.1",

@@ -22,3 +22,16 @@
     width: min(1200px, 100% - 58px);
     }
   }
+ 
+::-webkit-scrollbar {
+  padding: 0 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-left: 2px solid #48E59B33;
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-left: 2px solid #71E0AC;
+}
