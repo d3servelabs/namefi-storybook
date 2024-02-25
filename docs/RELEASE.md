@@ -8,7 +8,7 @@ npm login
 
 ```sh
 npm run bump # bump a patch version and push to git
-npm build:lib
+npm run build:lib
 npm publish
 ```
 
