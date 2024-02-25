@@ -1,22 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { UserAuthStateTile } from '@components/UserAuthState/Tile/UserAuthStateTile';
-import { UserAuthStateTileLabel } from '@components/UserAuthState/Tile/UserAuthStateTileLabel';
-import  ShortAddress  from '@components/ShortAddress';
-import { UserAuthStateTileAction } from '@components/UserAuthState/Tile/UserAuthStateTileAction';
+import UserAuthStateTile from '@components/UserAuthState/Tile';
+import ShortAddress from '@components/ShortAddress';
 import React from 'react';
-
-
 
 const meta = {
 	title: 'Components/UserAuthState/Tile',
-	component: UserAuthStateTile,
+
 	tags: ['autodocs'],
 	parameters: {
 		layout: 'centered',
 	},
-	argTypes: {
-	},
-} satisfies Meta<typeof UserAuthStateTile>;
+	argTypes: {},
+} satisfies Meta<{userAddress?:string,userLoading?:boolean}>;
 
 export default meta;
 
@@ -25,10 +20,10 @@ type Story = StoryObj<typeof meta>;
 export const LoggedOut: Story = {
 	render: (props) => {
 		return (
-			<UserAuthStateTile backgroundColor={'#111111b3'}>
+			<UserAuthStateTile.Root backgroundColor={'#111111b3'}>
 				<UserAuthStateTile.Network network={1} />
-				<UserAuthStateTileLabel>Connect Wallet</UserAuthStateTileLabel>
-				<UserAuthStateTileAction>
+				<UserAuthStateTile.Label>Connect Wallet</UserAuthStateTile.Label>
+				<UserAuthStateTile.Action>
 					<img
 						onClick={(event) => {
 							event.stopPropagation();
@@ -39,8 +34,8 @@ export const LoggedOut: Story = {
 						alt="disconnect image"
 						role="svg"
 					/>
-				</UserAuthStateTileAction>
-			</UserAuthStateTile>
+				</UserAuthStateTile.Action>
+			</UserAuthStateTile.Root>
 		);
 	},
 };
@@ -48,46 +43,46 @@ export const LoggedOut: Story = {
 export const LoggedIn: Story = {
 	args: {
 		userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-	},
-	render: ({ userAddress }) => {
+	} as any,
+	render: ({ userAddress }:any) => {
 		return (
-			<UserAuthStateTile backgroundColor={'#111'}>
+			<UserAuthStateTile.Root backgroundColor={'#111'}>
 				<UserAuthStateTile.Network network={1} />
-				<UserAuthStateTileLabel>
+				<UserAuthStateTile.Label>
 					<ShortAddress address={userAddress} />
-				</UserAuthStateTileLabel>
-				<UserAuthStateTileAction>
+				</UserAuthStateTile.Label>
+				<UserAuthStateTile.Action>
 					<img
 						src={userAddress ? '/assets/disconnect.svg' : '/assets/arrow-right1.svg'}
 						className={userAddress ? 'max-w-[44px]' : 'max-w-[22px] mr-3'}
 						alt="disconnect image"
 						role="svg"
 					/>
-				</UserAuthStateTileAction>
-			</UserAuthStateTile>
+				</UserAuthStateTile.Action>
+			</UserAuthStateTile.Root>
 		);
 	},
 };
 export const Loading: Story = {
 	args: {
 		userLoading: true,
-	},
+	} as any,
 	render: (props) => {
 		return (
-			<UserAuthStateTile backgroundColor={'#111'}>
+			<UserAuthStateTile.Root backgroundColor={'#111'}>
 				<UserAuthStateTile.Network network={1} />
-				<UserAuthStateTileLabel className={'pr-8'}>Loading...</UserAuthStateTileLabel>
-			</UserAuthStateTile>
+				<UserAuthStateTile.Label className={'pr-8'}>Loading...</UserAuthStateTile.Label>
+			</UserAuthStateTile.Root>
 		);
 	},
 };
 export const NetworkError: Story = {
 	render: (props) => {
 		return (
-			<UserAuthStateTile backgroundColor={'#111'}>
+			<UserAuthStateTile.Root backgroundColor={'#111'}>
 				<UserAuthStateTile.Network network={0} />
-				<UserAuthStateTileLabel className={'pr-8'}>Wrong Network</UserAuthStateTileLabel>
-			</UserAuthStateTile>
+				<UserAuthStateTile.Label className={'pr-8'}>Wrong Network</UserAuthStateTile.Label>
+			</UserAuthStateTile.Root>
 		);
 	},
 };

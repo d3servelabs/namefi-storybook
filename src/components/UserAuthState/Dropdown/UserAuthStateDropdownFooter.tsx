@@ -1,5 +1,5 @@
 import React from 'react';
-import {cn} from "../../../utils/cn";
+import {cn} from "@utils/cn";
 
 export function UserAuthStateDropdownFooter({ userAddress, signedIn,loading }:{userAddress?: string, signedIn?:boolean, loading?:boolean}) {
 	return (
@@ -19,3 +19,5 @@ export function UserAuthStateDropdownFooter({ userAddress, signedIn,loading }:{u
 		</div>
 	);
 }
+
+export default UserAuthStateDropdownFooter;

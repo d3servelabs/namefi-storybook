@@ -49,6 +49,7 @@
 		"src/components/DomainSettings/index.ts",
 		"src/components/OwnedDomains/index.ts",
 		"src/components/Layouts/BaseLayout/index.ts",
+		"src/components/UserAuthState/index.ts",
 		"src/styles", "src/assets", "src/vite.config.js"
 	],
 	"exclude": ["node_modules", "lib", "dist"],

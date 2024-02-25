@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 export function UserAuthStateDropdownBody() {
+    //TODO
     const [isVisible, setIsVisible] = useState(false);
 
     return (
@@ -32,3 +33,5 @@ export function UserAuthStateDropdownBody() {
         </div>
     );
 }
+
+export default UserAuthStateDropdownBody;

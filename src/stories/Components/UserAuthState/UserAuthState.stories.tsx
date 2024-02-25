@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { UserAuthState } from "@components/UserAuthState/UserAuthState";
+import { UserAuthStateDemo } from "@components/UserAuthState/UserAuthStateDemo";
 
 const meta = {
     title: 'Components/UserAuthState',
-    component: UserAuthState,
+    component: UserAuthStateDemo,
     tags: ['autodocs'],
     parameters: {
         layout: 'centered',
@@ -19,7 +19,7 @@ const meta = {
       onSignOut: { action: 'signout' },
       onNetworkClicked: { action: 'network-clicked' },
     },
-}satisfies Meta<typeof UserAuthState>
+}satisfies Meta<typeof UserAuthStateDemo>
 
 export default meta; 
 

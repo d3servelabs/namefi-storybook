@@ -1,5 +1,5 @@
 import { HeaderSearchBar, HeaderSearchBarProps } from "./HeaderSearchBar"
-import { UserAuthState, UserAuthStateProps } from "./UserAuthState/UserAuthState"
+import { UserAuthStateDemo, UserAuthStateProps } from "./UserAuthState/UserAuthStateDemo"
 
 export type HeaderProps = {
         includeSearchBar?:boolean,
@@ -16,7 +16,7 @@ export const Header = ({includeSearchBar, authStateProps, headerSearchProps }: H
                     <img src="/assets/namefi.svg" width={90} alt="logo" role="svg"/>
                 </div>
                 {includeSearchBar && <HeaderSearchBar {...headerSearchProps} />}
-                <UserAuthState {...authStateProps} />
+                <UserAuthStateDemo {...authStateProps} />
             </nav>
         </header>
     )
