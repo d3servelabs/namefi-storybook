@@ -60,13 +60,13 @@ const DNSRecordsFooter = ({ onSave }: { onSave?: () => void}) => {
 	}, [onSave])
 	return <div className="flex justify-end pr-[30px] py-4 gap-x-2">
 		<button className="flex justify-center items-center w-7 h-7 rounded-full bg-[#48E59B33] cursor-pointer">
-			<img className="block w-[16px] cursor-pointer" src="/assets/Update.svg" alt="Update" role="img" />	
+			<img className="block w-[16px] cursor-pointer" src="/assets/Plus.svg" alt="Add" role="img" />	
 		</button>
 		<button className="flex justify-center items-center w-7 h-7 rounded-full bg-[#48E59B33] cursor-pointer opacity-30">
-			<img className="block w-[16px] cursor-pointer" src="/assets/Update.svg" alt="Update" role="img" />	
+			<img className="block w-[16px] cursor-pointer" src="/assets/Download.svg" alt="Download" role="img" />	
 		</button>
 		<button className="flex justify-center items-center w-7 h-7 rounded-full bg-[#48E59B33] cursor-pointer opacity-30">
-			<img className="block w-[16px] cursor-pointer" src="/assets/Update.svg" alt="Update" role="img" />	
+			<img className="block w-[16px] cursor-pointer" src="/assets/Trash.svg" alt="Delete" role="img" />	
 		</button>
 	</div>
 }
