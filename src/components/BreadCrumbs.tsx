@@ -1,22 +1,21 @@
 import { cn } from '@utils/cn';
-import React, {ReactElement, ReactNode} from 'react';
-import { ChevronRight } from '@web3uikit/icons';
+import React, { ReactElement } from 'react';
+import { ChevronRightIcon } from '@radix-ui/react-icons';
 
 export function BreadCrumbsRoot({
 	children,
 	className,
-	activeIndex = (children?.length??0) - 1,
-}: Omit<React.ComponentProps<'div'>,'children'> & {
+	activeIndex = (children?.length ?? 0) - 1,
+}: Omit<React.ComponentProps<'div'>, 'children'> & {
 	activeIndex?: number;
 	children?: ReactElement[];
 }) {
 	return (
 		<div className={cn('flex flex-row gap-2', className)}>
 			{children?.map((crumb, index) => {
-
 				return (
 					<>
-						<ChevronRight className={'w-4.5 h-4.5 text-[#48E59B]'} />
+						<ChevronRightIcon className={'w-4.5 h-4.5 text-[#48E59B]'} />
 						{React.cloneElement(crumb, { active: index === activeIndex })}
 					</>
 				);
