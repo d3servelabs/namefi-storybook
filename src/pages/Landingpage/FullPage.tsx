@@ -10,17 +10,17 @@ import { Footer } from './Footer'
 import { Card1, Card2 } from './DomainCard'
 import { CaretLeft } from './icons/CaretLeft'
 import { CaretRight } from './icons/CaretRight'
-import { NamefiBrandText } from '@components/NamefiBrandText'
 import { Message1, Message2 } from './AssetsMessage'
 import clsx from 'clsx'
-import { FaqComponent } from './FaqComponent'
-import {ButtonText} from "@components/Buttons/ButtonText";
+import { FaqComponent, FaqComponentProps } from './FaqComponent'
 
 export type FullPageProps = {
     featuredCardProps: FeaturedCardGridProps
+    homepageText?: string;
+    faqComponentProps: FaqComponentProps
 }
 
-export const FullPage = ({featuredCardProps}: FullPageProps) => {
+export const FullPage = ({featuredCardProps, homepageText, faqComponentProps}: FullPageProps) => {
 
     const [prev, setPrev] = useState(0)
   return (
@@ -28,10 +28,12 @@ export const FullPage = ({featuredCardProps}: FullPageProps) => {
         <div className='w-full h-screen flex flex-col justify-between items-center pb-10'>
             <Header />
             <div className='w-full flex flex-col justify-between items-center h-[50vh]'>
-                <h1 className='text-white tracking-wider text-[50px] xl:text-[64px] font-bold font-third '>Trading domains on chain.</h1>
+                <h1 className='text-white tracking-wider text-[50px] xl:text-[64px] font-bold font-third '>{homepageText}</h1>
                 <div className='relative flex gap-5'>
                     <Subscription />
-                    <SolidButton>I'm an Investor</SolidButton>
+                    <div>
+                        <SolidButton>I'm an Investor</SolidButton>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,7 +68,7 @@ export const FullPage = ({featuredCardProps}: FullPageProps) => {
         <div className='relative w-full xl:w-[1200px] flex flex-col justify-center items-center gap-[40px] xl:gap-[64px] '>
             <h3 className='font-bold text-3xl text-primary-500 tracking-widest self-start '>FAQs</h3>
             <div className='w-full h-auto flex flex-col justify-center items-center'>
-                <FaqComponent />
+                <FaqComponent {...faqComponentProps} />
             </div>
         </div>
         <Footer />

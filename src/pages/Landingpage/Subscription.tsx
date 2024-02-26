@@ -7,7 +7,7 @@ export type SubscriptionProps = {
 
 export const Subscription = ({emailValue, onEmailValueChanged}: SubscriptionProps) => {
   return (
-    <form className='relative block w-[480px] xl:w-[575px] h-[56px] rounded-full font-third peer '>
+    <form className='relative block w-[480px] xl:w-[575px] h-[56px] rounded-full font-third peer bg-blue-800 '>
         <label className='relative w-full group'>
             <input 
             value={emailValue}
