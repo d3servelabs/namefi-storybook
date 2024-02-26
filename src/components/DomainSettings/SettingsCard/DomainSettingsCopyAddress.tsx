@@ -1,7 +1,7 @@
 import { useCopyToClipboard } from '@uidotdev/usehooks';
-import { ShortAddress } from '@components/ShortAddress';
+import ShortAddress  from '@components/ShortAddress';
 import { EthEmblem } from '@components/icons/EthEmblem';
-import { useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { CheckIcon, ClipboardCopyIcon } from '@radix-ui/react-icons';
 import { cn } from '@utils/cn';
 

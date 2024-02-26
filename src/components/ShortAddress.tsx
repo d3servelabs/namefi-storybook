@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ShortAddress({
+export default function ShortAddress({
 	address,
 	fallback = true,
 	loading,

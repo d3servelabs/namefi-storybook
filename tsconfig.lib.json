@@ -24,6 +24,9 @@
 			"@pages/*": [
 				"src/pages/*"
 			],
+			"@icons": [
+				"src/components/icons/*"
+			],
 			"@components/*": [
 				"src/components/*"
 			],
@@ -35,6 +38,9 @@
 			],
 			"@stories/*": [
 				"src/stories/*"
+			],
+			"@utils/*": [
+				"src/utils/*"
 			]
 
 		}
@@ -45,8 +51,11 @@
 		"src/components/Logo.tsx",
 		"src/styles", "src/assets", "src/vite.config.js",
 		"src/custom.d.ts",
-		"src/components/Layouts/BaseLayout/BaseLayoutFooter.tsx",
-		"src/components/Layouts/BaseLayout/BaseLayoutFooterLink.tsx",
+		"src/components/index.ts",
+		"src/components/DomainSettings/index.ts",
+		"src/components/OwnedDomains/index.ts",
+		"src/components/Layouts/BaseLayout/index.ts",
+		"src/components/UserAuthState/index.ts",
 		"src/styles", "src/assets", "src/vite.config.js"
 	],
 	"exclude": ["node_modules", "lib", "dist"],

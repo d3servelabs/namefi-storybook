@@ -1,16 +1,16 @@
 import { cn } from '@utils/cn';
 import React from "react";
 
-export default function DomainSettingsCardRoot({
+export default function DomainSettingsWebViewCaption({
 	children,
 	className,
 	...props
-}: React.ComponentProps<'div'> & {children: React.ReactNode}) {
+}: React.ComponentProps<'div'>) {
 	return (
 		<div
 			{...props}
 			className={cn(
-				'w-full h-full rounded-5 bg-[#222B27] p-5 overflow-hidden',
+				"text-green-200 text-[10px] font-normal font-['Roboto'] leading-[14px] tracking-wide mt-2",
 				className,
 			)}>
 			{children}

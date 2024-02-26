@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import  BaseLayoutFooter from '@components/Layouts/BaseLayout/BaseLayoutFooter';
 import  BaseLayoutFooterLink from '@components/Layouts/BaseLayout/BaseLayoutFooterLink';
 import  BaseLayoutRoot from '@components/Layouts/BaseLayout/BaseLayoutRoot';
-import  {UserAuthState} from '@components/UserAuthState/UserAuthState';
+import  {UserAuthStateDemo} from '@components/UserAuthState/UserAuthStateDemo';
 import  BaseLayoutHeader from '@components/Layouts/BaseLayout/BaseLayoutHeader';
 import  BaseLayoutBody from '@components/Layouts/BaseLayout/BaseLayoutBody';
 
@@ -27,7 +27,7 @@ export const Default: Story = {
 			<div className={'w-full h-full min-h-[720px]'}>
 				<BaseLayoutRoot
 					className={'min-h-[720px]'}
-					header={<BaseLayoutHeader endSlot={<UserAuthState />} />}
+					header={<BaseLayoutHeader endSlot={<UserAuthStateDemo />} />}
 					footer={
 						<BaseLayoutFooter
 							links={

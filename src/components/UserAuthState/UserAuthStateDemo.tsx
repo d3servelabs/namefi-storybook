@@ -1,11 +1,9 @@
 import React, { useMemo } from 'react';
-import { ShortAddress } from '../ShortAddress';
-import { UserAuthStateTile } from './Tile/UserAuthStateTile';
+import  ShortAddress  from '../ShortAddress';
+import  UserAuthStateTile from './Tile';
 import { Popover } from '@radix-ui/themes';
-import { UserAuthStateDropDown } from './Dropdown/UserAuthStateDropDown';
-import {UserAuthStateTileLabel} from "@components/UserAuthState/Tile/UserAuthStateTileLabel";
-import {UserAuthStateTileNetwork} from "@components/UserAuthState/Tile/UserAuthStateTileNetwork";
-import {UserAuthStateTileAction} from "@components/UserAuthState/Tile/UserAuthStateTileAction";
+import UserAuthStateDropDown from './Dropdown';
+
 
 export type UserAuthStateProps = Partial<{
 	userAddress;
@@ -17,7 +15,7 @@ export type UserAuthStateProps = Partial<{
 	onNetworkClicked: () => any;
 }>;
 
-export const UserAuthState = ({
+export const UserAuthStateDemo = ({
 	userAddress,
 	userLoading,
 	balanceLoading,
@@ -30,7 +28,7 @@ export const UserAuthState = ({
 		<>
 			<Popover.Root>
 				<Popover.Trigger>
-					<UserAuthStateTile backgroundColor={userAddress ? '#111' : '#111111b3'}>
+					<UserAuthStateTile.Root backgroundColor={userAddress ? '#111' : '#111111b3'}>
 						<UserAuthStateTile.Network network={1} onClick={onNetworkClicked} />
 						<UserAuthStateTile.Label>
 							{userLoading || balanceLoading ? (
@@ -66,14 +64,14 @@ export const UserAuthState = ({
 								/>
 							)}
 						</UserAuthStateTile.Action>
-					</UserAuthStateTile>
+					</UserAuthStateTile.Root>
 				</Popover.Trigger>
 				<Popover.Content>
-					<UserAuthStateDropDown>
+					<UserAuthStateDropDown.Root>
 						<UserAuthStateDropDown.Header userAddress={userAddress} loading={userLoading}/>
 						<UserAuthStateDropDown.Body/>
 						<UserAuthStateDropDown.Footer/>
-					</UserAuthStateDropDown>
+					</UserAuthStateDropDown.Root>
 				</Popover.Content>
 			</Popover.Root>
 		</>

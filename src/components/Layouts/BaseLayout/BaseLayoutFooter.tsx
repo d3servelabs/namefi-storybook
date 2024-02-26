@@ -1,5 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react';
-import { BaseLayoutFooterLink } from './BaseLayoutFooterLink';
+import BaseLayoutFooterLink from './BaseLayoutFooterLink';
 
 type AppLayoutFooterProps = React.ComponentProps<'div'> & {
 	links: ReactNode | ReactElement<typeof BaseLayoutFooterLink> | ReactElement<typeof BaseLayoutFooterLink>[];

@@ -3,22 +3,5 @@
 - Chromatic: https://www.chromatic.com/build?appId=65c152b8f94c60aa3e2a4564
 - Storybook: https://storybook.namefi.dev
 
-## Release a new version to NPM
-
-First make sure you are authenticated to NPM
-
-```sh
-npm run bump # bump a patch version and push to git
-yarn build:lib
-npm login
-npm run publish
-```
-
-In client side do
-
-```sh
-yarn upgrade @namefi/ui
-```
-
 ## Reference
 - TODO: Use tailwind prettier plugin: https://github.com/tailwindlabs/prettier-plugin-tailwindcss

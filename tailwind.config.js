@@ -22,7 +22,7 @@ const grayscale = Object.fromEntries(
 );
 
 const baseUnit = Object.fromEntries(
-	arrayRange(0, 25, 0.25, (output) => [output, `${(output / 4).toFixed(4)}rem`]),
+	arrayRange(0, 100, 0.25, (output) => [output, `${(output / 4).toFixed(4)}rem`]),
 );
 
 /** @type {import('tailwindcss').Config} */
@@ -36,6 +36,7 @@ module.exports = {
 			height: baseUnit,
 			inset: baseUnit,
 			padding: baseUnit,
+
 			fontFamily: {
 				primary: ['Roboto Mono', 'Serif'],
 				secondary: ['Nunito', 'Serif'],

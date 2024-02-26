@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import BaseLayoutHeader from "@components/Layouts/BaseLayout/BaseLayoutHeader";
-import {UserAuthState} from "@components/UserAuthState/UserAuthState";
+import {UserAuthStateDemo} from "@components/UserAuthState/UserAuthStateDemo";
 
 
 
@@ -24,7 +24,7 @@ export const Default: Story = {
 		return (
 			<div className={'w-full'}>
 				<BaseLayoutHeader
-					endSlot={<UserAuthState/>}
+					endSlot={<UserAuthStateDemo/>}
 				/>
 			</div>
 		);
