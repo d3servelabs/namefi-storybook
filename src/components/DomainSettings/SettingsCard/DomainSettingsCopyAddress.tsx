@@ -1,18 +1,23 @@
-import { useCopyToClipboard } from '@uidotdev/usehooks';
-import ShortAddress  from '@components/ShortAddress';
+import ShortAddress from '@components/ShortAddress';
 import { EthEmblem } from '@components/icons/EthEmblem';
 import React, { useCallback, useState } from 'react';
 import { CheckIcon, ClipboardCopyIcon } from '@radix-ui/react-icons';
 import { cn } from '@utils/cn';
 
-export default function DomainSettingsCopyAddress({ address }) {
-	const [clipboard, copyToClipboard] = useCopyToClipboard();
+export default function DomainSettingsCopyAddress({
+	address,
+}: {
+	address: string;
+}) {
 	const [success, setSuccess] = useState(false);
-	const handleCopy = useCallback(async () => {
-		await copyToClipboard(address);
-		setSuccess(true);
-		setTimeout(() => setSuccess(false), 2000);
-	}, [copyToClipboard, setSuccess, address]);
+	const handleCopy = useCallback(() => {
+		if (typeof window !== 'undefined') {
+			window.navigator.clipboard.writeText(address)?.then(() => {
+				setSuccess(true);
+				setTimeout(() => setSuccess(false), 2000);
+			});
+		}
+	}, [setSuccess, address]);
 
 	return (
 		<div className="w-full max-w-80 mx-auto h-15 relative bg-stone-950 rounded-2.5 p-5 flex flex-row items-center justify-between">
