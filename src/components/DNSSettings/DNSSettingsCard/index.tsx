@@ -1,6 +1,7 @@
 import { cn } from '@utils/cn';
 import React, { useCallback } from 'react';
 import styled from '@emotion/styled';
+import { Checkbox } from '@components/Checkbox';
 
 const CardHeaderStyle = styled.div`
 `
@@ -73,6 +74,7 @@ const DNSRecordsFooter = ({ onSave }: { onSave?: () => void}) => {
 const DNSRecordRows = styled.div`
 	display: grid;	
 	grid-template-columns:
+		48px
 		minmax(80px, 1fr)
 		minmax(140px, 2fr)
 		minmax(140px, 2fr)
@@ -80,43 +82,49 @@ const DNSRecordRows = styled.div`
 `
 
 const DNSRecordsTable = () => {
-	return <div className="flex flex-col overflow-hidden bg-black-900 rounded-[10px] font-primary">
+	return <div className="flex flex-col overflow-hidden bg-black-900 rounded-[10px] font-primary pl-2 pt-2">
 		<DNSRecordRows className="text-xs text-black-400 bg-black-900 pr-[14px]">
-				<div className="p-4 text-left">Type</div>
-				<div className="p-4 text-left">Host</div>
-				<div className="p-4 text-left">Points to</div>
-				<div className="p-4 text-left">TTL(s)</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left"></div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">Type</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">Host</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">Points to</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">TTL(s)</div>
 		</DNSRecordRows>
 		<DNSRecordRows className="flex-1 contents text-sm overflow-y-scroll text-black-500">
 			<div className="contents">
-				<div className="p-4 break-words overflow-hidden truncate">A</div>
-				<div className="p-4 break-words overflow-hidden truncate">namefinamefinamefinamefinamefinamefi.com</div>
-				<div className="p-4 break-words overflow-hidden truncate">24.199.74.33</div>
-				<div className="p-4 break-words overflow-hidden truncate">3600</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate"><Checkbox /></div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">A</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">namefinamefinamefinamefinamefinamefi.com</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">24.199.74.33</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">3600</div>
 			</div>
 			<div className="contents">
-				<div className="p-4 break-words overflow-hidden truncate">AAAAA</div>
-				<div className="p-4 break-words overflow-hidden truncate">namefi.com</div>
-				<div className="p-4 break-words overflow-hidden truncate">24.199.74.33</div>
-				<div className="p-4 break-words overflow-hidden truncate">3600</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate"><Checkbox /></div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">AAAAA</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">namefi.com</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">24.199.74.33</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">3600</div>
 			</div>
 			<div className="contents">
-				<div className="p-4 break-words overflow-hidden truncate">NS</div>
-				<div className="p-4 break-words overflow-hidden truncate">namefi.com</div>
-				<div className="p-4 break-words overflow-hidden truncate">24.199.74.33</div>
-				<div className="p-4 break-words overflow-hidden truncate">3600</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate"><Checkbox /></div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">NS</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">namefi.com</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">24.199.74.33</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">3600</div>
 			</div>
 			<div className="contents">
-				<div className="p-4 break-words overflow-hidden truncate">SOA</div>
-				<div className="p-4 break-words overflow-hidden truncate">namefi.com</div>
-				<div className="p-4 break-words overflow-hidden truncate">24.199.74.33</div>
-				<div className="p-4 break-words overflow-hidden truncate">3600</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate"><Checkbox /></div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">SOA</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">namefi.com</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">24.199.74.33</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">3600</div>
 			</div>
 			<div className="contents">
-				<div className="p-4 break-words overflow-hidden truncate">SOA</div>
-				<div className="p-4 break-words overflow-hidden truncate">namefi.com</div>
-				<div className="p-4 break-words overflow-hidden truncate">24.199.74.33</div>
-				<div className="p-4 break-words overflow-hidden truncate">3600</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate"><Checkbox /></div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">SOA</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">namefi.com</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">24.199.74.33</div>
+				<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">3600</div>
 			</div>
 		</DNSRecordRows>
 		<DNSRecordsFooter />
