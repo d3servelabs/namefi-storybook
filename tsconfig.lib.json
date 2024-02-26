@@ -4,7 +4,6 @@
 		"useDefineForClassFields": true,
 		"outDir": "lib",
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
-		
 		"allowJs": false,
 		"skipLibCheck": true,
 		"esModuleInterop": false,
@@ -17,7 +16,8 @@
 		"isolatedModules": true,
 		"jsx": "react",
 		"declaration": true,
-		"declarationDir": "lib",
+		"emitDeclarationOnly": true,
+		"declarationDir": "types",
 		"noImplicitAny": false,
 		"baseUrl": ".",
 		"paths": {
