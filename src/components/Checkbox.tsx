@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useCallback } from 'react'
+import { cn } from '@utils/cn';
 
 export type CheckboxProps = {
-    isChecked?: boolean
+    value?: boolean,
+    onChange?: (value: boolean) => void
+    className?: string
 }
-export const Checkbox = ({isChecked}: CheckboxProps) => {
+export const Checkbox = ({ value, onChange, className }: CheckboxProps) => {
+  const handleChange = useCallback(() => {
+    onChange?.(!value)
+  }, [value, onChange])
   return (
-    <label className='relative block border-box rounded-sm w-5 h-5 border border-primary-500 cursor-pointer  '>
-        <input type="checkbox" className='opacity-0 w-0 h-0 peer ' />
+    <label className={cn('relative block border-box rounded-sm w-5 h-5 border border-primary-500 cursor-pointer', className)}>
+        <input type="checkbox" className='opacity-0 w-0 h-0 peer' checked={value} onChange={handleChange} />
         <span className='absolute bg-brand-200 left-0.5 top-0.5 w-3.5 h-3.5 rounded-sm duration-200
         peer-checked:bg-brand-100
         before:absolute

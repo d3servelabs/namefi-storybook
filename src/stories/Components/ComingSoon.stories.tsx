@@ -1,25 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Checkbox } from '../../components/Checkbox';
+import { ComingSoon } from '@components/ComingSoon';
 
 const meta = {
-	title: 'Components/Checkbox',
-	component: Checkbox,
-	tags: ['autodocs'],
+	title: 'Components/ComingSoon',
+	component: ComingSoon,
 	parameters: {
 		layout: 'centered',
 	},
-} satisfies Meta<typeof Checkbox>;
+} satisfies Meta<typeof ComingSoon>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	argTypes: {
-		value: { control: 'boolean' },
-		onChange: { action: 'onChange' },
+		onClickDiscord: { action: 'onChange' },
 		className: { control: 'text' },
 	},
 	args: {
-		value: false,
+		className: 'min-w-[480px]',
 	},
+	tags: ['autodocs'],
 };
