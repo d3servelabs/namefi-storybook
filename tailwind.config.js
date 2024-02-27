@@ -36,7 +36,7 @@ module.exports = {
 			height: baseUnit,
 			inset: baseUnit,
 			padding: baseUnit,
-
+			minHeight: baseUnit,
 			fontFamily: {
 				primary: ['Roboto Mono', 'Serif'],
 				secondary: ['Nunito', 'Serif'],
