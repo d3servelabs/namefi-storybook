@@ -1,10 +1,11 @@
 import React from 'react'
 import { DomainCreditCard, DomainCreditCardProps } from './DomainCreditCard'
-import { ActivitiesGrid } from './ActivitiesGrid'
+import { ActivitiesGrid, ActivitiesGridProps } from './ActivitiesGrid'
 
 export type DashBoardProps = {
     domainCreditProps: DomainCreditCardProps
-    userName?: string
+    userName?: string;
+    activitiesGridProps?: ActivitiesGridProps
 }
 export const Dashboard = ({domainCreditProps, userName}: DashBoardProps) => {
   return (
@@ -18,7 +19,7 @@ export const Dashboard = ({domainCreditProps, userName}: DashBoardProps) => {
           <DomainCreditCard {...domainCreditProps} userName={userName} />
           <ActivitiesGrid />
       </div>
-
+ 
     </section>
   )
 }

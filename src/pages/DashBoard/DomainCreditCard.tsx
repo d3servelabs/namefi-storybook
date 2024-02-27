@@ -13,7 +13,9 @@ export const DomainCreditCard = ({userName, dashboardBalanceProps}: DomainCredit
     <div className='relative rounded-[20px] flex flex-col justify-between items-end w-[493px] h-[361px]'>
               <div className='w-full h-[48px] flex items-center justify-between'>
                   <p className='font-bold text-[21px] text-[#d9d9d9] tracking-[0.05em] '>Your Credit</p>
-                    <SolidButton >Claim <img className='w-[21px]' src="/assets/arrow-right2.svg" alt="arrow right" role='img' /></SolidButton>
+                    <div>
+                        <SolidButton >Claim <img className='w-[21px]' src="/assets/arrow-right2.svg" alt="arrow right" role='img' /></SolidButton>
+                    </div>
               </div>
               <div className='flex flex-col w-[459px] h-[289px] p-7 rounded-[20px] border border-[#C6EEDB] items-end justify-between'>
                   <div className='w-full h-[64px] flex justify-between items-center  '>

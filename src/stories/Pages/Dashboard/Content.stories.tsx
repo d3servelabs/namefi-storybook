@@ -5,7 +5,7 @@ import moment from "moment";
 const meta = {
   title: 'Pages/Dashboard',
   component: Dashboard,
-  parameters: {
+  parameters: { 
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
     design: {

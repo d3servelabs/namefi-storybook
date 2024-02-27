@@ -25,7 +25,7 @@ export const FullPage: Story = {
         
         headerProps: {
             includeSearchBar: false,
-            headerSearchProps: {
+            headerSearchProps: { 
               placeholderText: 'Search another domain'
             },
             authStateProps: {
