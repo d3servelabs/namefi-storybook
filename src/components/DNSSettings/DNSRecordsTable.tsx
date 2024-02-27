@@ -10,8 +10,8 @@ import DeleteIconSource from '/assets/Trash.svg';
 const DNSRecordTableRowsGroup = styled.div`
 	display: grid;
 	grid-template-columns:
-		48px
-		minmax(80px, 1fr)
+		36px
+		minmax(60px, 1fr)
 		minmax(140px, 2fr)
 		minmax(140px, 2fr)
 		minmax(80px, 1fr);
@@ -51,7 +51,11 @@ const DNSRecordsTableRow = ({
 	return (
 		<div className="contents">
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
-				<Checkbox className="transition opacity-30 hover:opacity-100" value={checked} onChange={handleCheckChange} />
+				<Checkbox
+					className="transition opacity-30 hover:opacity-100"
+					value={checked}
+					onChange={handleCheckChange}
+				/>
 			</div>
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
 				{record.type}
@@ -134,7 +138,7 @@ export const DNSRecordsTable = ({
 	return (
 		<div
 			className={cn(
-				'flex flex-col overflow-hidden bg-black-900 rounded-[10px] font-primary pl-2 pt-2',
+				'flex-1 flex flex-col overflow-hidden w-full bg-black-900 rounded-[10px] font-primary pl-2 pt-2',
 				className,
 			)}>
 			<DNSRecordTableRowsGroup className="text-xs text-black-400 bg-black-900 pr-[14px]">

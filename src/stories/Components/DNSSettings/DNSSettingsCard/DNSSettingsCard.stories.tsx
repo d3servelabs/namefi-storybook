@@ -17,6 +17,7 @@ interface DNSSettingsCardProps {
 	onBack: () => void;
 	onSave: () => void;
 	className?: string;
+	tableClassName?: string;
 }
 const DNSSettingsCard = ({
 	records,
@@ -26,6 +27,7 @@ const DNSSettingsCard = ({
 	onBack,
 	onSave,
 	className,
+	tableClassName,
 }: DNSSettingsCardProps) => {
 	const [tab, setTab] = useState<DNSSettingsTabKey>('records');
 	return (
@@ -34,12 +36,15 @@ const DNSSettingsCard = ({
 			<DNSSettingsTabs value={tab} onChange={setTab} onSave={onSave} />
 			{tab === 'records' ? (
 				<DNSRecordsTable
+					className={tableClassName}
 					records={records}
 					onAdd={onAddRecord}
 					onDownload={onDownloadRecords}
 					onDelete={onDeleteRecords}
 				/>
-			): <ComingSoon />}
+			) : (
+				<ComingSoon />
+			)}
 		</Card>
 	);
 };
@@ -103,9 +108,11 @@ export const Default: Story = {
 		onBack: { action: 'onBack' },
 		onSave: { action: 'onSave' },
 		className: { control: 'text' },
+		tableClassName: { control: 'text' },
 	},
 	args: {
 		records: DNS_RECORD_DATAS,
-		className: 'w-[640px] max-h-[640px]'
+		className: 'w-[613px] min-h-[472px]',
+		tableClassName: 'max-h-[280px]',
 	},
 };
