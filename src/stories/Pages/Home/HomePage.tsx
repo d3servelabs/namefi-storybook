@@ -1,8 +1,6 @@
 import React from 'react'
 import '../../../App.css'
-// import { HomePageContent } from '@pages/home/content'
 import { HomePageContent } from '../../../pages/home/content'
-// import { PageLayout } from '@components/PageLayout'
 import { PageLayout, PageLayoutProps } from '../../../components/PageLayout'
 
 interface HomePageProps {

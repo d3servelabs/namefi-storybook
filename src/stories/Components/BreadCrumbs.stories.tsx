@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import BreadCrumbsRoot from "@components/BreadCrumbs";
+import BreadCrumbsRoot from "../../components/BreadCrumbs";
 
 const meta = {
     title: 'Components/BreadCrumbs',

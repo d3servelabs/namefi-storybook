@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { DomainCard } from "@components/DomainCard";
-import moment from "moment";
-import { deterministicMoment } from "@stories/consts";
+import { DomainCard } from "../../components/DomainCard";
+import { deterministicMoment } from "../consts";
 
 const meta = {
     title: 'Components/DomainCard',

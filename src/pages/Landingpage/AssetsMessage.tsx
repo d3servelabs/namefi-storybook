@@ -1,8 +1,5 @@
-import { NamefiBrandText } from '@components/NamefiBrandText'
-import {CaretLeft} from './icons/CaretLeft'
+import { NamefiBrandText } from '../../components/NamefiBrandText'
 import React from 'react'
-import { DefiIcon } from './icons/DEfiIcon'
-import { CaretRight } from './icons/CaretRight'
 
 export const Message1 = () => {
   return (

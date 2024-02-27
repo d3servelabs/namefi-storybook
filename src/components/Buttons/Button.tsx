@@ -1,7 +1,7 @@
 import React from 'react';
-import { cn } from '@utils/cn';
-import { ButtonLoadingContent } from '@components/Buttons/ButtonLoadingContent';
-import {ButtonText} from "@components/Buttons/ButtonText";
+import { cn } from '../../utils/cn';
+import { ButtonLoadingContent } from './ButtonLoadingContent';
+import {ButtonText} from "./ButtonText";
 
 export type ButtonProps = React.ComponentPropsWithRef<'button'> &
 	Partial<{

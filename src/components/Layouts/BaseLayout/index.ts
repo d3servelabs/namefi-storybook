@@ -6,9 +6,11 @@ import { default as BaseLayoutHeader } from './BaseLayoutHeader';
 
 export { BaseLayoutRoot, BaseLayoutFooter, BaseLayoutFooterLink, BaseLayoutBody, BaseLayoutHeader };
 
-export default {
+const BaseLayout = {
 	Root: BaseLayoutRoot,
 	Header: BaseLayoutHeader,
 	Body: BaseLayoutBody,
-	Footer: Object.assign(BaseLayoutBody, { Link: BaseLayoutFooterLink }),
+	Footer: Object.assign(BaseLayoutFooter, { Link: BaseLayoutFooterLink }),
 };
+
+export default BaseLayout;

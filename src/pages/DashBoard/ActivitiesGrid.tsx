@@ -1,6 +1,4 @@
-import { NamefiBrandText } from '@components/NamefiBrandText'
 import React from 'react'
-import { LoadindAnimation } from './LoadindAnimation'
 import { Activities, ActivitiesProps } from './Activities'
 
 

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { BaseButton, SolidButton } from './SolidButton'
 import clsx from 'clsx'
-import { NamefiBrandText } from '@components/NamefiBrandText'
+import { NamefiBrandText } from '../../components/NamefiBrandText'
 
 type faqProps = {
   question: string;

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { StepDiagram } from "@components/StepDiagram";
+import { StepDiagram } from "../../components/StepDiagram";
 
 const meta = {
     title: 'Components/StepDiagram',

@@ -1,3 +1,5 @@
+import React from 'react';
+
 export function RefreshIcon({className}) {
 	return (
 		<svg

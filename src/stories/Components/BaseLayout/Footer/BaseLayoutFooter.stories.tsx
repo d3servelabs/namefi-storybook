@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import  BaseLayoutFooter from '@components/Layouts/BaseLayout/BaseLayoutFooter';
-import  BaseLayoutFooterLink from '@components/Layouts/BaseLayout/BaseLayoutFooterLink';
+import  BaseLayoutFooter from '../../../../components/Layouts/BaseLayout/BaseLayoutFooter';
+import  BaseLayoutFooterLink from '../../../../components/Layouts/BaseLayout/BaseLayoutFooterLink';
 
 const meta: Meta<typeof BaseLayoutFooter> = {
 	title: 'Components/Layouts/BaseLayout/Footer',

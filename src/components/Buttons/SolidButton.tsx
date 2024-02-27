@@ -1,6 +1,6 @@
 import React from 'react'
-import {Button, ButtonProps} from "@components/Buttons/Button";
-import {cn} from "@utils/cn";
+import {Button, ButtonProps} from "./Button";
+import {cn} from "../../utils/cn";
 
 
 

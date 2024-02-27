@@ -1,8 +1,8 @@
 import React from 'react';
-import  ShortAddress  from '@components/ShortAddress';
+import  ShortAddress  from '../../../components/ShortAddress';
 import {useCopyToClipboard} from "@uidotdev/usehooks"
-import {cn} from "@utils/cn";
-import {NetworkLogo} from "@components/NetworkLogo";
+import {cn} from "../../../utils/cn";
+import {NetworkLogo} from "../../NetworkLogo";
 
 export function UserAuthStateDropdownHeader({ userAddress,loading,chainId =1 }) {
 	const [clipboard,copyToClipboard] = useCopyToClipboard()

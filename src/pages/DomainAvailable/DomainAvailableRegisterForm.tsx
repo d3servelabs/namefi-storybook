@@ -1,5 +1,5 @@
-import { Button, ButtonProps } from "@components/Buttons/Button";
-import { NamefiBrandText } from "@components/NamefiBrandText";
+import { Button, ButtonProps } from "../../components/Buttons/Button";
+import { NamefiBrandText } from "../../components/NamefiBrandText";
 import React from "react";
 
 export type DomainAvailableRegisterFormProps = {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { RedirectLinkButton } from "@components/RedirectLinkButton";
+import { RedirectLinkButton } from "../../components/RedirectLinkButton";
 const meta = {
     title: 'Components/RedirectLinkButton',
     component: RedirectLinkButton,

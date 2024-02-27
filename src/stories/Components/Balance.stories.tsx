@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Balance } from "@components/Balance";
+import { Balance } from "../../components/Balance";
 
 const meta = {
     title: 'Components/Balance',

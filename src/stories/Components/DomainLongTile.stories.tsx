@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { DomainTile } from '@components/DomainTile';
-import { deterministicMoment } from '@stories/consts';
+import { DomainTile } from '../../components/DomainTile';
+import { deterministicMoment } from '../consts';
 
 const meta = {
 	title: 'Components/DomainLongTile',

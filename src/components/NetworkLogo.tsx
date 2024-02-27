@@ -1,10 +1,13 @@
 import React from 'react';
-import { cn } from '@utils/cn';
+import { cn } from '../utils/cn';
+import { EthereumLogo } from './icons/EthereumLogo';
 
 export const NetworkLogo = ({
 	network,
 	...props
-}: React.ComponentProps<'div'> & { network: number }) => {
+}: React.ComponentProps<'div'> & {
+	network: number;
+}) => {
 	//todo
 	return (
 		<div
@@ -14,14 +17,9 @@ export const NetworkLogo = ({
 				background: '#617DEA',
 			}}>
 			{network === 1 ? (
-				<img src="/assets/eth-icon.svg" alt="eth logo" role="img" className={'w-12 h-12'} />
+				<EthereumLogo className={'w-12 h-12'} />
 			) : [1, 11155111, 5].includes(network) ? (
-				<img
-					src="/assets/eth-icon.svg"
-					alt="eth logo"
-					role="img"
-					className={'w-12 h-12 grayscale-1'}
-				/>
+				<EthereumLogo className={'w-12 h-12 grayscale-1'} />
 			) : (
 				<div className={'grid place-items-center h-full w-full'}>
 					<span className={'text-2xl font-bold text-slate-100/90'}>?</span>

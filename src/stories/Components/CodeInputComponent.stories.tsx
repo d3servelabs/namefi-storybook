@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CodeInputField } from "@components/CodeInputField";
+import { CodeInputField } from "../../components/CodeInputField";
 const meta = {
     title: 'Components/CodeInputField',
     component: CodeInputField,

@@ -1,8 +1,8 @@
-import OwnedDomainsFilter from '@components/OwnedDomains/OwnedDomainsFilter';
-import OwnedDomainsFilterChip from '@components/OwnedDomains/OwnedDomainsFilterChip';
-import OwnedDomainsRoot from '@components/OwnedDomains/OwnedDomainsRoot';
-import OwnedDomainsGridRoot from '@components/OwnedDomains/OwnedDomainsGridRoot';
-import { DomainTile } from '@components/DomainTile';
+import OwnedDomainsFilter from './OwnedDomainsFilter';
+import OwnedDomainsFilterChip from './OwnedDomainsFilterChip';
+import OwnedDomainsRoot from './OwnedDomainsRoot';
+import OwnedDomainsGridRoot from './OwnedDomainsGridRoot';
+import { DomainTile } from '../DomainTile';
 
 const OwnedDomains = {
 	Filter: Object.assign(OwnedDomainsFilter, { Chip: OwnedDomainsFilterChip }),

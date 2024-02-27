@@ -1,6 +1,5 @@
-import { cn } from '@utils/cn';
+import { cn } from '../../../utils/cn';
 import React, { useId } from 'react';
-import { ToggleButton } from '@components/ToggleButton';
 
 export default function DomainSettingsToggle({
 	checked,
@@ -23,11 +22,7 @@ export default function DomainSettingsToggle({
 				className={`text-emerald-400 text-sm font-medium font-['Roboto'] leading-[14px] tracking-wide`}>
 				{children}
 			</span>
-			{/*<ToggleButton checked={checked} onChange={onCheckedChange}  classes={{*/}
-			{/*	track: "bg-[#797979AF] peer-checked:bg-[#48E59BA0]",*/}
-			{/*	thumb: "bg-[#D6D6D6] peer-checked:bg-[#E8FFD2]",*/}
-			{/*	root: "h-[1.125rem]",*/}
-			{/*}}/>*/}
+
 
 			<div className={cn(' h-[18px] w-8 rounded-full')}>
 				<label className="relative block w-full h-full rounded-full">

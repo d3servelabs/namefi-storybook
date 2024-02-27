@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import OwnedDomains from '@components/OwnedDomains';
+import OwnedDomains from '../../components/OwnedDomains';
 import { useSet } from '@uidotdev/usehooks';
 import { useCallback } from 'react';
 

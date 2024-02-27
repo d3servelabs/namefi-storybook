@@ -1,6 +1,6 @@
-import { DiscordIcon } from '@components/icons/DiscordIcon'
-import { TelegramIcon } from '@pages/Landingpage/icons/TelegramIcon'
-import { Xicon } from '@pages/Landingpage/icons/Xicon'
+import { DiscordIcon } from '../../components/icons/DiscordIcon'
+import { TelegramIcon } from './icons/TelegramIcon'
+import { Xicon } from './icons/Xicon'
 import React from 'react'
 
 export const SocialLinks = () => {

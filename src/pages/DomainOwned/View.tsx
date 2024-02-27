@@ -1,6 +1,5 @@
-import { Button } from '@components/Buttons/Button'
 import React from 'react'
-import { RedirectLinkButton } from '@components/RedirectLinkButton'
+import { RedirectLinkButton } from '../../components/RedirectLinkButton'
 
 export const View = () => {
     return (

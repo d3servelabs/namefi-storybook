@@ -1,7 +1,6 @@
 import React from 'react'
 import { SubscriptionFooter } from './Subscription'
-import { NamefiBrandText } from '@components/NamefiBrandText'
-import { SocialLinks } from './SocialLinks'
+import { NamefiBrandText } from '../../components/NamefiBrandText'
 import { Xicon } from './icons/Xicon'
 import { DiscordIcon } from './icons/DiscordIcon'
 import { TelegramIcon } from './icons/TelegramIcon'

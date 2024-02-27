@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { NamefiBrandText } from "@components/NamefiBrandText";
+import { NamefiBrandText } from "../../components/NamefiBrandText";
 const meta = {
     title: 'Components/NamefiBrandText',
     component: NamefiBrandText,

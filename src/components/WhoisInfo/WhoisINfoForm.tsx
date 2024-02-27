@@ -3,8 +3,10 @@ import React from 'react'
 
 export const WhoisINfoForm = () => {
   return (
-    <div className='w-full h-[340px] flex flex-col justify-center items-center rounded-5 bg-brand-black rounded-2xl '>
-        <form className='w-[493px] h-[284px] flex flex-col items-end gap-4 text-sm text-white font-normal tracking-wider'>
+    <div className='w-full py-8 flex flex-col justify-center items-center rounded-5 bg-brand-black rounded-2xl '>
+        <form 
+            
+            className='w-[493px] h-full flex flex-col items-end gap-4 text-sm text-white font-normal tracking-wider'>
             <div className='flex gap-5  '>
                 <label className=' flex items-center w-[237px] '>
                     <p className='text-black-500 tracking-wider w-[150px] font-normal text-sm '>First Name</p>
@@ -16,7 +18,7 @@ export const WhoisINfoForm = () => {
                     <p className='text-black-500 tracking-wider w-[150px] font-normal text-sm '>Last Name</p>
                     <input
                         className='outline-none bg-[#232C27] min-w-[150px] py-2 px-3 placeholder:text-[#797979] rounded-md ' 
-                        type="text" placeholder='BUterin' />
+                        type="text" placeholder='Buterin' />
                 </label>
             </div>
             <div>
@@ -39,7 +41,7 @@ export const WhoisINfoForm = () => {
                         type="number" placeholder='(0) xxx-xxx-xxx' />
                 </label>
             </div>
-            <div className='flex gap-7'>
+            <div className='flex gap-8'>
                 <label className='flex items-center gap-3'>
                     <p className='text-black-500'>Street</p>
                     <input

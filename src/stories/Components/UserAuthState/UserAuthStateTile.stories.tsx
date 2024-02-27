@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import UserAuthStateTile from '@components/UserAuthState/Tile';
-import ShortAddress from '@components/ShortAddress';
+import UserAuthStateTile from '../../../components/UserAuthState/Tile';
+import ShortAddress from '../../../components/ShortAddress';
 import React from 'react';
 
 const meta = {
