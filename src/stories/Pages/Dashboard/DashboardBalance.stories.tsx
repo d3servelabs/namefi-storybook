@@ -19,7 +19,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Balance: Story = { 
   args: {
-    
     balanceProps: {
         balance: 100.233,
         

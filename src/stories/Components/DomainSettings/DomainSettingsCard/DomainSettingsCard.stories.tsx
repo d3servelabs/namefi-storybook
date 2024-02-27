@@ -35,7 +35,7 @@ export const Default: Story = {
 				},5000)
 			},
 			[],
-		);
+		); 
 
 		return (
 			<DomainSettings.Card.Root>

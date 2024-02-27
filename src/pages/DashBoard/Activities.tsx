@@ -3,15 +3,19 @@ import { LoadindAnimation } from './LoadindAnimation';
 
 export type ActivitiesProps = {
     todo?: string;
-    domainName?: string;
+    domainName: string;
     isLoading?: boolean
 }
 
 export const Activities = ({todo, domainName, isLoading}: ActivitiesProps) => {
+
+
   return (
     <div className='flex justify-between w-[574px] h-[24px] font-primary font-normal text-white '>
         <p className=' text-base tracking-wider min-w-[110px]'>[{todo}]</p>
-        <p className='text-center text-base tracking-wider min-w-[153px]'>{domainName}</p>
+        <p className='text-center text-base tracking-wider min-w-[153px]'>
+            {domainName?.length > 14 ? domainName?.slice(0,5) + '...' + domainName?.slice(-6) : domainName }
+        </p>
         {
             isLoading ?
                 <div className='w-[200px] h-full flex items-center justify-between '>
