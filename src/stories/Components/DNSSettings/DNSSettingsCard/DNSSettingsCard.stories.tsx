@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Card, CardHeader } from '@components/Card';
+import { ComingSoon } from '@components/ComingSoon';
 import {
 	DNSSettingsTabs,
 	type DNSSettingsTabKey,
@@ -31,14 +32,14 @@ const DNSSettingsCard = ({
 		<Card className={className}>
 			<CardHeader onBack={onBack}>DNS Settings</CardHeader>
 			<DNSSettingsTabs value={tab} onChange={setTab} onSave={onSave} />
-			{tab === 'records' && (
+			{tab === 'records' ? (
 				<DNSRecordsTable
 					records={records}
 					onAdd={onAddRecord}
 					onDownload={onDownloadRecords}
 					onDelete={onDeleteRecords}
 				/>
-			)}
+			): <ComingSoon />}
 		</Card>
 	);
 };
@@ -105,5 +106,6 @@ export const Default: Story = {
 	},
 	args: {
 		records: DNS_RECORD_DATAS,
+		className: 'w-[640px] max-h-[640px]'
 	},
 };
