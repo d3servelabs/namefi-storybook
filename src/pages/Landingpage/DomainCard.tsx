@@ -1,7 +1,5 @@
-import React, {useMemo} from 'react'
-import moment from "moment";
-import { NamefiBrandText } from '@components/NamefiBrandText';
-// import { NamefiBrandText } from './NamefiBrandText';
+import React from 'react'
+import { NamefiBrandText } from '../../components/NamefiBrandText';
 
 export const Card1 = () => {
 

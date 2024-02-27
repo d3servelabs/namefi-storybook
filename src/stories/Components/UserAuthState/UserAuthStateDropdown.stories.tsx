@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import UserAuthStateDropDown from '@components/UserAuthState/Dropdown';
+import UserAuthStateDropDown from '../../../components/UserAuthState/Dropdown';
 import React from 'react';
 
 const meta = {

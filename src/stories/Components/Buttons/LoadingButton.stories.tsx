@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 
-import { Button as Component } from '@components/Buttons/Button';
-import {ArrowRight} from "@components/icons/ArrowRight";
-import {ButtonText} from "@components/Buttons/ButtonText";
-import {ButtonLoadingContent} from "@components/Buttons/ButtonLoadingContent";
+import { Button as Component } from '../../../components/Buttons/Button';
+import {ArrowRight} from "../../../components/icons/ArrowRight";
+import {ButtonText} from "../../../components/Buttons/ButtonText";
+import {ButtonLoadingContent} from "../../../components/Buttons/ButtonLoadingContent";
 
 const meta = {
 	title: 'Components/Buttons/BaseButton/Variants',

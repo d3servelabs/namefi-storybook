@@ -1,5 +1,5 @@
 import React, {memo} from 'react';
-import {FlowStep} from '@components/FlowStep';
+import {FlowStep} from './FlowStep';
 
 export type StepDiagramProps = {stepCount:number, currentStep:number}
 

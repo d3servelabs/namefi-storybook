@@ -1,6 +1,9 @@
 import UserAuthStateTile from './Tile'
 import UserAuthStateDropdown from './Dropdown'
-export default {
+
+const UserAuthState =  {
     Tile: UserAuthStateTile,
     Dropdown: UserAuthStateDropdown,
 }
+
+export default UserAuthState;

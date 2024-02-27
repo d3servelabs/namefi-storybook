@@ -11,7 +11,7 @@ import { default as DomainSettingsRightSection } from './SettingsCard/DomainSett
 import { default as DomainSettingsTwoSectionLayout } from './SettingsCard/DomainSettingsTwoSectionLayout';
 import { default as DomainSettingsWebViewCaption } from './SettingsCard/DomainSettingsWebViewCaption';
 
-export default {
+const DomainSettings = {
 	Card: {
 		Title: DomainSettingsTitle,
 		CopyAddress: DomainSettingsCopyAddress,
@@ -27,3 +27,4 @@ export default {
 		WebViewCaption: DomainSettingsWebViewCaption,
 	},
 };
+export default DomainSettings;

@@ -1,11 +1,13 @@
 import UserAuthStateTileRoot from './UserAuthStateTileRoot';
-import UserAuthStateTileLabel from '@components/UserAuthState/Tile/UserAuthStateTileLabel';
-import UserAuthStateTileNetwork from '@components/UserAuthState/Tile/UserAuthStateTileNetwork';
-import UserAuthStateTileAction from '@components/UserAuthState/Tile/UserAuthStateTileAction';
+import UserAuthStateTileLabel from './UserAuthStateTileLabel';
+import UserAuthStateTileNetwork from './UserAuthStateTileNetwork';
+import UserAuthStateTileAction from './UserAuthStateTileAction';
 
-export default {
+const UserAuthStateTile = {
 	Root: UserAuthStateTileRoot,
 	Network: UserAuthStateTileNetwork,
 	Label: UserAuthStateTileLabel,
 	Action: UserAuthStateTileAction,
 };
+
+export default UserAuthStateTile

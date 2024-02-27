@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@utils/cn';
+import { cn } from '../../../utils/cn';
 
 export type UserAuthStateDropdownProps = React.ComponentProps<'div'> & {};
 const UserAuthStateDropDownRoot = React.forwardRef<HTMLDivElement, UserAuthStateDropdownProps>(

@@ -1,5 +1,5 @@
-import React, {ReactElement, ReactNode} from 'react';
-import NamefiLogo from "@components/icons/NamefiLogo";
+import React, {ReactNode} from 'react';
+import NamefiLogo from "../../../components/icons/NamefiLogo";
 type AppLayoutHeaderProps = React.ComponentProps<'header'> & {
 	content?: ReactNode;
 	endSlot?: ReactNode;

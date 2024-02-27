@@ -1,5 +1,5 @@
 import React from 'react';
-import { NetworkLogo } from '@components/NetworkLogo';
+import { NetworkLogo } from '../../NetworkLogo';
 
 const UserAuthStateTileNetwork = ({
 	network,

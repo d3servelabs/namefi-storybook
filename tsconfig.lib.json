@@ -20,42 +20,13 @@
 		"declarationDir": "types",
 		"noImplicitAny": false,
 		"baseUrl": ".",
-		"paths": {
-			"@pages/*": [
-				"src/pages/*"
-			],
-			"@icons": [
-				"src/components/icons/*"
-			],
-			"@components/*": [
-				"src/components/*"
-			],
-			"@styles/*": [
-				"src/styles/*"
-			],
-			"@assets/*": [
-				"src/assets/*"
-			],
-			"@stories/*": [
-				"src/stories/*"
-			],
-			"@utils/*": [
-				"src/utils/*"
-			]
-
-		}
 	},
 	"include": [
 		"src/index.ts",
+		"src/lib.css",
 		"src/index.css",
-		"src/components/Logo.tsx",
-		"src/styles", "src/assets", "src/vite.config.js",
+		"src/components",
 		"src/custom.d.ts",
-		"src/components/index.ts",
-		"src/components/DomainSettings/index.ts",
-		"src/components/OwnedDomains/index.ts",
-		"src/components/Layouts/BaseLayout/index.ts",
-		"src/components/UserAuthState/index.ts",
 		"src/styles", "src/assets", "src/vite.config.js"
 	],
 	"exclude": ["node_modules", "lib", "dist"],

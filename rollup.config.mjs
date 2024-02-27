@@ -39,17 +39,6 @@ export default [
             peerDepsExternal(),
             resolve(),
             svgr({icon: true, memo: true, exportType: "default",}),
-            alias({
-                entries: [
-                    {find: '@', replacement: path.resolve(__dirname, './src')},
-                    {find: '@icons', replacement: path.resolve(__dirname, './src/components/icons')},
-                    {find: '@components', replacement: path.resolve(__dirname, './src/components')},
-                    {find: '@assets', replacement: path.resolve(__dirname, './src/assets')},
-                    {find: '@pages', replacement: path.resolve(__dirname, './src/pages')},
-                    {find: '@stories', replacement: path.resolve(__dirname, './src/stories')},
-                    {find: '@utils', replacement: path.resolve(__dirname, './src/utils')},
-                ]
-            }),
             commonjs(),
             postcss({
                 extensions: ['.css'],

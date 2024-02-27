@@ -7,8 +7,8 @@
 	},
 	"main": "lib/cjs/bundle.js",
 	"module": "lib/esm/bundle.js",
-	"types": "lib/index.d.ts",
 	"style": "lib/esm/bundle.css",
+	"types": "lib/esm/types/index.d.ts",
 	"files": [
 		"lib/**"
 	],

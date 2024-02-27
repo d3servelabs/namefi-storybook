@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { FlowStep } from "@components/FlowStep";
+import { FlowStep } from "../../components/FlowStep";
 
 const meta = {
     title: 'Components/FlowStep',

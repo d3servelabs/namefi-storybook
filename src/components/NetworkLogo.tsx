@@ -1,6 +1,6 @@
 import React from 'react';
-import { cn } from '@utils/cn';
-import { EthereumLogo } from '@components/icons/EthereumLogo';
+import { cn } from '../utils/cn';
+import { EthereumLogo } from './icons/EthereumLogo';
 
 export const NetworkLogo = ({
 	network,

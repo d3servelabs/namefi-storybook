@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ToggleButton } from "@components/ToggleButton";
+import { ToggleButton } from "../../components/ToggleButton";
 const meta = {
     title: 'Components/ToggleButton',
     component: ToggleButton,

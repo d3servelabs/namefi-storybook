@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import  BaseLayoutFooter from '@components/Layouts/BaseLayout/BaseLayoutFooter';
-import  BaseLayoutFooterLink from '@components/Layouts/BaseLayout/BaseLayoutFooterLink';
-import  BaseLayoutRoot from '@components/Layouts/BaseLayout/BaseLayoutRoot';
-import  {UserAuthStateDemo} from '@components/UserAuthState/UserAuthStateDemo';
-import  BaseLayoutHeader from '@components/Layouts/BaseLayout/BaseLayoutHeader';
-import  BaseLayoutBody from '@components/Layouts/BaseLayout/BaseLayoutBody';
+import  BaseLayoutFooter from '../../../components/Layouts/BaseLayout/BaseLayoutFooter';
+import  BaseLayoutFooterLink from '../../../components/Layouts/BaseLayout/BaseLayoutFooterLink';
+import  BaseLayoutRoot from '../../../components/Layouts/BaseLayout/BaseLayoutRoot';
+import  {UserAuthStateDemo} from '../../../components/UserAuthState/UserAuthStateDemo';
+import  BaseLayoutHeader from '../../../components/Layouts/BaseLayout/BaseLayoutHeader';
+import  BaseLayoutBody from '../../../components/Layouts/BaseLayout/BaseLayoutBody';
 
 const meta: Meta<typeof BaseLayoutRoot> = {
 	title: 'Components/Layouts/BaseLayout',

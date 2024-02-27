@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { WalletDropdown } from "@components/WalletDropdown";
+import { WalletDropdown } from "../../components/WalletDropdown";
 
 const meta = {
     title: 'Components/WalletDropdown',

@@ -1,11 +1,12 @@
 import UserAuthStateDropDownRoot from './UserAuthStateDropDownRoot';
-import UserAuthStateDropdownHeader from '@components/UserAuthState/Dropdown/UserAuthStateDropdownHeader';
-import UserAuthStateDropdownBody from '@components/UserAuthState/Dropdown/UserAuthStateDropdownBody';
-import UserAuthStateDropdownFooter from '@components/UserAuthState/Dropdown/UserAuthStateDropdownFooter';
+import UserAuthStateDropdownHeader from './UserAuthStateDropdownHeader';
+import UserAuthStateDropdownBody from './UserAuthStateDropdownBody';
+import UserAuthStateDropdownFooter from './UserAuthStateDropdownFooter';
 
-export default {
+const UserAuthStateDropdown = {
 	Root: UserAuthStateDropDownRoot,
 	Header: UserAuthStateDropdownHeader,
 	Body: UserAuthStateDropdownBody,
 	Footer: UserAuthStateDropdownFooter,
 };
+export default UserAuthStateDropdown

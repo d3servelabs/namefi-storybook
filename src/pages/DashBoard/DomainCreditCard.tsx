@@ -1,5 +1,4 @@
-import { Balance, BalanceProps } from '@components/Balance'
-import { SolidButton } from '@components/Buttons/SolidButton';
+import { SolidButton } from '../../components/Buttons/SolidButton';
 import React from 'react'
 import { DashboardBalance, DashboardBalanceProps } from './DashboardBalance';
 

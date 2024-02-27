@@ -1,4 +1,4 @@
-import { Balance, BalanceProps } from '@components/Balance'
+import { Balance, BalanceProps } from '../../components/Balance'
 import React from 'react'
 
 export type DashboardBalanceProps = {
