@@ -51,7 +51,7 @@ const DNSRecordsTableRow = ({
 	return (
 		<div className="contents">
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
-				<Checkbox className="opacity-30" value={checked} onChange={handleCheckChange} />
+				<Checkbox className="transition opacity-30 hover:opacity-100" value={checked} onChange={handleCheckChange} />
 			</div>
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
 				{record.type}
