@@ -16,7 +16,7 @@ export const FeaturedCardGrid = ({cardContent}: FeaturedCardGridProps) => {
   return (
     <div className='block relative w-full xl:w-[1230px] min-h-[736px] rounded-[20px] flex flex-col justify-between gap-32 py-14 items-center bg-[#24242480] '>
         <div className='w-[368px] h-[58px] font-bold tracking-wider flex justify-between self-start '>
-            <NamefiBrandText text={'Namefi'} color='#48e59b' fontSize='48px' />
+            <NamefiBrandText className="text-5xl text-primary-500">Namefi</NamefiBrandText>
             <p className=' text-4xl text-primary-500 '>Features</p>
 
         </div>

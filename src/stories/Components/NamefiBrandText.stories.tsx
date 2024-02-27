@@ -15,8 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const Text: Story = {
     args: {
-        text: 'Available',
-        color: 'yellow',
-        fontSize: '30px'
+        children: 'Available',
+        className: 'text-3xl text-[yellow]',
     }
 }

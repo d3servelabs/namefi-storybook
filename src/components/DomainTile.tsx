@@ -37,7 +37,7 @@ export const DomainTile = (props: DomainTileProps) => {
 				<div className="w-29.25 self-end ">
 					{!sameOwner ? (
 						<p className="font-bold tracking-widest  ">
-							<NamefiBrandText text="Available" fontSize="1.125rem" color="#48E59B" />
+							<NamefiBrandText className="text-lg text-primary-500">Available</NamefiBrandText>
 						</p>
 					) : (
 						showActions && (

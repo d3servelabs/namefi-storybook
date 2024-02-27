@@ -1,20 +1,21 @@
 import React from 'react';
+import { cn } from '../utils/cn';
 
 export type NamefiBrandTextProps = {
-	text: string;
-	color: string;
-	fontSize?: string;
+	children: React.ReactNode;
+	className?: string;
 };
-export const NamefiBrandText = ({ text, color, fontSize }) => {
+
+export const NamefiBrandText = ({ children, className }: NamefiBrandTextProps) => {
 	return (
 		<span
-			className='font-["Zilla_Slab_Highlight"] text-2xl font-bold tracking-[0.1em] '
-			style={{
-				color,
-				fontSize,
-			}}>
-			{text}
+			className={cn(
+				'font-["Zilla_Slab_Highlight"] text-2xl font-bold tracking-[0.1em]',
+				className,
+			)}>
+			{children}
 		</span>
 	);
 };
-export  default NamefiBrandText
+
+export default NamefiBrandText;

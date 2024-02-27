@@ -12,7 +12,7 @@ export const Footer = () => {
             <div className='w-full h-[134px] flex flex-col justify-between '>
                 <div className='w-full flex justify-between items-center '>
                     <p className='font-bold tracking-widest '>
-                        <NamefiBrandText text='Namefi' fontSize='32px' color='white' />
+                        <NamefiBrandText className="text-[32px] text-white">Namefi</NamefiBrandText>
                     </p>
                     <SubscriptionFooter />
                 </div>
