@@ -1,1 +1,2 @@
-export * from './DNSSettingsCard'
+export * from './DNSSettingsTabs';
+export * from './DNSRecordsTable';

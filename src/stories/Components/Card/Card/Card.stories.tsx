@@ -1,25 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Checkbox } from '../../components/Checkbox';
+import { Card } from '@components/Card';
 
 const meta = {
-	title: 'Components/Checkbox',
-	component: Checkbox,
-	tags: ['autodocs'],
+	title: 'Components/Card/Card',
+	component: Card,
 	parameters: {
 		layout: 'centered',
 	},
-} satisfies Meta<typeof Checkbox>;
+	tags: ['autodocs'],
+} satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	argTypes: {
-		value: { control: 'boolean' },
-		onChange: { action: 'onChange' },
+    children: { control: 'text' }, 
 		className: { control: 'text' },
 	},
 	args: {
-		value: false,
-	},
+    children: 'Content goes here',
+    className: 'w-[320px]',
+  },
 };
