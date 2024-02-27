@@ -52,9 +52,9 @@ export const DomainCard = (props: DomainCardProps) => {
             <div className='flex w-full h-7.5 items-center justify-between'>
                 <p>
                     {status==='TAKEN'? 
-                        (sameOwner ?<NamefiBrandText fontSize={'1.5rem'} color={'#FEF556'} text={'You Own This'} /> :
-                                 <NamefiBrandText fontSize={'1.5rem'} color={'#3488FC'} text={'Taken'} /> ) :
-                                 <NamefiBrandText fontSize={'1.5rem'} color={'#48E59B'} text={'Available'} />
+                        (sameOwner ?<NamefiBrandText className="text-2xl text-[#FEF556]">You Own This</NamefiBrandText> :
+                                 <NamefiBrandText className="text-2xl text-[#3488FC]">Taken</NamefiBrandText>) :
+                                 <NamefiBrandText className="text-2xl text-primary-500">Available</NamefiBrandText>
                     }
                 </p>
                 <button className='relative block' onClick={onSettingsClicked}>

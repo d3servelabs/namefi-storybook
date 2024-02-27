@@ -23,7 +23,7 @@ export function DomainAvailableRegisterForm({
             <div className='h-[175px] w-full flex flex-col justify-between'>
                 <div className="w-full h-[59px] ">
                     <p className="text-[21px] text-white font-semibold tracking-wider"> Register a new domain.</p>
-                    <p className="text-sm text-[#c6eedb] font-normal tracking-wider">We will mint a <NamefiBrandText color='#d9d9d9' fontSize='14px' text=' Namefi' /> NFT to your connected wallet.</p>
+                    <p className="text-sm text-[#c6eedb] font-normal tracking-wider">We will mint a <NamefiBrandText className="text-sm text-black-500"> Namefi</NamefiBrandText> NFT to your connected wallet.</p>
                 </div>
                 <div className="h-[80px] w-full flex items-center justify-between ">
                     <div className='h-full w-[245px] flex flex-col justify-between '>

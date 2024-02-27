@@ -63,7 +63,7 @@ export const Transfer = ({
 			<div className="w-full h-[59px] flex flex-col justify-between ">
 				<h4 className="font-semibold text-[21px] tracking-[0.05em] text-[#d9d9d9] ">
 					{transferNotInitiated && 'Transfer domain to another wallet.'}
-					{isTransferring && <>Transferring your <NamefiBrandText text={domainName} fontSize={'21px'} color={"d9d9d9"} /> NFT.</>}
+					{isTransferring && <>Transferring your <NamefiBrandText className="text-black-500 text-[21px]">{domainName}</NamefiBrandText> NFT.</>}
 					{isTransferFinished && 'Congratulations!'}
 				</h4>
 				<p className="font-normal text-sm tracking-[0.04em] text-[#C6EEDB] ">
