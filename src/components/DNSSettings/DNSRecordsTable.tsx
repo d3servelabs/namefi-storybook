@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import styled from '@emotion/styled';
-import { Checkbox } from '@components/Checkbox';
-import { IconCircleButton } from '@components/Buttons/IconCircleButton';
-import { cn } from '@utils/cn';
+import { Checkbox } from '../Core/Checkbox';
+import { IconCircleButton } from '../Core/Buttons/IconCircleButton';
+import { cn } from '../../utils/cn';
 import PlusIconSource from '/assets/Plus.svg';
 import DownloadIconSource from '/assets/Download.svg';
 import DeleteIconSource from '/assets/Trash.svg';

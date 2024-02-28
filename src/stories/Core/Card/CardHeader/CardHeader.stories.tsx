@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CardHeader } from '@components/Card';
+import { CardHeader } from '../../../../components/Core/Card';
 
 const meta = {
-	title: 'CoreCard/CardHeader',
+	title: 'Core/Card/CardHeader',
 	component: CardHeader,
 	parameters: {
 		layout: 'centered',

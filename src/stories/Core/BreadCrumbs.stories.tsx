@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import BreadCrumbsRoot from "../../components/Core/BreadCrumbs";
 
 const meta = {
-    title: 'CoreBreadCrumbs',
+    title: 'Core/BreadCrumbs',
     component: BreadCrumbsRoot,
     parameters: {
         layout: 'centered'

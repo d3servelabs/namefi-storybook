@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card, CardHeader } from '@components/Card';
+import { Card, CardHeader } from '../../../components/Core/Card';
 
 interface Props {
 	onBackDisabled?: boolean;
@@ -16,7 +16,7 @@ const Component = ({ onBackDisabled, onBack, className, children }: Props) => {
 };
 
 const meta = {
-	title: 'CoreCard',
+	title: 'Core/Card',
 	component: Component,
 	parameters: {
 		layout: 'centered',

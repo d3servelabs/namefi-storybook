@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { FlowStep } from "../../components/Core/FlowStep";
 
 const meta = {
-    title: 'CoreFlowStep',
+    title: 'Core/FlowStep',
     component: FlowStep,
     parameters: {
         layout: 'centered'

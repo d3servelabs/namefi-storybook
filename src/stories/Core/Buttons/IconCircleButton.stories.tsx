@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconCircleButton } from '@components/Buttons/IconCircleButton';
+import { IconCircleButton } from '../../../components/Core/Buttons/IconCircleButton';
 import PlusIconSource from '/assets/Plus.svg';
 import DownloadIconSource from '/assets/Download.svg';
 import DeleteIconSource from '/assets/Trash.svg';
 
 const meta = {
-	title: 'CoreButtons/IconCircleButton',
+	title: 'Core/Buttons/IconCircleButton',
 	component: IconCircleButton,
 	parameters: {
 		layout: 'centered',

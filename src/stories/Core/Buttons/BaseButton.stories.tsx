@@ -3,7 +3,7 @@ import {Button as Component} from '../../../components/Core/Buttons/Button'
 import {ButtonText} from "../../../components/Core/Buttons/ButtonText";
 
 const meta = {
-    title: 'CoreButtons/BaseButton',
+    title: 'Core/Buttons/BaseButton',
     component: Component,
     parameters: {
         layout: 'centered'

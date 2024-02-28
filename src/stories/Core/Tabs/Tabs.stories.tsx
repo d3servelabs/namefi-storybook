@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Tabs } from '@components/Tabs';
+import { Tabs } from '../../../components/Core/Tabs';
 
 const meta = {
-	title: 'CoreTabs',
+	title: 'Core/Tabs',
 	component: Tabs,
 	parameters: {
 		layout: 'centered',

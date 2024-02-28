@@ -3,7 +3,7 @@ import {SolidButton as Component} from "../../../components/Core/Buttons/SolidBu
 import {ButtonText} from "../../../components/Core/Buttons/ButtonText";
 
 const meta = {
-    title: 'CoreButtons/BaseButton/Variants',
+    title: 'Core/Buttons/BaseButton/Variants',
     component: Component, 
     parameters: {
         layout: 'centered'

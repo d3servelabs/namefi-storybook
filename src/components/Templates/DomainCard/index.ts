@@ -3,7 +3,7 @@ import DomainCardHeader from "./DomainCardHeader";
 import DomainCardFooter from "./DomainCardFooter";
 import DomainCardBody from "./DomainCardBody";
 import DomainOwner from "./DomainOwner";
-import DomainStatus from "./DomainStatus";
+import DomainStatus, {DomainStatusEnum} from "./DomainStatus";
 import DomainExpirationAndLock from "./DomainExpirationAndLock";
 
 const DomainCard= {
@@ -13,6 +13,7 @@ const DomainCard= {
     Footer: DomainCardFooter,
     Owner: DomainOwner,
     Status: DomainStatus,
+    StatusEnum: DomainStatusEnum,
     ExpirationAndLock: DomainExpirationAndLock,
 }
 export default DomainCard
