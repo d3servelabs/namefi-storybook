@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react';
 import BaseLayoutFooterLink from './BaseLayoutFooterLink';
-import NamefiWhiteLogo from "../../../components/icons/NamefiWhiteLogo";
+import NamefiWhiteLogo from "../../Core/icons/NamefiWhiteLogo";
 
 type AppLayoutFooterProps = React.ComponentProps<'div'> & {
 	links: ReactNode | ReactElement<typeof BaseLayoutFooterLink> | ReactElement<typeof BaseLayoutFooterLink>[];

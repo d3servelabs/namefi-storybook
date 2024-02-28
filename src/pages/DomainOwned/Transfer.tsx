@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { WalletInput } from './WalletInput';
 import { ProgressBar } from './ProgressBar';
-import { Button } from '../../components/Buttons/Button';
+import { Button } from '../../components/Core/Buttons/Button';
 import clsx from 'clsx';
-import { StepDiagram } from '../../components/StepDiagram';
-import  ShortAddress  from '../../components/ShortAddress';
-import { NamefiBrandText } from '../../components/NamefiBrandText';
-import {ButtonText} from "../../components/Buttons/ButtonText";
+import { StepDiagram } from '../../components/Core/StepDiagram';
+import  ShortAddress  from '../../components/Core/ShortAddress';
+import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
+import {ButtonText} from "../../components/Core/Buttons/ButtonText";
 
 export type TransferProps = {
 	unlocked?: boolean;

@@ -1,7 +1,7 @@
-export { default as DomainCard } from './DomainCard';
+export { default as DomainCard } from './Templates/DomainCard';
 export { DomainTile } from './DomainTile';
-export { default as BreadCrumbs } from './BreadCrumbs';
-export { default as ShortAddress } from './ShortAddress';
-export { default as YearCounter } from './YearCounter';
-export { default as NetworkLogo } from './NetworkLogo';
-export { default as NamefiBrandText } from './NamefiBrandText';
+export { default as BreadCrumbs } from './Core/BreadCrumbs';
+export { default as ShortAddress } from './Core/ShortAddress';
+export { default as YearCounter } from './Core/YearCounter';
+export { default as NetworkLogo } from './Core/NetworkLogo';
+export { default as NamefiBrandText } from './Core/NamefiBrandText';

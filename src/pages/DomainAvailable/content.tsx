@@ -1,5 +1,5 @@
 import React from 'react'
-import {DomainCard, DomainCardProps} from '../../components/DomainCard/DomainCard'
+import {DomainCardDemo, DomainCardProps} from '../../components/Templates/DomainCard/DomainCardDemo'
 import {OwnedDomainsGrid, OwnedDomainsGridProps} from "../../components/OwnedDomainsGrid";
 import { DomainAvailable, DomainAvailableProps } from './DomainAvailable';
 
@@ -13,7 +13,7 @@ export const DomainAvailableContent = ({domainCardProps, domainAvailableProps, o
     return (
         <section className='relative min-h-screen py-24'>
             <div className='w-full h-auto flex justify-center items-center gap-36 relative mb-40'>
-                <DomainCard {...domainCardProps}/>
+                <DomainCardDemo {...domainCardProps}/>
                 <DomainAvailable {...domainAvailableProps} />
             </div>
             {!!ownedDomainsProps && 

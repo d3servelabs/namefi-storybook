@@ -1,5 +1,5 @@
 import React from 'react'
-import { NamefiBrandText } from '../../components/NamefiBrandText'
+import { NamefiBrandText } from '../../components/Core/NamefiBrandText'
 
 interface cardContentProps {
     label: string;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonProps } from './Buttons/Button'
+import { Button, ButtonProps } from './Core/Buttons/Button'
 interface FlowProps {
     buttonProps: ButtonProps
 }

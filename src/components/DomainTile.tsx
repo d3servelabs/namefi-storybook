@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { NamefiBrandText } from './NamefiBrandText';
+import { NamefiBrandText } from './Core/NamefiBrandText';
 import { PlusIcon, BookmarkIcon, LightningBoltIcon, ResetIcon } from '@radix-ui/react-icons';
 
 export type DomainTileProps = {

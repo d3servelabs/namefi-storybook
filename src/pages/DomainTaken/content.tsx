@@ -1,6 +1,6 @@
 import React from 'react'
 import { OwnedDomainsGrid, OwnedDomainsGridProps } from '../../components/OwnedDomainsGrid'
-import { DomainCard, DomainCardProps } from '../../components/DomainCard/DomainCard'
+import { DomainCardDemo, DomainCardProps } from '../../components/Templates/DomainCard/DomainCardDemo'
 import { DomainTakenMessage, DomainTakenMessageProps } from './DomainTakenMessage'
 
 export type DomainTakenContentProps = {
@@ -12,7 +12,7 @@ export const DomainTakenContent = ({domainCardProps, domainMessageProps, ownedDo
   return (
     <section className='relative min-h-screen py-24'>
         <div className=' w-full h-auto flex justify-center items-center gap-36 relative mb-40'>
-          <DomainCard {...domainCardProps} />
+          <DomainCardDemo {...domainCardProps} />
           <DomainTakenMessage {...domainMessageProps} />
       </div>
       <OwnedDomainsGrid {...ownedDomainsProps}/>

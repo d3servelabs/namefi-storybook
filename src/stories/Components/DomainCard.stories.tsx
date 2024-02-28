@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { DomainCard } from "../../components/DomainCard/DomainCard";
+import { DomainCardDemo } from "../../components/Templates/DomainCard/DomainCardDemo";
 import { deterministicMoment } from "../consts";
 
 const meta = {
     title: 'Components/DomainCard',
-    component: DomainCard,
+    component: DomainCardDemo,
     tags: ['autodocs'],
     argTypes: {
         onSettingsClicked: {action: 'onSettingsClicked'},
@@ -13,7 +13,7 @@ const meta = {
     parameters: {
         layout: 'centered'
     }
-}satisfies Meta<typeof DomainCard>
+}satisfies Meta<typeof DomainCardDemo>
 
 export default meta;
 type Story = StoryObj<typeof meta>

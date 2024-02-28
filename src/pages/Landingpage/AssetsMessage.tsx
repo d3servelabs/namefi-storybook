@@ -1,4 +1,4 @@
-import { NamefiBrandText } from '../../components/NamefiBrandText'
+import { NamefiBrandText } from '../../components/Core/NamefiBrandText'
 import React from 'react'
 
 export const Message1 = () => {
