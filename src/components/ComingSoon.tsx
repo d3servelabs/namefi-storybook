@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { cn } from '@utils/cn';
+import { cn } from '../utils/cn';
 
 export const ComingSoon = ({
 	onClickDiscord,

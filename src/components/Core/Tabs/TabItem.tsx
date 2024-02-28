@@ -1,4 +1,4 @@
-import { cn } from '@utils/cn';
+import { cn } from '../../../utils/cn';
 import React, { useCallback } from 'react';
 
 export interface Tab<TKey extends string = string> {
