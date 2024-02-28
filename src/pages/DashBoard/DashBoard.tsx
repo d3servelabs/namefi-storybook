@@ -21,5 +21,5 @@ export const Dashboard = ({domainCreditProps, userName}: DashBoardProps) => {
       </div>
  
     </section>
-  )
+  ) 
 }

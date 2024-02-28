@@ -24,4 +24,4 @@ export default function DomainSettingsWebView({
 				className={'w-[100rem] h-[62.5rem] scale-[0.2] origin-top-left '}></iframe>
 		</div>
 	);
-}
+} 

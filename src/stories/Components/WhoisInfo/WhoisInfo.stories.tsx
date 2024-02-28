@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { WhoisInfo } from "@components/WhoisInfo/WhoisInfo";
+// import { WhoisInfo } from "@components/WhoisInfo/WhoisInfo";
+import { WhoisInfo } from "../../../components/WhoisInfo/WhoisInfo";
 const meta = {
     title: 'Components/WhoisInfo/WhoisInfo',
     component: WhoisInfo,
@@ -11,6 +12,8 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>
-export const WhoisInfoStory : Story = {
-    
+export const Story : Story = {
+    args: {
+       
+    }
 }

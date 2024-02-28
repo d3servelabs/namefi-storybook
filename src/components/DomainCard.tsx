@@ -84,7 +84,7 @@ export const DomainCard = (props: DomainCardProps) => {
                         }
                     </div>
                 </div>
-            </div>
+            </div> 
         </a>
     )
 }

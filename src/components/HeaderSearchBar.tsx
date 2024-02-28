@@ -4,7 +4,7 @@ export type HeaderSearchBarProps = {
     placeholderText?: string
     searchValue?: string,
     onSearchValueChanged?: (value:string)=>any,
-    onSearchClicked?: ()=>any, 
+    onSearchClicked?: ()=>any,  
 }
 export const HeaderSearchBar = ({placeholderText,onSearchClicked,searchValue,onSearchValueChanged}: HeaderSearchBarProps) => {
   return (

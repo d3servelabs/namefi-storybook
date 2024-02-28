@@ -2,7 +2,7 @@ import { cn } from '../../../utils/cn';
 import React from "react";
 
 export default function DomainSettingsCardRoot({
-	children,
+	children, 
 	className,
 	...props
 }: React.ComponentProps<'div'> & {children: React.ReactNode}) {
