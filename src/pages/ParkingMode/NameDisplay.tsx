@@ -35,13 +35,9 @@ export const NameDisplay = ({
 				{punycode && <div className="text-sm text-black-400">{punycode}</div>}
 			</div>
 			<div className="absolute -left-8 -top-4">
-				<NamefiBrandText
-					text={
-						status === 'for-bid' ? 'For Bid' : status === 'for-sale' ? 'For Sale' : ''
-					}
-					color="#48E59B"
-					fontSize={30}
-				/>
+				<NamefiBrandText className="text-primary-500 text-3xl">
+					{status === 'for-bid' ? 'For Bid' : status === 'for-sale' ? 'For Sale' : ''}
+				</NamefiBrandText>
 			</div>
 			<div
 				className="flex justify-end items-center mt-4 absolute right-6 bottom-4 cursor-pointer"
