@@ -51,10 +51,7 @@ export const EstimatedValue: Story = {
 		const prettyValue = usePrettyPrice(value, 0);
 		const prettyDollar = usePrettyPrice(dollar);
 		return (
-			<Statistic
-				title="Estimated Value"
-				tip={tip}
-				description={`≈$${prettyDollar}`}>
+			<Statistic title="Estimated Value" tip={tip} description={`≈$${prettyDollar}`}>
 				<div className="flex items-end gap-8">
 					<span>{prettyValue}</span>
 					<span className="text-xl text-[#d6d6d6]">{unit}</span>
