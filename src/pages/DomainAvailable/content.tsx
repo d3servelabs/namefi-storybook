@@ -1,5 +1,5 @@
-import React, {ReactNode} from 'react'
-import {DomainCard, DomainCardProps} from '../../components/DomainCard'
+import React from 'react'
+import {DomainCard, DomainCardProps} from '../../components/DomainCard/DomainCard'
 import {OwnedDomainsGrid, OwnedDomainsGridProps} from "../../components/OwnedDomainsGrid";
 import { DomainAvailable, DomainAvailableProps } from './DomainAvailable';
 

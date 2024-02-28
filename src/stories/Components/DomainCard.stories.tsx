@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { DomainCard } from "../../components/DomainCard";
+import { DomainCard } from "../../components/DomainCard/DomainCard";
 import { deterministicMoment } from "../consts";
 
 const meta = {
@@ -7,8 +7,9 @@ const meta = {
     component: DomainCard,
     tags: ['autodocs'],
     argTypes: {
-        onSettingsClicked: {action: 'onSettingsClicked'}
-    },
+        onSettingsClicked: {action: 'onSettingsClicked'},
+        small: {type:'boolean'}
+    } as any,
     parameters: {
         layout: 'centered'
     }

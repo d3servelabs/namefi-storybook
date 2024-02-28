@@ -1,6 +1,6 @@
 import React from 'react'
 import { OwnedDomainsGrid, OwnedDomainsGridProps } from '../../components/OwnedDomainsGrid'
-import { DomainCard, DomainCardProps } from '../../components/DomainCard'
+import { DomainCard, DomainCardProps } from '../../components/DomainCard/DomainCard'
 import { View  } from './View'
 
 export type DomainOwnedContentProps = {

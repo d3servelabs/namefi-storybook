@@ -1,4 +1,4 @@
-export { DomainCard } from './DomainCard';
+export { default as DomainCard } from './DomainCard';
 export { DomainTile } from './DomainTile';
 export { default as BreadCrumbs } from './BreadCrumbs';
 export { default as ShortAddress } from './ShortAddress';
