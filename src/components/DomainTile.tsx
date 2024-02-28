@@ -63,16 +63,16 @@ export const DomainTile = (props: DomainTileProps) => {
 					</button>
 				)}
 			</div>
-			<h3 className="text-5.25 text-[#fff] font-medium tracking-widest ">{domainName}</h3>
+			<h3 className="text-5.25lg text-[#fff] font-medium tracking-widest ">{domainName}</h3>
 			<div className="w-28.25 h-6.75 flex items-center justify-between self-end ">
 				{showExpiration && !!expirationDate && (
 					<>
 						<img className="w-7" src="/assets/lock.svg" alt="lock image" role="img" />
 						<div className="w-18.75 h-full font-secondary">
-							<p className="text-[#acacac] text-2 font-extrabold tracking-widest ">
+							<p className="text-[#acacac] text-2lg font-extrabold tracking-widest ">
 								Expires on
 							</p>
-							<p className="text-[#ededed] text-2.5 font-extrabold tracking-widest ">
+							<p className="text-[#ededed] text-2.5lg font-extrabold tracking-widest ">
 								Mar 01 2025
 							</p>
 						</div>

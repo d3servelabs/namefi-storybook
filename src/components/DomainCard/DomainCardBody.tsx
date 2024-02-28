@@ -9,7 +9,7 @@ function DomainCardBody({
 	return (
 		<h3
 			{...props}
-			className={cn('tracking-widest text-white','font-semibold text-7', small && "text-5.25 font-medium", className)}>
+			className={cn('tracking-widest text-white','font-semibold text-7lg', small && "text-5.25lg font-medium", className)}>
 			{children}
 		</h3>
 	);

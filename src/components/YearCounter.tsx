@@ -15,8 +15,8 @@ export default function YearCounter({ onYearsChanged, years }: YearCounterProps)
 				<MinusIcon className={'w-8 h-8 '}/>
 			</button>
 			<div className=' font-light font-["Roboto_Mono"] text-white flex items-center justify-between gap-2'>
-				<p className="text-8 leading-none">{years}</p>
-				<p className=" text-4 leading-none self-end mb-1">
+				<p className="text-8lg leading-none">{years}</p>
+				<p className=" text-4lg leading-none self-end mb-1">
 					year{years > 1 ? 's' : ''}
 				</p>
 			</div>

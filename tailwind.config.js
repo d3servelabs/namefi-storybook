@@ -24,6 +24,7 @@ const grayscale = Object.fromEntries(
 const baseUnit = Object.fromEntries(
 	arrayRange(0, 100, 0.25, (output) => [output, `${(output / 4).toFixed(4)}rem`]),
 );
+const baseUnitX = Object.fromEntries(arrayRange(0, 100, 0.25, (output) => [`${output}lg`, `${(output / 4).toFixed(4)}rem`]));
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -31,7 +32,7 @@ module.exports = {
 	theme: {
 		extend: {
 			borderRadius: baseUnit,
-			fontSize: baseUnit,
+			fontSize: baseUnitX,
 			width: baseUnit,
 			height: baseUnit,
 			inset: baseUnit,
@@ -90,6 +91,7 @@ module.exports = {
 				dissolve: 'dissolve 0.2s linear 1',
 			},
 		},
+
 	},
 	plugins: [],
 };

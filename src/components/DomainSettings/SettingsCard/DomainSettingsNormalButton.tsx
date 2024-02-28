@@ -11,7 +11,7 @@ export default function DomainSettingsNormalButton({
 		<SolidButton
 			{...props}
 			className={cn(
-				'font-["Roboto_Mono"] !text-3 font-light text-white bg-[#101010] hover:bg-[#101010]/60',
+				'font-["Roboto_Mono"] !text-3lg font-light text-white bg-[#101010] hover:bg-[#101010]/60',
 				className,
 			)}>
 			{children}
