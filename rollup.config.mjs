@@ -23,6 +23,7 @@ const __dirname = path.dirname(__filename); // get the name of the directory
 import tailwindcss from 'tailwindcss';
 
 import tailwindConfig from './tailwind.config.js';
+
 export default [
     {
         important: '#v2',
@@ -46,13 +47,17 @@ export default [
             commonjs(),
             postcss({
                 extensions: ['.css'],
-                plugins:[
-                    tailwindcss({...tailwindConfig, important:'#v2'}),
+                plugins: [
+                    tailwindcss({
+                        ...tailwindConfig, important: '#v2', corePlugins: {
+                            preflight: false
+                        },
+                    }),
                     postcssNested({
-                    bubble:['media', 'tailwind'],
-                    unwrap:['media', 'tailwind']
+                        bubble: ['media', 'tailwind'],
+                        unwrap: ['media', 'tailwind']
 
-                })],
+                    })],
                 extract: true,  // extracts all css to 'lib/styles.css'
             }),
             typescript({tsconfig: './tsconfig.lib.json',}),
