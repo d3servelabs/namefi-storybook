@@ -7,7 +7,7 @@ import {ButtonText} from "../../../components/Core/Buttons/ButtonText";
 import {ButtonLoadingContent} from "../../../components/Core/Buttons/ButtonLoadingContent";
 
 const meta = {
-	title: 'CoreButtons/BaseButton/Variants',
+	title: 'Core/Buttons/BaseButton/Variants',
 	component: Component,
 	parameters: {
 		layout: 'centered',

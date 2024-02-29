@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { StepDiagram } from "../../components/Core/StepDiagram";
 
 const meta = {
-    title: 'CoreStepDiagram',
+    title: 'Core/StepDiagram',
     component: StepDiagram,
     tags: ['autodocs'],
     parameters: {

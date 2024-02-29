@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Balance } from "../../components/Core/Balance";
 
 const meta = {
-    title: 'Components/Balance',
+    title: 'Core/Balance',
     component: Balance,
     parameters: {
         layout: 'centered'

@@ -2,7 +2,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 import styled from '@emotion/styled';
 import { Checkbox } from '../Core/Checkbox';
 import { IconCircleButton } from '../Core/Buttons/IconCircleButton';
-import { cn } from 'src/utils/cn';
+import { cn } from '../../utils/cn';
 import PlusIconSource from '/assets/Plus.svg';
 import DownloadIconSource from '/assets/Download.svg';
 import DeleteIconSource from '/assets/Trash.svg';
@@ -53,8 +53,8 @@ const DNSRecordsTableRow = ({
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
 				<Checkbox
 					className="transition opacity-30 hover:opacity-100"
-					value={checked}
-					onChange={handleCheckChange}
+					// value={checked}
+					// onChange={handleCheckChange}
 				/>
 			</div>
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
