@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import moment from 'moment';
-import DomainSettings from '../../../../components/DomainSettings';
-import YearCounter from "../../../../components/YearCounter";
+import DomainSettings from '../../../../components/Templates/DomainSettings';
+import YearCounter from "../../../../components/Core/YearCounter";
 import {useCallback, useState} from "react";
 
 const meta = {

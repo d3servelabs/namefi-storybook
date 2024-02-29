@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, HeaderProps } from './Header'
+import { Header, HeaderProps } from './Core/Header'
 export type PageLayoutProps = {
   headerProps: HeaderProps,
   children

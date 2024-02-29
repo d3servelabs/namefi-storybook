@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react'
-interface TextInputProps {
+interface TextInputProps extends React.ComponentProps<'input'> {
     searchValue?: string
     placeholder?: string
     className?: string
@@ -8,10 +8,11 @@ interface TextInputProps {
     inputType?: 'text' | 'email' | 'number';
     onSearchChanged?: (value: string) => any
 }
-export const TextInput = ({searchValue, placeholder, inputType, className, isEmailVerified,  onSearchChanged}: TextInputProps) => {
+export const TextInput = ({searchValue, placeholder, inputType, className, isEmailVerified,  onSearchChanged, ...props}: TextInputProps) => {
   return (
     <>
         <input
+            {...props}
             className={clsx('outline-none bg-[#232C27] py-2 px-3 placeholder:text-[#797979] rounded-md ', className)} 
             value={searchValue}
             type={inputType}

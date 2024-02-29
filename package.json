@@ -1,6 +1,6 @@
 {
 	"name": "@namefi/ui",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"engines": {
 		"node": ">=20 < 21",
 		"npm": ">=10 < 11"
@@ -33,6 +33,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"build:lib": "rimraf lib && rollup -c",
+		"build:local": "npm run build:lib && npm pack",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"storybook": "storybook dev -p 6006",
@@ -44,6 +45,7 @@
 		"bump": "npm version patch && git push --follow-tags"
 	},
 	"dependencies": {
+		"@emotion/styled": "^11.11.0",
 		"@radix-ui/react-icons": "^1.3.0",
 		"@radix-ui/themes": "^2.0.3",
 		"@uidotdev/usehooks": "^2.4.1",

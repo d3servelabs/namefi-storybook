@@ -1,5 +1,5 @@
 import React from 'react'
-import { NamefiBrandText } from '../../components/NamefiBrandText';
+import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
 
 export const Card1 = () => {
 
@@ -8,7 +8,7 @@ export const Card1 = () => {
         <div className='relative bg-black-1000 rounded-[20px] p-6 bg-black flex flex-col justify-between items-center w-[400px] h-[400px] xl:w-[500px] xl:h-[500px] rounded-[20px] drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
             <div className='flex w-full h-[30px] items-center justify-between'>
                 <p>
-                    <NamefiBrandText fontSize={'24px'} color={'#3488FC'} text={'Taken'} />
+                    <NamefiBrandText className="text-2xl text-[#3488FC]">Taken</NamefiBrandText>
                 </p>
             </div>
             <h3 className='text-white font-semibold text-[28px] tracking-widest'>Vitalik.eth</h3>

@@ -1,7 +1,8 @@
 import React, {useMemo} from 'react'
 import moment from "moment";
-import ShortAddress from "./ShortAddress";
-import { NamefiBrandText } from './NamefiBrandText';
+import ShortAddress from "./Core/ShortAddress";
+import NamefiBrandText from './Core/NamefiBrandText';
+
 
 export type DomainCardProps =
     {
@@ -50,13 +51,14 @@ export const DomainCard = (props: DomainCardProps) => {
     return (
         <a href={href} className='relative rounded-5 p-6 bg-black-1000 flex flex-col justify-between items-center w-100 h-100  drop-shadow-[0_0_15px_rgba(202,202,202,0.25)]'>
             <div className='flex w-full h-7.5 items-center justify-between'>
-                <p>
+                {/* <p>
                     {status==='TAKEN'? 
-                        (sameOwner ?<NamefiBrandText fontSize={'1.5rem'} color={'#FEF556'} text={'You Own This'} /> :
+                        (sameOwner ?
+                        <NamefiBrandText fontSize={'1.5rem'} color={'#FEF556'} text={'You Own This'} /> :
                                  <NamefiBrandText fontSize={'1.5rem'} color={'#3488FC'} text={'Taken'} /> ) :
                                  <NamefiBrandText fontSize={'1.5rem'} color={'#48E59B'} text={'Available'} />
                     }
-                </p>
+                </p> */}
                 <button className='relative block' onClick={onSettingsClicked}>
                     { sameOwner && (showSettings ?? true) &&  <img className='w-7.5' src="/assets/Gear.svg" alt="Gear image" role='img'/>}
                 </button>

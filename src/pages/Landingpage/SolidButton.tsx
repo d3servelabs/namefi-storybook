@@ -1,6 +1,6 @@
-import {Button, ButtonProps} from '../../components/Buttons/Button'
+import {Button, ButtonProps} from '../../components/Core/Buttons/Button'
 import React from 'react'
-import {ButtonText} from "../../components/Buttons/ButtonText";
+import {ButtonText} from "../../components/Core/Buttons/ButtonText";
 import {cn} from "../../utils/cn";
 
 

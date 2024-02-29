@@ -1,5 +1,5 @@
-import { Button } from '../../components/Buttons/Button'
-import { Checkbox } from '../../components/Checkbox'
+import { Button } from '../../components/Core/Buttons/Button'
+import { Checkbox } from '../../components/Core/Checkbox'
 import React from 'react'
 
 export type CartProps = {

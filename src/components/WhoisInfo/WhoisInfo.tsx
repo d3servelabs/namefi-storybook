@@ -14,7 +14,7 @@ export const WhoisInfo = () => {
             <WhoisForm.Root >
                 <WhoisForm.Div className='flex gap-6 justify-end w-full'>
                     <WhoisForm.Label className='gap-3 w-[237px]' labelName='First Name'>
-                        <WhoisForm.Input className='w-[145px]' inputType='text' placeholder='Vitalik' />
+                        <WhoisForm.Input className='w-[145px]' inputType='text' placeholder='Vitalik'  />
                     </WhoisForm.Label>
                     <WhoisForm.Label className='gap-3 w-[237px]' labelName='Last Name'>
                         <WhoisForm.Input className='w-[145px]' inputType='text' placeholder='Buterin' />

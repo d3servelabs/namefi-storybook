@@ -1,4 +1,4 @@
-import { DiscordIcon } from '../../components/icons/DiscordIcon'
+import { DiscordIcon } from '../../components/Core/icons/DiscordIcon'
 import { TelegramIcon } from './icons/TelegramIcon'
 import { Xicon } from './icons/Xicon'
 import React from 'react'
