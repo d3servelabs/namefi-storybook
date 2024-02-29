@@ -1,10 +1,9 @@
 import { CropIcon } from '@radix-ui/react-icons'
 import React, { ComponentProps, useReducer } from 'react'
-import { TextInput } from './TextInput'
-import { Label } from './Label'
-import { DivElement } from './DivElement'
+import { TextInput } from '../../Core/Formfield/TextInput'
+import { Label } from '../../Core/Formfield/Label'
 import clsx from 'clsx'
-import { Select } from './Select'
+import { Select } from '../../Core/Formfield/Select'
 
 interface WhoisProps  {
     children: React.ReactNode

@@ -3,7 +3,7 @@ import React from 'react'
 import { WhoisForm, WhoisSelect } from './WhoisINfoForm'
 
 
-export const WhoisInfo = () => {
+export const WhoisFormfield = () => {
   return (
     <div className='w-[613px] h-auto py-7 rounded-5 bg-[#232C27] flex flex-col justify-center items-center '>
         <div className='w-[544px]  flex flex-col gap-2 items-center'>
