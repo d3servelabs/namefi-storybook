@@ -24,9 +24,9 @@ export const PhoneMockup = ({
 }: PhoneMockupProps) => {
 	return (
     <div className={cn('relative', className)}>
-      <img className="block w-[373px] min-w-[373px]" src="/assets/iPhone.svg" />
+      <img className="block w-screen sm:w-[236px] md:w-[204px] xl:w-[373px] xl:min-w-[373px]" src="/assets/iPhone.svg" />
       <PhoneMockupContent>
-        <div className="w-full h-full py-3 px-4">{children}</div>
+        <div className="w-full h-full py-3 px-4 bg-[#2d2d2d]">{children}</div>
       </PhoneMockupContent>
     </div>
 	);

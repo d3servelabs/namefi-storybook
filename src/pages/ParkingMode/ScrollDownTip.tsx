@@ -1,5 +1,5 @@
 import React from 'react';
-import { css, keyframes } from '@emotion/css'
+import { css, keyframes } from '@emotion/css';
 import { cn } from '../../utils/cn';
 
 const bounce = keyframes`
@@ -28,10 +28,20 @@ export interface ScrollDownTipProps {
 
 export const ScrollDownTip = ({ children, className }: ScrollDownTipProps) => {
 	return (
-		<div className={cn('flex justify-center gap-3', className)}>
-				<img src="/assets/ScrollDown.svg" alt="Scroll Down" className={cn('w-[18px]', animation)} />
-			<div className="text-xl font-semibold text-[#fff]">{children}</div>
-				<img src="/assets/ScrollDown.svg" alt="Scroll Down" className={cn('w-[18px]', animation)} />
+		<div className={className}>
+			<div className="flex justify-center gap-3">
+				<img
+					src="/assets/ScrollDown.svg"
+					alt="Scroll Down"
+					className={cn('w-[8px] md:w-[10px] xl:w-[18px]', animation)}
+				/>
+				<div className="text-[8px] md:text-[10px] lg:text-xl font-semibold text-[#fff]">{children}</div>
+				<img
+					src="/assets/ScrollDown.svg"
+					alt="Scroll Down"
+					className={cn('w-[8px] md:w-[10px] xl:w-[18px]', animation)}
+				/>
+			</div>
 		</div>
 	);
 };

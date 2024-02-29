@@ -15,9 +15,9 @@ export interface ParkingModeFooterProps {
 export const ParkingModeFooter = ({ children, links, className }: ParkingModeFooterProps) => {
 	return (
 		<div className={cn('border-t-[0.75px] border-[#A5A5A5] pt-8 pb-10', className)}>
-			<div className="flex justify-between items-center px-12">
-				<div className="text-base text-black-400 mr-12">{children}</div>
-				<div className="flex gap-12 text-lg text-[#d6d6d6]">
+			<div className="flex flex-col-reverse sm:flex-row gap-6 sm:gap-12 justify-between items-center px-12 max-w-[1488px] mx-auto">
+				<div className="text-[6px] md:text-[8px] lg:text-base text-black-400">{children}</div>
+				<div className="flex flex-col sm:flex-row gap-3 sm:gap-12 text-center sm:text-left text-[8px] md:text-[10px] xl:text-lg text-[#d6d6d6]">
 					{links.map((link, index) => (
 						<a key={index} href={link.href} target="_blank">
 							{link.text}

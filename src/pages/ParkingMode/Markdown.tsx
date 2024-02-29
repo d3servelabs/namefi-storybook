@@ -5,12 +5,14 @@ import DOMPurify from 'dompurify';
 
 const MarkdownContent = styled.div`
 	color: #d6d6d6;
+	font-weight: 300;
 	strong {
+		color: #fff;
 		font-weight: 600;
 	}
 	em {
-		font-style: normal;
 		color: #48e59b;
+		font-style: normal;
 	}
 `;
 
