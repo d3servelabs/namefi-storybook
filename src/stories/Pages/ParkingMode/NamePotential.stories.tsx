@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
 import React, { useState, useCallback } from 'react';
-import { SolidButton } from '../../../components/Buttons/SolidButton';
+import { SolidButton } from '../../../components/Core/Buttons/SolidButton';
 import { NamePotential } from '../../../pages/ParkingMode/NamePotential';
 
 const meta = {

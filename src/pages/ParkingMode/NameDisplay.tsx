@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { NamefiBrandText } from '../../components/NamefiBrandText';
+import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
 import { cn } from '../../utils/cn';
 import { useShortAddress } from './useShortAddress';
 
