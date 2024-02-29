@@ -13,15 +13,20 @@ import {fileURLToPath} from 'url';
 import {createRequire} from 'node:module';
 import alias from "@rollup/plugin-alias";
 import path from "path";
+import postcssNested from 'postcss-nested';
 
 const requireFile = createRequire(import.meta.url);
 const packageJson = requireFile('./package.json');
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
+import tailwindcss from 'tailwindcss';
+
+import tailwindConfig from './tailwind.config.js';
 
 export default [
     {
+        important: '#v2',
         input: 'src/index.ts',
         output: [
             {
@@ -42,6 +47,17 @@ export default [
             commonjs(),
             postcss({
                 extensions: ['.css'],
+                plugins: [
+                    tailwindcss({
+                        ...tailwindConfig, important: '#v2', corePlugins: {
+                            preflight: false
+                        },
+                    }),
+                    postcssNested({
+                        bubble: ['media', 'tailwind'],
+                        unwrap: ['media', 'tailwind']
+
+                    })],
                 extract: true,  // extracts all css to 'lib/styles.css'
             }),
             typescript({tsconfig: './tsconfig.lib.json',}),
