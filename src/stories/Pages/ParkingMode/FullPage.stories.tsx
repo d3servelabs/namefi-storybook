@@ -6,8 +6,8 @@ import {
 	BaseLayoutHeader,
 	BaseLayoutBody,
 } from '../../../components/Layouts/BaseLayout';
-import { UserAuthStateDemo } from '../../../components/UserAuthState/UserAuthStateDemo';
-import { SolidButton } from '../../../components/Buttons/SolidButton';
+import { UserAuthStateDemo } from '../../../components/Templates/UserAuthState/UserAuthStateDemo';
+import { SolidButton } from '../../../components/Core/Buttons/SolidButton';
 import { NameDisplay } from '../../../pages/ParkingMode/NameDisplay';
 import { Statistic } from '../../../pages/ParkingMode/Statistic';
 import { NamePotential } from '../../../pages/ParkingMode/NamePotential';
