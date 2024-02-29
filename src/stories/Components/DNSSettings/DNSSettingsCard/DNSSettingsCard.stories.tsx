@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card, CardHeader } from '@components/Card';
-import { ComingSoon } from '@components/ComingSoon';
+import { Card, CardHeader } from '../../../../components/Core/Card';
+import { ComingSoon } from '../../../../components/ComingSoon';
 import {
 	DNSSettingsTabs,
 	type DNSSettingsTabKey,
 	DNSRecordsTable,
 	type DNSRecordData,
-} from '@components/DNSSettings';
+} from '../../../../components/DNSSettings';
 
 interface DNSSettingsCardProps {
 	records: DNSRecordData[];
