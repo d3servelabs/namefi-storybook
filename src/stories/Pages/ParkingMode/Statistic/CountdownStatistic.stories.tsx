@@ -23,16 +23,16 @@ export const Default: Story = {
 		className: { control: 'text' },
 	},
 	args: {
-		title: 'Value',
-		tip: 'Tips!',
+		title: 'Countdown',
+		tip: 'Lorem ipsum dolor sit amet',
 		time: new Date(+new Date() + 1000 * 60 * 60 * 24 * 3),
-		description: 'Perfect',
+		description: 'Lorem ipsum dolor sit amet',
 		className: '',
 	},
 	tags: ['autodocs'],
 };
 
-export const NameCountdown: Story = {
+export const DealCountdown: Story = {
 	argTypes: {
 		time: { control: 'date' },
 		tip: { control: 'text' },

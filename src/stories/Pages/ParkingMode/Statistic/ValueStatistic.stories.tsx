@@ -26,10 +26,10 @@ export const Default: Story = {
 	},
 	args: {
 		title: 'Value',
-		tip: 'Tips!',
+		tip: 'Lorem ipsum dolor sit amet',
 		value: 100,
 		unit: '$NFSC',
-		description: 'Perfect',
+		description: 'Lorem ipsum dolor sit amet',
 		className: '',
 	},
 	tags: ['autodocs'],
@@ -48,7 +48,7 @@ export const EstimatedValue: Story = {
 		value: 20000,
 		unit: '$NFSC',
 		dollar: 20000,
-		tip: 'Tips!',
+		tip: 'Lorem ipsum dolor sit amet',
 	} as any,
 	tags: ['autodocs'],
 	render: ({ title, value, unit, dollar, tip }: any) => {

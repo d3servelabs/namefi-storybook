@@ -24,9 +24,9 @@ export const Default: Story = {
 	},
 	args: {
 		title: 'Title',
-		tip: 'Tips!',
+		tip: 'Lorem ipsum dolor sit amet',
 		children: '100',
-		description: 'Perfect',
+		description: 'Lorem ipsum dolor sit amet',
 		className: '',
 	},
 	tags: ['autodocs'],

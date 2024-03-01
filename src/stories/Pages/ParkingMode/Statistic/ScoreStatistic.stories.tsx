@@ -23,10 +23,10 @@ export const Default: Story = {
 		className: { control: 'text' },
 	},
 	args: {
-		title: 'Value',
-		tip: 'Tips!',
+		title: 'Score',
+		tip: 'Lorem ipsum dolor sit amet',
 		score: 100,
-		description: 'Perfect',
+		description: 'Lorem ipsum dolor sit amet',
 		className: '',
 	},
 	tags: ['autodocs'],
@@ -41,7 +41,7 @@ export const NameScore: Story = {
 	args: {
 		score: 87,
 		provider: 'XXXXXX',
-		tip: 'Tips!',
+		tip: 'Lorem ipsum dolor sit amet',
 	} as any,
 	tags: ['autodocs'],
 	render: ({ score, provider, tip }: any) => {
