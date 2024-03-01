@@ -1,7 +1,7 @@
 import '../../../App.css'
 import React from 'react'
 import { PageLayout, PageLayoutProps } from '../../../components/PageLayout'
-import { Dashboard, DashBoardProps } from '@pages/DashBoard/DashBoard'
+import { Dashboard, DashBoardProps } from '../../../components/Templates/DashBoard/DashBoard'
 
 interface FullPageProps {
   dashBoardProps: DashBoardProps,
