@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react'
-import { StepDiagram } from '../StepDiagram'
+import { StepDiagram } from '../Core/StepDiagram'
 
 export const VerifySteps: React.FC<ComponentProps<'div'>> = ({children}) => {
   return (

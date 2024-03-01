@@ -1,7 +1,7 @@
 import React, { ComponentProps } from 'react'
-import { SolidButton } from '../Buttons/SolidButton'
-import { cn } from '../../../utils/cn'
-import { ArrowRight } from '../icons/ArrowRight'
+import { SolidButton } from '../Core/Buttons/SolidButton'
+import { cn } from '../../utils/cn'
+import { ArrowRight } from '../Core/icons/ArrowRight'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 
 export const VerifyButton: React.FC<ComponentProps<typeof SolidButton>> = ({className, children, ...props}) => {
