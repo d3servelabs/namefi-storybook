@@ -1,14 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Activities } from "@pages/DashBoard/Activities";
+import ActivitiesListItem from "../../../components/Templates/DashBoard/Activities/List/ActivitiesListItem";
+
 
 const meta = {
     title: 'Pages/Dashboard/Activities',
-    component: Activities,
+    component: ActivitiesListItem,
     parameters: {
         layout: 'centered'
     },
     tags: ['autodocs']
-} satisfies Meta<typeof Activities>
+} satisfies Meta<typeof ActivitiesListItem>
 
 export default meta;
 

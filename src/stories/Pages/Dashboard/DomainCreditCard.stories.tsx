@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
-import { DomainCreditCard } from '@pages/DashBoard/DomainCreditCard';
+import { DomainBalanceCard } from '../../../components/Templates/DashBoard/DomainBalanceCard';
 import moment from "moment";
 
 const meta = {
   title: 'Pages/Dashboard/DomainCreditCard',
-  component: DomainCreditCard,
+  component: DomainBalanceCard,
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
@@ -16,7 +16,7 @@ const meta = {
       url: 'https://www.figma.com/file/meS5SKN5PdA8HwHT3fuKmp/Namefi-App?type=design&node-id=670-3073&mode=design&t=ySn2Mda92cyJOLTn-4s',
     }
   },
-} satisfies Meta<typeof DomainCreditCard>;
+} satisfies Meta<typeof DomainBalanceCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
