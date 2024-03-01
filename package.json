@@ -53,6 +53,7 @@
 		"@uidotdev/usehooks": "^2.4.1",
 		"clsx": "^2.1.0",
 		"moment": "^2.30.1",
+		"punycode": "^2.3.1",
 		"tailwind-merge": "^2.2.1",
 		"typescript": "^5.3.3"
 	},
@@ -80,6 +81,7 @@
 		"@svgr/rollup": "^8.1.0",
 		"@types/jest": "^29.5.11",
 		"@types/node": "^20.11.14",
+		"@types/punycode": "^2.1.4",
 		"@types/react": "^18.2.55",
 		"@types/react-dom": "^18.2.18",
 		"@vitejs/plugin-react": "^4.2.1",
