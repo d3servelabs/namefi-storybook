@@ -3,6 +3,7 @@ import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
 import { cn } from '../../utils/cn';
 import { useShortAddress } from './hooks/useShortAddress';
 import { usePunycode } from './hooks/usePunycode';
+import ChatSVG from '../../assets/Chat.svg';
 
 export interface NameDisplayProps {
 	name: string;
@@ -28,7 +29,9 @@ export const NameDisplay = ({ name, owner, status, onClickOwner, className }: Na
 				<div className="text-3xl md:text-4xl xl:text-6xl leading-tight text-[#fff]">
 					{name}
 				</div>
-				{punycode && punycode !== name && <div className="text-sm text-black-400">{punycode}</div>}
+				{punycode && punycode !== name && (
+					<div className="text-sm text-black-400">{punycode}</div>
+				)}
 			</div>
 			<div className="absolute -left-1.5 -top-3 sm:-left-4 sm:-top-2 md:-left-5 md:-top-2.5 xl:-left-8 xl:-top-4">
 				<NamefiBrandText className="text-primary-500 text-xl sm:text-sm md:text-lg xl:text-3xl">
@@ -42,7 +45,7 @@ export const NameDisplay = ({ name, owner, status, onClickOwner, className }: Na
 				<div className="text-sm text-[#ededed] mr-3">{shortOwner}</div>
 				<img
 					className="text-sm w-5 text-[#ededed] mr-3 hidden sm:inline-block"
-					src="/assets/Chat.svg"
+					src={ChatSVG}
 					alt="chat"
 				/>
 			</div>

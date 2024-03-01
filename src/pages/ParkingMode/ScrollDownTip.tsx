@@ -1,6 +1,7 @@
 import React from 'react';
 import { css, keyframes } from '@emotion/css';
 import { cn } from '../../utils/cn';
+import ScrollDownSVG from '../../assets/ScrollDown.svg';
 
 const bounce = keyframes`
   from, 80%, to {
@@ -31,13 +32,15 @@ export const ScrollDownTip = ({ children, className }: ScrollDownTipProps) => {
 		<div className={className}>
 			<div className="flex justify-center gap-3">
 				<img
-					src="/assets/ScrollDown.svg"
+					src={ScrollDownSVG}
 					alt="Scroll Down"
 					className={cn('w-[8px] md:w-[10px] xl:w-[18px]', animation)}
 				/>
-				<div className="text-[8px] md:text-[10px] lg:text-xl font-semibold text-[#fff]">{children}</div>
+				<div className="text-[8px] md:text-[10px] lg:text-xl font-semibold text-[#fff]">
+					{children}
+				</div>
 				<img
-					src="/assets/ScrollDown.svg"
+					src={ScrollDownSVG}
 					alt="Scroll Down"
 					className={cn('w-[8px] md:w-[10px] xl:w-[18px]', animation)}
 				/>
