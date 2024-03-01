@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { DashboardBalance } from '@pages/DashBoard/DashboardBalance';
+import { DashboardBalance } from '../../../components/Templates/DashBoard/DashboardBalance';
 
 const meta = {
   title: 'Pages/Dashboard',
