@@ -2,24 +2,18 @@ import React, { useCallback } from 'react';
 import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
 import { cn } from '../../utils/cn';
 import { useShortAddress } from './hooks/useShortAddress';
+import { usePunycode } from './hooks/usePunycode';
 
 export interface NameDisplayProps {
 	name: string;
-	punycode?: string;
 	owner: string;
 	status: 'for-bid' | 'for-sale';
 	onClickOwner?: () => void;
 	className?: string;
 }
 
-export const NameDisplay = ({
-	name,
-	punycode,
-	owner,
-	status,
-	onClickOwner,
-	className,
-}: NameDisplayProps) => {
+export const NameDisplay = ({ name, owner, status, onClickOwner, className }: NameDisplayProps) => {
+	const punycode = usePunycode(name);
 	const shortOwner = useShortAddress(owner);
 	const handleClickOwner = useCallback(() => {
 		onClickOwner?.();
@@ -34,7 +28,7 @@ export const NameDisplay = ({
 				<div className="text-3xl md:text-4xl xl:text-6xl leading-tight text-[#fff]">
 					{name}
 				</div>
-				{punycode && <div className="text-sm text-black-400">{punycode}</div>}
+				{punycode && punycode !== name && <div className="text-sm text-black-400">{punycode}</div>}
 			</div>
 			<div className="absolute -left-1.5 -top-3 sm:-left-4 sm:-top-2 md:-left-5 md:-top-2.5 xl:-left-8 xl:-top-4">
 				<NamefiBrandText className="text-primary-500 text-xl sm:text-sm md:text-lg xl:text-3xl">
