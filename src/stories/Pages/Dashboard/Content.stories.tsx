@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 // import { Dashboard } from '../../../../../../pages/DashBoard/DashBoard';
 import { Dashboard } from '../../../components/Templates/DashBoard/DashBoard';
-import moment from "moment";
 
 const meta = {
   title: 'Pages/Dashboard',
