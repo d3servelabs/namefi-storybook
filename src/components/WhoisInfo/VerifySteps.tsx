@@ -5,11 +5,11 @@ export const VerifySteps: React.FC<ComponentProps<'div'>> = ({children}) => {
   return (
     <div className='w-full h-14 flex flex-col justify-between items-center'>
         <div className=' w-35'>
-            <StepDiagram stepCount={2} currentStep={1} className='w-full' />
+            {children?.[0]}
         </div>
         <div className=' w-full text-white flex justify-between'>
-            <p>Send code</p>
-            <p>Verify code</p>
+            {children?.[1]}
+            {children?.[2]}
         </div>
     </div>
   )

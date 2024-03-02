@@ -1,7 +1,8 @@
 import React from 'react'
-import { Info } from './WhoisInfoRoot'
+import { Info } from './index'
 import { VerifyButton } from '../../WhoisInfo/VerifyButton'
 import { LinkButton } from '../../LinkButton'
+import { StepDiagram } from '../../../components/Core/StepDiagram'
 
 export const WhoisInfo = () => {
   return (
@@ -31,9 +32,16 @@ export const WhoisInfo = () => {
             </Info.InfoCard>
         </Info.Card>
         <Info.RightFrame>
-            <Info.Step />
+            <Info.VerifySteps>
+                <StepDiagram stepCount={2} currentStep={1} className='w-full' />
+                <p>Send code</p>
+                <p className=' opacity-30'>Verify code</p>
+            </Info.VerifySteps>
             <Info.Verify>
-              <Info.Text />
+              <Info.VerifyText>
+                    <Info.VerifyHeading>WHOIS info required.</Info.VerifyHeading>
+                    <Info.VerifyParagraph>To be able to verify email.</Info.VerifyParagraph>
+              </Info.VerifyText>
               <VerifyButton>
                   Send Code
               </VerifyButton>
@@ -42,3 +50,5 @@ export const WhoisInfo = () => {
     </Info.Root>
   )
 }
+
+

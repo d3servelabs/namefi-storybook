@@ -17,8 +17,8 @@ type Story = StoryObj<typeof meta>
 
 export const ActivitiesStory: Story = {
     args: {
-        // todo: 'Register',
-        // domainName: 'Namely.io',
-        // isLoading: true
+        todo: 'Register',
+        domainName: 'Namely.io',
+        isLoading: true
     }
 }
