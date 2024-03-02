@@ -1,11 +1,12 @@
 import React from 'react'
 import { DomainBalanceCard, DomainCreditCardProps } from './DomainBalanceCard'
-import { ActivitiesListRoot, ActivitiesGridProps } from './Activities/List/ActivitiesListRoot'
+// import { ActivitiesListRoot, ActivitiesGridProps } from './Activities/List/ActivitiesListRoot'
+import ActivitiesListRoot from './Activities/List/ActivitiesListRoot'
 
 export type DashBoardProps = {
     domainCreditProps: DomainCreditCardProps
     userName?: string;
-    activitiesGridProps?: ActivitiesGridProps
+    // activitiesGridProps?: ActivitiesGridProps
 }
 export const Dashboard = ({domainCreditProps, userName}: DashBoardProps) => {
   return (
@@ -17,7 +18,7 @@ export const Dashboard = ({domainCreditProps, userName}: DashBoardProps) => {
       </div>
         <div className='w-full h-auto flex justify-center items-center gap-20 relative mb-40'>
           <DomainBalanceCard {...domainCreditProps} userName={userName} />
-          <ActivitiesList />
+          <ActivitiesListRoot />
       </div>
  
     </section>
