@@ -95,7 +95,7 @@
 		"marked": "^12.0.0",
 		"postcss": "^8.4.35",
 		"postcss-nested": "^6.0.1",
-		"punycode": "^2.3.1",
+		"punycode": "^1.4.1",
 		"rimraf": "^5.0.5",
 		"rollup": "^4.12.0",
 		"rollup-plugin-dts": "^6.1.0",
@@ -114,7 +114,7 @@
 		"@types/react-dom": "*",
 		"dompurify": "^3.0.0",
 		"marked": "^12.0.0",
-		"punycode": "^2.0.0",
+		"punycode": "^1.4.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0"
 	}
