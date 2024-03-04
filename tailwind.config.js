@@ -33,9 +33,12 @@ module.exports = {
 	theme: {
 		extend: {
 			borderRadius: baseUnit,
+			gap: baseUnit,
 			fontSize: baseUnitX,
 			width: baseUnit,
+			maxWidth: baseUnit,
 			height: baseUnit,
+			maxHeight: baseUnit,
 			inset: baseUnit,
 			padding: baseUnit,
 			minHeight: baseUnit,
@@ -94,5 +97,11 @@ module.exports = {
 		},
 
 	},
-	plugins: [],
+	plugins: [
+		require('tailwind-scrollbar')({
+		 nocompatible: true,
+
+		}),
+
+	],
 };
