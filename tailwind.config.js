@@ -24,11 +24,12 @@ const grayscale = Object.fromEntries(
 const baseUnit = Object.fromEntries(
 	arrayRange(0, 100, 0.25, (output) => [output, `${(output / 4).toFixed(4)}rem`]),
 );
-const baseUnitX = Object.fromEntries(arrayRange(0, 100, 0.25, (output) => [`${output}lg`, `${(output / 4).toFixed(4)}rem`]));
+const baseUnitX = Object.fromEntries(
+	arrayRange(0, 100, 0.25, (output) => [`${output}lg`, `${(output / 4).toFixed(4)}rem`]),
+);
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		extend: {
@@ -48,11 +49,45 @@ module.exports = {
 				third: ['Roboto Flex', 'Serif'],
 			},
 			colors: {
-				warning: '#FF3C3C',
+				warning: {
+					DEFAULT: '#FF3C3C',
+					500: '#FF3C3C',
+				},
+				error: {
+					light: '#FFC7C7',
+					100: '#FFC7C7',
+					DEFAULT: '#FF3C3C',
+					500: '#FF3C3C',
+					900: '#3C1919',
+				},
+				alert: {
+					100: '#FBF9CE',
+					DEFAULT: '#FEF556',
+				},
+				pending: '#FBF9CE',
+				occupied: '#FEF556',
 				primary: {
+					200: '#C6EEDB',
+					light: '#C6EEDB',
+
+					DEFAULT: '#48E59B',
 					500: '#48E59B',
-					700: '#48e59bcc',
-					900: '#0A4429',
+
+					600: '#3DBB7F',
+					80: '#3DBB7F',
+
+					700: '#399B6D',
+					60: '#399B6D',
+
+					800: '#0A4429',
+					dark: '#0A4429',
+
+					900: '#1C3B2D',
+					20: '#1C3B2D',
+
+					950: '#141C18',
+					5: '#141C18',
+
 				},
 				brand: {
 					100: '#c6eedb0d',
@@ -95,13 +130,10 @@ module.exports = {
 				dissolve: 'dissolve 0.2s linear 1',
 			},
 		},
-
 	},
 	plugins: [
 		require('tailwind-scrollbar')({
-		 nocompatible: true,
-
+			nocompatible: true,
 		}),
-
 	],
 };
