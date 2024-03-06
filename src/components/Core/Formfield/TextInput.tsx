@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react'
-interface TextInputProps extends React.ComponentProps<'input'> {
+export interface TextInputProps extends React.ComponentProps<'input'> {
     searchValue?: string
     placeholder?: string
     className?: string

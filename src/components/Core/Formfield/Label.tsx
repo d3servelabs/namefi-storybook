@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, {ComponentProps} from 'react'
 
-interface LabelProps extends React.ComponentProps<'label'> {
+export interface LabelProps extends React.ComponentProps<'label'> {
     labelName?: string;
     className?: string;
     children?: React.ReactNode

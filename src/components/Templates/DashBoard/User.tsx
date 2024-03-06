@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const User = () => {
+export const User = ({ userName }: { userName: string }) => {
   return (
     <div className='w-full pl-[24px] mb-20 h-[64px] flex items-center gap-[12px]  '>
           <h2 className='font-bold tracking-[0.05em] text-[24px] text-[#d9d9d9] '>GM,</h2>

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React from 'react'
 
-interface SelectProps extends React.ComponentProps<'select'> {
+export interface SelectProps extends React.ComponentProps<'select'> {
     values?: number[]
     className?: string
 }
