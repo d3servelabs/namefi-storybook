@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { Tabs, type Tab } from '../Core/Tabs';
-import {cn} from "../../utils/cn";
+import { Icon } from '../Core/Icon';
+import { cn } from '../../utils/cn';
 
 export type DNSSettingsTabKey = 'records' | 'forward' | 'ns';
 
@@ -27,11 +28,9 @@ export const DNSSettingsTabs = ({ value, onChange, onSave, className }: DNSSetti
 			<div className="flex text-brand-300">
 				<div className="flex cursor-pointer" onClick={handleClickSave}>
 					<span className="mr-1.5">Save</span>
-					<img
-						className="block w-[22px] cursor-pointer"
-						src="/assets/arrow-right1.svg"
-						alt="Arrow"
-						role="img"
+					<Icon
+						icon="ArrowRight"
+						className="text-[22px] text-primary-500 cursor-pointer"
 					/>
 				</div>
 			</div>

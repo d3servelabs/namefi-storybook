@@ -1,14 +1,15 @@
 import React from 'react';
 import { cn } from '../../../utils/cn';
+import { Icon, type IconName, isIconName } from '../Icon';
 
 export interface IconCircleButtonProps {
-	iconSource: string;
+	icon: IconName | React.ReactElement;
 	onClick?: () => void;
 	disabled?: boolean;
 	className?: string;
 }
 
-export const IconCircleButton = ({ iconSource, onClick, disabled, className }: IconCircleButtonProps) => {
+export const IconCircleButton = ({ icon, onClick, disabled, className }: IconCircleButtonProps) => {
 	return (
 		<button
 			className={cn(
@@ -17,7 +18,11 @@ export const IconCircleButton = ({ iconSource, onClick, disabled, className }: I
 				disabled && 'opacity-30',
 			)}
 			onClick={onClick}>
-			<img className="block w-[16px] cursor-pointer" src={iconSource} alt="Download" role="img" />
+			{typeof icon === 'string' && isIconName(icon) ? (
+				<Icon icon={icon} className="block text-base text-primary-500 cursor-pointer" />
+			) : (
+				icon
+			)}
 		</button>
 	);
 };

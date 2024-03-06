@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
+import { Icon } from '../../components/Core/Icon';
 import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
 import { cn } from '../../utils/cn';
 import { useShortAddress } from './hooks/useShortAddress';
 import { usePunycode } from './hooks/usePunycode';
-import ChatSVG from '../../assets/Chat.svg';
 
 export interface NameDisplayProps {
 	name: string;
@@ -43,10 +43,9 @@ export const NameDisplay = ({ name, owner, status, onClickOwner, className }: Na
 				onClick={handleClickOwner}>
 				<div className="text-[10px] text-[#acacac] mr-1.5">Owner by </div>
 				<div className="text-sm text-[#ededed] mr-3">{shortOwner}</div>
-				<img
-					className="text-sm w-5 text-[#ededed] mr-3 hidden sm:inline-block"
-					src={ChatSVG}
-					alt="chat"
+				<Icon
+					icon="Chat"
+					className="text-xl text-primary-500 mr-3 hidden sm:inline-block"
 				/>
 			</div>
 		</div>

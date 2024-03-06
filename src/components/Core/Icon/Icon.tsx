@@ -3,12 +3,16 @@ import IcoMoon, { iconList } from 'react-icomoon';
 import { css } from '@emotion/css';
 import { cn } from '../../../utils/cn';
 import iconSet from './selection.json';
-import { type IconNames } from './names';
+import { type IconNames as IconName } from './names';
 
-export const ICON_NAMES = iconList(iconSet) as IconNames[];
+export { type IconName };
+
+export const ICON_NAMES = iconList(iconSet) as IconName[];
+
+export const isIconName = (icon: string): icon is IconName => ICON_NAMES.includes(icon as IconName);
 
 export interface IconProps extends SVGProps<SVGElement> {
-	icon: IconNames;
+	icon: IconName;
 	className?: string;
 }
 

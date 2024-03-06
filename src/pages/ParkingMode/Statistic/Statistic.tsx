@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCircledSVG from '../../../assets/InfoCircled.svg';
+import { Icon } from '../../../components/Core/Icon';
 
 export interface StatisticProps {
 	title: React.ReactNode;
@@ -14,7 +14,7 @@ export const Statistic = ({ title, tip, children, description, className }: Stat
 		<div className={className}>
 			<div className="text-[8px] lg:text-sm text-black-500 flex gap-[0.5em] mb-1 lg:mb-2">
 				{title}
-				{tip && <img className="w-[1em]" src={InfoCircledSVG} alt="Info" />}
+				{tip && <Icon icon="InfoCircled" className="text-primary-500" />}
 			</div>
 			<div className="text-2xl md:text-3xl lg:text-5xl text-[#fff] font-primary mb-0.5 lg:mb-1">
 				{children}

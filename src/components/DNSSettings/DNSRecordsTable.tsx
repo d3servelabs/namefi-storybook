@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, ChangeEvent } from 'react';
 import styled from '@emotion/styled';
 import { Checkbox } from '../Core/Checkbox';
 import { IconCircleButton } from '../Core/Buttons/IconCircleButton';
@@ -39,9 +39,9 @@ const DNSRecordsTableRow = ({
 		[record, selectedRows],
 	);
 	const handleCheckChange = useCallback(
-		(value: boolean) => {
+		(event: ChangeEvent<HTMLInputElement>) => {
 			onSelectedRowsChange(
-				value
+				event.currentTarget.checked
 					? [...selectedRows, record]
 					: selectedRows.filter((row) => row.id !== record.id),
 			);
@@ -53,8 +53,8 @@ const DNSRecordsTableRow = ({
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
 				<Checkbox
 					className="transition opacity-30 hover:opacity-100"
-					// value={checked}
-					// onChange={handleCheckChange}
+					checked={checked}
+					onChange={handleCheckChange}
 				/>
 			</div>
 			<div className="min-h-[30px] p-2 mb-1.5 leading-4 break-words overflow-hidden truncate">
@@ -96,14 +96,14 @@ const DNSRecordsTableFooter = ({
 	}, [onClickDelete]);
 	return (
 		<div className="flex justify-end pr-[30px] py-4 gap-x-2">
-			<IconCircleButton iconSource={PlusIconSource} onClick={handleClickAdd} />
+			<IconCircleButton icon="Add" onClick={handleClickAdd} />
 			<IconCircleButton
-				iconSource={DownloadIconSource}
+				icon="Download"
 				onClick={handleClickDownload}
 				disabled={!hasRowsSelected}
 			/>
 			<IconCircleButton
-				iconSource={DeleteIconSource}
+				icon="Delete"
 				onClick={handleClickDelete}
 				disabled={!hasRowsSelected}
 			/>
