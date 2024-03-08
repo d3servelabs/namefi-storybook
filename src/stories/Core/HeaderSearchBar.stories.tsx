@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HeaderSearchBar } from "../../components/Core/HeaderSearchBar";
+import { default as HeaderSearchBar } from "../../components/Core/HeaderSearchBar";
 
 const meta = {
     title: 'Components/HeaderSearchBar',

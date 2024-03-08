@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderSearchBar, HeaderSearchBarProps } from "./HeaderSearchBar"
+import { default as HeaderSearchBar, HeaderSearchBarProps } from "./HeaderSearchBar"
 import { UserAuthStateDemo, UserAuthStateProps } from "../Templates/UserAuthState/UserAuthStateDemo"
 
 export type HeaderProps = {
