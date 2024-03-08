@@ -34,15 +34,15 @@ export const ScrollDownTip = ({ children, className }: ScrollDownTipProps) => {
 				<img
 					src={ScrollDownSVG}
 					alt="Scroll Down"
-					className={cn('w-[8px] md:w-[10px] xl:w-[18px]', animation)}
+					className={cn('w-[12px] md:w-[18px]', animation)}
 				/>
-				<div className="text-[8px] md:text-[10px] lg:text-xl font-semibold text-[#fff]">
+				<div className="text-xs md:text-xl font-semibold text-[#fff]">
 					{children}
 				</div>
 				<img
 					src={ScrollDownSVG}
 					alt="Scroll Down"
-					className={cn('w-[8px] md:w-[10px] xl:w-[18px]', animation)}
+					className={cn('w-[12px] md:w-[18px]', animation)}
 				/>
 			</div>
 		</div>
