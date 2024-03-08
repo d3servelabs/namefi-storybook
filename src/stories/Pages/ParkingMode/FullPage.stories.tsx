@@ -9,7 +9,7 @@ import { ValueStatistic, ScoreStatistic } from '../../../pages/ParkingMode/Stati
 import { NamePotential } from '../../../pages/ParkingMode/NamePotential';
 import { ParkingModeFooter } from '../../../pages/ParkingMode/ParkingModeFooter';
 import { ScrollDownTip } from '../../../pages/ParkingMode/ScrollDownTip';
-import { TldButtons } from '../../../components/TldButtons';
+import { TLDChip } from '../../../pages/ParkingMode/TLDChip';
 
 const ParkingMode = () => {
 	return (
@@ -51,12 +51,12 @@ const ParkingMode = () => {
 				<div className="flex flex-wrap justify-between items-center gap-6 px-36 mb-32">
 					<div className="text-white text-[10px] sm:text-[8px] md:text-[10px] xl:text-lg font-medium">Explore Namefi also in</div>
 					<div className="flex flex-wrap justify-center gap-3">
-						<TldButtons tld=".namefi" isSelected={false} />
-						<TldButtons tld=".eth" isSelected={false} />
-						<TldButtons tld=".org" isSelected={false} />
-						<TldButtons tld=".co" isSelected={false} />
-						<TldButtons tld=".xyz" isSelected={false} />
-						<TldButtons tld=".net" isSelected={false} />
+						<TLDChip>.namefi</TLDChip>
+						<TLDChip>.eth</TLDChip>
+						<TLDChip>.org</TLDChip>
+						<TLDChip>.co</TLDChip>
+						<TLDChip>.xyz</TLDChip>
+						<TLDChip>.net</TLDChip>
 					</div>
 				</div>
 				<ScrollDownTip className="hidden sm:block">Show me the potential</ScrollDownTip>
