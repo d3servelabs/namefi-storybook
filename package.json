@@ -31,6 +31,7 @@
 	},
 	"scripts": {
 		"dev": "vite",
+		"gen:icons": "svgr --ignore-existing --memo --ref --typescript --no-dimensions --ext tsx --out-dir src/components/Core/icons -- src/assets/svg",
 		"build": "vite build",
 		"build:lib": "rimraf lib && rollup -c",
 		"build:local": "npm run build:lib && npm pack",
@@ -77,6 +78,7 @@
 		"@storybook/test": "^7.6.13",
 		"@storybook/test-runner": "^0.16.0",
 		"@storybook/theming": "^7.6.13",
+		"@svgr/cli": "^8.1.0",
 		"@svgr/rollup": "^8.1.0",
 		"@types/dompurify": "^3.0.5",
 		"@types/jest": "^29.5.11",
