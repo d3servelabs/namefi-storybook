@@ -3,4 +3,8 @@ export { default as ShortAddress } from './ShortAddress';
 export { default as YearCounter } from './YearCounter';
 export { default as NetworkLogo } from './NetworkLogo';
 export { default as NamefiBrandText } from './NamefiBrandText';
+export { default as StatusChip } from './StatusChip';
+export { default as HeaderSearchBar } from './HeaderSearchBar';
+export { default as Surface } from './Surface';
 export * from './Buttons';
+export * from './icons';
