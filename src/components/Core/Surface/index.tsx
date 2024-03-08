@@ -9,7 +9,7 @@ const Surface = ({ children, className }: SurfaceProps) => {
     return (
         <div
             className={cn(
-                'w-full h-full rounded-5 bg-[#222B27] text-black-500 overflow-hidden flex flex-col',
+                'w-full h-full rounded-5 bg-primary-5 overflow-hidden',
                 className,
             )}>
             {children}
