@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Activities from '../../../components/Templates/DashBoard/Activities';
+import Activities from '../../../components/Templates/Dashboard/Activities';
+import StatusChip from "../../../components/Core/StatusChip";
 
 const meta = {
 	title: 'Pages/Dashboard/ActivitiesGrid',
@@ -22,35 +23,80 @@ export const Status: Story = {
 	args: {
 		activities: [
 			{
-				status: 'Register',
+				label: 'Register',
 				domainName: 'Namefi.io',
 				isLoading: true,
 				waitingForRegistrar: false,
 			},
 			{
-				status: 'Release',
+				label: 'Release',
 				domainName: 'Namefi.io',
 				isLoading: true,
 				waitingForRegistrar: false,
 			},
-			{ status: 'Burn', domainName: 'Namefi.io', isLoading: false, waitingForRegistrar: true },
 			{
-				status: 'Mint',
+				label: 'Burn',
+				domainName: 'Namefi.io',
+				isLoading: false,
+				waitingForRegistrar: true,
+			},
+			{
+				label: 'Mint',
 				domainName: 'abrac...fa.com',
 				isLoading: false,
 				waitingForRegistrar: true,
 			},
 			{
-				status: 'Transfer',
+				label: 'Transfer',
 				domainName: 'abrac...fa.com',
 				isLoading: false,
 				waitingForRegistrar: true,
 			},
 			{
-				status: 'List',
+				label: 'List',
 				domainName: 'abrac...fa.com',
 				isLoading: true,
 				waitingForRegistrar: false,
+			},
+			{
+				label: 'Register',
+				domainName: 'Namefi.io',
+				isLoading: true,
+				waitingForRegistrar: false,
+			},
+			{
+				label: 'Release',
+				domainName: 'Namefi.io',
+				isLoading: true,
+				waitingForRegistrar: false,
+			},
+			{
+				label: 'Burn',
+				domainName: 'Namefi.io',
+				isLoading: false,
+				waitingForRegistrar: true,
+			},
+			{
+				label: 'Mint',
+				domainName: 'abrac...fa.com',
+				isLoading: false,
+				waitingForRegistrar: true,
+			},
+			{
+				label: 'Transfer',
+				domainName: 'abrac...fa.com',
+				isLoading: false,
+				waitingForRegistrar: true,
+			},
+			{
+				label: 'List',
+				domainName: 'abrac...fa.com',
+				status: 'error'
+			},
+			{
+				label: 'List',
+				domainName: 'abrac...fa.com',
+				status: 'success'
 			},
 		],
 	} as any,
@@ -67,35 +113,40 @@ export const Status: Story = {
 					</Activities.Header.Tabs>
 				</Activities.Header.Root>
 				<Activities.List.Root>
-					<div className={'pb-4.5'}>
-						<Activities.List.Item className={'*:!text-3.5lg'}>
-							<Activities.List.Item.Columns.One>
-								Type
-							</Activities.List.Item.Columns.One>
-							<Activities.List.Item.Columns.Two>
-								Domain Name
-							</Activities.List.Item.Columns.Two>
-							<Activities.List.Item.Columns.Three>
-								Status
-							</Activities.List.Item.Columns.Three>
-						</Activities.List.Item>
-					</div>
+					<Activities.List.Item.Root className={'*:!text-3.5lg'}>
+						<Activities.List.Item.Columns.One>Type</Activities.List.Item.Columns.One>
+						<Activities.List.Item.Columns.Two>
+							Domain Name
+						</Activities.List.Item.Columns.Two>
+						<Activities.List.Item.Columns.Three>
+							Status
+						</Activities.List.Item.Columns.Three>
+					</Activities.List.Item.Root>
 
-					{activities.map(({ status, domainName, isLoading, waitingForRegistrar }) => {
+					{activities.map(({ status, domainName, isLoading, waitingForRegistrar,label }) => {
 						return (
-							<Activities.List.Item>
+							<Activities.List.Item.Root>
 								<Activities.List.Item.Columns.One>
-									{status}
+									{label}
 								</Activities.List.Item.Columns.One>
 								<Activities.List.Item.Columns.Two>
 									{domainName}
 								</Activities.List.Item.Columns.Two>
-								<Activities.List.Item.Columns.Three
-									loading={isLoading}
-									waitingForRegistrar={
-										waitingForRegistrar
-									}></Activities.List.Item.Columns.Three>
-							</Activities.List.Item>
+
+								{status?
+									<Activities.List.Item.Columns.Three>
+										<StatusChip color={status}>{status.toUpperCase()}</StatusChip>
+									</Activities.List.Item.Columns.Three>
+									:isLoading ? (
+									<Activities.List.Item.Columns.Three.PendingOperation />
+								) : waitingForRegistrar ? (
+									<Activities.List.Item.Columns.Three.WaitingForRegistrar />
+								) : (
+									<Activities.List.Item.Columns.Three>
+										<StatusChip color={'error'}>Failed</StatusChip>
+									</Activities.List.Item.Columns.Three>
+								)}
+							</Activities.List.Item.Root>
 						);
 					})}
 				</Activities.List.Root>

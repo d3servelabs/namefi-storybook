@@ -6,7 +6,7 @@ export default function ActivitiesHeaderTabs({children, className, ...props}: Co
         <div
             {...props}
             className={cn(
-                'w-[175px] h-full flex gap-[18px] font-medium text-[16px] font-["Roboto_Mono"] tracking-[0.02em] text-[#C6EEDB]',
+                'h-full flex gap-4.5 font-medium text-4 font-["Roboto_Mono"] tracking-[0.02em] text-[#C6EEDB]',
                 className,
             )}>
             {children}
