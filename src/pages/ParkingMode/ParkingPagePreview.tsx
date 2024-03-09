@@ -45,9 +45,14 @@ const Container = styled.div`
 		linear-gradient(185deg, rgba(241, 255, 248, 0.25) -86.83%, rgba(222, 255, 240, 0) 223.83%);
 `;
 
-export const ParkingPagePreview = ({ domain }: { domain: string }) => {
+export interface ParkingPagePreviewProps {
+	domain: string;
+	className?: string;
+}
+
+export const ParkingPagePreview = ({ domain, className }: ParkingPagePreviewProps) => {
 	return (
-		<Container>
+		<Container className={className}>
 			<div className={animations.content}>
 				<div className="font-[Zilla Slab Highlight] font-bold text-[#2b2b2b] text-3xl mb-4">
 					<div className="bg-primary-500">Coming Soon!</div>
