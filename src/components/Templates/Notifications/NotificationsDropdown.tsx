@@ -43,12 +43,12 @@ export const NotificationsDropdown = ({
 				{notifications.map((notification) => (
 					<NotificationItem
 						key={notification?.id}
+						message={notification?.message}
 						title={notification?.title}
 						count={notification?.count}
 						datetime={notification?.createdAt}
-						onClick={() => onClickItem(notification)}>
-						{notification?.message}
-					</NotificationItem>
+						onClick={() => onClickItem(notification)}
+					/>
 				))}
 			</Dropdown.Body>
 			<Dropdown.Footer>

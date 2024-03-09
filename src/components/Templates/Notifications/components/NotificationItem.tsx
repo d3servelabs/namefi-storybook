@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import moment from 'moment';
 import { cn } from '../../../../utils/cn';
+import { LinkifyContent } from './LinkifyContent';
 
 const usePrettyDate = (date: Date) =>
 	useMemo(() => {
@@ -15,7 +16,7 @@ const usePrettyDate = (date: Date) =>
 
 export interface NotificationItemProps {
 	title: string;
-	children: React.ReactNode;
+	message: React.ReactNode;
 	count: number;
 	datetime: Date;
 	onClick?: () => void;
@@ -24,7 +25,7 @@ export interface NotificationItemProps {
 
 export const NotificationItem = ({
 	title,
-	children,
+	message,
 	count,
 	datetime,
 	onClick,
@@ -40,7 +41,9 @@ export const NotificationItem = ({
 			onClick={onClick}>
 			<div className="flex flex-col gap-y-1">
 				<div className="text-base text-primary-500 font-primary">[ {title} ]</div>
-				<div className="text-sm text-black-500 font-primary">{children}</div>
+				<div className="text-sm text-black-500 font-primary">
+					<LinkifyContent content={message} />
+				</div>
 			</div>
 			<div className="flex flex-col gap-y-1 items-center">
 				<div className="flex items-center h-6">

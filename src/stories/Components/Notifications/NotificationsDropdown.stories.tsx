@@ -3,7 +3,6 @@ import {
 	NotificationsDropdown,
 	type NotificationData,
 } from '../../../components/Templates/Notifications';
-import { LinkIcon } from '../../../components/Core/icons/Link';
 
 const meta = {
 	title: 'Components/Notifications/NotificationsDropdown',
@@ -20,42 +19,21 @@ const NOTIFICATION_DATAS: NotificationData[] = [
 	{
 		id: '3',
 		title: 'Mint NFT',
-		message: (
-			<>
-				Started minting{' '}
-				<a href="https://example.com/" target="_blank">
-					example.com <LinkIcon className="text-primary-500" />
-				</a>
-			</>
-		),
+		message: 'Started minting example.com',
 		count: 3,
 		createdAt: new Date(),
 	},
 	{
 		id: '2',
 		title: 'Burn NFT',
-		message: (
-			<>
-				Started burning example.com{' '}
-				<a href="https://example.com/" target="_blank">
-					example.com <LinkIcon className="text-primary-500" />
-				</a>
-			</>
-		),
+		message: 'Started burning example.com',
 		count: 2,
 		createdAt: new Date(),
 	},
 	{
 		id: '1',
 		title: 'Register',
-		message: (
-			<>
-				Started registering example.com{' '}
-				<a href="https://example.com/" target="_blank">
-					example.com <LinkIcon className="text-primary-500" />
-				</a>
-			</>
-		),
+		message: 'Started registering example.com',
 		count: 2,
 		createdAt: new Date(),
 	},

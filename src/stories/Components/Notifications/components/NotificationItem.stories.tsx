@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	argTypes: {
 		title: { control: 'text' },
-		children: { control: 'text' },
+		message: { control: 'text' },
 		count: { control: 'number' },
 		datetime: { control: 'date' },
 		onClick: { action: 'onClick' },
@@ -24,7 +24,7 @@ export const Default: Story = {
 	},
 	args: {
 		title: 'Mint NFT',
-		children: 'Started minting example.com',
+		message: 'Started minting example.com',
 		count: 3,
 		datetime: new Date(),
 		className: 'w-[490px]',
