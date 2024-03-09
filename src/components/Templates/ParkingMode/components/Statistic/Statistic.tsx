@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoCircledSVG from '../../../assets/InfoCircled.svg';
+import InfoCircledSVG from '../../../../../assets/InfoCircled.svg';
 
 export interface StatisticProps {
 	title: React.ReactNode;

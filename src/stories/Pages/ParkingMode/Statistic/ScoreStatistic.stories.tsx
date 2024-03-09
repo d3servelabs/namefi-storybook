@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { ScoreStatistic } from '../../../../pages/ParkingMode/Statistic/ScoreStatistic';
+import { ScoreStatistic } from '../../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/Statistic/Variants/ScoreStatistic',
+	title: 'Pages/ParkingMode/Components/Statistic/Variants/ScoreStatistic',
 	component: ScoreStatistic,
 	parameters: {
 		layout: 'centered',

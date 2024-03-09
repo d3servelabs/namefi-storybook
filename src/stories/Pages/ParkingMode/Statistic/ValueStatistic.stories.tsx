@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { ValueStatistic } from '../../../../pages/ParkingMode/Statistic/ValueStatistic';
-import { usePrettyPrice } from '../../../../pages/ParkingMode/hooks/usePrettyPrice';
+import { ValueStatistic, usePrettyPrice } from '../../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/Statistic/Variants/ValueStatistic',
+	title: 'Pages/ParkingMode/Components/Statistic/Variants/ValueStatistic',
 	component: ValueStatistic,
 	parameters: {
 		layout: 'centered',

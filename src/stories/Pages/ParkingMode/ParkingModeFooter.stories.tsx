@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
-import { ParkingModeFooter } from '../../../pages/ParkingMode/ParkingModeFooter';
+import { ParkingModeFooter } from '../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/ParkingModeFooter',
+	title: 'Pages/ParkingMode/Components/ParkingModeFooter',
 	component: ParkingModeFooter,
 	parameters: {
-		layout: 'centered',
+		layout: 'fullscreen',
 	},
 } satisfies Meta<typeof ParkingModeFooter>;
 

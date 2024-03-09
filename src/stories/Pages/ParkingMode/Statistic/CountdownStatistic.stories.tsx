@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { CountdownStatistic } from '../../../../pages/ParkingMode/Statistic/CountdownStatistic';
+import { CountdownStatistic } from '../../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/Statistic/Variants/CountdownStatistic',
+	title: 'Pages/ParkingMode/Components/Statistic/Variants/CountdownStatistic',
 	component: CountdownStatistic,
 	parameters: {
 		layout: 'centered',

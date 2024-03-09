@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
-import { ParkingPagePreview } from '../../../pages/ParkingMode/ParkingPagePreview';
+import { ParkingPagePreview } from '../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/ParkingPagePreview',
+	title: 'Pages/ParkingMode/Components/ParkingPagePreview',
 	component: ParkingPagePreview,
 	parameters: {
 		layout: 'centered',
