@@ -50,14 +50,12 @@ const ParkingMode = () => {
 								description={<div className="flex justify-end">by XXXXXX</div>}
 							/>
 						</div>
-						<div className="flex flex-col justify-center items-center">
-							<div>
+						<div className="flex flex-col justify-center items-center w-full px-6 md:w-auto md:px-0">
 								<SolidButton className="font-primary text-sm whitespace-nowrap text-[10px] md:text-base">
 									Make an Offer{' '}
 									<img src="/assets/arrow-right2.svg" className="w-[1em]" />
 								</SolidButton>
-							</div>
-							<p className="mt-1.5 block sm:hidden text-brand-300 text-center text-[8px]">
+							<p className="mt-1.5 block md:hidden text-brand-300 text-center text-[8px]">
 								Trading on mobile will be supported soon!
 							</p>
 						</div>
@@ -76,10 +74,10 @@ const ParkingMode = () => {
 						</div>
 					</div>
 				</div>
-				<ScrollDownTip className="hidden sm:block">Show me the potential</ScrollDownTip>
+				<ScrollDownTip className="hidden md:block">Show me the potential</ScrollDownTip>
 			</div>
 			<div className="max-w-[1488px] mx-auto px-0 md:px-8 mb-8 md:mb-9">
-				<div className="border-none sm:border-t border-[#444] pt-11">
+				<div className="border-none md:border-t border-[#444] pt-11">
 					<NamePotential
 						name="example.com"
 						description={`The name **"Namefi"** signifies the _act of naming something_, with the idea that it becomes just as _essential, connecting people_ and contributing to a better _future_ for the internet.`}
