@@ -27,7 +27,7 @@ export const Default: Story = {
 			{ text: 'Private Terms' },
 			{ text: 'Terms & Conditions' },
 		],
-		className: 'w-[1500px]',
+		className: 'w-[1480px] max-w-screen',
 	},
 	tags: ['autodocs'],
 };
