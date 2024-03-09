@@ -1,4 +1,5 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useRef, useCallback } from 'react';
+import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { SolidButton } from '../../Core/Buttons/SolidButton';
 import { NameDisplay, type NameStatus } from './components/NameDisplay';
 import { ValueStatistic, ScoreStatistic } from './components/Statistic';
@@ -7,22 +8,26 @@ import { ParkingModeHeader, type UserAuthStateProps } from './components/Parking
 import { ParkingModeFooter, type ParkingModeFooterLink } from './components/ParkingModeFooter';
 import { ScrollDownTip } from './components/ScrollDownTip';
 import { TLDChip } from './components/TLDChip';
-import { ParkingPagePreview } from './components/ParkingPagePreview';
+import { MakeOffer } from './components/MakeOffer';
 
 export interface ParkingModeProps {
 	domain: string;
 	domainOwner: string;
 	domainStatus: NameStatus;
 	onClickOwner: () => void;
+	exchangeRate: number;
+	unit: string;
 	domainValue: number;
-	domainValueDescription: string;
 	domainValueTip: string;
 	domainScore: number;
 	domainScoreProvider: string;
 	domainScoreTip: string;
 	otherTLDs: string[];
 	onClickTLD: (tld: string) => void;
-	onClickMakeOffer: () => void;
+	offerMinimum: number;
+	offerMaximum: number;
+	onBuy: () => void;
+	onOffer: () => void;
 	domainPotentialDescription: string;
 	domainPotentialPreview: React.ReactNode;
 	onClickGeneratePotentialPreview: () => void;
@@ -37,15 +42,19 @@ export const ParkingMode = ({
 	domainOwner,
 	domainStatus,
 	onClickOwner,
+	exchangeRate,
+	unit,
 	domainValue,
-	domainValueDescription,
 	domainValueTip,
 	domainScore,
 	domainScoreProvider,
 	domainScoreTip,
 	otherTLDs,
 	onClickTLD,
-	onClickMakeOffer,
+	offerMinimum,
+	offerMaximum,
+	onBuy,
+	onOffer,
 	domainPotentialDescription,
 	domainPotentialPreview,
 	onClickGeneratePotentialPreview,
@@ -54,21 +63,19 @@ export const ParkingMode = ({
 	userAuthStateProps,
 	footerLinks,
 }: ParkingModeProps) => {
-	// const [domain, setDomain] = useState('');
-	// const previewRef = useRef<HTMLDivElement>(null);
-	// const handleGeneratePreview = useCallback(() => {
-	// 	setDomain('namefi.com');
-	// 	previewRef.current?.scrollIntoView({ behavior: 'smooth' });
-	// }, [])
 	const previewRef = useRef<HTMLDivElement>(null);
 	const handleGeneratePreview = useCallback(() => {
 		onClickGeneratePotentialPreview();
 		previewRef.current?.scrollIntoView({ behavior: 'smooth' });
-	}, [onClickGeneratePotentialPreview, previewRef])
+	}, [onClickGeneratePotentialPreview, previewRef]);
 	return (
 		<div className={'w-full bg-[#1A1A1A]'}>
 			<div className="max-w-[1488px] mx-auto min-h-screen pb-4 flex flex-col justify-around">
-				<ParkingModeHeader twitterLink={headerTwitterLink} discordLink={headerDiscordLink} userAuthStateProps={userAuthStateProps} />
+				<ParkingModeHeader
+					twitterLink={headerTwitterLink}
+					discordLink={headerDiscordLink}
+					userAuthStateProps={userAuthStateProps}
+				/>
 				<div className="flex-1 flex flex-col">
 					<div className="flex-1 flex justify-center items-center py-30">
 						<NameDisplay
@@ -84,22 +91,35 @@ export const ParkingMode = ({
 								title="Estimated Value"
 								tip={domainValueTip}
 								value={domainValue}
-								unit="$NFSC"
-								description={domainValueDescription}
+								unit={unit}
+								description={`≈${(domainValue * exchangeRate).toFixed(2)}`}
 							/>
 							<ScoreStatistic
 								title="Name Score"
 								tip={domainScoreTip}
 								score={domainScore}
-								description={<div className="flex justify-end">by {domainScoreProvider}</div>}
+								description={
+									<div className="flex justify-end">by {domainScoreProvider}</div>
+								}
 							/>
 						</div>
-						<div className="flex flex-col justify-center items-center w-full px-6 md:w-auto md:px-0">
-							<SolidButton className="font-primary text-sm whitespace-nowrap text-[10px] md:text-base" onClick={onClickMakeOffer}>
-								Make an Offer{' '}
-								<img src="/assets/arrow-right2.svg" className="w-[1em]" />
+						<div className="hidden md:flex justify-center items-center w-auto px-0">
+							<MakeOffer
+								exchangeRate={exchangeRate}
+								unit={unit}
+								minimumPrice={offerMinimum}
+								maximumPrice={offerMaximum}
+								domainStatus={domainStatus}
+								onBuy={onBuy}
+								onOffer={onOffer}
+								className="font-primary text-sm whitespace-nowrap text-[10px] md:text-base"
+							/>
+						</div>
+						<div className="flex md:hidden flex-col justify-center items-center w-full px-6">
+							<SolidButton className="font-primary text-sm whitespace-nowrap text-[10px]">
+								Make an Offer <ArrowRightIcon className="w-[1em]" />
 							</SolidButton>
-							<p className="mt-1.5 block md:hidden text-brand-300 text-center text-[8px]">
+							<p className="mt-1.5 text-brand-300 text-center text-[8px]">
 								Trading on mobile will be supported soon!
 							</p>
 						</div>
@@ -109,7 +129,11 @@ export const ParkingMode = ({
 							Explore Namefi also in
 						</div>
 						<div className="flex flex-wrap justify-center gap-3">
-							{otherTLDs.map((tld) => <TLDChip key={tld} onClick={() => onClickTLD(tld)}>.namefi</TLDChip>)}
+							{otherTLDs.map((tld) => (
+								<TLDChip key={tld} onClick={() => onClickTLD(tld)}>
+									.namefi
+								</TLDChip>
+							))}
 						</div>
 					</div>
 				</div>
@@ -126,15 +150,12 @@ export const ParkingMode = ({
 						<SolidButton
 							className="font-primary text-[10px] md:text-base"
 							onClick={handleGeneratePreview}>
-							Generate{' '}
-							<img src="/assets/arrow-right2.svg" alt="arrow" className="w-[1em]" />
+							Generate <ArrowRightIcon className="w-[1em]" />
 						</SolidButton>
 					</NamePotential>
 				</div>
 			</div>
-			<ParkingModeFooter
-				className="w-full mx-auto"
-				links={footerLinks}>
+			<ParkingModeFooter className="w-full mx-auto" links={footerLinks}>
 				D3SERVE LABS, Inc. All Rights Reserved.
 			</ParkingModeFooter>
 		</div>
