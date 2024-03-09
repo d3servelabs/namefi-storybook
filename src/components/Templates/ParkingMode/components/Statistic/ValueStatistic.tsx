@@ -1,6 +1,6 @@
 import React from 'react';
 import { Statistic } from './Statistic';
-import { usePrettyPrice } from '../hooks/usePrettyPrice';
+import { usePrettyPrice } from '../../hooks/usePrettyPrice';
 
 export interface ValueStatisticProps {
 	title: React.ReactNode;

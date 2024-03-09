@@ -1,14 +1,16 @@
 import React, { useCallback } from 'react';
-import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
-import { cn } from '../../utils/cn';
-import { useShortAddress } from './hooks/useShortAddress';
-import { usePunycode } from './hooks/usePunycode';
-import ChatSVG from '../../assets/Chat.svg';
+import { NamefiBrandText } from '../../../Core/NamefiBrandText';
+import { cn } from '../../../../utils/cn';
+import { useShortAddress } from '../hooks/useShortAddress';
+import { usePunycode } from '../hooks/usePunycode';
+import ChatSVG from '../../../../assets/Chat.svg';
+
+export type NameStatus = 'for-bid' | 'for-sale';
 
 export interface NameDisplayProps {
 	name: string;
 	owner: string;
-	status: 'for-bid' | 'for-sale';
+	status: NameStatus;
 	onClickOwner?: () => void;
 	className?: string;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { cn } from '../../utils/cn';
+import { cn } from '../../../../utils/cn';
 import { PhoneMockup } from './PhoneMockup';
 import { Markdown } from './Markdown';
 

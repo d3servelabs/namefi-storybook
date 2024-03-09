@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
-import { NameDisplay } from '../../../pages/ParkingMode/NameDisplay';
+import { NameDisplay } from '../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/NameDisplay',
+	title: 'Pages/ParkingMode/Components/NameDisplay',
 	component: NameDisplay,
 	parameters: {
 		layout: 'centered',

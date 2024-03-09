@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
-import { ScrollDownTip } from '../../../pages/ParkingMode/ScrollDownTip';
+import { ScrollDownTip } from '../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/ScrollDownTip',
+	title: 'Pages/ParkingMode/Components/ScrollDownTip',
 	component: ScrollDownTip,
 	parameters: {
 		layout: 'centered',

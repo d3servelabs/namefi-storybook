@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
-import { Markdown } from '../../../pages/ParkingMode/Markdown';
+import { Markdown } from '../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/Markdown',
+	title: 'Pages/ParkingMode/Components/Markdown',
 	component: Markdown,
 	parameters: {
 		layout: 'centered',

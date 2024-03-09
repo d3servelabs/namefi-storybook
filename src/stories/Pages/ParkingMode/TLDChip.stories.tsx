@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
-import { TLDChip } from '../../../pages/ParkingMode/TLDChip';
+import { TLDChip } from '../../../components/Templates/ParkingMode';
 
 const meta = {
-	title: 'Pages/ParkingMode/TLDChip',
+	title: 'Pages/ParkingMode/Components/TLDChip',
 	component: TLDChip,
 	parameters: {
 		layout: 'centered',

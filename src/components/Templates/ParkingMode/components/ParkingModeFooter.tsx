@@ -1,6 +1,6 @@
 import React from 'react';
-import { cn } from '../../utils/cn';
-import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
+import { cn } from '../../../../utils/cn';
+import { NamefiBrandText } from '../../../Core/NamefiBrandText';
 
 export interface ParkingModeFooterLink {
 	text: string;

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { cn } from '../../utils/cn';
-import iPhoneMaskSVG from '../../assets/iPhoneMask.svg';
-import iPhoneMaskFullSVG from '../../assets/iPhoneMaskFull.svg';
-import iPhoneSVG from '../../assets/iPhone.svg';
+import { cn } from '../../../../utils/cn';
+import iPhoneMaskSVG from '../../../../assets/iPhoneMask.svg';
+import iPhoneMaskFullSVG from '../../../../assets/iPhoneMaskFull.svg';
+import iPhoneSVG from '../../../../assets/iPhone.svg';
 
 const PhoneMockupContent = styled.div`
 	position: absolute;
