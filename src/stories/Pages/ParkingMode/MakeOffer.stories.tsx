@@ -20,6 +20,7 @@ export const Default: Story = {
 		maximumPrice: { control: 'number' },
 		unit: { control: 'text' },
 		domainStatus: { control: 'radio', options: ['for-bid', 'for-sale'] },
+		priceTip: { control: 'text' },
 		onBuy: { action: 'onBuy' },
 		onOffer: { action: 'onOffer' },
 	},
@@ -28,6 +29,7 @@ export const Default: Story = {
 		maximumPrice: 99999999,
 		unit: '$NFSC',
 		domainStatus: 'for-sale',
+		priceTip: 'Lorem ipsum dolor sit amet',
 	},
 	tags: ['autodocs'],
 };

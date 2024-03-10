@@ -10,6 +10,7 @@ export interface MakeOfferProps {
 	maximumPrice?: number;
 	unit: string;
 	domainStatus?: NameStatus;
+	priceTip?: React.ReactNode;
 	onBuy?: () => void;
 	onOffer?: (price: number) => void;
 	className?: string;
@@ -21,6 +22,7 @@ export const MakeOffer = ({
 	maximumPrice,
 	unit,
 	domainStatus,
+	priceTip,
 	onBuy,
 	onOffer,
 	className,
@@ -54,7 +56,9 @@ export const MakeOffer = ({
 							/>
 							<div className="text-[#d6d6d6] text-5lg font-primary py-3 ml-4 leading-none">
 								{unit}
-								<InfoCircledIcon className="inline-block w-5 text-primary-500 ml-2" />
+								{priceTip && (
+									<InfoCircledIcon className="inline-block w-5 text-primary-500 ml-2" />
+								)}
 							</div>
 						</div>
 						<div className="">
