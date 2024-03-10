@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { ValueStatistic, usePrettyPrice } from '../../../../components/Templates/ParkingMode';
+import { ValueStatistic } from '../../../../components/Templates/ParkingMode';
 
 const meta = {
 	title: 'Pages/ParkingMode/Components/Statistic/Variants/ValueStatistic',
@@ -20,7 +20,7 @@ export const Default: Story = {
 		tip: { control: 'text' },
 		value: { control: 'number' },
 		unit: { control: 'text' },
-		description: { control: 'text' },
+		exchangeRate: { control: 'number' },
 		className: { control: 'text' },
 	},
 	args: {
@@ -28,38 +28,8 @@ export const Default: Story = {
 		tip: 'Lorem ipsum dolor sit amet',
 		value: 100,
 		unit: '$NFSC',
-		description: 'Lorem ipsum dolor sit amet',
+		exchangeRate: 1,
 		className: '',
 	},
 	tags: ['autodocs'],
-};
-
-export const EstimatedValue: Story = {
-	argTypes: {
-		title: { control: 'text' },
-		value: { control: 'number' },
-		unit: { control: 'text' },
-		dollar: { control: 'number' },
-		tip: { control: 'text' },
-	} as any,
-	args: {
-		title: 'Estimated Value',
-		value: 20000,
-		unit: '$NFSC',
-		dollar: 20000,
-		tip: 'Lorem ipsum dolor sit amet',
-	} as any,
-	tags: ['autodocs'],
-	render: ({ title, value, unit, dollar, tip }: any) => {
-		const prettyDollar = usePrettyPrice(dollar);
-		return (
-			<ValueStatistic
-				title={title}
-				tip={tip}
-				value={value}
-				unit={unit}
-				description={`≈$${prettyDollar}`}
-			/>
-		);
-	},
 };

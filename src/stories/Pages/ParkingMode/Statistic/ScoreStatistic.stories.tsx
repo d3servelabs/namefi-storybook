@@ -19,39 +19,15 @@ export const Default: Story = {
 		title: { control: 'text' },
 		tip: { control: 'text' },
 		score: { control: 'number' },
-		description: { control: 'text' },
+		provider: { control: 'text' },
 		className: { control: 'text' },
 	},
 	args: {
 		title: 'Score',
 		tip: 'Lorem ipsum dolor sit amet',
 		score: 100,
-		description: 'Lorem ipsum dolor sit amet',
+		provider: 'XXXXXX',
 		className: '',
 	},
 	tags: ['autodocs'],
-};
-
-export const NameScore: Story = {
-	argTypes: {
-		score: { control: 'number' },
-		provider: { control: 'string' },
-		tip: { control: 'text' },
-	} as any,
-	args: {
-		score: 87,
-		provider: 'XXXXXX',
-		tip: 'Lorem ipsum dolor sit amet',
-	} as any,
-	tags: ['autodocs'],
-	render: ({ score, provider, tip }: any) => {
-		return (
-			<ScoreStatistic
-				title="Name Score"
-				tip={tip}
-				score={score}
-				description={<div className="flex justify-end">by {provider}</div>}
-			/>
-		);
-	},
 };

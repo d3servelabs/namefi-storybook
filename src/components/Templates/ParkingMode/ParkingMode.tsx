@@ -86,21 +86,19 @@ export const ParkingMode = ({
 						/>
 					</div>
 					<div className="flex flex-wrap md:flex-row flex-col md:mb-24 mb-8 md:px-12 px-2.5 md:gap-6 gap-0 justify-around items-center">
-						<div className="flex flex-wrap md:gap-12 gap-4 md:mr-12 mr-0 md:mb-0 mb-6 justify-center items-center">
+						<div className="flex flex-wrap md:gap-12 gap-4 md:mr-12 mr-0 md:mb-0 mb-6 justify-center items-start">
 							<ValueStatistic
 								title="Estimated Value"
 								tip={domainValueTip}
 								value={domainValue}
 								unit={unit}
-								description={`≈${(domainValue * exchangeRate).toFixed(2)}`}
+								exchangeRate={exchangeRate}
 							/>
 							<ScoreStatistic
 								title="Name Score"
 								tip={domainScoreTip}
 								score={domainScore}
-								description={
-									<div className="flex justify-end">by {domainScoreProvider}</div>
-								}
+								provider={domainScoreProvider}
 							/>
 						</div>
 						<div className="hidden md:flex justify-center items-center w-auto px-0">
