@@ -26,6 +26,7 @@ export interface ParkingModeProps {
 	onClickTLD: (tld: string) => void;
 	offerMinimum: number;
 	offerMaximum: number;
+	offerPriceTip: React.ReactNode;
 	onBuy: () => void;
 	onOffer: () => void;
 	domainPotentialDescription: string;
@@ -53,6 +54,7 @@ export const ParkingMode = ({
 	onClickTLD,
 	offerMinimum,
 	offerMaximum,
+	offerPriceTip,
 	onBuy,
 	onOffer,
 	domainPotentialDescription,
@@ -108,6 +110,7 @@ export const ParkingMode = ({
 								minimumPrice={offerMinimum}
 								maximumPrice={offerMaximum}
 								domainStatus={domainStatus}
+								priceTip={offerPriceTip}
 								onBuy={onBuy}
 								onOffer={onOffer}
 								className="font-primary text-sm whitespace-nowrap text-[10px] md:text-base"
