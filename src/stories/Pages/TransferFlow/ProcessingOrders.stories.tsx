@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ProcessingOrders } from "@pages/RegistrationFlow/ProcessingOrders";
+import { ProcessingOrders } from "../../../pages/RegistrationFlow/ProcessingOrders";
 
 const meta = {
     title: 'Components/RegistrationFlow/ProcessingOrders',

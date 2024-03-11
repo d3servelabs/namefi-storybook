@@ -1,5 +1,4 @@
 import React, { ComponentProps } from 'react'
-import { WhoisLinkButton } from '../LinkButton'
 
 export const CardHeader: React.FC<ComponentProps<'div'>> = ({children, ...props}) => {
   return (

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BaseButton as BaseButtonComponent } from '@pages/Landingpage/SolidButton';
+import { BaseButton as BaseButtonComponent } from '../../../../pages/Landingpage/SolidButton';
 const meta = {
   title: 'Pages/Landingpage/Button',
   component: BaseButtonComponent,

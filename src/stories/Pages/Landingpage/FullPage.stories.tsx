@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FullPage as FullPageComponent } from '@pages/Landingpage/FullPage';
+import { FullPage as FullPageComponent } from '../../../pages/Landingpage/FullPage';
 import '../../../index.css'
 import '../../../App.css'
-import { FasterIcon } from '@pages/Landingpage/icons/FasterIcon';
-import { SaferIcon } from '@pages/Landingpage/icons/SaferIcon';
-import { DefiIcon } from '@pages/Landingpage/icons/DEfiIcon';
+import { FasterIcon } from '../../../pages/Landingpage/icons/FasterIcon';
+import { SaferIcon } from '../../../pages/Landingpage/icons/SaferIcon';
+import { DefiIcon } from '../../../pages/Landingpage/icons/DEfiIcon';
 
 const meta = {
   title: 'Pages/Landingpage',

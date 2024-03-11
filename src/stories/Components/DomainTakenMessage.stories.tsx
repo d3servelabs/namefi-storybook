@@ -21,7 +21,6 @@ export const DomainTakenMessageStory: Story = {
     isLoading: false,
     buttonProps: {
         onClick: () => {},
-        label: '',
         children: null
     }
   }

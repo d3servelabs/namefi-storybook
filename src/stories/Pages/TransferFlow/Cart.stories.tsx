@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Cart } from "@pages/RegistrationFlow/Registration";
+import { Cart } from "../../../pages/RegistrationFlow/Registration";
 
 const meta = {
     title: 'Components/RegistrationFlow/Cart',

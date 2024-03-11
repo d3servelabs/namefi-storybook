@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
 import {DomainOwnedContent} from "../../../pages/DomainOwned/content";
-import { deterministicMoment } from '@stories/consts';
+import { deterministicMoment } from '../../../stories/consts';
 
 const meta = { 
   title: 'Pages/DomainOwned/Content',

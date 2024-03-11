@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card1 as DomainCardComponent } from '@pages/Landingpage/DomainCard';
+import { Card1 as DomainCardComponent } from '../../../pages/Landingpage/DomainCard';
 import '../../../index.css'
 import '../../../App.css'
 

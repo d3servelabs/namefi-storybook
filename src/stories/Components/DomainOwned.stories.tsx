@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { DomainOwned } from "@pages/DomainOwned/DomainOwned";
+import { DomainOwned } from "../../pages/DomainOwned/DomainOwned";
 
 const meta = {
     title: 'Components/DomainOwned',

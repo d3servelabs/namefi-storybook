@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FeaturedCardGrid as FeaturedCardGridComponent } from '@pages/Landingpage/FeaturedCardGrid';
+import { FeaturedCardGrid as FeaturedCardGridComponent } from '../../../pages/Landingpage/FeaturedCardGrid';
 import '../../../index.css'
 import '../../../App.css'
-import { SaferIcon } from '@pages/Landingpage/icons/SaferIcon';
-import { FasterIcon } from '@pages/Landingpage/icons/FasterIcon';
-import { DefiIcon } from '@pages/Landingpage/icons/DEfiIcon';
+import { SaferIcon } from '../../../pages/Landingpage/icons/SaferIcon';
+import { FasterIcon } from '../../../pages/Landingpage/icons/FasterIcon';
+import { DefiIcon } from '../../../pages/Landingpage/icons/DEfiIcon';
 
 const meta = {
   title: 'Pages/Landingpage',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { NavLinks as NavLinksComponent } from '@pages/Landingpage/NavLinks';
+import { NavLinks as NavLinksComponent } from '../../../pages/Landingpage/NavLinks';
 
 const meta = {
   title: 'Pages/Landingpage',

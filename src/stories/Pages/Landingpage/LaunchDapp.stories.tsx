@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { LaunchDapp as LaunchDappComponent } from '@pages/Landingpage/LaunchDapp';
+import { LaunchDapp as LaunchDappComponent } from '../../../pages/Landingpage/LaunchDapp';
 
 const meta = {
   title: 'Pages/Landingpage',

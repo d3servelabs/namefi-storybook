@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SocialLinks as SocialLinksComponent } from '@pages/Landingpage/SocialLinks';
+import { SocialLinks as SocialLinksComponent } from '../../../pages/Landingpage/SocialLinks';
 import '../../../index.css'
 import '../../../App.css'
 

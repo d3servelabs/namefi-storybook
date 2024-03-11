@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {FullPage as FullPageComponent} from './FullPage';
 import '../../../index.css'
 import '../../../App.css'
-import { deterministicMoment } from '@stories/consts';
+import { deterministicMoment } from '../../../stories/consts';
 
 
 const meta = {
@@ -62,7 +62,6 @@ export const FullPage: Story = {
         isLoading: false,
         ownerAddress: null,
         buttonProps: {
-          label: '',
           children: null,
           onClick: () => {}
         }

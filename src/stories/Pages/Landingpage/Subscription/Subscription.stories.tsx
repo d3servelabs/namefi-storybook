@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Subscription as SubscriptionComponent } from '@pages/Landingpage/Subscription';
+import { Subscription as SubscriptionComponent } from '../../../../pages/Landingpage/Subscription';
 const meta = {
   title: 'Pages/Landingpage/Subscription',
   component: SubscriptionComponent,

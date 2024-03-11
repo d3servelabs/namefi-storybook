@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card2 as DomainCardComponent } from '@pages/Landingpage/DomainCard';
+import { Card2 as DomainCardComponent } from '../../../pages/Landingpage/DomainCard';
 const meta = {
   title: 'Pages/Landingpage',
   component: DomainCardComponent,

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Message1 as MessageComponent } from '@pages/Landingpage/AssetsMessage';
+import { Message1 as MessageComponent } from '../../../pages/Landingpage/AssetsMessage';
 import '../../../index.css'
 import '../../../App.css'
 

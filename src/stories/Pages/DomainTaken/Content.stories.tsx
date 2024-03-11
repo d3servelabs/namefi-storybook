@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css'
 import '../../../App.css'
 import {DomainTakenContent} from "../../../pages/DomainTaken/content";
-import { deterministicMoment } from '@stories/consts';
+import { deterministicMoment } from '../../../stories/consts';
 
 const meta = { 
   title: 'Pages/DomainTaken/Content',
@@ -53,7 +53,6 @@ export const Content: Story = {
       isLoading: false,
       ownerAddress: null,
       buttonProps: {
-        label: '',
         children: null,
         onClick: () => {}
       }

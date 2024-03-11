@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FaqComponent as FaqComponentComponent } from '@pages/Landingpage/FaqComponent';
+import { FaqComponent as FaqComponentComponent } from '../../../pages/Landingpage/FaqComponent';
 
 const meta = {
   title: 'Pages/Landingpage',

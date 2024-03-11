@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PoweredBy as PoweredByComponent } from '@pages/Landingpage/PoweredBy';
+import { PoweredBy as PoweredByComponent } from '../../../pages/Landingpage/PoweredBy';
 
 const meta = {
   title: 'Pages/Landingpage',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Header as HeaderComponent } from '@pages/Landingpage/Header';
+import { Header as HeaderComponent } from '../../../pages/Landingpage/Header';
 import '../../../index.css'
 import '../../../App.css'
 

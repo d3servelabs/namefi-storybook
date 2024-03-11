@@ -22,12 +22,7 @@ type Story = StoryObj<typeof meta>;
 
 export const DomainCreditCardStory: Story = { 
   args: {
-    userName: 'Vitalik.eth',
-    dashboardBalanceProps: {
-      balanceProps: {
-        balance: 100.23
-      }
-    }
+    
   }
  
 }
