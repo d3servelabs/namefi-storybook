@@ -22,7 +22,7 @@ export const Default: Story = {
         borderColor: '#fff',
         content: 'Button',
         
-    } as any ,
+    } as any , 
     render: ({content, ...props}: any) => {
         return (
             <Component>

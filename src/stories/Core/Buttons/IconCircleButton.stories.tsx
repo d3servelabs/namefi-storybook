@@ -26,5 +26,5 @@ export const Default: Story = {
 		iconSource: PlusIconSource,
 		disabled: false,
 	},
-	tags: ['autodocs'],
+	tags: ['autodocs'], 
 };

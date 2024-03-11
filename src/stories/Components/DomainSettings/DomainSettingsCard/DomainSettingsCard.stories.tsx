@@ -36,7 +36,7 @@ export const Default: Story = {
 			},
 			[],
 		); 
-
+ 
 		return (
 			<DomainSettings.Card.Root>
 				<DomainSettings.Card.TwoSectionLayout>
