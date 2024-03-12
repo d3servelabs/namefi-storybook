@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { OTPInputField } from "../../components/OTPInputField"
+import { OtpInputField } from "../../components/Core/OtpInputField"
 import { useState } from "react";
 
 const meta = {
     title: 'Components/OTPInputField',
-    component: OTPInputField,
+    component: OtpInputField,
     parameters: {
         layout: 'centered',
     }
-}satisfies Meta<typeof OTPInputField>
+}satisfies Meta<typeof OtpInputField>
 
 export default meta;
 
@@ -29,7 +29,7 @@ export const OTPInput: Story = {
         const [otp, setOtp] = useState(otpValue)
         const onValueChange = (value: string) => setOtp(value)
         return(
-            <OTPInputField 
+            <OtpInputField
                 otpValue={otp}
                 fieldLength={fieldLength}
                 onValueChange={onValueChange}
