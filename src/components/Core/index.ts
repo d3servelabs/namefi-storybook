@@ -6,5 +6,8 @@ export { default as NamefiBrandText } from './NamefiBrandText';
 export { default as StatusChip } from './StatusChip';
 export { default as HeaderSearchBar } from './HeaderSearchBar';
 export { default as Surface } from './Surface';
+export { OtpInputField } from './OtpInputField';
+export { StepDiagram } from './StepDiagram';
+export { default as Form } from './Form';
 export * from './Buttons';
 export * from './icons';

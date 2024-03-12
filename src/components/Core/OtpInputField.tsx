@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import { cn } from '../utils/cn'
+import { cn } from '../../utils/cn'
 
 interface OTPInputFieldProps {
     fieldLength: number
@@ -7,7 +7,7 @@ interface OTPInputFieldProps {
     otpValue: string
 }
 
-export const OTPInputField = ({fieldLength, otpValue, onValueChange, ...props}: OTPInputFieldProps) => {
+export const OtpInputField = ({fieldLength, otpValue, onValueChange, ...props}: OTPInputFieldProps) => {
 
     const REGEX_DIGIT = /^\d+$/
 
