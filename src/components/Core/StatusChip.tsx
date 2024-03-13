@@ -11,7 +11,7 @@ export default function StatusChip({ color, children, icon, className }: StatusC
 	return (
 		<div
 			className={cn(
-				'flex gap-1 items-center justify-start text-3.5lg',
+				'flex gap-1 items-center justify-start text-3.5lg whitespace-nowrap break-keep',
 				color === 'info'
 					? 'text-blue-200'
 					: color === 'warning'
