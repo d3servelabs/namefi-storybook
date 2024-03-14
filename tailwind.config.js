@@ -59,6 +59,7 @@ module.exports = {
 					100: '#FFC7C7',
 					DEFAULT: '#FF3C3C',
 					500: '#FF3C3C',
+					20: '#3C1919',
 					900: '#3C1919',
 				},
 				alert: {

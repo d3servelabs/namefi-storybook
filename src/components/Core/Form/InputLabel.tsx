@@ -11,7 +11,7 @@ export interface LabelProps extends ComponentProps<'label'> {
 const InputLabel = ({ children, className, labelName, ...props }: LabelProps) => {
 	return (
 		<label className={cn('flex items-center ', className)} {...props}>
-			<p className="text-black-500 tracking-wider max-w-[150px] font-normal text-sm ">
+			<p className="text-black-500 tracking-wider font-normal text-sm ">
 				{labelName}
 			</p>
 			{children}

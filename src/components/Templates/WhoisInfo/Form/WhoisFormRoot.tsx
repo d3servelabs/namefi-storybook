@@ -15,7 +15,7 @@ export const WhoisFormRoot = ({ children, className, ...props }: WhoisFormRootPr
 			<form
 				{...props}
 				className={clsx(
-					'w-[493px] h-full flex flex-col items-end gap-4 text-sm text-white font-normal tracking-wider',
+					'min-w-[493px] h-full flex flex-col items-end gap-4 text-sm text-white font-normal tracking-wider',
 					className,
 				)}>
 				{children}
