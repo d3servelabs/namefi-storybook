@@ -13,7 +13,7 @@ export const NetworkLogo = ({
 	network: number;
 }) => {
 	const testnet = React.useMemo(() => {
-		return [11155111, 5, 80001, 84531].includes(network as any);
+		return [11155111, 5, 80001, 84531,84532].includes(network as any);
 	}, [network]);
 	return (
 		<div
@@ -30,7 +30,7 @@ export const NetworkLogo = ({
 				<EthNetwork className={cn('w-full h-full')} />
 			) : [137, 80001].includes(network as any) ? (
 				<PolygonNetwork className={cn('w-full h-full')} />
-			) : [8453, 84531].includes(network as any) ? (
+			) : [8453, 84531,84532].includes(network as any) ? (
 				<BaseNetwork className={cn('w-full h-full')} />
 			) : (
 				<div className={'grid place-items-center h-full w-full'}>
