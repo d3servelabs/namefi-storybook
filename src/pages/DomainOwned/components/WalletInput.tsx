@@ -1,32 +1,36 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { cn } from '../../../utils/cn';
+import MetamaskSVG from '../../../assets/metamask.svg';
+import { PasteIcon } from '../../../components/Core/icons/Paste';
 
-export type WalletInputProps = {
-	onInputValueChanged?: (value: string) => any;
-	onPasteClicked?: () => any;
-	inputValue?: string;
-};
+export interface WalletInputProps {
+	value?: string;
+	onChange?: (value: string) => void;
+	placeholder?: string;
+	className?: string;
+}
 
-export const WalletInput = ({ onInputValueChanged, inputValue, onPasteClicked }: WalletInputProps) => {
+export const WalletInput = ({ value, onChange, placeholder, className }: WalletInputProps) => {
+	const handlePasteClick = useCallback(async () => {
+		try {
+			const text = await navigator.clipboard.readText();
+			onChange?.(text);
+		} catch {}
+	}, [onChange]);
 	return (
-		<div className="relative w-full h-[83px] flex flex-col justify-between ">
-			<p className="font-normal text-sm tracking-[0.05em] text-[#d9d9d9] ">Recipient Wallet</p>
-			<div className="h-[55px] w-full rounded-[10px] px-[10px] bg-[#313131]">
-				<form className="relative w-full h-full bg-inherit">
-					<img className="absolute top-[10px]" src="/assets/metamask.svg" alt="metamask img" role="img" />
-					<label className="w-full">
-						<input
-							value={inputValue}
-							onChange={(evt) => onInputValueChanged?.(evt.target.value)}
-							className='w-full h-full outline-0 px-[40px] border-0 bg-inherit text-[#797979] font-medium font-["Roboto_Mono"]'
-							type="text"
-							placeholder="Paste wallet address"
-						/>
-					</label>
-					<button type="button" onClick={onPasteClicked} className="absolute right-0 top-[18px]">
-						<img src="/assets/group.svg" alt="group img" role="img" />
-					</button>
-				</form>
-			</div>
+		<div className={cn('flex w-full rounded-[10px] p-2.5 bg-[#313131]', className)}>
+			<img className="ml-1 mr-3" src={MetamaskSVG} alt="MetaMask" role="img" />
+			<label className="flex-1 w-full">
+				<input
+					value={value}
+					onChange={(evt) => onChange?.(evt.target.value)}
+					className="w-full h-full outline-0 border-0 bg-inherit text-xs text-[#efefef] placeholder:text-[#797979] font-primary"
+					placeholder={placeholder}
+				/>
+			</label>
+			<button type="button" onClick={handlePasteClick} className="right-0 top-[18px]">
+				<PasteIcon className="text-xl text-primary-500 stroke-[0.01]" />
+			</button>
 		</div>
 	);
 };
