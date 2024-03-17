@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 import { Checkbox } from '../Core/Checkbox';
 import { IconCircleButton } from '../Core/Buttons/IconCircleButton';
 import { cn } from '../../utils/cn';
-import PlusIconSource from '/assets/Plus.svg';
-import DownloadIconSource from '/assets/Download.svg';
-import DeleteIconSource from '/assets/Trash.svg';
+import { AddIcon } from '../Core/icons/Add';
+import { DownloadIcon } from '../Core/icons/Download';
+import { DeleteIcon } from '../Core/icons/Delete';
 
 const DNSRecordTableRowsGroup = styled.div`
 	display: grid;
@@ -96,14 +96,14 @@ const DNSRecordsTableFooter = ({
 	}, [onClickDelete]);
 	return (
 		<div className="flex justify-end pr-[30px] py-4 gap-x-2">
-			<IconCircleButton iconSource={PlusIconSource} onClick={handleClickAdd} />
+			<IconCircleButton icon={<AddIcon />} onClick={handleClickAdd} />
 			<IconCircleButton
-				iconSource={DownloadIconSource}
+				icon={<DownloadIcon />}
 				onClick={handleClickDownload}
 				disabled={!hasRowsSelected}
 			/>
 			<IconCircleButton
-				iconSource={DeleteIconSource}
+				icon={<DeleteIcon />}
 				onClick={handleClickDelete}
 				disabled={!hasRowsSelected}
 			/>
