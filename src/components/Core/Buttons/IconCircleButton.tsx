@@ -12,12 +12,12 @@ export const IconCircleButton = ({ icon, onClick, disabled, className }: IconCir
 	return (
 		<button
 			className={cn(
-				'transition flex justify-center items-center w-7 h-7 rounded-full bg-[#48E59B33] cursor-pointer',
+				'transition flex justify-center items-center w-auto h-auto p-[0.375em] aspect-square overflow-hidden rounded-full bg-[#48E59B33] cursor-pointer text-base',
 				className,
 				disabled && 'opacity-30',
 			)}
 			onClick={onClick}>
-			<div className="text-base text-primary-500 stroke-[0.02] cursor-point">{icon}</div>
+			<div className="text-primary-500 stroke-[0.02] cursor-point">{icon}</div>
 		</button>
 	);
 };
