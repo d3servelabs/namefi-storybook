@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { WalletInput } from './WalletInput';
-import { ProgressBar } from './ProgressBar';
+import { WalletInput } from './components/WalletInput';
+import { ProgressBar } from './components/ProgressBar';
 import { Button } from '../../components/Core/Buttons/Button';
 import clsx from 'clsx';
 import { StepDiagram } from '../../components/Core/StepDiagram';
