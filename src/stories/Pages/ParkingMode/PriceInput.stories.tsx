@@ -28,6 +28,7 @@ export const Default: Story = {
 		value: 100,
 		minimum: 0,
 		maximum: 99999999,
+		fixed: 2,
 	},
 	tags: ['autodocs'],
 };
@@ -37,6 +38,6 @@ export const Controlled: Story = {
 	args: {} as any,
 	render: () => {
 		const [value, setValue] = useState<number | null>(100);
-		return <PriceInput exchangeRate={1} value={value} onChange={setValue} />;
+		return <PriceInput exchangeRate={1} value={value} minimum={0} maximum={99999999} fixed={2} onChange={setValue} />;
 	},
 };

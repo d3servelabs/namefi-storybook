@@ -8,6 +8,8 @@ export interface MakeOfferProps {
 	exchangeRate: number;
 	minimumPrice?: number;
 	maximumPrice?: number;
+	fixedPrice?: number;
+	maxLengthPrice?: number;
 	unit: string;
 	domainStatus?: NameStatus;
 	priceTip?: React.ReactNode;
@@ -20,6 +22,8 @@ export const MakeOffer = ({
 	exchangeRate,
 	minimumPrice,
 	maximumPrice,
+	fixedPrice,
+	maxLengthPrice,
 	unit,
 	domainStatus,
 	priceTip,
@@ -52,6 +56,8 @@ export const MakeOffer = ({
 								exchangeRate={exchangeRate}
 								minimum={minimumPrice}
 								maximum={maximumPrice}
+								fixed={fixedPrice}
+								maxLength={maxLengthPrice}
 								ref={inputRef}
 							/>
 							<div className="text-[#d6d6d6] text-5lg font-primary py-3 ml-4 leading-none">

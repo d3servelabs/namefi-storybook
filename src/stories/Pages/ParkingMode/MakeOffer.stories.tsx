@@ -17,7 +17,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	argTypes: {
 		exchangeRate: { control: 'number' },
+		minimumPrice: { control: 'number' },
 		maximumPrice: { control: 'number' },
+		fixedPrice: { control: 'number' },
+		maxLengthPrice: { control: 'number' },
 		unit: { control: 'text' },
 		domainStatus: { control: 'radio', options: ['for-bid', 'for-sale'] },
 		priceTip: { control: 'text' },
@@ -26,7 +29,10 @@ export const Default: Story = {
 	},
 	args: {
 		exchangeRate: 1,
+		minimumPrice: 0,
 		maximumPrice: 99999999,
+		fixedPrice: 2,
+		maxLengthPrice: 11,
 		unit: '$NFSC',
 		domainStatus: 'for-sale',
 		priceTip: 'Lorem ipsum dolor sit amet',
