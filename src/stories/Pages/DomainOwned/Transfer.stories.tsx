@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Transfer } from "../../pages/DomainOwned/Transfer";
+import { Transfer } from "../../../pages/DomainOwned/Transfer";
 
 const meta = {
     title: 'Components/DomainOwned/Transfer',
