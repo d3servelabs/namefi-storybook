@@ -2,13 +2,13 @@ import React from 'react';
 import { cn } from '../../../utils/cn';
 
 export interface IconCircleButtonProps {
-	iconSource: string;
+	icon: React.ReactNode;
 	onClick?: () => void;
 	disabled?: boolean;
 	className?: string;
 }
 
-export const IconCircleButton = ({ iconSource, onClick, disabled, className }: IconCircleButtonProps) => {
+export const IconCircleButton = ({ icon, onClick, disabled, className }: IconCircleButtonProps) => {
 	return (
 		<button
 			className={cn(
@@ -17,7 +17,7 @@ export const IconCircleButton = ({ iconSource, onClick, disabled, className }: I
 				disabled && 'opacity-30',
 			)}
 			onClick={onClick}>
-			<img className="block w-[16px] cursor-pointer" src={iconSource} alt="Download" role="img" />
+			<div className="text-base text-primary-500 stroke-[0.02] cursor-point">{icon}</div>
 		</button>
 	);
 };
