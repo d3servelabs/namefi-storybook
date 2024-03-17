@@ -1,5 +1,5 @@
 const colors = require('tailwindcss/colors');
-
+ 
 /**
  * @template T
  * @param {number} start

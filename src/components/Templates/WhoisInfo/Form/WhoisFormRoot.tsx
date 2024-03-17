@@ -21,5 +21,5 @@ export const WhoisFormRoot = ({ children, className, ...props }: WhoisFormRootPr
 				{children}
 			</form>
 		</div>
-	);
+	); 
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export const WalletDropdown = () => {
-	const [isVisible, setIsVisible] = useState(false);
+	const [isVisible, setIsVisible] = useState(false); 
 
   return (
     <div className='relative rounded-[32px] bg-[#111] drop-shadow-[0_0_20px_rgba(255,239,239,0.15)] py-12 px-6 '>

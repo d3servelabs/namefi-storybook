@@ -11,7 +11,7 @@ export const CardHeader = ({ children, className, onBack }: CardHeaderProps) => 
 		onBack?.();
 	}, [onBack]);
 	return (
-		<div className={className}>
+		<div className={className}> 
 			{onBack && (
 				<div className="flex mb-2">
 					<img

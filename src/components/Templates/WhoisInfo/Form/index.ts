@@ -5,4 +5,4 @@ const WhoisForm = {
     Root: WhoisFormRoot,
 }
 
-export default WhoisForm;
+export default WhoisForm; 
