@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, forwardRef } from 'react';
+import React, { useState, useMemo, useEffect, useCallback, forwardRef } from 'react';
 import { cn } from '../../../../utils/cn';
 
 export interface PriceInputProps {
@@ -6,9 +6,14 @@ export interface PriceInputProps {
 	exchangeRate?: number;
 	minimum?: number;
 	maximum?: number;
+	fixed?: number;
+	maxLength?: number;
 	onChange?: (value: number | null) => void;
 	className?: string;
 }
+
+const fix = (value: number, fixed: number) =>
+	fixed === Infinity || typeof fixed !== 'number' ? value : value.toFixed(fixed);
 
 export const PriceInput = forwardRef(
 	(
@@ -17,44 +22,46 @@ export const PriceInput = forwardRef(
 			exchangeRate = 1,
 			minimum = -Infinity,
 			maximum = Infinity,
+			fixed = Infinity,
+			maxLength,
 			onChange,
 			className,
 		}: PriceInputProps,
 		ref: React.Ref<HTMLInputElement>,
 	) => {
 		const [isFocus, setIsFocus] = useState(false);
-		const dollar = useMemo(
-			() => ((value || 0) * exchangeRate).toFixed(2),
-			[value, exchangeRate],
-		);
+		const [input, setInput] = useState('');
+		const dollar = useMemo(() => fix(+input * exchangeRate, 2), [input, exchangeRate]);
 		const handleInputChange = useCallback(
-			(e: React.ChangeEvent<HTMLInputElement>) => {
-				const { value } = e.target;
-				const number = +value;
-				if (!onChange) {
-					return;
-				}
-				if (!value) {
-					onChange(null);
-					return;
-				}
+			(event: React.ChangeEvent<HTMLInputElement>) => {
+				const string = event.target.value;
+				const number = +string;
 				if (isNaN(number)) {
+					setInput(string);
 					return;
 				}
 				if (number < minimum) {
-					onChange(minimum);
+					setInput(String(minimum));
 					return;
 				}
 				if (number > maximum) {
-					onChange(maximum);
+					setInput(String(maximum));
 					return;
 				}
-				onChange(number);
+				setInput(string);
 			},
-			[onChange, minimum, maximum],
+			[setInput, minimum, maximum],
 		);
 		const handleInputFocus = useCallback(() => setIsFocus(true), [setIsFocus]);
-		const handleInputBlur = useCallback(() => setIsFocus(false), [setIsFocus]);
+		const handleInputBlur = useCallback(() => {
+			setIsFocus(false);
+			const next = input ? +fix(+input, fixed) : null;
+			setInput(next !== null ? String(next) : '');
+			onChange?.(next);
+		}, [setIsFocus, onChange, input, fixed]);
+		useEffect(() => {
+			setInput(String(value !== null ? value : ''));
+		}, [value, setInput]);
 		return (
 			<div
 				className={cn(
@@ -64,10 +71,11 @@ export const PriceInput = forwardRef(
 				)}>
 				<input
 					className="absolute top-0 left-0 w-full h-full py-3 px-6 bg-transparent focus:outline-0 text-transparent text-3xl tracking-wider caret-primary-light"
-					value={value === null ? '' : value}
+					value={input}
 					onChange={handleInputChange}
 					onFocus={handleInputFocus}
 					onBlur={handleInputBlur}
+					maxLength={maxLength}
 					ref={ref}
 				/>
 				<span
@@ -75,7 +83,7 @@ export const PriceInput = forwardRef(
 						'transition text-3xl tracking-wider',
 						isFocus ? 'text-black-500' : 'text-primary-500',
 					)}>
-					{value === null ? '' : value}
+					{input}
 				</span>
 				<span className="text-sm text-black-500 font-light ml-2.5">≈${dollar}</span>
 			</div>
