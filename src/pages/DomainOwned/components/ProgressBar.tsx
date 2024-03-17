@@ -1,29 +1,30 @@
-import React from 'react'
-import clsx from 'clsx'
+import React, { useMemo } from 'react';
+import { cn } from '../../../utils/cn';
+
+const PROGRESS_WIDTH_MAXIMUM = 100;
+const PROGRESS_WIDTH_MINIMUM = 5;
 
 export type ProgressBarProps = {
-    progressWidth: number;
-    domainName?: string;
-    isLoading?: boolean;
-}
-export const ProgressBar = ({progressWidth = 0, domainName = 'namefi.com', isLoading}: ProgressBarProps) => {
-  return (
-    <div className='relative w-[434px] h-[49px] flex flex-col justify-between '>
-        <div className='relative w-full h-[3px] rounded-[3px] bg-[#48e59b33] overflow-hidden '>
-            <div className={clsx(isLoading ? 'w-1/2 animate-loading absolute h-full rounded-[3px] bg-[#71E0AC]' : 'absolute w-full h-full rounded-[3px] bg-[#71E0AC]')}>
-            </div>
-        </div>
-        <div className='relative h-[24px] flex items-center gap-2 '>
-            {progressWidth == 100 ?             
-                <p className='font-normal text-sm tracking-[0.05em] text-[#d6d6d6] '>Transfer completed.</p> :
-                <p className='font-normal text-sm tracking-[0.05em] text-[#d6d6d6] '>
-                    We’re working on transferring {domainName}. <span className='text-[#48e59b]'>{`${progressWidth}%`}</span>
-                </p> 
-            }
-            <button>
-                <img className='w-[17px]' src="/assets/external-link.svg" alt="external-link image" role='img' />
-            </button>
-        </div>
-    </div>
-  )
-}
+	value: number;
+	className?: string;
+};
+
+export const ProgressBar = ({ value = 0, className }: ProgressBarProps) => {
+	const width = useMemo(
+		() => Math.min(Math.max(value, PROGRESS_WIDTH_MINIMUM), PROGRESS_WIDTH_MAXIMUM),
+		[value],
+	);
+	return (
+		<div className={cn('w-full h-[3px] rounded-[3px] bg-[#1d3b2d] overflow-hidden', className)}>
+			<div
+				className={cn('h-full overflow-visible', value < 100 && 'animate-loading')}
+				style={{ width: width < 100 ? `${100 - width}%` : '100%' }}>
+				<div
+					className={cn('h-full rounded-[3px] bg-[#71E0AC]')}
+					style={{
+						width: `${width < 100 ? (100 / (100 - width)) * width : 100}%`,
+					}}></div>
+			</div>
+		</div>
+	);
+};
