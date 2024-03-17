@@ -4,14 +4,14 @@ type ToolTipContextProps = {
     onHover: () => void;
     isOpen: boolean
 }
-const ToolTipContext = createContext<ToolTipContextProps >(null!)
+const ToolTipContext = createContext<ToolTipContextProps >({} as ToolTipContextProps)
 
 export const useToolTipContext = () => {
     return useContext(ToolTipContext)
 }
 
 export const ToolTipProvider = ({children}: {children: ReactNode}) => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     const onHover = () => setIsOpen(!isOpen)
     console.log(isOpen)

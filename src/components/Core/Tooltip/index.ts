@@ -8,7 +8,7 @@ import { TooltipTitle } from "./TooltipTitle";
 import { TooltipTrigger } from "./TooltipTrigger";
 
 
-const ToolTip = {
+const ToolTips = {
     Provider: ToolTipProvider,
     Root,
     Image: TooltipImage,
@@ -19,4 +19,4 @@ const ToolTip = {
     Content: TooltipContent
 }
 
-export default ToolTip; 
+export default ToolTips; 

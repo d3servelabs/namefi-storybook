@@ -2,11 +2,7 @@ import React, { useMemo } from 'react';
 import  ShortAddress  from '../../Core/ShortAddress';
 import  UserAuthStateTile from './Tile';
 import { Popover } from '@radix-ui/themes';
-<<<<<<< HEAD:src/components/Templates/UserAuthState/UserAuthStateDemo.tsx
-import UserAuthStateDropDown from './Dropdown'; 
-=======
 import UserAuthStateDropDown from './Dropdown/Demo';
->>>>>>> fff5836bf0abb3eb3459d8c082a9916fa2f86a3f:src/components/Templates/UserAuthState/Demo.tsx
 
 
 export type UserAuthStateProps = Partial<{

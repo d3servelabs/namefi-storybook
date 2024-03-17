@@ -10,7 +10,7 @@ const meta = {
         backgrounds: {
             default: 'dark',
         },
-    },
+    }, 
     argTypes:{
         userAddress: {type: 'string'},
         userLoading: {type: 'boolean'},

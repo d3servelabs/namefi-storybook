@@ -10,12 +10,10 @@ export const TooltipTrigger = ({children, className, ...props}: TriggerProps) =>
 
     const {onHover} = useToolTipContext()
   return (
-   <> {console.log(onHover)}
-    <div 
-        onClick={() => onHover()}
+    <div
+        onClick={onHover}
         className={cn('cursor-pointer inline-block', className)}>
         {children}
-        
-    </div></>
+    </div>
   )
 }
