@@ -4,7 +4,7 @@ import NamefiLogo from '../../../Core/icons/NamefiLogo';
 import { DiscordIcon } from '../../../Core/icons/Discord';
 import { TwitterIcon } from '../../../Core/icons/Twitter';
 import { BaseLayoutHeader } from '../../../Layouts/BaseLayout';
-import { UserAuthStateDemo, type UserAuthStateProps } from '../../../Templates/UserAuthState/UserAuthStateDemo';
+import UserAuthStateDemo, { type UserAuthStateProps } from '../../UserAuthState/Demo';
 
 export { type UserAuthStateProps }
 

@@ -1,12 +1,14 @@
-import UserAuthStateDropDownRoot from './UserAuthStateDropDownRoot';
-import UserAuthStateDropdownHeader from './UserAuthStateDropdownHeader';
-import UserAuthStateDropdownBody from './UserAuthStateDropdownBody';
-import UserAuthStateDropdownFooter from './UserAuthStateDropdownFooter';
+import Root from './Root';
+import * as Header from './Header';
+import * as Body from './Body';
+import * as Footer from './Footer';
+import * as Nav from './Nav';
 
 const UserAuthStateDropdown = {
-	Root: UserAuthStateDropDownRoot,
-	Header: UserAuthStateDropdownHeader,
-	Body: UserAuthStateDropdownBody,
-	Footer: UserAuthStateDropdownFooter,
+	Root,
+	Header,
+	Body,
+	Footer,
+	Nav
 };
 export default UserAuthStateDropdown

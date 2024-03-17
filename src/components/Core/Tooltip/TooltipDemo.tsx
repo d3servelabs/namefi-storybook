@@ -2,6 +2,7 @@ import React from 'react'
 import ToolTip from '.'
 
 export const TooltipDemo = () => {
+
   return (
     <ToolTip.Provider>
         <ToolTip.Root >

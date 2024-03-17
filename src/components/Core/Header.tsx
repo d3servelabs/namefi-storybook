@@ -1,6 +1,6 @@
 import React from 'react'
 import { default as HeaderSearchBar, HeaderSearchBarProps } from "./HeaderSearchBar"
-import { UserAuthStateDemo, UserAuthStateProps } from "../Templates/UserAuthState/UserAuthStateDemo"
+import { default as UserAuthStateDemo, UserAuthStateProps } from "../Templates/UserAuthState/Demo"
 
 export type HeaderProps = {
         includeSearchBar?:boolean,

@@ -1,5 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
+import {cn} from "../../../../utils/cn";
 
 export type UserAuthStateTileRootProps = React.ComponentProps<'button'> & {
 	children?: React.ReactNode;
@@ -16,8 +16,8 @@ const UserAuthStateTileRoot = React.forwardRef<HTMLButtonElement, UserAuthStateT
 				ref={ref}
 				type={'button'}
 				{...props}
-				className={clsx(
-					'relative flex items-center justify-between gap-3 rounded-[32px] p-[8px] bg-[#111] h-[60px]',
+				className={cn(
+					'relative flex items-center justify-between gap-3 rounded-8 p-2 bg-[#111] h-15',
 					props.className,
 				)}
 				style={{ backgroundColor, ...props.style }}>
