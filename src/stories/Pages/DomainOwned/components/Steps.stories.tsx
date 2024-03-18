@@ -27,11 +27,11 @@ export const Default: Story = {
 	args: {
 		current: 0,
 		items: [
-			<StepButton icon={<UnlockIcon className="text-primary-500" />}>Unlock</StepButton>,
-			<StepButton icon={<ReverseLeftIcon className="text-primary-500" />} disabled>
+			<StepButton icon={<UnlockIcon />}>Unlock</StepButton>,
+			<StepButton icon={<ReverseLeftIcon />} disabled>
 				Transfer
 			</StepButton>,
-			<StepButton icon={<DoneIcon className="text-primary-500" />} disabled>
+			<StepButton icon={<DoneIcon />} disabled>
 				Done
 			</StepButton>,
 		],
