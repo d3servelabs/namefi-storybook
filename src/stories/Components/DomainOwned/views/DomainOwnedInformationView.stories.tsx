@@ -1,27 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../../../../index.css';
-import '../../../../../App.css';
-import { DomainOwnedLayout } from '../../../../../pages/DomainOwned/components/DomainOwnedLayout';
+import '../../../../index.css';
+import '../../../../App.css';
+import { Information } from '../../../../components/DomainOwned/views/Information';
 
 const meta = {
-	title: 'Components/DomainOwned/Components/Layouts/Links',
-	component: DomainOwnedLayout.Links,
+	title: 'Components/DomainOwned/Views/Information',
+	component: Information,
 	parameters: {
 		layout: 'centered',
 	},
-} satisfies Meta<typeof DomainOwnedLayout.Links>;
+} satisfies Meta<typeof Information>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Links: Story = {
+export const Default: Story = {
 	argTypes: {
-		title: { control: 'text' },
 		links: { control: 'object' },
+		onClickTransfer: { action: 'onClickTransfer' },
+		onClickListForSale: { action: 'onClickListForSale' },
+		onClickBorrow: { action: 'onClickBorrow' },
 		className: { control: 'text' },
 	},
 	args: {
-		title: 'Lorem ipsum ',
 		links: [
 			{
 				children: 'Etherscan',
@@ -44,7 +45,7 @@ export const Links: Story = {
 				href: 'https://looksrare.org/',
 			},
 		],
-		className: '',
+		className: 'w-[440px]',
 	},
 	tags: ['autodocs'],
 };

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { Borrow } from '../../../../pages/DomainOwned/views/Borrow';
+import { Borrow } from '../../../../components/DomainOwned/views/Borrow';
 
 const meta = {
 	title: 'Components/DomainOwned/Views/Borrow',
