@@ -4,13 +4,11 @@ import { UnlockIcon } from '../../../components/Core/icons/Unlock';
 import { ReverseLeftIcon } from '../../../components/Core/icons/ReverseLeft';
 import { DoneIcon } from '../../../components/Core/icons/Done';
 import { ReverseRightIcon } from '../../../components/Core/icons/ReverseRight';
-import { LinkIcon } from '../../../components/Core/icons/Link';
 import { DomainOwnedLayout } from '../components/DomainOwnedLayout';
 import { type LinkChipProps } from '../components/LinkChip';
 import { StepButton } from '../components/StepButton';
 import { Steps } from '../components/Steps';
 import { WalletInput } from '../components/WalletInput';
-import { ProgressBar } from '../components/ProgressBar';
 
 export type TransferStatus = 'START' | 'UNLOCKED' | 'TRANSFERRING' | 'TRANSFERRED' | 'DONE';
 
@@ -38,7 +36,10 @@ export const Transfer = ({
 	className,
 }: TransferProps) => {
 	const [recipient, setRecipient] = useState('');
-	const handleClickTransfer = useCallback(() => onClickTransfer?.({ recipient }), [recipient, onClickTransfer]);
+	const handleClickTransfer = useCallback(
+		() => onClickTransfer?.({ recipient }),
+		[recipient, onClickTransfer],
+	);
 
 	switch (status) {
 		case 'START': {
@@ -102,16 +103,11 @@ export const Transfer = ({
 					}
 					description="Take a ☕, your domain will arrive in the destinated wallet soon."
 					className={className}>
-					<div className="mb-12">
-						<ProgressBar value={50} className="mb-2.5" />
-						<a
-							href={transactionLink}
-							target="_blank"
-							className="block text-[#d6d6d6] text-sm">
-							We're working on transferring {domain}.
-							<LinkIcon className="text-brand-blue text-lg stroke-[0.02] ml-2" />
-						</a>
-					</div>
+					<DomainOwnedLayout.Progress
+						progress={50}
+						description={`We're working on transferring ${domain}.`}
+						href={transactionLink}
+					/>
 					<Steps
 						current={1}
 						items={[
@@ -135,16 +131,11 @@ export const Transfer = ({
 						-4,
 					)}.`}
 					className={className}>
-					<div className="mb-12">
-						<ProgressBar value={100} className="mb-2.5" />
-						<a
-							href={transactionLink}
-							target="_blank"
-							className="block text-[#d6d6d6] text-sm">
-							{domain} transfer completed.
-							<LinkIcon className="text-brand-blue text-lg stroke-[0.02] ml-2" />
-						</a>
-					</div>
+					<DomainOwnedLayout.Progress
+						progress={100}
+						description={`${domain} transfer completed.`}
+						href={transactionLink}
+					/>
 					<Steps
 						current={1}
 						items={[
@@ -168,16 +159,11 @@ export const Transfer = ({
 						-4,
 					)}.`}
 					className={className}>
-					<div className="mb-12">
-						<ProgressBar value={100} className="mb-2.5" />
-						<a
-							href={transactionLink}
-							target="_blank"
-							className="block text-[#d6d6d6] text-sm">
-							{domain} transfer completed.
-							<LinkIcon className="text-brand-blue text-lg stroke-[0.02] ml-2" />
-						</a>
-					</div>
+					<DomainOwnedLayout.Progress
+						progress={100}
+						description={`${domain} transfer completed.`}
+						href={transactionLink}
+					/>
 					<DomainOwnedLayout.Links title="View on" links={viewLinks} />
 				</DomainOwnedLayout.Main>
 			);
