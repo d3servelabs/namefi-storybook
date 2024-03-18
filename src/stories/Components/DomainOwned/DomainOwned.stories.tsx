@@ -1,12 +1,12 @@
 import { useState, useMemo, useCallback } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import '../../index.css';
-import '../../App.css';
+import '../../../index.css';
+import '../../../App.css';
 import {
 	DomainOwned,
 	type DomainOwnedView,
 	type TransferStatus,
-} from '../../pages/DomainOwned/DomainOwned';
+} from '../../../components/DomainOwned/DomainOwned';
 
 const meta = {
 	title: 'Components/DomainOwned',

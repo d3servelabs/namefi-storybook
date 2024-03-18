@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../../index.css';
 import '../../../../../App.css';
-import { DomainOwnedLayout } from '../../../../../pages/DomainOwned/components/DomainOwnedLayout';
+import { DomainOwnedLayout } from '../../../../../components/DomainOwned/components/DomainOwnedLayout';
 import { DoneIcon } from '../../../../../components/Core/icons/Done';
 import { ReverseRightIcon } from '../../../../../components/Core/icons/ReverseRight';
 import { BookmarkIcon } from '../../../../../components/Core/icons/Bookmark';

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { StepButton } from '../../../../pages/DomainOwned/components/StepButton';
-import { Steps } from '../../../../pages/DomainOwned/components/Steps';
+import { StepButton } from '../../../../components/DomainOwned/components/StepButton';
+import { Steps } from '../../../../components/DomainOwned/components/Steps';
 import { UnlockIcon } from '../../../../components/Core/icons/Unlock';
 import { ReverseLeftIcon } from '../../../../components/Core/icons/ReverseLeft';
 import { DoneIcon } from '../../../../components/Core/icons/Done';
