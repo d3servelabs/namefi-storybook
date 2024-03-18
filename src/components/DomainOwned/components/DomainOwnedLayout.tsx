@@ -5,6 +5,8 @@ import {
 } from '../../../components/Core/Buttons/IconCircleButton';
 import { cn } from '../../../utils/cn';
 import { LinkChip, type LinkChipProps } from './LinkChip';
+import { ProgressBar } from './ProgressBar';
+import { LinkIcon } from '../../../components/Core/icons/Link';
 
 export type DomainOwnedLayoutMainProps = {
 	icon?: React.ReactNode;
@@ -73,7 +75,29 @@ const Links = ({ title, links, className }: DomainOwnedLayoutLinksProps) => {
 	);
 };
 
+export interface DomainOwnedLayoutProgressProps {
+	progress: number;
+	description?: React.ReactNode;
+	href?: string;
+	className?: string;
+}
+
+const Progress = ({ progress, description, href, className }: DomainOwnedLayoutProgressProps) => {
+	return (
+		<div className={cn('mb-12', className)}>
+			<ProgressBar value={progress} />
+			{description && (
+				<a href={href} target="_blank" className="block text-[#d6d6d6] text-sm mt-2.5">
+					{description}
+					{href && <LinkIcon className="text-brand-blue text-lg stroke-[0.02] ml-2" />}
+				</a>
+			)}
+		</div>
+	);
+};
+
 export const DomainOwnedLayout = {
 	Main,
 	Links,
+	Progress,
 };
