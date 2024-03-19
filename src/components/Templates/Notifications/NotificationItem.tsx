@@ -15,7 +15,7 @@ const usePrettyDate = (date: Date) =>
 
 export interface NotificationItemProps {
 	title: string;
-	message: string;
+	children: React.ReactNode;
 	count: number;
 	datetime: Date;
 	onClick?: () => void;
@@ -24,7 +24,7 @@ export interface NotificationItemProps {
 
 export const NotificationItem = ({
 	title,
-	message,
+	children,
 	count,
 	datetime,
 	onClick,
@@ -40,7 +40,7 @@ export const NotificationItem = ({
 			onClick={onClick}>
 			<div className="flex flex-col gap-y-1">
 				<div className="text-base text-primary-500 font-primary">[ {title} ]</div>
-				<div className="text-sm text-black-500 font-primary">{message}</div>
+				<div className="text-sm text-black-500 font-primary">{children}</div>
 			</div>
 			<div className="flex flex-col gap-y-1 items-center">
 				<div className="flex items-center h-6">
