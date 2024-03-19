@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import React, { useMemo } from 'react';
+import React, {ComponentProps, useMemo} from 'react';
+import {cn} from "../../utils/cn";
 
 export type BalanceProps = {
 	balance?: number;
@@ -7,7 +7,8 @@ export type BalanceProps = {
 	fontSizeSpan?: string;
 	color?: string;
 	approxBalance?: boolean;
-};
+	approxBalanceClassName?: string;
+} & ComponentProps<'p'>;
 
 export const Balance = ({
 	balance,
@@ -15,6 +16,7 @@ export const Balance = ({
 	fontSizeP,
 	fontSizeSpan,
 	color,
+	className,approxBalanceClassName
 }: BalanceProps) => {
 	const [fullTruncatedBalance, shortBalance,multiplier] = useMemo(() => {
 		if (balance !== undefined && balance !== null) {
@@ -32,9 +34,9 @@ export const Balance = ({
 	return (
 		<>
 			{fullTruncatedBalance && (
-				<>
+				<div>
 					<p
-						className="text-lg text-white tracking-wide font-normal font-primary"
+						className={cn("text-lg text-white tracking-wide font-normal font-primary",className)}
 						style={{fontSize: fontSizeP, color,}}>
 						{shortBalance[0]}.
 						<span className="text-sm" style={{fontSize: fontSizeSpan,}}>
@@ -42,11 +44,11 @@ export const Balance = ({
 						</span>
 					</p>
 					{approxBalance && (
-						<p className="font-primary mt-2 font-normal text-[#d6d6d6] text-sm tracking-wider">
+						<p className={cn("font-primary mt-2 font-normal text-[#d6d6d6] text-sm tracking-wider",approxBalanceClassName)}>
 							≈${fullTruncatedBalance[0]}.{fullTruncatedBalance[1]}
 						</p>
 					)}
-				</>
+				</div>
 			)}
 		</>
 	);

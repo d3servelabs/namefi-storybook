@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import  ShortAddress  from '../../Core/ShortAddress';
 import  UserAuthStateTile from './Tile';
 import { Popover } from '@radix-ui/themes';
-import UserAuthStateDropDown from './Dropdown';
+import UserAuthStateDropDown from './Dropdown/Demo';
 
 
 export type UserAuthStateProps = Partial<{
@@ -15,7 +15,7 @@ export type UserAuthStateProps = Partial<{
 	onNetworkClicked: () => any;
 }>;
 
-export const UserAuthStateDemo = ({
+const UserAuthStateDemo = ({
 	userAddress,
 	userLoading,
 	balanceLoading,
@@ -67,13 +67,11 @@ export const UserAuthStateDemo = ({
 					</UserAuthStateTile.Root>
 				</Popover.Trigger>
 				<Popover.Content>
-					<UserAuthStateDropDown.Root>
-						<UserAuthStateDropDown.Header userAddress={userAddress} loading={userLoading}/>
-						<UserAuthStateDropDown.Body/>
-						<UserAuthStateDropDown.Footer/>
-					</UserAuthStateDropDown.Root>
+					<UserAuthStateDropDown/>
 				</Popover.Content>
 			</Popover.Root>
 		</>
 	);
 };
+
+export default UserAuthStateDemo

@@ -46,3 +46,15 @@
 ::-webkit-scrollbar-thumb:horizontal {
   border-top: 2px solid #71E0AC;
 }
+
+.h5 {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.h6 {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: calc(14rem /16);
+  font-weight: 400;
+}
