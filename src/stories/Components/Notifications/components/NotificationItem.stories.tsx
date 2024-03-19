@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { NotificationItem } from '../../../../components/Templates/Notifications';
 
 const meta = {
-	title: 'Pages/Notifications/NotificationItem',
+	title: 'Components/Notifications/Components/NotificationItem',
 	component: NotificationItem,
 	parameters: {
 		layout: 'centered',

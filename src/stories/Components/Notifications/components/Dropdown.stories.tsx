@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
-import { Button, SolidButton } from '../../../components/Core/Buttons';
-import { Dropdown } from '../../../components/Templates/Notifications';
+import { Button, SolidButton } from '../../../../components/Core/Buttons';
+import { Dropdown } from '../../../../components/Templates/Notifications';
 
 const meta = {
-	title: 'Pages/Notifications/Dropdown',
+	title: 'Components/Notifications/Components/Dropdown',
 	parameters: {
 		layout: 'centered',
 	},
