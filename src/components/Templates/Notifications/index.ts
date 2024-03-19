@@ -1,3 +1,3 @@
-export * from './Dropdown'
-export * from './NotificationItem'
 export * from './NotificationsDropdown'
+export * from './components/Dropdown'
+export * from './components/NotificationItem'

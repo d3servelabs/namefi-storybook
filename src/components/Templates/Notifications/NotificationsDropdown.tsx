@@ -2,8 +2,8 @@ import React from 'react';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { Button, SolidButton } from '../../Core/Buttons';
 import { BellIcon } from '../../Core/icons/Bell';
-import { NotificationItem } from './NotificationItem';
-import { Dropdown } from './Dropdown';
+import { NotificationItem } from './components/NotificationItem';
+import { Dropdown } from './components/Dropdown';
 
 export interface NotificationData {
 	id: string;
