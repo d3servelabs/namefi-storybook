@@ -8,7 +8,7 @@ import { Dropdown } from './Dropdown';
 export interface NotificationData {
 	id: string;
 	title: string;
-	message: string;
+	message: React.ReactNode;
 	count: number;
 	createdAt: Date;
 }
@@ -44,11 +44,11 @@ export const NotificationsDropdown = ({
 					<NotificationItem
 						key={notification?.id}
 						title={notification?.title}
-						message={notification?.message}
 						count={notification?.count}
 						datetime={notification?.createdAt}
-						onClick={() => onClickItem(notification)}
-					/>
+						onClick={() => onClickItem(notification)}>
+						{notification?.message}
+					</NotificationItem>
 				))}
 			</Dropdown.Body>
 			<Dropdown.Footer>
