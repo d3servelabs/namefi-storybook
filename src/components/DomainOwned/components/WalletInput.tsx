@@ -14,7 +14,7 @@ export const WalletInput = ({ value, onChange, placeholder, className }: WalletI
 	const handlePasteClick = useCallback(async () => {
 		try {
 			const text = await navigator.clipboard.readText();
-			onChange?.(text);
+			onChange?.(text?.trim());
 		} catch {}
 	}, [onChange]);
 	return (
