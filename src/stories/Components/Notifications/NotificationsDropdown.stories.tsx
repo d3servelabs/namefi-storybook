@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {
 	NotificationsDropdown,
 	type NotificationData,
-} from '../../../../components/Templates/Notifications';
-import { LinkIcon } from '../../../../components/Core/icons/Link';
+} from '../../../components/Templates/Notifications';
+import { LinkIcon } from '../../../components/Core/icons/Link';
 
 const meta = {
-	title: 'Pages/Notifications/NotificationsDropdown',
+	title: 'Components/Notifications/NotificationsDropdown',
 	component: NotificationsDropdown,
 	parameters: {
 		layout: 'centered',
