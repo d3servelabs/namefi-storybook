@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import BaseLayoutHeader from "../../../../components/Layouts/BaseLayout/BaseLayoutHeader";
-import {UserAuthStateDemo} from "../../../../components/Templates/UserAuthState/Demo";
+import UserAuthStateDemo from "../../../../components/Templates/UserAuthState/Demo";
 
 
 
