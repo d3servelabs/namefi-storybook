@@ -1,6 +1,5 @@
 import React from 'react'
 import ToolTips from '.'
-import * as Popover from '@radix-ui/react-popover';
 import * as Tooltip from '@radix-ui/react-tooltip';
 export const TooltipDemo = () => {
 
@@ -8,24 +7,29 @@ export const TooltipDemo = () => {
     <Tooltip.Provider>
             <Tooltip.Root >
                 <Tooltip.Trigger>
-                        Hover to show tooltip
+                        <p className='text-white'>Hover to show tooltip</p>
                 </Tooltip.Trigger>
                     <Tooltip.Content sideOffset={5} align='start'>
-                        <ToolTips.Content>
+                        <ToolTips.Content.Long>
                             <ToolTips.Image />
                             <ToolTips.Info>
-                                <ToolTips.Title>
+                                <ToolTips.Typography.Title>
                                     AutoPark™️
-                                </ToolTips.Title>
-                                <p>Your domain is linked to an ENS wallet address. </p>
-                                <p>You can receive funds in crypto with this domain.</p>
-                                <ToolTips.Link 
-                                    href='https://www.w3schools.com/react/react_usecontext.asp'
-                                    target='blank'>
+                                </ToolTips.Typography.Title>
+                                <ToolTips.Typography.BodyText>
+                                    <p>Your domain is automatically set to <ToolTips.Typography.Span>parking mode</ToolTips.Typography.Span> - for sale.</p>
+                                    <p>Visitors can <ToolTips.Typography.Span>buy</ToolTips.Typography.Span> or <ToolTips.Typography.Span>make an offer</ToolTips.Typography.Span> to you.</p>
+                                </ToolTips.Typography.BodyText>
+                                <ToolTips.Typography.Link href='https://www.w3schools.com/react/react_usecontext.asp'>
                                     Learn More
-                                </ToolTips.Link>
+                                </ToolTips.Typography.Link>
                             </ToolTips.Info>
-                        </ToolTips.Content>
+                        </ToolTips.Content.Long>
+                        {/* <ToolTips.Content.Short>
+                            <ToolTips.Typography.BodyText>
+                                To change type, please delete and add new record
+                            </ToolTips.Typography.BodyText>
+                        </ToolTips.Content.Short> */}
                     </Tooltip.Content>
             </Tooltip.Root>
     </Tooltip.Provider>

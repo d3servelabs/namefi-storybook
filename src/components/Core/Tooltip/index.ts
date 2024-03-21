@@ -1,22 +1,14 @@
-import { Root } from "./Root";
-import { TooltipContent } from "./TooltipContent";
-import { ToolTipProvider } from "./TooltipContext";
+import Content from "./TooltipContent";
 import { TooltipImage } from "./TooltipImage";
 import { TooltipInfo } from "./TooltipInfo";
-import { TooltipLink } from "./TooltipLink";
-import { TooltipTitle } from "./TooltipTitle";
-import { TooltipTrigger } from "./TooltipTrigger";
+import Typography from "./TooltipTypography";
 
 
 const ToolTips = {
-    Provider: ToolTipProvider,
-    Root,
     Image: TooltipImage,
     Info: TooltipInfo,
-    Title: TooltipTitle,
-    Link: TooltipLink,
-    Trigger: TooltipTrigger,
-    Content: TooltipContent
+    Typography,
+    Content
 }
 
 export default ToolTips; 
