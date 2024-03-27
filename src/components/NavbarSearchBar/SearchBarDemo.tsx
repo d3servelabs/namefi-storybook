@@ -3,7 +3,12 @@ import SearchDropdown from '.'
 import * as Popover from '@radix-ui/react-popover';
 import { HeaderSearchBar } from '../Core';
 
-export const SearchBarDemo = () => {
+export interface SearchBarDemoProps {
+  isTdSelected: boolean;
+  status: 'TAKEN' | 'AVAILABLE' | 'YOUOWNIT' | 'NOTSUPPORTED';
+  price: number
+}
+export const SearchBarDemo = ({price, isTdSelected, status}: SearchBarDemoProps) => {
   const [inputValue, setInputValue] = useState('')
 
   return (
@@ -14,21 +19,23 @@ export const SearchBarDemo = () => {
           <Popover.Portal >
             <Popover.Content align='center' sideOffset={10} >
               <SearchDropdown.Root>
+                  
+                 {isTdSelected ? <SearchDropdown.Body> 
+                    <SearchDropdown.DropdownMessage status={status} price={price} />
+                    <SearchDropdown.TryAnother>
+                      <SearchDropdown.TLD>
+                        {
+                          ['eth','com','base','org','net','co.uk','btc','cosmos']
+                        }
+                      </SearchDropdown.TLD>
+                    </SearchDropdown.TryAnother>
+                  </SearchDropdown.Body> :
                   <SearchDropdown.TLD>
                     {
                       ['eth','com','base','org','net','co.uk','btc','cosmos']
                     }
                   </SearchDropdown.TLD>
-                  {/* <SearchDropdown.DropdownMessage status='TAKEN'>
-                      Taken, you may import it if you own it.
-                  </SearchDropdown.DropdownMessage> 
-                  <SearchDropdown.TryAnother>
-                    <SearchDropdown.TLD>
-                      {
-                        ['eth','com','base','org','net','co.uk','btc','cosmos']
-                      }
-                    </SearchDropdown.TLD>
-                  </SearchDropdown.TryAnother> */}
+                  }
               </SearchDropdown.Root>
             </Popover.Content>
           </Popover.Portal>

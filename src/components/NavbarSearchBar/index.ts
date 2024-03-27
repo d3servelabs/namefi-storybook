@@ -1,4 +1,4 @@
-import { DropDownProvider } from "./DropdownContext";
+import { DropdownBody } from "./DropdownBody";
 import { DropdownMessage } from "./DropdownMessage";
 import { DropdownTld } from "./DropdownTld";
 import { Root } from "./Root";
@@ -9,7 +9,8 @@ const SearchDropdown = {
     Root,
     DropdownMessage,
     TLD: DropdownTld,
-    TryAnother
+    TryAnother,
+    Body: DropdownBody
 }
 
 export default SearchDropdown

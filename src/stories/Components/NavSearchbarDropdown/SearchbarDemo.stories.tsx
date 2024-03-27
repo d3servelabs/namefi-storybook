@@ -15,5 +15,8 @@ type Story = StoryObj<typeof meta>
 
 export const Dropdown: Story = {
     args: {
+        isTdSelected: false,
+        status: 'AVAILABLE',
+        price: 24
     }
 } 
