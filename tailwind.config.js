@@ -1,5 +1,6 @@
 const colors = require('tailwindcss/colors');
- 
+
+
 /**
  * @template T
  * @param {number} start
@@ -89,7 +90,6 @@ module.exports = {
 
 					950: '#141C18',
 					5: '#141C18',
-
 				},
 				brand: {
 					100: '#c6eedb0d',
@@ -126,10 +126,20 @@ module.exports = {
 						opacity: 1,
 					},
 				},
+				wiggle: {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' },
+				}
 			},
 			animation: {
 				loading: 'loading 1s ease-in-out infinite alternate',
 				dissolve: 'dissolve 0.2s linear 1',
+				reverseSpin: 'spin 1s linear infinite reverse',
+				slowReverseSpin: 'spin 3s linear infinite reverse',
+				slowSpin: 'spin 3s linear infinite',
+				wiggle: 'wiggle .5s ease-in-out infinite',
+				jitter: 'wiggle .15s ease-in-out 5',
+
 			},
 		},
 	},
