@@ -1,6 +1,5 @@
 const colors = require('tailwindcss/colors');
-
-
+ 
 /**
  * @template T
  * @param {number} start
@@ -67,6 +66,7 @@ module.exports = {
 					100: '#FBF9CE',
 					DEFAULT: '#FEF556',
 				},
+
 				pending: '#FBF9CE',
 				occupied: '#FEF556',
 				primary: {
@@ -90,23 +90,43 @@ module.exports = {
 
 					950: '#141C18',
 					5: '#141C18',
+
+				},
+				grey: {
+					lighter: '#D6D6D6',
+					50: '#BCBCBC',
+					DEFAULT: '#797979',
+					darker: '#4B4B4B'
 				},
 				brand: {
 					100: '#c6eedb0d',
 					200: '#c6eedb33',
+
 					300: '#C6EEDB',
+					light: '#C6EEDB',
+
 					dark: '#232C27',
 					black: '#111111',
 					blue: '#70A8F4',
+
 					green: '#48E59B',
+					20: '#48E59B',
 				},
 				black: {
 					200: '#d9d9d9cc',
 					400: '#797979',
+
 					500: '#D9D9D9',
+					70: '#565656',
+
+					brand: '#313131',
 					600: '#313131e6',
+
 					700: '#111111b3',
+
+					background: '#111111',
 					900: '#111111',
+
 					1000: '#000000',
 				},
 				border: {
@@ -126,20 +146,10 @@ module.exports = {
 						opacity: 1,
 					},
 				},
-				wiggle: {
-					'0%, 100%': { transform: 'rotate(-3deg)' },
-					'50%': { transform: 'rotate(3deg)' },
-				}
 			},
 			animation: {
 				loading: 'loading 1s ease-in-out infinite alternate',
 				dissolve: 'dissolve 0.2s linear 1',
-				reverseSpin: 'spin 1s linear infinite reverse',
-				slowReverseSpin: 'spin 3s linear infinite reverse',
-				slowSpin: 'spin 3s linear infinite',
-				wiggle: 'wiggle .5s ease-in-out infinite',
-				jitter: 'wiggle .15s ease-in-out 5',
-
 			},
 		},
 	},

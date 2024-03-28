@@ -8,7 +8,7 @@ export const TooltipDemo = () => {
     <Tooltip.Provider>
             <Tooltip.Root >
                 <Tooltip.Trigger>
-                        <p className='text-white'>Hover to show tooltip</p>
+                        <h6 className='text-white'>Hover to show tooltip</h6>
                 </Tooltip.Trigger>
                     <Tooltip.Content sideOffset={5} align='start'>
                         <ToolTips.Content.Long icon={<TooltipImage />}>

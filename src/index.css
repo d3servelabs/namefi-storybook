@@ -18,4 +18,25 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #333;
+}
+@layer base {
+  h1 {
+    @apply font-primary text-4xl text-grey 
+  }
+  h2 {
+    @apply text-white text-7lg tracking-widest font-semibold
+  }
+  h3 {
+    @apply text-white text-5.25lg font-primary tracking-wider font-semibold
+  }
+  h4 {
+    @apply text-white text-lg tracking-wider
+  }
+  h5 {
+    @apply font-primary text-base tracking-wide
+  }
+  h6 {
+    @apply text-sm font-primary text-brand-light
+  }
 }
