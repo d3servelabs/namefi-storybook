@@ -4,10 +4,10 @@ import { ListForSale, type ListForSaleProps } from './ListForSale';
 import { Borrow, type BorrowProps } from './Borrow';
 
 export const DomainOwnedViews = {
-	...Information,
-	...Transfer,
-	...ListForSale,
-	...Borrow,
+	Information,
+	Transfer,
+	ListForSale,
+	Borrow,
 };
 
 export namespace DomainOwnedViewsInterfaces {
