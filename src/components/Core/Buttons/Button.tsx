@@ -32,7 +32,7 @@ export const Button = Object.assign(React.forwardRef<HTMLButtonElement,ButtonPro
 			disabled={disabled}
 			aria-disabled={disabled}
 			className={cn(
-				'flex items-center justify-center ring-[.1em] ring-white w-full gap-[.75em] rounded-full py-[0.625em] px-[1.625em] text-lg ring-inset ',
+				'flex items-center justify-center ring-[.1em] ring-white w-full gap-[.75em] rounded-full py-[0.625em] px-[1.625em] text-lg ring-inset text-white enabled:hover:bg-primary-dark/10 enabled:active:bg-primary-dark/30',
 				disabled && 'cursor-not-allowed opacity-30',
 				className,
 			)}
