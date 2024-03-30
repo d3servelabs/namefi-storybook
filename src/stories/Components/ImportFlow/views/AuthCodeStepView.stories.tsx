@@ -28,6 +28,7 @@ export const Default: Story = {
 		onClickVerify: { action: 'onClickVerify' },
 		onClickConnectWallet: { action: 'onClickConnectWallet' },
 		onClickNext: { action: 'onClickNext' },
+		onBack: { action: 'onBack' },
 		className: { control: 'text' },
 	},
 	args: {

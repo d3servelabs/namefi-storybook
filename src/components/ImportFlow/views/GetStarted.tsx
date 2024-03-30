@@ -16,10 +16,18 @@ export interface GetStartedProps {
 	costExchangeRate?: number;
 	networkOptions?: Option[];
 	onClickStart?: () => void;
+	onBack?: () => void;
 	className?: string;
 }
 
-export const GetStarted = ({ costValue, costExchangeRate = 1, networkOptions, onClickStart, className }: GetStartedProps) => {
+export const GetStarted = ({
+	costValue,
+	costExchangeRate = 1,
+	networkOptions,
+	onClickStart,
+	onBack,
+	className,
+}: GetStartedProps) => {
 	return (
 		<ImportFlowLayout.Main
 			title={
@@ -33,6 +41,7 @@ export const GetStarted = ({ costValue, costExchangeRate = 1, networkOptions, on
 					Start Import
 				</ActionButton>
 			}
+			onBack={onBack}
 			className={className}>
 			<div className="mt-6 mb-12">
 				<ImportFlowLayout.Field

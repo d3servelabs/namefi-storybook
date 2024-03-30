@@ -13,10 +13,11 @@ export interface UnlockStepProps {
 	status: UnlockStepStatus;
 	onClickVerify?: () => void;
 	onClickNext?: () => void;
+	onBack?: () => void;
 	className?: string;
 }
 
-export const UnlockStep = ({ status, onClickVerify, onClickNext, className }: UnlockStepProps) => {
+export const UnlockStep = ({ status, onClickVerify, onClickNext, onBack, className }: UnlockStepProps) => {
 	const steps = (
 		<Steps
 			items={[
@@ -46,6 +47,7 @@ export const UnlockStep = ({ status, onClickVerify, onClickNext, className }: Un
 								Verify Unlock
 							</ActionButton>
 					}
+					onBack={onBack}
 					className={className}
 				/>
 			);
@@ -56,31 +58,13 @@ export const UnlockStep = ({ status, onClickVerify, onClickNext, className }: Un
 					title="Verifying unlock..."
 					description="Give us just a few seconds."
 					steps={steps}
+					onBack={onBack}
 					className={className}>
 					<Spinner />
 				</ImportFlowLayout.Main>
 			);
 		}
 		case 'LOCKED': {
-			return (
-				<ImportFlowLayout.Main
-					icon={<UnlockIcon />}
-					title="Domain is unlocked."
-					description="Verified Successful."
-					steps={steps}
-					actions={
-						<ActionButton
-							icon={<ArrowRightIcon />}
-							className="w-auto mt-12"
-							onClick={onClickNext}>
-							Next
-						</ActionButton>
-					}
-					className={className}
-				/>
-			);
-		}
-		case 'UNLOCKED': {
 			return (
 				<ImportFlowLayout.Main
 					icon={<UnlockIcon />}
@@ -95,6 +79,27 @@ export const UnlockStep = ({ status, onClickVerify, onClickNext, className }: Un
 							Verify Again
 						</ActionButton>
 					}
+					onBack={onBack}
+					className={className}
+				/>
+			);
+		}
+		case 'UNLOCKED': {
+			return (
+				<ImportFlowLayout.Main
+					icon={<UnlockIcon />}
+					title="Domain is unlocked."
+					description="Verified Successful."
+					steps={steps}
+					actions={
+						<ActionButton
+							icon={<ArrowRightIcon />}
+							className="w-auto mt-12"
+							onClick={onClickNext}>
+							Next
+						</ActionButton>
+					}
+					onBack={onBack}
 					className={className}
 				/>
 			);

@@ -17,9 +17,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	argTypes: {
 		status: { control: 'radio', options: ['DEFAULT', 'LOADING', 'LOCKED', 'UNLOCKED'] },
-		className: { control: 'text' },
 		onClickVerify: { action: 'onClickVerify' },
 		onClickNext: { action: 'onClickNext' },
+		onBack: { action: 'onBack' },
+		className: { control: 'text' },
 	},
 	args: {
 		status: 'DEFAULT',

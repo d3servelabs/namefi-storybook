@@ -31,7 +31,7 @@ const Main = ({
 	return (
 		<div className={className}>
 			<div
-				className="flex items-center text-base text-primary-light leading-7 mb-6"
+				className="inline-flex items-center text-base text-primary-light leading-7 mb-6 cursor-pointer"
 				onClick={onBack}>
 				<div className="mr-2 text-base text-primary-500">
 					<ArrowLeftIcon className="w-5 h-5" />

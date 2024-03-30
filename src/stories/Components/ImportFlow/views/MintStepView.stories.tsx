@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { EthereumLogo} from '../../../../components/Core/icons/EthereumLogo'
+import { EthereumLogo } from '../../../../components/Core/icons/EthereumLogo';
 import { MintStep } from '../../../../components/ImportFlow/views/MintStep';
 
 const meta = {
@@ -17,16 +17,17 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	argTypes: {
-		networkIcon: { control: 'object' },
+		icon: { control: 'object' },
 		progressDescription: { control: 'object' },
-		progressHref: { control: 'text' },
+		progressURL: { control: 'text' },
 		onClickImportAnother: { action: 'onClickImportAnother' },
+		onBack: { action: 'onBack' },
 		className: { control: 'text' },
 	},
 	args: {
-		networkIcon: <EthereumLogo />,
-		progressDescription: 'We\'re working on minting example.com.',
-		progressHref: 'https://example.com',
+		icon: <EthereumLogo />,
+		progressDescription: "We're working on minting example.com.",
+		progressURL: 'https://example.com',
 		className: 'w-[520px]',
 	},
 	tags: ['autodocs'],
@@ -38,8 +39,13 @@ export const UnknownNetworkAndShowProgressNumber: Story = {
 	render: () => {
 		return (
 			<MintStep
-				progressDescription={<>We're working on minting example.com. <span className="text-primary-500">(40%)</span></>}
-				progressHref="https://example.com"
+				progressDescription={
+					<>
+						We're working on minting example.com.{' '}
+						<span className="text-primary-500">(40%)</span>
+					</>
+				}
+				progressURL="https://example.com"
 			/>
 		);
 	},

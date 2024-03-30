@@ -19,6 +19,7 @@ export interface AuthCodeStepProps {
 	onClickVerify?: () => void;
 	onClickNext?: () => void;
 	onClickConnectWallet?: () => void;
+	onBack?: () => void;
 	className?: string;
 }
 
@@ -31,6 +32,7 @@ export const AuthCodeStep = ({
 	onClickVerify,
 	onClickNext,
 	onClickConnectWallet,
+	onBack,
 	className,
 }: AuthCodeStepProps) => {
 	const steps = (
@@ -77,6 +79,7 @@ export const AuthCodeStep = ({
 							Verify code
 						</ActionButton>
 					}
+					onBack={onBack}
 					className={className}>
 					{form}
 				</ImportFlowLayout.Main>
@@ -88,6 +91,7 @@ export const AuthCodeStep = ({
 					title="Verifying code..."
 					description="Give us just a few seconds."
 					steps={steps}
+					onBack={onBack}
 					className={className}>
 					<Spinner />
 				</ImportFlowLayout.Main>
@@ -108,6 +112,7 @@ export const AuthCodeStep = ({
 							Verify Again
 						</ActionButton>
 					}
+					onBack={onBack}
 					className={className}>
 					{form}
 				</ImportFlowLayout.Main>
@@ -142,6 +147,7 @@ export const AuthCodeStep = ({
 							</div>
 						)
 					}
+					onBack={onBack}
 					className={className}>
 					{!walletConnected && form}
 				</ImportFlowLayout.Main>

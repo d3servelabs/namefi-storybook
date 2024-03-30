@@ -18,14 +18,15 @@ export const Default: Story = {
 	argTypes: {
 		domain: { control: 'object' },
 		progressDescription: { control: 'object' },
-		progressHref: { control: 'text' },
+		progressURL: { control: 'text' },
 		onClickViewDomain: { action: 'onClickViewDomain' },
+		onBack: { action: 'onBack' },
 		className: { control: 'text' },
 	},
 	args: {
 		domain: 'example.com',
 		progressDescription: "Minting Completed.",
-		progressHref: 'https://example.com',
+		progressURL: 'https://example.com',
 		className: 'w-[520px]',
 	},
 	tags: ['autodocs'],
