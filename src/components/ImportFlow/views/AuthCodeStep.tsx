@@ -17,7 +17,7 @@ export interface AuthCodeStepProps {
 	walletConnected?: boolean;
 	onAuthCodeChange?: (value: string) => void;
 	onClickVerify?: () => void;
-	onClickNext?: () => void;
+	onClickImportDomain?: () => void;
 	onClickConnectWallet?: () => void;
 	onBack?: () => void;
 	className?: string;
@@ -30,7 +30,7 @@ export const AuthCodeStep = ({
 	walletConnected = false,
 	onAuthCodeChange,
 	onClickVerify,
-	onClickNext,
+	onClickImportDomain,
 	onClickConnectWallet,
 	onBack,
 	className,
@@ -129,7 +129,7 @@ export const AuthCodeStep = ({
 							<ActionButton
 								icon={<ArrowRightIcon className="w-5 h-5" />}
 								className="w-auto mt-12"
-								onClick={onClickNext}>
+								onClick={onClickImportDomain}>
 								Confirm to Import
 							</ActionButton>
 						) : (

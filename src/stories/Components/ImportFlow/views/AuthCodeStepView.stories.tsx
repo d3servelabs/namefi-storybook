@@ -27,7 +27,7 @@ export const Default: Story = {
 		onAuthCodeChange: { action: 'onAuthCodeChange' },
 		onClickVerify: { action: 'onClickVerify' },
 		onClickConnectWallet: { action: 'onClickConnectWallet' },
-		onClickNext: { action: 'onClickNext' },
+		onClickImportDomain: { action: 'onClickImportDomain' },
 		onBack: { action: 'onBack' },
 		className: { control: 'text' },
 	},

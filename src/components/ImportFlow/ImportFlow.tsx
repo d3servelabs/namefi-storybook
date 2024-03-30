@@ -74,6 +74,13 @@ export const ImportFlow = ({
 		}
 		setAuthCodeStepStatus('VERIFIED');
 	}, [domain]);
+	const handleImportDomain = useCallback(async () => {
+		if (!await importDomain(domain)) {
+			return;
+		}
+		setView('WAIT_REGISTRAR');
+		setWaitRegistrarStepStatus('FIRST_TIME');
+	}, [importDomain, domain])
 
 	useEffect(() => {
 		if (mintURL) {
@@ -137,10 +144,7 @@ export const ImportFlow = ({
 					onAuthCodeChange={handleAuthCodeChange}
 					onClickVerify={handleVerifyAuthCode}
 					onClickConnectWallet={connectWallet}
-					onClickNext={() => {
-						setView('WAIT_REGISTRAR');
-						setWaitRegistrarStepStatus('FIRST_TIME');
-					}}
+					onClickImportDomain={handleImportDomain}
 					onBack={onBack}
 				/>
 			);
