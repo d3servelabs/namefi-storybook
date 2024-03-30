@@ -39,11 +39,6 @@ export const MintStep = ({
 			description="Your domain is released."
 			icon={icon}
 			steps={steps}
-			actions={
-				<ActionButton className="w-auto" onClick={onClickImportAnother}>
-					Import another one
-				</ActionButton>
-			}
 			onBack={onBack}
 			className={className}>
 			<ImportFlowLayout.Progress
@@ -52,6 +47,11 @@ export const MintStep = ({
 				href={progressURL}
 				className="mt-6 mb-14"
 			/>
+			<ImportFlowLayout.Actions>
+				<ActionButton onClick={onClickImportAnother}>
+					Import another one
+				</ActionButton>
+			</ImportFlowLayout.Actions>
 		</ImportFlowLayout.Main>
 	);
 };

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../../index.css';
 import '../../../../../App.css';
 import { ImportFlowLayout } from '../../../../../components/ImportFlow/components/ImportFlowLayout';
+import { ActionButton } from '../../../../../components/ImportFlow/components/ActionButton';
 import { Steps } from '../../../../../components/ImportFlow/components/Steps';
 import { DoneIcon } from '../../../../../components/Core/icons/Done';
 import YellowCatPNG from '../../../../../assets/yellow-cat.png';
@@ -58,8 +59,13 @@ export const Advance: Story = {
 			/>
 		),
 		children: (
-			<div className="text-sm text-black-500 mt-6">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+			<div className="mt-2">
+				<div className="text-sm text-black-500">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				</div>
+				<ImportFlowLayout.Actions className="mt-4">
+					<ActionButton>Submit</ActionButton>
+				</ImportFlowLayout.Actions>
 			</div>
 		),
 	},

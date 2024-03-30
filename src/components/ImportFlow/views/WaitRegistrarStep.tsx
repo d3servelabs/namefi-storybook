@@ -44,14 +44,14 @@ export const WaitRegistrarStep = ({
 					description="You can now close off and check back later."
 					illustration={<img src={YellowCatPNG} className="ml-5" />}
 					steps={steps}
-					actions={
+					onBack={onBack}
+					className={className}>
+					<ImportFlowLayout.Actions>
 						<ActionButton className="w-auto mt-6" onClick={onClickImportAnother}>
 							Import another one
 						</ActionButton>
-					}
-					onBack={onBack}
-					className={className}
-				/>
+					</ImportFlowLayout.Actions>
+				</ImportFlowLayout.Main>
 			);
 		}
 		case 'RECHECK': {
@@ -60,11 +60,6 @@ export const WaitRegistrarStep = ({
 					title="Waiting on your registrar."
 					description="Minting will automatically start when your domain is released."
 					steps={steps}
-					actions={
-						<ActionButton className="w-auto" onClick={onClickImportAnother}>
-							Import another one
-						</ActionButton>
-					}
 					onBack={onBack}
 					className={className}>
 					<ImportFlowLayout.Progress
@@ -72,6 +67,11 @@ export const WaitRegistrarStep = ({
 						description="It takes from few mins up to 7 days, contact your registrar to speed things up."
 						className="mt-6 mb-14"
 					/>
+					<ImportFlowLayout.Actions>
+						<ActionButton className="w-auto" onClick={onClickImportAnother}>
+							Import another one
+						</ActionButton>
+					</ImportFlowLayout.Actions>
 				</ImportFlowLayout.Main>
 			);
 		}

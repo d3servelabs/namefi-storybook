@@ -37,14 +37,6 @@ export const Completed = ({
 			title={`Congratulations! You just imported ${domain}.`}
 			description="Now you can trade and manage the domain with us."
 			steps={steps}
-			actions={
-				<ActionButton
-					icon={<ArrowRightIcon />}
-					className="w-auto"
-					onClick={handleClickViewDomain}>
-					Go to domain
-				</ActionButton>
-			}
 			onBack={onBack}
 			className={className}>
 			<ImportFlowLayout.Progress
@@ -53,6 +45,13 @@ export const Completed = ({
 				href={progressURL}
 				className="mt-6 mb-9"
 			/>
+			<ImportFlowLayout.Actions>
+				<ActionButton
+					icon={<ArrowRightIcon />}
+					onClick={handleClickViewDomain}>
+					Go to domain
+				</ActionButton>
+			</ImportFlowLayout.Actions>
 		</ImportFlowLayout.Main>
 	);
 };

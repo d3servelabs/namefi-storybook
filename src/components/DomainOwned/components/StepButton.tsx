@@ -23,7 +23,7 @@ export const StepButton = ({
 	return (
 		<Button
 			className={cn(
-				'transition border-white text-white text-lg font-primary',
+				'transition border-white text-white text-lg font-primary w-auto',
 				loading && 'opacity-60',
 				disabled && 'opacity-30',
 				className,
