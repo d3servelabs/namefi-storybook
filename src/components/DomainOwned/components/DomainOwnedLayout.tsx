@@ -85,7 +85,7 @@ export interface DomainOwnedLayoutProgressProps {
 const Progress = ({ progress, description, href, className }: DomainOwnedLayoutProgressProps) => {
 	return (
 		<div className={cn('mb-12', className)}>
-			<ProgressBar value={progress} />
+			<ProgressBar value={progress} className="my-2" />
 			{description && (
 				<a href={href} target="_blank" className="block text-[#d6d6d6] text-sm mt-2.5">
 					{description}
