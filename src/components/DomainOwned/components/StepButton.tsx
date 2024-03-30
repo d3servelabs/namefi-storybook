@@ -23,7 +23,7 @@ export const StepButton = ({
 	return (
 		<Button
 			className={cn(
-				'border-white text-white text-lg font-primary',
+				'transition border-white text-white text-lg font-primary',
 				loading && 'opacity-60',
 				disabled && 'opacity-30',
 				className,
@@ -32,7 +32,7 @@ export const StepButton = ({
 			onClick={onClick}>
 			{children}
 			{(loading || icon) && (
-				<div className="text-primary-500">
+				<div className={disabled ? 'text-white' : 'text-primary-500'}>
 					{loading ? <RefreshIcon className="animate-spin" /> : icon}
 				</div>
 			)}

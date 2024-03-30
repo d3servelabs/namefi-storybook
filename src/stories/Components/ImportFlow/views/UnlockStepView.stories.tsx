@@ -18,6 +18,8 @@ export const Default: Story = {
 	argTypes: {
 		status: { control: 'radio', options: ['DEFAULT', 'LOADING', 'LOCKED', 'UNLOCKED'] },
 		className: { control: 'text' },
+		onClickVerify: { action: 'onClickVerify' },
+		onClickNext: { action: 'onClickNext' },
 	},
 	args: {
 		status: 'DEFAULT',

@@ -11,8 +11,8 @@ export type UnlockStepStatus = 'DEFAULT' | 'LOADING' | 'LOCKED' | 'UNLOCKED';
 
 export interface UnlockStepProps {
 	status: UnlockStepStatus;
-	onClickVerify: () => void;
-	onClickNext: () => void;
+	onClickVerify?: () => void;
+	onClickNext?: () => void;
 	className?: string;
 }
 
@@ -39,12 +39,12 @@ export const UnlockStep = ({ status, onClickVerify, onClickNext, className }: Un
 					description="Unlock it and verify its status."
 					steps={steps}
 					actions={
-						<ActionButton
-							icon={<RefreshIcon />}
-							className="w-auto"
-							onClick={onClickVerify}>
-							Verify Unlock
-						</ActionButton>
+							<ActionButton
+								icon={<RefreshIcon />}
+								className="w-auto mt-16"
+								onClick={onClickVerify}>
+								Verify Unlock
+							</ActionButton>
 					}
 					className={className}
 				/>
@@ -71,7 +71,7 @@ export const UnlockStep = ({ status, onClickVerify, onClickNext, className }: Un
 					actions={
 						<ActionButton
 							icon={<ArrowRightIcon />}
-							className="w-auto"
+							className="w-auto mt-12"
 							onClick={onClickNext}>
 							Next
 						</ActionButton>
@@ -90,7 +90,7 @@ export const UnlockStep = ({ status, onClickVerify, onClickNext, className }: Un
 					actions={
 						<ActionButton
 							icon={<RefreshIcon />}
-							className="w-auto"
+							className="w-auto mt-12"
 							onClick={onClickVerify}>
 							Verify Again
 						</ActionButton>
