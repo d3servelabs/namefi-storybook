@@ -1,8 +1,10 @@
 import React from 'react';
 import { ArrowLeftIcon } from '@radix-ui/react-icons';
 import { cn } from '../../../utils/cn';
-import { ProgressBar } from '../../../components/DomainOwned';
-import { LinkIcon } from '../../../components/Core/icons/Link';
+import {
+	DomainOwnedLayout,
+	type DomainOwnedLayoutProgressProps,
+} from '../../../components/DomainOwned';
 import InfoCircledSVG from '../../../assets/InfoCircled.svg';
 
 export type ImportFlowLayoutMainProps = {
@@ -80,26 +82,8 @@ const Field = ({ label, tooltip, children, className }: ImportFlowLayoutFieldPro
 	);
 };
 
-export interface ImportFlowLayoutProgressProps {
-	progress: number;
-	description?: React.ReactNode;
-	href?: string;
-	className?: string;
-}
-
-const Progress = ({ progress, description, href, className }: ImportFlowLayoutProgressProps) => {
-	return (
-		<div className={cn('mb-12', className)}>
-			<ProgressBar value={progress} className="my-2" />
-			{description && (
-				<a href={href} target="_blank" className="block text-[#d6d6d6] text-sm mt-2.5">
-					{description}
-					{href && <LinkIcon className="text-brand-blue text-lg stroke-[0.02] ml-2" />}
-				</a>
-			)}
-		</div>
-	);
-};
+export type ImportFlowLayoutProgressProps = DomainOwnedLayoutProgressProps;
+const Progress = DomainOwnedLayout.Progress;
 
 export const ImportFlowLayout = {
 	Main,
