@@ -1,8 +1,9 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../index.css';
 import '../../../App.css';
 import { EthereumLogo } from '../../../components/Core/icons/EthereumLogo';
+import BaseNetworkIcon from '../../../components/Core/icons/BaseNetwork';
 import { ImportFlow } from '../../../components/ImportFlow/ImportFlow';
 
 const createMockChecker = (name: string, successAfterCalledCount: number = 1) => {
@@ -27,6 +28,21 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const NETWORK_OPTIONS = [
+	{
+		key: 'ethereum',
+		name: 'Ethereum Mainnet',
+		icon: <EthereumLogo className="w-6 h-6" />,
+		fee: 13.28,
+	},
+	{
+		key: 'polygon',
+		name: 'Base Chain',
+		icon: <BaseNetworkIcon className="w-6 h-6" />,
+		fee: 0.0328,
+	},
+]
+
 export const Controlled: Story = {
 	argTypes: {
 		defaultDomainImported: { control: { type: 'boolean' } },
@@ -44,14 +60,18 @@ export const Controlled: Story = {
 		const handleConnectWallet = useCallback(async () => {
 			setWalletConnected(true);
 		}, []);
-		const handleImportDomain = useCallback(async () => {
+		const handleImportDomain = useCallback(async (payload) => {
 			// simluating import api
+			console.log('Import Domain', payload)
 			return true;
 		}, []);
 
 		return (
 			<ImportFlow
 				domain="example.com"
+				costValue={20}
+				costExchangeRate={1}
+				networkOptions={NETWORK_OPTIONS}
 				defaultDomainImported={defaultDomainImported}
 				mintIcon={<EthereumLogo />}
 				mintURL="https://example.com/"

@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { GetStarted } from './views/GetStarted';
+import { GetStarted, type NetworkOption } from './views/GetStarted';
 import { UnlockStep, type UnlockStepStatus } from './views/UnlockStep';
 import { AuthCodeStep, type AuthCodeStepStatus } from './views/AuthCodeStep';
 import { WaitRegistrarStep, type WaitRegistrarStepStatus } from './views/WaitRegistrarStep';
@@ -16,6 +16,9 @@ export type ImportFlowView =
 
 export interface ImportFlowProps {
 	domain: string;
+	costValue: number;
+	costExchangeRate?: number;
+	networkOptions?: NetworkOption[];
 	defaultDomainImported?: boolean;
 	mintIcon?: React.ReactNode;
 	mintURL?: string;
@@ -23,7 +26,7 @@ export interface ImportFlowProps {
 	verifyAuthCode: (domain: string) => Promise<boolean>;
 	walletConnected: boolean;
 	connectWallet: () => Promise<void>;
-	importDomain: (domain: string) => Promise<boolean>;
+	importDomain: (payload: { domain: string; network: string }) => Promise<boolean>;
 	checkIfRegistrarDone: (domain: string) => Promise<boolean>;
 	checkIfRegistrarDoneInterval: number;
 	checkIfMintDone: (domain: string) => Promise<boolean>;
@@ -34,6 +37,9 @@ export interface ImportFlowProps {
 }
 export const ImportFlow = ({
 	domain,
+	costValue,
+	costExchangeRate,
+	networkOptions,
 	defaultDomainImported = false,
 	mintIcon,
 	mintURL,
@@ -56,6 +62,8 @@ export const ImportFlow = ({
 	const [waitRegistrarStepStatus, setWaitRegistrarStepStatus] =
 		useState<WaitRegistrarStepStatus>('RECHECK');
 
+	const [network, setNetwork] = useState<string>('');
+
 	const handleVerifyUnlock = useCallback(async () => {
 		setUnlockStepStatus('LOADING');
 		setUnlockStepStatus((await verifyUnlock(domain)) ? 'UNLOCKED' : 'LOCKED');
@@ -77,12 +85,12 @@ export const ImportFlow = ({
 		setAuthCodeStepStatus('VERIFIED');
 	}, [domain]);
 	const handleImportDomain = useCallback(async () => {
-		if (!await importDomain(domain)) {
+		if (!(await importDomain({ domain, network }))) {
 			return;
 		}
 		setView('WAIT_REGISTRAR');
 		setWaitRegistrarStepStatus('FIRST_TIME');
-	}, [importDomain, domain])
+	}, [importDomain, domain, network]);
 
 	useEffect(() => {
 		if (defaultDomainImported) {
@@ -118,9 +126,11 @@ export const ImportFlow = ({
 		case 'GET_STARTED': {
 			return (
 				<GetStarted
-					costValue={20}
-					costExchangeRate={1}
-					networkOptions={[]}
+					costValue={costValue}
+					costExchangeRate={costExchangeRate}
+					network={network}
+					networkOptions={networkOptions}
+					onChangeNetwork={setNetwork}
 					onClickStart={() => setView('UNLOCK')}
 					onBack={onBack}
 				/>
