@@ -9,12 +9,14 @@ export type WaitRegistrarStepStatus = 'FIRST_TIME' | 'RECHECK';
 export interface WaitRegistrarStepProps {
 	status: WaitRegistrarStepStatus;
 	onClickImportAnother?: () => void;
+	onBack?: () => void;
 	className?: string;
 }
 
 export const WaitRegistrarStep = ({
 	status,
 	onClickImportAnother,
+	onBack,
 	className,
 }: WaitRegistrarStepProps) => {
 	const steps = (
@@ -42,6 +44,7 @@ export const WaitRegistrarStep = ({
 							Import another one
 						</ActionButton>
 					}
+					onBack={onBack}
 					className={className}
 				/>
 			);
@@ -57,6 +60,7 @@ export const WaitRegistrarStep = ({
 							Import another one
 						</ActionButton>
 					}
+					onBack={onBack}
 					className={className}>
 					<ImportFlowLayout.Progress
 						progress={50}

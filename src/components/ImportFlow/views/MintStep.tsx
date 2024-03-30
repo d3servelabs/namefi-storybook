@@ -5,18 +5,20 @@ import { Steps } from '../components/Steps';
 import { ActionButton } from '../components/ActionButton';
 
 export interface MintStepProps {
-	networkIcon?: React.ReactNode;
+	icon?: React.ReactNode;
 	progressDescription?: React.ReactNode;
-	progressHref?: string;
+	progressURL?: string;
 	onClickImportAnother?: () => void;
+	onBack?: () => void;
 	className?: string;
 }
 
 export const MintStep = ({
-	networkIcon,
+	icon,
 	progressDescription,
-	progressHref,
+	progressURL,
 	onClickImportAnother,
+	onBack,
 	className,
 }: MintStepProps) => {
 	const steps = (
@@ -39,18 +41,19 @@ export const MintStep = ({
 				</>
 			}
 			description="Your domain is released."
-			icon={networkIcon}
+			icon={icon}
 			steps={steps}
 			actions={
 				<ActionButton className="w-auto" onClick={onClickImportAnother}>
 					Import another one
 				</ActionButton>
 			}
+			onBack={onBack}
 			className={className}>
 			<ImportFlowLayout.Progress
 				progress={50}
 				description={progressDescription}
-				href={progressHref}
+				href={progressURL}
 				className="mt-6 mb-14"
 			/>
 		</ImportFlowLayout.Main>

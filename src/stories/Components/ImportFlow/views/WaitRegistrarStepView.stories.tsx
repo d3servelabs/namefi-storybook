@@ -18,6 +18,7 @@ export const Default: Story = {
 	argTypes: {
 		status: { control: 'radio', options: ['FIRST_TIME', 'RECHECK'] },
 		onClickImportAnother: { action: 'onClickImportAnother' },
+		onBack: { action: 'onBack' },
 		className: { control: 'text' },
 	},
 	args: {

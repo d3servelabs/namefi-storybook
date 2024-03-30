@@ -20,6 +20,7 @@ export const Default: Story = {
 		costExchangeRate: { control: 'number' },
 		networkOptions: { control: 'object' },
 		className: { control: 'text' },
+		onBack: { action: 'onBack' },
 		onClickStart: { action: 'onClickStart' },
 	},
 	args: {
