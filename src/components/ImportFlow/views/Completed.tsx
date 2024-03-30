@@ -23,15 +23,9 @@ export const Completed = ({
 }: CompletedProps) => {
 	const steps = (
 		<Steps
-			items={[
-				<div className="text-xs text-grey tracking-wide">Unlock</div>,
-				<div className="text-xs text-grey tracking-wide">Code Verified</div>,
-				<div className="text-xs text-grey tracking-wide">Mint Namefi NFT</div>,
-				<div className="text-xs text-white tracking-wide font-medium">
-					Successfully Imported
-				</div>,
-			]}
+			items={['Unlock', 'Code Verified', 'Mint Namefi NFT', 'Successfully Imported']}
 			current={3}
+			itemClassName="min-w-32"
 			className="mb-12"
 		/>
 	);

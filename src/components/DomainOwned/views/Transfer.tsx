@@ -59,6 +59,7 @@ export const Transfer = ({
 								Transfer
 							</StepButton>,
 						]}
+						itemClassName="mt-2"
 					/>
 				</DomainOwnedLayout.Main>
 			);
@@ -88,6 +89,7 @@ export const Transfer = ({
 								Transfer
 							</StepButton>,
 						]}
+						itemClassName="mt-2"
 					/>
 				</DomainOwnedLayout.Main>
 			);
@@ -118,6 +120,7 @@ export const Transfer = ({
 								Transferring...
 							</StepButton>,
 						]}
+						itemClassName="mt-2"
 					/>
 				</DomainOwnedLayout.Main>
 			);
@@ -146,6 +149,7 @@ export const Transfer = ({
 								Done
 							</StepButton>,
 						]}
+						itemClassName="mt-2"
 					/>
 				</DomainOwnedLayout.Main>
 			);

@@ -38,14 +38,13 @@ export const AuthCodeStep = ({
 	const steps = (
 		<Steps
 			items={[
-				<div className="text-xs text-grey tracking-wide">Unlock</div>,
-				<div className="text-xs text-white tracking-wide font-medium">
-					{status === 'VERIFIED' ? 'Code Entered' : 'Auth-Code'}
-				</div>,
-				<div className="text-xs text-grey tracking-wide">Mint Namefi NFT</div>,
-				<div className="text-xs text-grey tracking-wide">Successfully Imported</div>,
+				'Unlock',
+				status === 'VERIFIED' ? 'Code Entered' : 'Auth-Code',
+				'Mint Namefi NFT',
+				'Successfully Imported',
 			]}
 			current={1}
+			itemClassName="min-w-32"
 			className="mb-12"
 		/>
 	);

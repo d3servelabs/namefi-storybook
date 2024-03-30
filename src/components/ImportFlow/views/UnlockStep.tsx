@@ -17,18 +17,18 @@ export interface UnlockStepProps {
 	className?: string;
 }
 
-export const UnlockStep = ({ status, onClickVerify, onClickNext, onBack, className }: UnlockStepProps) => {
+export const UnlockStep = ({
+	status,
+	onClickVerify,
+	onClickNext,
+	onBack,
+	className,
+}: UnlockStepProps) => {
 	const steps = (
 		<Steps
-			items={[
-				<div className="text-xs text-white tracking-wide font-medium">
-					Unlock from Source
-				</div>,
-				<div className="text-xs text-grey tracking-wide">Auth-Code</div>,
-				<div className="text-xs text-grey tracking-wide">Mint Namefi NFT</div>,
-				<div className="text-xs text-grey tracking-wide">Successfully Imported</div>,
-			]}
+			items={['Unlock from Source', 'Auth-Code', 'Mint Namefi NFT', 'Successfully Imported']}
 			current={0}
+			itemClassName="min-w-32"
 			className="mb-12"
 		/>
 	);
@@ -40,12 +40,12 @@ export const UnlockStep = ({ status, onClickVerify, onClickNext, onBack, classNa
 					description="Unlock it and verify its status."
 					steps={steps}
 					actions={
-							<ActionButton
-								icon={<RefreshIcon />}
-								className="w-auto mt-16"
-								onClick={onClickVerify}>
-								Verify Unlock
-							</ActionButton>
+						<ActionButton
+							icon={<RefreshIcon />}
+							className="w-auto mt-16"
+							onClick={onClickVerify}>
+							Verify Unlock
+						</ActionButton>
 					}
 					onBack={onBack}
 					className={className}

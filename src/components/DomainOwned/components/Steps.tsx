@@ -5,6 +5,7 @@ import { cn } from '../../../utils/cn';
 export interface StepsProps {
 	current: number;
 	items: React.ReactNode[];
+	itemClassName?: string;
 	className?: string;
 }
 
@@ -48,14 +49,14 @@ const stylesheet = css`
 	}
 `;
 
-export const Steps = ({ items, current, className }: StepsProps) => {
+export const Steps = ({ items, current, itemClassName, className }: StepsProps) => {
 	return (
 		<ol className={cn('flex', className)}>
 			{items.map((item, index) => {
 				return (
 					<li
 						key={index}
-						className={cn('flex flex-col items-center gap-y-5', stylesheet)}>
+						className={cn('flex flex-col items-center gap-y-3', stylesheet)}>
 						<div className="w-full flex justify-center">
 							<div
 								className={cn(
@@ -67,7 +68,14 @@ export const Steps = ({ items, current, className }: StepsProps) => {
 								{index + 1}
 							</div>
 						</div>
-						<div>{item}</div>
+						<div
+							className={cn(
+								'flex justify-center text-xs tracking-wide whitespace-nowrap',
+								index === current ? 'text-white font-medium' : 'text-grey',
+								itemClassName,
+							)}>
+							{item}
+						</div>
 					</li>
 				);
 			})}

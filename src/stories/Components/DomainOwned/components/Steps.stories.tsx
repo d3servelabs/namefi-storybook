@@ -22,6 +22,7 @@ export const Default: Story = {
 	argTypes: {
 		current: { control: 'number' },
 		items: { control: 'object' },
+		itemClassName: { control: 'text' },
 		className: { control: 'text' },
 	},
 	args: {
@@ -35,6 +36,26 @@ export const Default: Story = {
 				Done
 			</StepButton>,
 		],
+		itemClassName: '',
+		className: '',
+	},
+};
+
+export const PlainText: Story = {
+	argTypes: {
+		current: { control: 'number' },
+		items: { control: 'object' },
+		itemClassName: { control: 'text' },
+		className: { control: 'text' },
+	},
+	args: {
+		current: 0,
+		items: [
+			'1',
+			'2',
+			'3',
+		],
+		itemClassName: 'w-38',
 		className: '',
 	},
 };
