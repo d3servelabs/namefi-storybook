@@ -69,18 +69,17 @@ export const AuthCodeStep = ({
 					title="Look for the Auth-Code."
 					description="Enter it here and start minting your Namefi NFT."
 					steps={steps}
-					actions={
-						<ActionButton
-							icon={<ArrowRightIcon className="w-5 h-5" />}
-							disabled={!authCode}
-							className="w-auto"
-							onClick={onClickVerify}>
-							Verify code
-						</ActionButton>
-					}
 					onBack={onBack}
 					className={className}>
 					{form}
+					<ImportFlowLayout.Actions>
+						<ActionButton
+							icon={<ArrowRightIcon className="w-5 h-5" />}
+							disabled={!authCode}
+							onClick={onClickVerify}>
+							Verify code
+						</ActionButton>
+					</ImportFlowLayout.Actions>
 				</ImportFlowLayout.Main>
 			);
 		}
@@ -102,18 +101,17 @@ export const AuthCodeStep = ({
 					title="Look for the Auth-Code."
 					description="Re-enter auth-code and verify again."
 					steps={steps}
-					actions={
-						<ActionButton
-							icon={<RefreshIcon />}
-							disabled={!authCode}
-							className="w-auto"
-							onClick={onClickVerify}>
-							Verify Again
-						</ActionButton>
-					}
 					onBack={onBack}
 					className={className}>
 					{form}
+					<ImportFlowLayout.Actions>
+						<ActionButton
+							icon={<RefreshIcon />}
+							disabled={!authCode}
+							onClick={onClickVerify}>
+							Verify Again
+						</ActionButton>
+					</ImportFlowLayout.Actions>
 				</ImportFlowLayout.Main>
 			);
 		}
@@ -124,11 +122,14 @@ export const AuthCodeStep = ({
 					title="Auth-code verified."
 					description="Confirm to start minting your Namefi NFT."
 					steps={steps}
-					actions={
-						walletConnected ? (
+					onBack={onBack}
+					className={className}>
+					{!walletConnected && form}
+					<ImportFlowLayout.Actions>
+						{walletConnected ? (
 							<ActionButton
 								icon={<ArrowRightIcon className="w-5 h-5" />}
-								className="w-auto mt-12"
+								className="mt-12"
 								onClick={onClickImportDomain}>
 								Confirm to Import
 							</ActionButton>
@@ -139,16 +140,12 @@ export const AuthCodeStep = ({
 								</div>
 								<ActionButton
 									icon={<ArrowRightIcon className="w-5 h-5" />}
-									className="w-auto"
 									onClick={onClickConnectWallet}>
 									Connect Wallet
 								</ActionButton>
 							</div>
-						)
-					}
-					onBack={onBack}
-					className={className}>
-					{!walletConnected && form}
+						)}
+					</ImportFlowLayout.Actions>
 				</ImportFlowLayout.Main>
 			);
 		}

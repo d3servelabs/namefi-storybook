@@ -58,9 +58,17 @@ const Main = ({
 				{illustration && <div>{illustration}</div>}
 			</div>
 			{children}
-			{actions && <div className="flex items-center">{actions}</div>}
 		</div>
 	);
+};
+
+export interface ImportFlowLayoutActionsProps {
+	children: React.ReactNode;
+	className?: string;
+}
+
+const Actions = ({ children, className }: ImportFlowLayoutActionsProps) => {
+	return <div className={cn('flex items-center', className)}>{children}</div>;
 };
 
 export interface ImportFlowLayoutFieldProps {
@@ -87,6 +95,7 @@ const Progress = DomainOwnedLayout.Progress;
 
 export const ImportFlowLayout = {
 	Main,
+	Actions,
 	Field,
 	Progress,
 };

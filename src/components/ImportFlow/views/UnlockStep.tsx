@@ -39,17 +39,17 @@ export const UnlockStep = ({
 					title="Go to your domain's current registrar."
 					description="Unlock it and verify its status."
 					steps={steps}
-					actions={
+					onBack={onBack}
+					className={className}>
+					<ImportFlowLayout.Actions>
 						<ActionButton
 							icon={<RefreshIcon />}
-							className="w-auto mt-16"
+							className="mt-16"
 							onClick={onClickVerify}>
 							Verify Unlock
 						</ActionButton>
-					}
-					onBack={onBack}
-					className={className}
-				/>
+					</ImportFlowLayout.Actions>
+				</ImportFlowLayout.Main>
 			);
 		}
 		case 'LOADING': {
@@ -71,17 +71,17 @@ export const UnlockStep = ({
 					title="Domain is still locked."
 					description="Refresh to verify again."
 					steps={steps}
-					actions={
+					onBack={onBack}
+					className={className}>
+					<ImportFlowLayout.Actions>
 						<ActionButton
 							icon={<RefreshIcon />}
-							className="w-auto mt-12"
+							className="mt-12"
 							onClick={onClickVerify}>
 							Verify Again
 						</ActionButton>
-					}
-					onBack={onBack}
-					className={className}
-				/>
+					</ImportFlowLayout.Actions>
+				</ImportFlowLayout.Main>
 			);
 		}
 		case 'UNLOCKED': {
@@ -91,17 +91,17 @@ export const UnlockStep = ({
 					title="Domain is unlocked."
 					description="Verified Successful."
 					steps={steps}
-					actions={
+					onBack={onBack}
+					className={className}>
+					<ImportFlowLayout.Actions>
 						<ActionButton
 							icon={<ArrowRightIcon />}
-							className="w-auto mt-12"
+							className="mt-12"
 							onClick={onClickNext}>
 							Next
 						</ActionButton>
-					}
-					onBack={onBack}
-					className={className}
-				/>
+					</ImportFlowLayout.Actions>
+				</ImportFlowLayout.Main>
 			);
 		}
 		default:
