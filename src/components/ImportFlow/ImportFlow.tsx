@@ -16,6 +16,7 @@ export type ImportFlowView =
 
 export interface ImportFlowProps {
 	domain: string;
+	defaultDomainImported?: boolean;
 	mintIcon?: React.ReactNode;
 	mintURL?: string;
 	verifyUnlock: (domain: string) => Promise<boolean>;
@@ -33,6 +34,7 @@ export interface ImportFlowProps {
 }
 export const ImportFlow = ({
 	domain,
+	defaultDomainImported = false,
 	mintIcon,
 	mintURL,
 	verifyUnlock,
@@ -83,12 +85,12 @@ export const ImportFlow = ({
 	}, [importDomain, domain])
 
 	useEffect(() => {
-		if (mintURL) {
-			setView('MINT');
+		if (defaultDomainImported) {
+			setView('WAIT_REGISTRAR');
 		} else {
 			setView('GET_STARTED');
 		}
-	}, [mintURL]);
+	}, [defaultDomainImported]);
 
 	useEffect(() => {
 		if (view !== 'WAIT_REGISTRAR') return;

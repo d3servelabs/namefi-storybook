@@ -29,26 +29,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Controlled: Story = {
 	argTypes: {
-		mintURL: { control: { type: 'text' } },
+		defaultDomainImported: { control: { type: 'boolean' } },
 		onClickImportAnother: { action: 'onClickImportAnother' },
 		onClickViewDomain: { action: 'onClickViewDomain' },
 		onBack: { action: 'onBack' },
 	} as any,
 	args: {} as any,
-	render: ({ mintURL: defaultMintURL, onClickImportAnother, onClickViewDomain, onBack }: any) => {
-		const [mintURL, setMintURL] = useState<string>(defaultMintURL);
+	render: ({ defaultDomainImported, onClickImportAnother, onClickViewDomain, onBack }: any) => {
 		const verifyUnlock = useMemo(() => createMockChecker('unlock'), []);
 		const verifyAuthCode = useMemo(() => createMockChecker('auth-code'), []);
-		const checkIfRegistrarDone = useMemo(() => {
-			const check = createMockChecker('if-registrar-done');
-			return async () => {
-				if (await check()) {
-					setMintURL('https://example.com');
-					return true;
-				}
-				return false;
-			};
-		}, []);
+		const checkIfRegistrarDone = useMemo(() => createMockChecker('if-registrar-done'), []);
 		const checkIfMintDone = useMemo(() => createMockChecker('if-mint-done', 5), []);
 		const [walletConnected, setWalletConnected] = useState(false);
 		const handleConnectWallet = useCallback(async () => {
@@ -58,15 +48,13 @@ export const Controlled: Story = {
 			// simluating import api
 			return true;
 		}, []);
-		useEffect(() => {
-			setMintURL(defaultMintURL);
-		}, [defaultMintURL]);
 
 		return (
 			<ImportFlow
 				domain="example.com"
+				defaultDomainImported={defaultDomainImported}
 				mintIcon={<EthereumLogo />}
-				mintURL={mintURL}
+				mintURL="https://example.com/"
 				verifyUnlock={verifyUnlock}
 				verifyAuthCode={verifyAuthCode}
 				walletConnected={walletConnected}
