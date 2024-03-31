@@ -4,7 +4,7 @@ import '../../../index.css';
 import '../../../App.css';
 import { EthereumLogo } from '../../../components/Core/icons/EthereumLogo';
 import BaseNetworkIcon from '../../../components/Core/icons/BaseNetwork';
-import { ImportFlow } from '../../../components/ImportFlow/ImportFlow';
+import { ImportFlow } from '../../../components/Templates/ImportFlow/ImportFlow';
 
 const createMockChecker = (name: string, successAfterCalledCount: number = 1) => {
 	let count = 0;
@@ -18,7 +18,7 @@ const createMockChecker = (name: string, successAfterCalledCount: number = 1) =>
 };
 
 const meta = {
-	title: 'Components/ImportFlow',
+	title: 'Templates/DomainImportFlow',
 	component: ImportFlow,
 	parameters: {
 		layout: 'centered',

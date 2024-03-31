@@ -1,6 +1,6 @@
 import React from 'react';
-import { cn } from '../../../utils/cn';
-import LoaderSVG from '../../../assets/loader.svg';
+import { cn } from '../../../../utils/cn';
+import LoaderSVG from '../../../../assets/loader.svg';
 
 export interface SpinnerProps {
 	className?: string;

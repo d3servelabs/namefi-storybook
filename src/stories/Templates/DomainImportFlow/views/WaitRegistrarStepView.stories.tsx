@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { WaitRegistrarStep } from '../../../../components/ImportFlow/views/WaitRegistrarStep';
+import { WaitRegistrarStep } from '../../../../components/Templates/ImportFlow/views/WaitRegistrarStep';
 
 const meta = {
-	title: 'Components/ImportFlow/Views/WaitRegistrarStep',
+	title: 'Templates/DomainImportFlow/Views/WaitRegistrarStep',
 	component: WaitRegistrarStep,
 	parameters: {
 		layout: 'centered',

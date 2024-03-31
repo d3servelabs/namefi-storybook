@@ -5,10 +5,10 @@ import '../../../../App.css';
 import {
 	AuthCodeStep,
 	type AuthCodeStepStatus,
-} from '../../../../components/ImportFlow/views/AuthCodeStep';
+} from '../../../../components/Templates/ImportFlow/views/AuthCodeStep';
 
 const meta = {
-	title: 'Components/ImportFlow/Views/AuthCodeStep',
+	title: 'Templates/DomainImportFlow/Views/AuthCodeStep',
 	component: AuthCodeStep,
 	parameters: {
 		layout: 'centered',

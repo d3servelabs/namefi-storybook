@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../../index.css';
 import '../../../../../App.css';
-import { ImportFlowLayout } from '../../../../../components/ImportFlow/components/ImportFlowLayout';
-import { ActionButton } from '../../../../../components/ImportFlow/components/ActionButton';
-import { Steps } from '../../../../../components/ImportFlow/components/Steps';
+import { ImportFlowLayout } from '../../../../../components/Templates/ImportFlow/components/ImportFlowLayout';
+import { ActionButton } from '../../../../../components/Templates/ImportFlow/components/ActionButton';
+import { Steps } from '../../../../../components/Templates/ImportFlow/components/Steps';
 import { DoneIcon } from '../../../../../components/Core/icons/Done';
 import YellowCatPNG from '../../../../../assets/yellow-cat.png';
 
 const meta = {
-	title: 'Components/ImportFlow/Components/Layouts/Main',
+	title: 'Templates/DomainImportFlow/Components/Layouts/Main',
 	component: ImportFlowLayout.Main,
 	parameters: {
 		layout: 'centered',

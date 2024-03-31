@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowLeftIcon } from '@radix-ui/react-icons';
-import { cn } from '../../../utils/cn';
+import { cn } from '../../../../utils/cn';
 import {
 	DomainOwnedLayout,
 	type DomainOwnedLayoutProgressProps,
-} from '../../../components/DomainOwned';
-import InfoCircledSVG from '../../../assets/InfoCircled.svg';
+} from '../../../DomainOwned';
+import InfoCircledSVG from '../../../../assets/InfoCircled.svg';
 
 export type ImportFlowLayoutMainProps = {
 	icon?: React.ReactNode;

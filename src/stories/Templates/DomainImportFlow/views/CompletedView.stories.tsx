@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { Completed } from '../../../../components/ImportFlow/views/Completed';
+import { Completed } from '../../../../components/Templates/ImportFlow/views/Completed';
 
 const meta = {
-	title: 'Components/ImportFlow/Views/Completed',
+	title: 'Templates/DomainImportFlow/Views/Completed',
 	component: Completed,
 	parameters: {
 		layout: 'centered',

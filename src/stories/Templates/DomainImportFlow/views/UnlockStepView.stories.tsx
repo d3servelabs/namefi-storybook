@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { UnlockStep } from '../../../../components/ImportFlow/views/UnlockStep';
+import { UnlockStep } from '../../../../components/Templates/ImportFlow/views/UnlockStep';
 
 const meta = {
-	title: 'Components/ImportFlow/Views/UnlockStep',
+	title: 'Templates/DomainImportFlow/Views/UnlockStep',
 	component: UnlockStep,
 	parameters: {
 		layout: 'centered',

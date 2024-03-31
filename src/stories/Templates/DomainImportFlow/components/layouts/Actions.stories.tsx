@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../../index.css';
 import '../../../../../App.css';
-import { ActionButton } from '../../../../../components/ImportFlow/components/ActionButton';
-import { ImportFlowLayout } from '../../../../../components/ImportFlow/components/ImportFlowLayout';
+import { ActionButton } from '../../../../../components/Templates/ImportFlow/components/ActionButton';
+import { ImportFlowLayout } from '../../../../../components/Templates/ImportFlow/components/ImportFlowLayout';
 
 const meta = {
-	title: 'Components/ImportFlow/Components/Layouts/Actions',
+	title: 'Templates/DomainImportFlow/Components/Layouts/Actions',
 	component: ImportFlowLayout.Actions,
 	parameters: {
 		layout: 'centered',

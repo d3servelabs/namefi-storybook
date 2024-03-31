@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Spinner } from '../../../../components/ImportFlow/components/Spinner';
+import { Spinner } from '../../../../components/Templates/ImportFlow/components/Spinner';
 
 const meta = {
-	title: 'Components/ImportFlow/Components/Spinner',
+	title: 'Templates/DomainImportFlow/Components/Spinner',
 	component: Spinner,
 	tags: ['autodocs'],
 	parameters: {

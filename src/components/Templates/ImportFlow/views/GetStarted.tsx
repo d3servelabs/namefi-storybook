@@ -1,8 +1,8 @@
 import React from 'react';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
-import { TokenIcon } from '../../../components';
-import { NamefiBrandText } from '../../../components';
-import { Balance } from '../../../components/Core/Balance';
+import { TokenIcon } from '../../../index';
+import { NamefiBrandText } from '../../../index';
+import { Balance } from '../../../Core/Balance';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
 import { ActionButton } from '../components/ActionButton';
 import { NetworkSelect, type NetworkOption } from '../components/NetworkSelect';

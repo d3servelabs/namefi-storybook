@@ -4,10 +4,10 @@ import '../../../../index.css';
 import '../../../../App.css';
 import { EthereumLogo } from '../../../../components/Core/icons/EthereumLogo';
 import BaseNetworkIcon from '../../../../components/Core/icons/BaseNetwork';
-import { GetStarted } from '../../../../components/ImportFlow/views/GetStarted';
+import { GetStarted } from '../../../../components/Templates/ImportFlow/views/GetStarted';
 
 const meta = {
-	title: 'Components/ImportFlow/Views/GetStarted',
+	title: 'Templates/DomainImportFlow/Views/GetStarted',
 	component: GetStarted,
 	parameters: {
 		layout: 'centered',

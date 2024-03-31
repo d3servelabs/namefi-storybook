@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
 import { EthereumLogo } from '../../../../components/Core/icons/EthereumLogo';
-import { MintStep } from '../../../../components/ImportFlow/views/MintStep';
+import { MintStep } from '../../../../components/Templates/ImportFlow/views/MintStep';
 
 const meta = {
-	title: 'Components/ImportFlow/Views/MintStep',
+	title: 'Templates/DomainImportFlow/Views/MintStep',
 	component: MintStep,
 	parameters: {
 		layout: 'centered',

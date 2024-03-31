@@ -2,10 +2,10 @@ import { useState, useMemo } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { EthereumLogo } from '../../../../components/Core/icons/EthereumLogo';
 import BaseNetworkIcon from '../../../../components/Core/icons/BaseNetwork';
-import { Select } from '../../../../components/ImportFlow/components/Select';
+import { Select } from '../../../../components/Templates/ImportFlow/components/Select';
 
 const meta = {
-	title: 'Components/ImportFlow/Components/Select',
+	title: 'Templates/DomainImportFlow/Components/Select',
 	component: Select,
 	tags: ['autodocs'],
 	parameters: {

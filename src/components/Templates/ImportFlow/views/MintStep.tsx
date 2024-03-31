@@ -1,5 +1,5 @@
 import React from 'react';
-import { NamefiBrandText } from '../../../components';
+import { NamefiBrandText } from '../../../index';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
 import { Steps } from '../components/Steps';
 import { ActionButton } from '../components/ActionButton';

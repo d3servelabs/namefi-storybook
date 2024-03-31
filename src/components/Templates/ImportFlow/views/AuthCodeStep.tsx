@@ -1,8 +1,8 @@
 import React from 'react';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
-import { CodeInputField } from '../../../components/Core/CodeInputField';
-import { RefreshIcon } from '../../../components/Core/icons/Refresh';
-import { DoneIcon } from '../../../components/Core/icons/Done';
+import { CodeInputField } from '../../../Core/CodeInputField';
+import { RefreshIcon } from '../../../Core/icons/Refresh';
+import { DoneIcon } from '../../../Core/icons/Done';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
 import { Steps } from '../components/Steps';
 import { ActionButton } from '../components/ActionButton';

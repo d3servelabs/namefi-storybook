@@ -2,10 +2,10 @@ import { useState, useMemo } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { EthereumLogo } from '../../../../components/Core/icons/EthereumLogo';
 import BaseNetworkIcon from '../../../../components/Core/icons/BaseNetwork';
-import { NetworkSelect } from '../../../../components/ImportFlow/components/NetworkSelect';
+import { NetworkSelect } from '../../../../components/Templates/ImportFlow/components/NetworkSelect';
 
 const meta = {
-	title: 'Components/ImportFlow/Components/NetworkSelect',
+	title: 'Templates/DomainImportFlow/Components/NetworkSelect',
 	component: NetworkSelect,
 	tags: ['autodocs'],
 	parameters: {
