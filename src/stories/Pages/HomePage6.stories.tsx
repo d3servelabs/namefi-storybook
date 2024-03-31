@@ -5,16 +5,18 @@ import {Homepage6} from './HomePage6';
 import '../../index.css'
 import '../../App.css'
 
-const meta = {
+const meta:Meta<typeof Homepage6> = {
   title: 'Pages/Homepage6',
   component: Homepage6,
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Homepage6>;
+  args:{
+    pageLayoutProps:{}
+  }as any,
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// export const Home: Story = {}
+export const Home: Story = {}

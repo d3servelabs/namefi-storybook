@@ -47,6 +47,11 @@ const preview: Preview = {
       },
 
     },
+    options:{
+      storySort:{
+        order: ['Core', 'Components','Templates','Pages']
+      },
+    },
     docs: {
       theme: theme,
     }
