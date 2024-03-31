@@ -3,7 +3,7 @@ import { UnlockStep, type UnlockStepProps } from './UnlockStep';
 import { AuthCodeStep, type AuthCodeStepProps } from './AuthCodeStep';
 import { WaitRegistrarStep, type WaitRegistrarStepProps } from './WaitRegistrarStep';
 import { MintStep, type MintStepProps } from './MintStep';
-import { CompletedStep, type CompletedStepProps } from './CompletedStep';
+import { Completed as CompletedStep, type CompletedProps as CompletedStepProps } from './Completed';
 
 export const ImportFlowViews = {
 	GetStarted,
