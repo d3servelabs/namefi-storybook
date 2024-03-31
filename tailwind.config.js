@@ -32,7 +32,7 @@ const baseUnitX = Object.fromEntries(
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
-	safelist: [{ pattern: /(primary|brand|error)/ }, {pattern: /animate/}],
+	safelist: [{ pattern: /(primary|brand|error|secondary)/ }, {pattern: /animate/}],
 	theme: {
 		extend: {
 			borderRadius: baseUnit,
@@ -92,6 +92,10 @@ module.exports = {
 					950: '#141C18',
 					5: '#141C18',
 
+				},
+				secondary:{
+					DEFAULT:'#015AD5',
+					500:'#015AD5'
 				},
 				grey: {
 					lighter: '#D6D6D6',
