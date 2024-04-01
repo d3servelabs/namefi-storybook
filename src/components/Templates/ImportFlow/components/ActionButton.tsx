@@ -1,5 +1,7 @@
 import React from 'react';
-import { StepButton, type StepButtonProps } from '../../DomainOwned';
+import {StepButton, StepButtonProps} from "../../DomainOwned/components/StepButton";
+
+
 
 export type ActionButtonProps = StepButtonProps;
 export const ActionButton = StepButton;

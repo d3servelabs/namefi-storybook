@@ -3,7 +3,7 @@ import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { RefreshIcon } from '../../../Core/icons/Refresh';
 import { UnlockIcon } from '../../../Core/icons/Unlock';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import { Steps } from '../components/Steps';
+import {Steps} from "../../DomainOwned/components/Steps";
 import { ActionButton } from '../components/ActionButton';
 import { Spinner } from '../components/Spinner';
 

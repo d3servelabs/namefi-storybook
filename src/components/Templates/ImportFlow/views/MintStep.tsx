@@ -1,8 +1,8 @@
 import React from 'react';
-import { NamefiBrandText } from '../../../index';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import { Steps } from '../components/Steps';
+import {Steps} from "../../DomainOwned/components/Steps";
 import { ActionButton } from '../components/ActionButton';
+import NamefiBrandText from "../../../Core/NamefiBrandText";
 
 export interface MintStepProps {
 	icon?: React.ReactNode;

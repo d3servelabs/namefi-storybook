@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from '../../../index';
 import { RefreshIcon } from '../../../Core/icons/Refresh';
 import { cn } from '../../../../utils/cn';
+import {Button} from "../../../Core/Buttons";
 
 export interface StepButtonProps {
 	children?: React.ReactNode;

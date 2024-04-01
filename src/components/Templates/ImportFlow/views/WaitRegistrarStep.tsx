@@ -1,7 +1,7 @@
 import React from 'react';
 import { GlobeIcon } from '@radix-ui/react-icons';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import { Steps } from '../components/Steps';
+import {Steps} from "../../DomainOwned/components/Steps";
 import { ActionButton } from '../components/ActionButton';
 import YellowCatPNG from '../../../../assets/yellow-cat.png';
 

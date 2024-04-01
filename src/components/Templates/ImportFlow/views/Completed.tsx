@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import { Steps } from '../components/Steps';
+import {Steps} from "../../DomainOwned/components/Steps";
 import { ActionButton } from '../components/ActionButton';
 
 export interface CompletedProps {

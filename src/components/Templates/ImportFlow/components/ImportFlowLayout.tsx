@@ -4,7 +4,7 @@ import { cn } from '../../../../utils/cn';
 import {
 	DomainOwnedLayout,
 	type DomainOwnedLayoutProgressProps,
-} from '../../DomainOwned';
+} from '../../DomainOwned/components/DomainOwnedLayout';
 import InfoCircledSVG from '../../../../assets/InfoCircled.svg';
 
 export type ImportFlowLayoutMainProps = {

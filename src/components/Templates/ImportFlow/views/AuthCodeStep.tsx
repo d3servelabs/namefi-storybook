@@ -4,9 +4,9 @@ import { CodeInputField } from '../../../Core/CodeInputField';
 import { RefreshIcon } from '../../../Core/icons/Refresh';
 import { DoneIcon } from '../../../Core/icons/Done';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import { Steps } from '../components/Steps';
 import { ActionButton } from '../components/ActionButton';
 import { Spinner } from '../components/Spinner';
+import {Steps} from "../../DomainOwned/components/Steps";
 
 export type AuthCodeStepStatus = 'INPUT' | 'LOADING' | 'FAILED' | 'VERIFIED';
 
