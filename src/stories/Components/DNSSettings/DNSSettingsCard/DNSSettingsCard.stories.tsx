@@ -7,7 +7,7 @@ import {
 	type DNSSettingsTabKey,
 	DNSRecordsTable,
 	type DNSRecordData,
-} from '../../../../components/DNSSettings';
+} from '../../../../components/Templates/DNSSettings';
 
 interface DNSSettingsCardProps {
 	records: DNSRecordData[];

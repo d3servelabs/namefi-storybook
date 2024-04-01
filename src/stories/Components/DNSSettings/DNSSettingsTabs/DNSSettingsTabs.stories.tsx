@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { DNSSettingsTabs  } from '../../../../components/DNSSettings';
+import { DNSSettingsTabs  } from '../../../../components/Templates/DNSSettings';
 
 const meta = {
 	title: 'Components/DNSSettings/DNSSettingsTabs',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import {
 	DNSRecordsTable,
 	type DNSRecordData,
-} from '../../../../components/DNSSettings';
+} from '../../../../components/Templates/DNSSettings';
 
 const meta = {
 	title: 'Components/DNSSettings/DNSRecordsTable',

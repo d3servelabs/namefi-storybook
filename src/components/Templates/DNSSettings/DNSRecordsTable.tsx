@@ -1,11 +1,11 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import styled from '@emotion/styled';
-import { Checkbox } from '../Core/Checkbox';
-import { IconCircleButton } from '../Core/Buttons/IconCircleButton';
-import { cn } from '../../utils/cn';
-import { AddIcon } from '../Core/icons/Add';
-import { DownloadIcon } from '../Core/icons/Download';
-import { DeleteIcon } from '../Core/icons/Delete';
+import { Checkbox } from '../../Core/Checkbox';
+import { IconCircleButton } from '../../Core/Buttons/IconCircleButton';
+import { cn } from '../../../utils/cn';
+import { AddIcon } from '../../Core/icons/Add';
+import { DownloadIcon } from '../../Core/icons/Download';
+import { DeleteIcon } from '../../Core/icons/Delete';
 
 const DNSRecordTableRowsGroup = styled.div`
 	display: grid;
