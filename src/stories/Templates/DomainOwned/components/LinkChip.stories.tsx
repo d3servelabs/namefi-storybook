@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { LinkChip } from '../../../../components/DomainOwned/components/LinkChip';
+import { LinkChip } from '../../../../components/Templates/DomainOwned/components/LinkChip';
 
 const meta = {
 	title: 'Templates/DomainOwned/Components/LinkChip',

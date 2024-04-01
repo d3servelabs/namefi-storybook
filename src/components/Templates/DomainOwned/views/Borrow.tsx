@@ -1,6 +1,6 @@
 import React from 'react';
-import { NamefiBrandText } from '../../../components';
-import { LightningIcon } from '../../../components/Core/icons/Lightning';
+import { NamefiBrandText } from '../../../index';
+import { LightningIcon } from '../../../Core/icons/Lightning';
 import { DomainOwnedLayout } from '../components/DomainOwnedLayout';
 import { type LinkChipProps } from '../components/LinkChip';
 

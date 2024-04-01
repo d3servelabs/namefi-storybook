@@ -5,7 +5,7 @@ import {
 	DomainCardProps,
 } from '../../components/Templates/DomainCard/DomainCardDemo';
 
-import { DomainOwned } from '../../components/DomainOwned';
+import { DomainOwned } from '../../components/Templates/DomainOwned';
 
 export type DomainOwnedContentProps = {
 	domainCardProps: DomainCardProps;

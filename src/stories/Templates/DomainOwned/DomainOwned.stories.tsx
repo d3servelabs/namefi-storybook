@@ -6,7 +6,7 @@ import {
 	DomainOwned,
 	type DomainOwnedView,
 	type TransferStatus,
-} from '../../../components/DomainOwned/DomainOwned';
+} from '../../../components/Templates/DomainOwned/DomainOwned';
 
 const meta = {
 	title: 'Templates/DomainOwned/SideCard',

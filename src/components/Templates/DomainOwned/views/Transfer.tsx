@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react';
-import { NamefiBrandText } from '../../../components';
-import { UnlockIcon } from '../../../components/Core/icons/Unlock';
-import { ReverseLeftIcon } from '../../../components/Core/icons/ReverseLeft';
-import { DoneIcon } from '../../../components/Core/icons/Done';
-import { ReverseRightIcon } from '../../../components/Core/icons/ReverseRight';
+import { NamefiBrandText } from '../../../index';
+import { UnlockIcon } from '../../../Core/icons/Unlock';
+import { ReverseLeftIcon } from '../../../Core/icons/ReverseLeft';
+import { DoneIcon } from '../../../Core/icons/Done';
+import { ReverseRightIcon } from '../../../Core/icons/ReverseRight';
 import { DomainOwnedLayout } from '../components/DomainOwnedLayout';
 import { type LinkChipProps } from '../components/LinkChip';
 import { StepButton } from '../components/StepButton';

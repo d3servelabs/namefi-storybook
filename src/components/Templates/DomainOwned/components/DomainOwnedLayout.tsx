@@ -2,11 +2,11 @@ import React from 'react';
 import {
 	IconCircleButton,
 	type IconCircleButtonProps,
-} from '../../../components/Core/Buttons/IconCircleButton';
-import { cn } from '../../../utils/cn';
+} from '../../../Core/Buttons/IconCircleButton';
+import { cn } from '../../../../utils/cn';
 import { LinkChip, type LinkChipProps } from './LinkChip';
 import { ProgressBar } from './ProgressBar';
-import { LinkIcon } from '../../../components/Core/icons/Link';
+import { LinkIcon } from '../../../Core/icons/Link';
 
 export type DomainOwnedLayoutMainProps = {
 	icon?: React.ReactNode;

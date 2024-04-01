@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
-import { cn } from '../../../utils/cn';
-import MetamaskSVG from '../../../assets/metamask.svg';
-import { PasteIcon } from '../../../components/Core/icons/Paste';
+import { cn } from '../../../../utils/cn';
+import MetamaskSVG from '../../../../assets/metamask.svg';
+import { PasteIcon } from '../../../Core/icons/Paste';
 
 export interface WalletInputProps {
 	value?: string;

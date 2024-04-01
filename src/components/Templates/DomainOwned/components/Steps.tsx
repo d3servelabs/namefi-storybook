@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import { cn } from '../../../utils/cn';
+import { cn } from '../../../../utils/cn';
 
 export interface StepsProps {
 	current: number;

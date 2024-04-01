@@ -2,7 +2,7 @@ import { useState, useMemo, useCallback } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { Transfer, type TransferStatus } from '../../../../components/DomainOwned/views/Transfer';
+import { Transfer, type TransferStatus } from '../../../../components/Templates/DomainOwned/views/Transfer';
 
 const meta = {
 	title: 'Templates/DomainOwned/Views/Transfer',

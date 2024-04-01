@@ -5,14 +5,14 @@ import '../../../index.css'
 import '../../../App.css'
 import { deterministicMoment } from '../../consts';
 
-const meta = {
+const meta: Meta<typeof FullPageStory> = {
   title: 'Templates/DomainOwned/FullPage',
   component: FullPageStory,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof FullPageStory>;
+} ;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

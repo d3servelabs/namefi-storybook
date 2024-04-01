@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { GlobeIcon } from '@radix-ui/react-icons';
-import { StepButton } from '../../../../components/DomainOwned/components/StepButton';
-import { Steps } from '../../../../components/DomainOwned/components/Steps';
+import { StepButton } from '../../../../components/Templates/DomainOwned/components/StepButton';
+import { Steps } from '../../../../components/Templates/DomainOwned/components/Steps';
 import { UnlockIcon } from '../../../../components/Core/icons/Unlock';
 import { ReverseLeftIcon } from '../../../../components/Core/icons/ReverseLeft';
 import { DoneIcon } from '../../../../components/Core/icons/Done';

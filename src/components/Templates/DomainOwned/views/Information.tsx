@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import { ReverseRightIcon } from '../../../components/Core/icons/ReverseRight';
-import { BookmarkIcon } from '../../../components/Core/icons/Bookmark';
-import { LightningIcon } from '../../../components/Core/icons/Lightning';
+import { ReverseRightIcon } from '../../../Core/icons/ReverseRight';
+import { BookmarkIcon } from '../../../Core/icons/Bookmark';
+import { LightningIcon } from '../../../Core/icons/Lightning';
 import { DomainOwnedLayout } from '../components/DomainOwnedLayout';
 import { type LinkChipProps } from '../components/LinkChip';
 

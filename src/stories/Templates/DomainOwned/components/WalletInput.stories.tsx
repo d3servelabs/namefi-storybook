@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { WalletInput } from '../../../../components/DomainOwned/components/WalletInput';
+import { WalletInput } from '../../../../components/Templates/DomainOwned/components/WalletInput';
 
 const meta = {
 	title: 'Templates/DomainOwned/Components/WalletInput',

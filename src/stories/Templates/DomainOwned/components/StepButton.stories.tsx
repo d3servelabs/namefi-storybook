@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { StepButton } from '../../../../components/DomainOwned/components/StepButton';
+import { StepButton } from '../../../../components/Templates/DomainOwned/components/StepButton';
 import { ReverseLeftIcon } from '../../../../components/Core/icons/ReverseLeft';
 
 const meta = {

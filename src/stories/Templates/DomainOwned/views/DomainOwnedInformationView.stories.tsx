@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../index.css';
 import '../../../../App.css';
-import { Information } from '../../../../components/DomainOwned/views/Information';
+import { Information } from '../../../../components/Templates/DomainOwned/views/Information';
 
 const meta = {
 	title: 'Templates/DomainOwned/Views/Information',

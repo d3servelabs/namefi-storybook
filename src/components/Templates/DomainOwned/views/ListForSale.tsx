@@ -1,6 +1,6 @@
 import React from 'react';
-import { NamefiBrandText } from '../../../components';
-import { BookmarkIcon } from '../../../components/Core/icons/Bookmark';
+import { NamefiBrandText } from '../../../index';
+import { BookmarkIcon } from '../../../Core/icons/Bookmark';
 import { DomainOwnedLayout } from '../components/DomainOwnedLayout';
 import { type LinkChipProps } from '../components/LinkChip';
 

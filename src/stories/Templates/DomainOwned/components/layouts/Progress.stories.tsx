@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import '../../../../../index.css';
 import '../../../../../App.css';
-import { DomainOwnedLayout } from '../../../../../components/DomainOwned/components/DomainOwnedLayout';
+import { DomainOwnedLayout } from '../../../../../components/Templates/DomainOwned/components/DomainOwnedLayout';
 
 const meta = {
 	title: 'Templates/DomainOwned/Components/Layouts/Progress',
