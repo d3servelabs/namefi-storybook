@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { GetStarted, type NetworkOption } from './views/GetStarted';
 import { UnlockStep, type UnlockStepStatus } from './views/UnlockStep';
 import { AuthCodeStep, type AuthCodeStepStatus } from './views/AuthCodeStep';
