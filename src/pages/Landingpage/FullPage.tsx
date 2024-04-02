@@ -4,7 +4,7 @@ import { SolidButton } from './SolidButton'
 import { Subscription } from './Subscription'
 import { PoweredBy } from './PoweredBy'
 import { Grid as FeaturedCardGrid, FeaturedCardGridProps } from './FeaturedCard'
-import { Supporting } from './Supporting'
+import { ProudlySupporting } from './ProudlySupporting'
 import { BackedBy } from './BackedBy'
 import { Footer } from './Footer'
 import { Card1, Card2 } from './DomainCard'
@@ -39,7 +39,7 @@ export const FullPage = ({featuredCardProps, homepageText, faqComponentProps}: F
         </div>
         <PoweredBy />
         <FeaturedCardGrid {...featuredCardProps} />
-        <Supporting />
+        <ProudlySupporting />
         <div className=' w-full xl:w-[1200px] h-[650px] xl:h-[720px] flex flex-col justify-between '>
             <h3 className='font-bold tracking-wider font-primary text-primary-500 text-2xl xl:text-3xl self-start '>Our Assets</h3>
             <div className='w-full h-[568px] flex gap-[100px] justify-center'>
