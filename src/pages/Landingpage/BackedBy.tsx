@@ -1,14 +1,20 @@
 import React from 'react'
+import alchemySvg from '../../../public/assets/alchemy.svg'
+import maskSvg from '../../../public/assets/mask.svg'
+import foothillSvg from '../../../public/assets/foothill.svg'
+import orangedaoSvg from '../../../public/assets/orangedao.svg'
 
 export const BackedBy = () => {
   return (
-    <div className='w-full xl:w-[1200px] h-[166px] flex flex-col bg-[#24242480] '>
-        <p className='font-primary text-lg font-normal text-brand-300 tracking-wide self-start '>Backed by</p>
-        <div className='h-[142px] flex gap-10 xl:gap-20 items-center justify-center'>
-            <img className='max-xl:w-40' src="/assets/alchemy.svg" alt="" />
-            <img className='max-xl:w-40' src="/assets/mask.svg" alt="" />
-            <img className='max-xl:w-40' src="/assets/foothill.svg" alt="" />
-            <img className='max-xl:w-40' src="/assets/orangedao.svg" alt="" />
+    <div className='w-full max-w-[1400px] h-[166px] flex flex-row bg-[#24242480] rounded-5 justify-between items-center p-8'>
+        <div className={'self-start'}>
+            <p className='font-primary text-lg font-normal text-brand-300 tracking-wide'>Backed by</p>
+        </div>
+        <div className='max-h-25 h-25 flex gap-12 items-center justify-center'>
+            <img className='grayscale hover:grayscale-0' src={alchemySvg} alt="" />
+            <img className='grayscale hover:grayscale-0' src={maskSvg} alt="" />
+            <img className='grayscale hover:grayscale-0' src={foothillSvg} alt="" />
+            <img className='grayscale hover:grayscale-0' src={orangedaoSvg} alt="" />
         </div>
     </div>
   )

@@ -1,5 +1,8 @@
 import React from 'react'
 import { NamefiBrandText } from '../../components/Core/NamefiBrandText';
+import tokeniconSvg from '../../../public/assets/tokenicon.svg'
+import maskuserSvg from '../../../public/assets/maskuser.svg'
+import lockSvg from '../../../public/assets/lock.svg'
 
 export const Card1 = () => {
 
@@ -19,7 +22,7 @@ export const Card1 = () => {
                         <p className='text-[#ededed] font-normal text-sm tracking-widest '>0x3923...d9s3</p>
                     </div>
                     <div className='w-[150px] h-full flex items-center justify-between '>
-                        <img className='w-[36.75px]' src="/assets/lock.svg" alt="lock image" role='img'/>
+                        <img className='w-[36.75px]' src={lockSvg} alt="lock image" role='img'/>
                         <div className='w-[100px] font-secondary'>
                             <p className='text-[#acacac] text-[11px] font-extrabold tracking-widest '>Expires on</p>
                             <p className='text-[#ededed] text-sm font-extrabold tracking-widest '>Mar 01 2025</p>
@@ -37,10 +40,10 @@ export const Card2 = () => {
             <div className='relative rounded-[20px] pl-12 pr-10 py-6 flex flex-col justify-between items-end w-full h-[320px] bg-black-1000  '>
                   <div className='w-full h-[70px] flex justify-between items-center  '>
                         <div className='w-[205px] h-12 flex items-center justify-between '>
-                            <img className='w-12' src="/assets/maskuser.svg" alt="maskuser" />
+                            <img className='w-12' src={maskuserSvg} alt="maskuser" />
                             <p className='font-medium text-lg font-primary text-white '>0x8312...9ds0</p>
                         </div>
-                        <img className='w-[64px]' src="/assets/tokenicon.svg" alt="Token Icon" role='img' />
+                        <img className='w-[64px]' src={tokeniconSvg} alt="Token Icon" role='img' />
                   </div>
                     <div className='w-full h-[90px] '>
                         <div className='h-full w-[272px] flex justify-between items-center '>

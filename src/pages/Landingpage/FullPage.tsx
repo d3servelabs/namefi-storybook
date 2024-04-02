@@ -3,7 +3,7 @@ import { Header } from './Header'
 import { SolidButton } from './SolidButton'
 import { Subscription } from './Subscription'
 import { PoweredBy } from './PoweredBy'
-import { FeaturedCardGrid, FeaturedCardGridProps } from './FeaturedCardGrid'
+import { Grid as FeaturedCardGrid, FeaturedCardGridProps } from './FeaturedCard'
 import { Supporting } from './Supporting'
 import { BackedBy } from './BackedBy'
 import { Footer } from './Footer'
@@ -12,7 +12,7 @@ import { CaretLeft } from './icons/CaretLeft'
 import { CaretRight } from './icons/CaretRight'
 import { Message1, Message2 } from './AssetsMessage'
 import clsx from 'clsx'
-import { FaqComponent, FaqComponentProps } from './FaqComponent'
+import { List as FaqList, FaqComponentProps } from './Faq'
 
 export type FullPageProps = {
     featuredCardProps: FeaturedCardGridProps
@@ -26,7 +26,7 @@ export const FullPage = ({featuredCardProps, homepageText, faqComponentProps}: F
   return (
     <div className='w-full bg-black-1000 flex flex-col justify-center items-center gap-[100px] pt-10'>
         <div className='w-full h-screen flex flex-col justify-between items-center pb-10'>
-            <Header />
+            <Header dAppHref={'#'} socialLinks={{}} />
             <div className='w-full flex flex-col justify-between items-center h-[50vh]'>
                 <h1 className='text-white tracking-wider text-[50px] xl:text-[64px] font-bold font-third '>{homepageText}</h1>
                 <div className='relative flex gap-5'>
@@ -68,10 +68,10 @@ export const FullPage = ({featuredCardProps, homepageText, faqComponentProps}: F
         <div className='relative w-full xl:w-[1200px] flex flex-col justify-center items-center gap-[40px] xl:gap-[64px] '>
             <h3 className='font-bold text-3xl text-primary-500 tracking-widest self-start '>FAQs</h3>
             <div className='w-full h-auto flex flex-col justify-center items-center'>
-                <FaqComponent {...faqComponentProps} />
+                <FaqList {...faqComponentProps} />
             </div>
         </div>
-        <Footer />
+        <Footer socialLinks={{}} />
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const LaunchDapp = () => {
+export const LaunchDapp = ({href}) => {
   return (
-    <a href="#">
+    <a href={href}>
         <div className='min-w-[240px] h-[60px] bg-black-700 relative flex justify-center items-center duration:300 gap-3 rounded-full group'>
             <p className='font-primary font-medium tracking-wider text-lg text-white 
             before:absolute

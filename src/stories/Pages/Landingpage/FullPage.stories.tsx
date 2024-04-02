@@ -4,7 +4,7 @@ import '../../../index.css'
 import '../../../App.css'
 import { FasterIcon } from '../../../pages/Landingpage/icons/FasterIcon';
 import { SaferIcon } from '../../../pages/Landingpage/icons/SaferIcon';
-import { DefiIcon } from '../../../pages/Landingpage/icons/DEfiIcon';
+import { DefiIcon } from '../../../pages/Landingpage/icons/DefiIcon';
 
 const meta = {
   title: 'Pages/Landingpage',
