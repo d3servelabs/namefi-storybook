@@ -12,13 +12,15 @@ export const Header = ({
 	socialLinks: ComponentProps<typeof SocialLinks>;
 }) => {
 	return (
-		<header className="namefi-cont namefi-header relative h-[80px] pl-6 pr-[10px] lg:rounded-[50px] ">
-			<nav className="relative w-full h-full m-0 flex justify-between items-center">
-				<div className="relative flex items-center gap-[6rem]">
+		<header className="namefi-cont namefi-header relative min-h-[80px] pl-6 pr-[10px] lg:rounded-[50px] flex flex-col justify-center max-lg:py-3">
+			<nav className="relative w-full h-full m-0 flex flex-row flex-wrap justify-between items-center max-lg:gap-2">
+				<div className="relative flex items-center order-0">
 					<img src={namefiSvg} width={90} alt="logo" role="svg" />
 				</div>
-				<NavLinks />
-				<div className="relative flex items-center justify-end gap-8 h-[60px] ">
+				<div className={'order-3 lg:order-1 max-lg:w-full  '}>
+					<NavLinks />
+				</div>
+				<div className="relative flex items-center justify-end gap-8 order-2">
 					<SocialLinks {...socialLinks} />
 					<LaunchDapp href={dAppHref} />
 				</div>
