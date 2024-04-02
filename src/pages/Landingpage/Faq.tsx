@@ -41,13 +41,13 @@ export const Item = ({ name, question, answer,children }: faqItemProps) => {
 		<div
 			key={name}
 			className={cn(
-				'relative max-w-[825px] px-2 lg:px-8 border-[1.5px] border-brand-200 rounded-2xl hover:border-primary-500 duration-300 mb-5',
+				'relative max-w-[825px] px-2 lg:px-8 min-h-[5rem] border-[1.5px] border-brand-200 rounded-2xl hover:border-primary-500 duration-300 mb-5',
 				selected && 'border-primary-500',
 			)}>
 			<button
 				onClick={() => ctx.setSelected(selected? undefined: name)}
 				className={cn(
-					` relative w-full flex items-center justify-between h-[80px] text-brand-200 hover:text-white duration-300
+					` relative w-full flex items-center justify-between text-brand-200 hover:text-white duration-300 min-h-[80px]
                   before:absolute
                   before:w-full
                   before:h-px
