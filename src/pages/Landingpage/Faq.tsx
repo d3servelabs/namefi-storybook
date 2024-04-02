@@ -41,7 +41,7 @@ export const Item = ({ name, question, answer,children }: faqItemProps) => {
 		<div
 			key={name}
 			className={cn(
-				'relative w-[700px] xl:w-[825px] px-[33px] border-[1.5px] border-brand-200 rounded-2xl hover:border-primary-500 duration-300 mb-5',
+				'relative max-w-[825px] px-2 lg:px-8 border-[1.5px] border-brand-200 rounded-2xl hover:border-primary-500 duration-300 mb-5',
 				selected && 'border-primary-500',
 			)}>
 			<button
@@ -56,7 +56,7 @@ export const Item = ({ name, question, answer,children }: faqItemProps) => {
                   before:bottom-0 `,
 					selected && 'text-white',
 				)}>
-				<span className="font-semibold text-[21px] tracking-widest ">{question}</span>
+				<span className="font-semibold text-[1.25rem] tracking-widest ">{question}</span>
 				<img src={!selected ? pinSvg : pinFillSvg} alt="pin icon" />
 			</button>
 			<div
@@ -73,7 +73,7 @@ export const Item = ({ name, question, answer,children }: faqItemProps) => {
 	);
 };
 
-export const ItemFooter = ({onYesClicked,onNoClicked})=>{
+export const ItemFooter = ({onYesClicked,onNoClicked}:any)=>{
 	return <div className="w-full flex justify-between items-center pb-[33px]">
 		<p className="font-light text-brand-green text-base tracking-widest">
 			Does it answer your question?
