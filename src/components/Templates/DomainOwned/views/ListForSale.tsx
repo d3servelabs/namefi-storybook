@@ -1,8 +1,8 @@
 import React from 'react';
-import { NamefiBrandText } from '../../../index';
 import { BookmarkIcon } from '../../../Core/icons/Bookmark';
 import { DomainOwnedLayout } from '../components/DomainOwnedLayout';
 import { type LinkChipProps } from '../components/LinkChip';
+import NamefiBrandText from "../../../Core/NamefiBrandText";
 
 export interface ListForSaleProps {
 	links?: LinkChipProps[];

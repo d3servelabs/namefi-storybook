@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import { NamefiBrandText } from '../../../index';
 import { UnlockIcon } from '../../../Core/icons/Unlock';
 import { ReverseLeftIcon } from '../../../Core/icons/ReverseLeft';
 import { DoneIcon } from '../../../Core/icons/Done';
@@ -9,6 +8,7 @@ import { type LinkChipProps } from '../components/LinkChip';
 import { StepButton } from '../components/StepButton';
 import { Steps } from '../components/Steps';
 import { WalletInput } from '../components/WalletInput';
+import NamefiBrandText from "../../../Core/NamefiBrandText";
 
 export type TransferStatus = 'START' | 'UNLOCKED' | 'TRANSFERRING' | 'TRANSFERRED' | 'DONE';
 
