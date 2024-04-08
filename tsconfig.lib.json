@@ -14,12 +14,12 @@
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"jsx": "react",
+		"jsx": "react-jsx",
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"declarationDir": "types",
 		"noImplicitAny": false,
-		"baseUrl": ".",
+		"baseUrl": "."
 	},
 	"include": [
 		"src/index.ts",
