@@ -12,7 +12,7 @@ import {fileURLToPath} from 'url';
 import {createRequire} from 'node:module';
 import path from "path";
 import postcssNested from 'postcss-nested';
-import { swc, defineRollupSwcOption } from 'rollup-plugin-swc3';
+import {swc, defineRollupSwcOption} from 'rollup-plugin-swc3';
 
 const requireFile = createRequire(import.meta.url);
 const packageJson = requireFile('./package.json');
@@ -24,67 +24,67 @@ import tailwindConfig from './tailwind.config.js';
 import svgr from "vite-plugin-svgr";
 
 export default [
-    {
-        input: 'src/index.ts',
-        output: [
-            {
-                file: packageJson.main,
-                format: 'cjs',
-                sourcemap: true,
-            },
-            {
-                file: packageJson.module,
-                format: 'esm',
-                sourcemap: true,
-            },
-        ],
+	{
+		input: 'src/index.ts',
+		output: [
+			{
+				file: packageJson.main,
+				format: 'cjs',
+				sourcemap: true,
+			},
+			{
+				file: packageJson.module,
+				format: 'esm',
+				sourcemap: true,
+			},
+		],
 
-        plugins: [
-            peerDepsExternal(),
-            resolve(),
-            commonjs(),
-            swc(
-                defineRollupSwcOption({
-                    include: /\.[jt]sx?$/,
-                    exclude: /(node_modules|lib)/,
-                    tsconfig: 'tsconfig.lib.json',
-                    sourceMaps:true,
-                    cwd: __dirname,
-                    jsc:{
-                        baseUrl: __dirname,
-                    }
-                })
-            ),
-            svgr({icon: true, memo: true, exportType: "default",}),
-            postcss({
-                extensions: ['.css'],
-                plugins: [
-                    tailwindcss({
-                        ...tailwindConfig, important: '#v2', corePlugins: {
-                            preflight: false
-                        },
-                    }),
-                    postcssNested({
-                        bubble: ['media', 'tailwind'],
-                        unwrap: ['media', 'tailwind']
+		plugins: [
+			peerDepsExternal(),
+			resolve(),
+			commonjs(),
+			swc(
+				defineRollupSwcOption({
+					include: /\.[jt]sx?$/,
+					exclude: /(node_modules|lib)/,
+					tsconfig: 'tsconfig.lib.json',
+					sourceMaps: true,
+					cwd: __dirname,
+					jsc: {
+						baseUrl: __dirname,
+					}
+				})
+			),
+			svgr({icon: true, memo: true, exportType: "default",}),
+			postcss({
+				extensions: ['.css'],
+				plugins: [
+					postcssNested({
+						bubble: ['media', 'tailwind'],
+						unwrap: ['media', 'tailwind']
+					}),
+					tailwindcss({
+						...tailwindConfig, important: '#v2', corePlugins: {
+							preflight: false
+						},
+					})
+				],
+				extract: true,  // extracts all css to 'lib/styles.css'
+			}),
 
-                    })],
-                extract: true,  // extracts all css to 'lib/styles.css'
-            }),
-
-            typescript({tsconfig: './tsconfig.lib.json', sourceMap: false}),
-            image(),
-        ],
-        external: [
-            ...Object.keys({
-                ...packageJson.peerDependencies,
-            })
-        ]
-    },
-    {
-        input: 'lib/esm/types/index.d.ts',
-        output: [{file: 'lib/index.d.ts', format: 'esm'}],
-        plugins: [dts()],
-        external: [/\.css$/],
-    },
+			typescript({tsconfig: './tsconfig.lib.json', sourceMap: false}),
+			image(),
+		],
+		external: [
+			...Object.keys({
+				...packageJson.peerDependencies,
+			})
+		]
+	},
+	{
+		input: 'lib/esm/types/index.d.ts',
+		output: [{file: 'lib/index.d.ts', format: 'esm'}],
+		plugins: [dts()],
+		external: [/\.css$/],
+	},
 ];

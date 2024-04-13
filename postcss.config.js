@@ -4,8 +4,7 @@ const postcssNested = require('postcss-nested');
 const postcss = require('postcss');
 
 module.exports = postcss(
+	postcssNested(),
 	tailwindcss(),
 	autoprefixer(),
-	postcssNested(),
-	
 );
