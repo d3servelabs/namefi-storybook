@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import SearchDropdown from '.'
-import * as Popover from '@radix-ui/react-popover';
+import {Popover} from '@radix-ui/themes';
 import { HeaderSearchBar } from '../Core';
 
 export interface SearchBarDemoProps {
@@ -16,7 +16,6 @@ export const SearchBarDemo = ({price, isTdSelected, status}: SearchBarDemoProps)
           <Popover.Trigger >
                 <HeaderSearchBar searchValue={inputValue} onSearchValueChanged={setInputValue} />
           </Popover.Trigger>
-          <Popover.Portal >
             <Popover.Content align='center' sideOffset={10} >
               <SearchDropdown.Root>
                   
@@ -38,7 +37,6 @@ export const SearchBarDemo = ({price, isTdSelected, status}: SearchBarDemoProps)
                   }
               </SearchDropdown.Root>
             </Popover.Content>
-          </Popover.Portal>
       </Popover.Root>
   )
 }
