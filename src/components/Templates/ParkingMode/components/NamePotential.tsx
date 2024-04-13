@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { cn } from '../../../../utils/cn';
 import { PhoneMockup } from './PhoneMockup';
 import { Markdown } from './Markdown';
+import {css} from "@emotion/css";
 
 export interface NamePotentialProps {
 	name: string;
@@ -13,10 +14,10 @@ export interface NamePotentialProps {
 	className?: string;
 }
 
-const StyledMarkdown = styled(Markdown)`
+const markdownClasses = css`
 	font-family: 'Roboto Slab', serif;
 	line-height: 1.5em;
-`;
+`
 
 export const NamePotential = ({
 	name,
@@ -33,7 +34,7 @@ export const NamePotential = ({
 		)}>
 		<div className="flex-1 pt-40 md:pt-28 px-8 md:px-0 bg-[#161616] md:bg-none">
 			<div className="text-3xl md:text-6xl text-white font-semibold mb-8 md:mb-9">{name}</div>
-			<StyledMarkdown className="text-sm md:text-2xl mb-32 md:mb-24" content={description} />
+			<Markdown className={cn(markdownClasses,"text-sm md:text-2xl mb-32 md:mb-24")} content={description} />
 			<div>{children}</div>
 		</div>
 		<div className="m-auto py-8" ref={previewRef}>

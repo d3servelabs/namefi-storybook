@@ -4,8 +4,10 @@ import { cn } from '../../../../utils/cn';
 import iPhoneMaskSVG from '../../../../assets/iPhoneMask.svg';
 import iPhoneMaskFullSVG from '../../../../assets/iPhoneMaskFull.svg';
 import iPhoneSVG from '../../../../assets/iPhone.svg';
+import StyledDiv from "../../../Core/StyledDiv";
+import {css} from "@emotion/css";
 
-const PhoneMockupContent = styled.div`
+const PhoneMockupContent = StyledDiv(css`
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -17,7 +19,7 @@ const PhoneMockupContent = styled.div`
 	@media (min-width: 640px) {
 		mask-image: url(${iPhoneMaskSVG});
 	}
-`;
+`);
 
 export interface PhoneMockupProps {
 	children?: React.ReactNode;

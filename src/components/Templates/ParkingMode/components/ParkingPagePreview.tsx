@@ -1,27 +1,27 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { css, keyframes } from '@emotion/css';
+import StyledDiv from '../../../Core/StyledDiv';
 
 const frames = {
 	showUp: keyframes`
-	from {
-		transform: translateY(32px);
-    opacity: 0;
-	}
-	to% {
-		transform: translateY(0);
-    opacity: 1; 
-	}
-`,
+      from {
+        transform: translateY(32px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    `,
 
 	fadeIn: keyframes`
-	from {
-    opacity: 0;
-	}
-	to% {
-    opacity: 1; 
-	}
-`,
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	`,
 };
 
 const animations = {
@@ -33,7 +33,7 @@ const animations = {
 	`,
 };
 
-const Container = styled.div`
+const Container = StyledDiv(css`
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -43,7 +43,7 @@ const Container = styled.div`
 	position: relative;
 	background: linear-gradient(#21212180, #21212180),
 		linear-gradient(185deg, rgba(241, 255, 248, 0.25) -86.83%, rgba(222, 255, 240, 0) 223.83%);
-`;
+`);
 
 export interface ParkingPagePreviewProps {
 	domain: string;

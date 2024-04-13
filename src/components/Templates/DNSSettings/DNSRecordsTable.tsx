@@ -1,13 +1,13 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import styled from '@emotion/styled';
 import { Checkbox } from '../../Core/Checkbox';
 import { IconCircleButton } from '../../Core/Buttons/IconCircleButton';
 import { cn } from '../../../utils/cn';
 import { AddIcon } from '../../Core/icons/Add';
 import { DownloadIcon } from '../../Core/icons/Download';
 import { DeleteIcon } from '../../Core/icons/Delete';
+import {css} from "@emotion/css";
 
-const DNSRecordTableRowsGroup = styled.div`
+const DNSRecordTableRowsGroup = css`
 	display: grid;
 	grid-template-columns:
 		36px
@@ -141,14 +141,14 @@ export const DNSRecordsTable = ({
 				'flex-1 flex flex-col overflow-hidden w-full bg-black-900 rounded-[10px] font-primary pl-2 pt-2',
 				className,
 			)}>
-			<DNSRecordTableRowsGroup className="text-xs text-black-400 bg-black-900 pr-[14px]">
+			<div className={cn(DNSRecordTableRowsGroup,"text-xs text-black-400 bg-black-900 pr-[14px]")}>
 				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left"></div>
 				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">Type</div>
 				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">Host</div>
 				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">Points to</div>
 				<div className="min-h-[30px] p-2 mb-1.5 leading-4 text-left">TTL(s)</div>
-			</DNSRecordTableRowsGroup>
-			<DNSRecordTableRowsGroup className="flex-1 contents text-sm overflow-y-scroll text-black-500">
+			</div>
+			<div className={cn(DNSRecordTableRowsGroup,"flex-1 contents text-sm overflow-y-scroll text-black-500")}>
 				{records.map((record) => (
 					<DNSRecordsTableRow
 						key={record.id}
@@ -157,7 +157,7 @@ export const DNSRecordsTable = ({
 						onSelectedRowsChange={setSelectedRows}
 					/>
 				))}
-			</DNSRecordTableRowsGroup>
+			</div>
 			<DNSRecordsTableFooter
 				selectedRows={selectedRows}
 				onClickAdd={handleClickAdd}

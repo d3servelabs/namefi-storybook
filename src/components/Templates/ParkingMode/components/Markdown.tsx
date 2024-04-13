@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react';
-import styled from '@emotion/styled';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
+import StyledDiv from "../../../Core/StyledDiv";
+import {css} from "@emotion/css";
 
-const MarkdownContent = styled.div`
+const MarkdownContent = StyledDiv(css`
 	color: #d6d6d6;
 	font-weight: 300;
 	strong {
@@ -14,7 +15,7 @@ const MarkdownContent = styled.div`
 		color: #48e59b;
 		font-style: normal;
 	}
-`;
+`);
 
 export interface MarkdownProps {
 	content?: string;

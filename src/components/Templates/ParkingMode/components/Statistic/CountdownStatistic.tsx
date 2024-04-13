@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled from '@emotion/styled';
 import { Statistic } from './Statistic';
+import StyledDiv from '../../../../Core/StyledDiv';
+import { css } from '@emotion/css';
 
 export interface CountdownStatisticProps {
 	title: React.ReactNode;
@@ -12,9 +13,9 @@ export interface CountdownStatisticProps {
 
 const pretty = (value: number) => String(Math.floor(value)).padStart(2, '0');
 
-const StyledCountdownValue = styled.div`
+const StyledCountdownValue = StyledDiv(css`
 	letter-spacing: 0.25em;
-`;
+`);
 
 export const CountdownStatistic = ({
 	title,
@@ -23,9 +24,11 @@ export const CountdownStatistic = ({
 	tip,
 	className,
 }: CountdownStatisticProps) => {
-	const [countdown, setCountdown] = useState<{ hours: string; minutes: string; seconds: string }>(
-		{ hours: '--', minutes: '--', seconds: '--' },
-	);
+	const [countdown, setCountdown] = useState<{
+		hours: string;
+		minutes: string;
+		seconds: string;
+	}>({ hours: '--', minutes: '--', seconds: '--' });
 
 	useEffect(() => {
 		const update = () => {
@@ -42,10 +45,10 @@ export const CountdownStatistic = ({
 			const seconds = pretty((distance % (1000 * 60)) / 1000);
 
 			setCountdown({ hours, minutes, seconds });
-		}
+		};
 
 		const timer = setInterval(update, 1000);
-		update();	
+		update();
 
 		return () => clearInterval(timer);
 	}, [time]);
