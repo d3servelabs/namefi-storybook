@@ -229,3 +229,57 @@
 /*    @apply text-sm font-primary text-brand-light*/
 /*  }*/
 /*}*/
+
+.__namefi__steps-item {
+    & > :first-child {
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            border-top-width: 1px;
+            border-color: #e6eedb;
+            top: 50%;
+            z-index: 0;
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            left: 50%;
+        }
+
+        & > :nth-child(2) {
+            position: absolute;
+            left: 50%;
+            width: 100%;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    & > :last-child {
+        padding: 0 12px;
+    }
+
+    &:first-child {
+        & > :first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    &:last-child {
+        & > :first-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
