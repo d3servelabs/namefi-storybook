@@ -1,5 +1,10 @@
-import React, { useId, useState } from 'react';
+import React, {useCallback, useId, useState} from 'react';
 import clsx from 'clsx';
+import ClipboardPasteSVG from '../../../public/assets/Clipboard-Paste.svg';
+import DoneSVG from '../../../public/assets/Done.svg';
+import EyeOpenSVG from '../../../public/assets/eye-open.svg';
+import EyeNoneSVG from '../../../public/assets/Eye-None.svg'
+
 
 export type InputComponentProps = {
 	incorrectAuthCode?: boolean;
@@ -18,8 +23,18 @@ export const CodeInputField = ({
 	onPasteClicked,
 	onValueChanged,
 }: InputComponentProps) => {
+
 	const [isVisible, setIsVisible] = useState(false);
 	const buttonKey = useId();
+
+	const handlePastClicked = useCallback(
+		async () => {
+		onPasteClicked?.();
+		onValueChanged?.(await navigator.clipboard.readText());
+		},
+		[onValueChanged,onPasteClicked],
+	);
+
 	return (
 		<form className="relative w-[300px] max-h-[75px] flex flex-col justify-between ">
 			<label
@@ -44,7 +59,7 @@ export const CodeInputField = ({
 					className="absolute right-5 top-[17px] "
 					type="button">
 					<img
-						src={incorrectAuthCode ? '/assets/Clipboard-Paste.svg' : '/assets/Done.svg'}
+						src={incorrectAuthCode ? ClipboardPasteSVG : DoneSVG}
 						alt="Clipboard-Paste image"
 						role="img"
 					/>
@@ -57,7 +72,7 @@ export const CodeInputField = ({
 						className="absolute right-5 top-[17px] "
 						type="button">
 						<img
-							src={isVisible ? '/assets/eye-open.svg' : '/assets/Eye-None.svg'}
+							src={isVisible ? EyeOpenSVG : EyeNoneSVG}
 							alt="eyen image"
 							role="img"
 						/>
@@ -67,11 +82,11 @@ export const CodeInputField = ({
 				<>
 					<button
 						key={buttonKey}
-						onClick={onPasteClicked}
+						onClick={handlePastClicked}
 						className="absolute right-5 top-[17px] "
 						type="button">
 						<img
-							src="/assets/Clipboard-Paste.svg"
+							src={ClipboardPasteSVG}
 							alt="Clipboard-Paste image"
 							role="img"
 						/>
