@@ -1,60 +1,231 @@
 
-.containers{
+.containers {
     margin-inline: auto;
     width: 100%;
     /* min-height: 100vh; */
-  }
-  .namefi-cont{
+}
+
+.namefi-cont {
     margin-inline: auto;
     width: min(1200px, 100%);
-  }
-  .hero-bg{
+}
+
+.hero-bg {
     margin-inline: auto;
     width: min(1728px, 100%);
-  }
-  .namefi-header{
+}
+
+.namefi-header {
     /* background: #111111b3; */
-    background: linear-gradient(0deg, #21212180, #21212180),linear-gradient(185.03deg, #f1fff84d -86.83%, #defff000 223.83%);
-  }
- 
-  @media screen and (min-width: 1024px) {
-    .cont{
-    width: min(1200px, 100% - 58px);
+    background: linear-gradient(0deg, #21212180, #21212180), linear-gradient(185.03deg, #f1fff84d -86.83%, #defff000 223.83%);
+}
+
+@media screen and (min-width: 1024px) {
+    .cont {
+        width: min(1200px, 100% - 58px);
     }
-  }
- 
+}
+
 ::-webkit-scrollbar {
-  padding: 0 6px;
+    padding: 0 6px;
 }
 
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-  background: transparent; 
+    background: transparent;
 }
 
 ::-webkit-scrollbar-track:vertical {
-  border-left: 2px solid #48E59B33;
+    border-left: 2px solid #48E59B33;
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-  border-left: 2px solid #71E0AC;
+    border-left: 2px solid #71E0AC;
 }
 
 ::-webkit-scrollbar-track:horizontal {
-  border-top: 2px solid #48E59B33;
+    border-top: 2px solid #48E59B33;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  border-top: 2px solid #71E0AC;
+    border-top: 2px solid #71E0AC;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+.h1 {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.h1.italic {
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 300;
+}
+
+.h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(28rem / 16);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: calc(2.8rem / 16);
+}
+
+.h2-character {
+    font-family: "Zilla Slab Highlight", sans-serif;
+    font-size: calc(24rem / 16);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: calc(2.4rem / 16);
+}
+
+.h3 {
+    font-family: Roboto, sans-serif;
+    font-size: calc(21rem / 16);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 180%;
+    letter-spacing: calc(5% * 21rem / 16);
+}
+
+.h3-subtitle {
+    font-family: Roboto, sans-serif;
+    font-size: calc(21rem / 16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 180%;
+    letter-spacing: calc(10% * 21rem / 16);
+}
+
+.h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(18rem / 16);
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: calc(5% * 18rem / 16);
+}
+
+.h4-subtitle {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: calc(18rem / 16);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: calc(2% * 18rem / 16);
+}
+
+
+.h4-character {
+    font-family: "Zilla Slab Highlight", sans-serif;
+    font-size: calc(18rem / 16);
+    font-style: normal;
+    letter-spacing: calc(10% * 18rem / 16);
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.h4-body {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: calc(18rem / 16);
+    font-style: normal;
+    letter-spacing: calc(2% * 18rem / 16);
+    font-weight: 400;
+    line-height: normal;
 }
 
 .h5 {
-  font-family: 'Roboto Mono', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: normal;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: calc(2% * 1rem);
 }
+
+.h5-subtitle {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: calc(2% * 1rem);
+}
+
 .h6 {
-  font-family: 'Roboto Mono', sans-serif;
-  font-size: calc(14rem /16);
-  font-weight: 400;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: calc(14rem / 16);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
 }
+
+.body-1 {
+    font-family: Roboto, sans-serif;
+    font-size: calc(14rem/16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: calc(5%*14rem/1);
+}
+
+.body-2 {
+    font-family: Roboto, sans-serif;
+    font-size: calc(14rem/1);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: calc(5%*14rem/1);
+}
+
+.body-3 {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: calc(14rem/1);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.subtitle-1 {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: calc(12rem/1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: calc(2%*12rem/1);
+}
+
+.subtitle-2 {
+    font-family: Roboto, sans-serif;
+    font-size: calc(12rem/1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: calc(5%*12rem/1);
+}
+
+/*@layer base {*/
+/*  h1 {*/
+/*    @apply font-primary text-4xl text-grey*/
+/*  }*/
+/*  h2 {*/
+/*    @apply text-white text-7lg tracking-widest font-semibold*/
+/*  }*/
+/*  h3 {*/
+/*    @apply text-white text-5.25lg font-primary tracking-wider font-semibold*/
+/*  }*/
+/*  h4 {*/
+/*    @apply text-white text-lg tracking-wider*/
+/*  }*/
+/*  h5 {*/
+/*    @apply font-primary text-base tracking-wide*/
+/*  }*/
+/*  h6 {*/
+/*    @apply text-sm font-primary text-brand-light*/
+/*  }*/
+/*}*/
