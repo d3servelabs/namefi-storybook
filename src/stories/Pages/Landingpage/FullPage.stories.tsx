@@ -72,7 +72,7 @@ export const FullPage: Story = {
 					],
 				},
 			],
-		},
+		} as any,
 		featuredCardProps: {
 			cardContent: [
 				{
@@ -99,6 +99,6 @@ export const FullPage: Story = {
 					img: <DefiIcon className="" />,
 				},
 			],
-		},
+		} as any,
 	},
 };
