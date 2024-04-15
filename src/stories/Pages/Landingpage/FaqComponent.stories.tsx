@@ -5,7 +5,6 @@ const meta = {
 	title: 'Pages/Landingpage',
 	component: List,
 	parameters: {
-		// More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
 		layout: 'fullscreen',
 	},
 } satisfies Meta<typeof List>;
@@ -73,7 +72,7 @@ export const FaqComponent: Story = {
 			<List>
 				{faqContent.map(({ question, answer }, index) => {
 					return (
-						<Item name={index+1} question={question} answer={answer}>
+						<Item name={index + 1} question={question} answer={answer}>
 							<ItemFooter />
 						</Item>
 					);
