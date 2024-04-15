@@ -1,8 +1,8 @@
-import React, {Dispatch, SetStateAction, useContext, useMemo, useState} from 'react';
+import React, { Dispatch, SetStateAction, useContext, useMemo, useState } from 'react';
 import { BaseButton, SolidButton } from './SolidButton';
 import pinSvg from '../../../public/assets/pin.svg';
 import pinFillSvg from '../../../public/assets/pin-fill.svg';
-import {cn} from "../../utils/cn";
+import { cn } from '../../utils/cn';
 
 type faqItemProps = {
 	name: any;
@@ -15,24 +15,28 @@ export type FaqComponentProps = {
 	children: React.ReactNode;
 };
 
-export const FaqContext = React.createContext<{
-	selected: any, setSelected: Dispatch<SetStateAction<any>>
-}| undefined>(undefined);
+export const FaqContext = React.createContext<
+	| {
+			selected: any;
+			setSelected: Dispatch<SetStateAction<any>>;
+	  }
+	| undefined
+>(undefined);
 
-const useFaqContext =()=>{
+const useFaqContext = () => {
 	const ctx = useContext(FaqContext);
 
-	if(!ctx) throw 'FAQ Context not found'
+	if (!ctx) throw 'FAQ Context not found';
 
-	return ctx
-}
+	return ctx;
+};
 export const List = ({ children }: FaqComponentProps) => {
 	const [selected, setSelected] = useState<any>();
 
 	return <FaqContext.Provider value={{ selected, setSelected }}>{children}</FaqContext.Provider>;
 };
 
-export const Item = ({ name, question, answer,children }: faqItemProps) => {
+export const Item = ({ name, question, answer, children }: faqItemProps) => {
 	const ctx = useFaqContext();
 	const selected = useMemo(() => {
 		return !!ctx.selected && !!name && ctx.selected === name;
@@ -45,7 +49,7 @@ export const Item = ({ name, question, answer,children }: faqItemProps) => {
 				selected && 'border-primary-500',
 			)}>
 			<button
-				onClick={() => ctx.setSelected(selected? undefined: name)}
+				onClick={() => ctx.setSelected(selected ? undefined : name)}
 				className={cn(
 					` relative w-full flex items-center justify-between text-brand-200 hover:text-white duration-300 min-h-[80px]
                   before:absolute
@@ -73,16 +77,18 @@ export const Item = ({ name, question, answer,children }: faqItemProps) => {
 	);
 };
 
-export const ItemFooter = ({onYesClicked,onNoClicked}:any)=>{
-	return <div className="w-full flex justify-between items-center pb-[33px]">
-		<p className="font-light text-brand-green text-base tracking-widest">
-			Does it answer your question?
-		</p>
-		<div className="flex gap-5">
-			<div>
-				<SolidButton onClick={onYesClicked}>Yes</SolidButton>
+export const ItemFooter = ({ onYesClicked, onNoClicked }: any) => {
+	return (
+		<div className="w-full flex justify-between items-center pb-[33px]">
+			<p className="font-light text-brand-green text-base tracking-widest">
+				Does it answer your question?
+			</p>
+			<div className="flex gap-5">
+				<div>
+					<SolidButton onClick={onYesClicked}>Yes</SolidButton>
+				</div>
+				<BaseButton onClick={onNoClicked}>No, ask a Human</BaseButton>
 			</div>
-			<BaseButton onClick={onNoClicked}>No, ask a Human</BaseButton>
 		</div>
-	</div>
-}
+	);
+};
