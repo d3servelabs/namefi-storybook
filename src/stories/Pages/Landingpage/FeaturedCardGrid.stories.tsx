@@ -15,7 +15,7 @@ const meta = {
 	parameters: {
 		layout: 'centered',
 	},
-} satisfies Meta<typeof FeaturedCardComponent>;
+} satisfies Meta<FeaturedCardComponent.FeaturedCardGridProps>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -47,7 +47,7 @@ export const FeaturedCard: Story = {
 				img: <DefiIcon className="" />,
 			},
 		],
-	},
+	} as any,
 	render() {
 		return (
 			<>
