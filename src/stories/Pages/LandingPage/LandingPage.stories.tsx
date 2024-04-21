@@ -19,7 +19,6 @@ type Story = StoryObj<typeof meta>;
 
 export const LandingPage: Story = {
 	args: {
-		homepageText: 'Trading domains on chain.',
 		faqComponentProps: {
 			faqContent: [
 				{
