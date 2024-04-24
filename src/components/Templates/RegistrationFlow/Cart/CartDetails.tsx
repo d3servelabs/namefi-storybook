@@ -3,6 +3,7 @@ import { NetworkLogo } from '../../../Core';
 import TokenIcon from '../../../Core/icons/TokenIcon';
 import React, { ComponentProps } from 'react';
 import { cn } from '../../../../utils/cn';
+import { isNil } from 'ramda';
 
 export type CardDetailsProps = ComponentProps<'div'> & {
 	price: number;
@@ -55,9 +56,9 @@ export default function CartDetails({
 						<span className="text-sm font-primary">$NFSC</span>
 					</p>
 				</div>
-				{!!availableTokens && (
+				{!isNil(availableTokens) && (
 					<div className="contents font-normal tracking-wider text-white">
-						<p className="text-sm "></p>
+						<p className="text-sm ">Available:</p>
 						<TokenIcon className={'w-5 h-5 my-auto'} />
 						<p className="text-lg break-keep">
 							{detailedAvailableTokens.wholeAmount}.
