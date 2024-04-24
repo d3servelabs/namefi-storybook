@@ -64,7 +64,7 @@ export default [
 						unwrap: ['media', 'tailwind']
 					}),
 					tailwindcss({
-						...tailwindConfig, important: '#v2', corePlugins: {
+						...tailwindConfig, corePlugins: {
 							preflight: false
 						},
 					})

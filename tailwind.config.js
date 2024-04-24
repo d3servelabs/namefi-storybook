@@ -1,6 +1,5 @@
 const colors = require('tailwindcss/colors');
 
-
 /**
  * @template T
  * @param {number} start
@@ -32,7 +31,17 @@ const baseUnitX = Object.fromEntries(
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
-	safelist: [{ pattern: /(primary|brand|error|secondary)/ }, {pattern: /animate/}],
+	safelist: [
+		{ pattern: /(primary|brand|error|secondary)/ },
+		// {
+		// 	pattern: /(grid|cols|row|span|items|align|justify|place|order)/,
+		// 	variants: ['xl','lg','md','sm','xs']
+		// },
+		// {
+		// 	pattern: /(block|hidden)/,
+		// 	variants: ['xl','lg','md','sm','xs']
+		// },
+	],
 	theme: {
 		extend: {
 			borderRadius: baseUnit,
@@ -91,17 +100,16 @@ module.exports = {
 
 					950: '#141C18',
 					5: '#141C18',
-
 				},
-				secondary:{
-					DEFAULT:'#015AD5',
-					500:'#015AD5'
+				secondary: {
+					DEFAULT: '#015AD5',
+					500: '#015AD5',
 				},
 				grey: {
 					lighter: '#D6D6D6',
 					50: '#BCBCBC',
 					DEFAULT: '#797979',
-					darker: '#4B4B4B'
+					darker: '#4B4B4B',
 				},
 				brand: {
 					100: '#c6eedb0d',
@@ -154,7 +162,7 @@ module.exports = {
 				wiggle: {
 					'0%, 100%': { transform: 'rotate(-3deg)' },
 					'50%': { transform: 'rotate(3deg)' },
-				}
+				},
 			},
 			animation: {
 				loading: 'loading 1s ease-in-out infinite alternate',
@@ -164,7 +172,6 @@ module.exports = {
 				slowSpin: 'spin 3s linear infinite',
 				wiggle: 'wiggle .5s ease-in-out infinite',
 				jitter: 'wiggle .15s ease-in-out 5',
-
 			},
 		},
 	},
