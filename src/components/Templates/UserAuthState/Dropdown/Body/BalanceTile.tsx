@@ -3,7 +3,7 @@ import TokenIcon from '../../../../Core/icons/TokenIcon';
 import React,{ ComponentProps } from 'react';
 import { cn } from '../../../../../utils/cn';
 
-function BalanceTile({ balance, loading, className, children, ...props }: ComponentProps<'div'> & {balance:number, loading?:boolean}) {
+function BalanceTile({ balance,approxBalance = true, loading, className, children, ...props }: ComponentProps<'div'> & {balance:number,approxBalance?:boolean, loading?:boolean}) {
 	return (
 		<div
 			{...props}
@@ -19,7 +19,8 @@ function BalanceTile({ balance, loading, className, children, ...props }: Compon
 					) : (
 					<Balance
 						balance={balance}
-						className={'text-[#797979] h5'}
+						className={'text-primary h5'}
+						approxBalance
 						approxBalanceClassName={'h6 text-[#797979] '}
 					/>
 
