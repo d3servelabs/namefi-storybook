@@ -18,6 +18,7 @@ function BalanceTile({ balance,approxBalance = true, loading, className, childre
 					<div className={'rounded-full animate-pulse bg-primary-light min-w-[15ch] leading-normal'}/>
 					) : (
 					<Balance
+						horizontal
 						balance={balance}
 						className={'text-primary h5'}
 						approxBalance
