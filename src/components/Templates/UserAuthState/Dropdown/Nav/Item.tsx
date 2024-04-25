@@ -1,5 +1,6 @@
 import React, { ComponentProps, useState } from 'react';
 import { cn } from '../../../../../utils/cn';
+import { ArrowRight } from 'lucide-react';
 
 function NavItem({
 	children,
@@ -11,10 +12,10 @@ function NavItem({
 		<a
 			{...props}
 			className={cn(
-				'table-row align-middle hover:bg-primary-20/60 active:bg-primary-20 even:border-t-[2px] border-neutral-400/30 cursor-pointer',
+				'table-row align-middle group even:border-t-[2px] border-neutral-400/30 cursor-pointer',
 				className,
 			)}>
-			<td className={'min-w-[10%] max-w-[25%] rounded-l-5'}></td>
+			<td className={'rounded-l-5'}></td>
 			<td className={'w-9'}>
 				<div
 					className={
@@ -24,10 +25,15 @@ function NavItem({
 				</div>
 			</td>
 			<td className={'w-min'}>
-				<div className={'pl-4 py-5 h5 text-white relative'}>{children}</div>
+				<div
+					className={'pl-4 py-5 h5 text-white relative text-nowrap'}>
+					{children}{' '}
+					<ArrowRight width={22} height={22} className={'inline text-primary invisible group-hover:visible group-hover:translate-x-1 duration-500 transition-all'} />
+
+				</div>
 			</td>
 
-			<td className={'min-w-[10%] max-w-[25%]  rounded-r-5'}></td>
+			<td className={'rounded-r-5'}></td>
 		</a>
 	);
 }
