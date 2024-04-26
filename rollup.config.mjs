@@ -22,6 +22,9 @@ const __dirname = path.dirname(__filename); // get the name of the directory
 import tailwindcss from 'tailwindcss';
 import tailwindConfig from './tailwind.config.js';
 import svgr from "vite-plugin-svgr";
+import postcssImport from "postcss-import";
+import autoprefixer from "autoprefixer";
+import postcssInline from "@sector-labs/postcss-inline-class";
 
 export default [
 	{
@@ -59,15 +62,20 @@ export default [
 			postcss({
 				extensions: ['.css'],
 				plugins: [
+					postcssImport(),
 					postcssNested({
 						bubble: ['media', 'tailwind'],
 						unwrap: ['media', 'tailwind']
 					}),
+					postcssInline(),
 					tailwindcss({
 						...tailwindConfig, corePlugins: {
 							preflight: false
 						},
-					})
+					}),
+
+					autoprefixer(),
+
 				],
 				extract: true,  // extracts all css to 'lib/styles.css'
 			}),
