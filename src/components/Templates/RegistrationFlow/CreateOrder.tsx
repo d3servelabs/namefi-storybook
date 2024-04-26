@@ -27,7 +27,11 @@ export const Root = ({ children }) => {
 export function ActionButton(props: ButtonProps) {
 	return (
 		<Button {...props}>
-			View order <ArrowRightIcon className={'text-primary w-5.5 h-5.5'} />
+			{props.children || (
+				<>
+					Proceed <ArrowRightIcon className={'text-primary w-5.5 h-5.5'} />
+				</>
+			)}
 		</Button>
 	);
 }
