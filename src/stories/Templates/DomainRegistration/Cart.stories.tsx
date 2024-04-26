@@ -1,24 +1,26 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Demo } from "../../../components/Templates/RegistrationFlow/Cart/Demo";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Demo } from '../../../components/Templates/RegistrationFlow/Cart/Demo';
 
-const meta = {
-    title: 'Templates/DomainRegistration/Cart',
-    component: Demo,
-    tags: ['autodocs'],
-    parameters: {
-        layout: 'centered'
-    }
-}satisfies Meta<typeof Demo>
+
+const meta: Meta<typeof Demo> = {
+	title: 'Templates/DomainRegistration/Cart',
+	component: Demo,
+	tags: ['autodocs'],
+	parameters: {
+		layout: 'centered',
+	},
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const CartStory: Story = {
-    args: {
-        checkedOut: false,
-        isConnectWallet: false,
-        isConnectWalletError: false,
-        years: 3,
-        domainName: "example.com",
-    }
-}
+	args: {
+		checkedOut: false,
+		isConnectWallet: false,
+		isConnectWalletError: false,
+		years: 3,
+		price:20,
+		domainName: 'example.com',
+	},
+};

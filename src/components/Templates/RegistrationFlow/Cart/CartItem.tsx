@@ -1,7 +1,8 @@
-import { GhostButton } from '../../../Core';
+import { GhostButton } from '../../../Core/Buttons/GhostButton';
 import { TrashIcon } from '@radix-ui/react-icons';
 import React, { ComponentProps } from 'react';
 import { cn } from '../../../../utils/cn';
+import centerTruncateString from '../../../../utils/centerTruncateString';
 
 export default function CartItem({
 	domainName,
@@ -10,15 +11,17 @@ export default function CartItem({
 	trashButton,
 }: {
 	domainName: string;
-	years: string[];
+	years: number;
 	price: number;
 	trashButton?: React.ReactNode;
 }) {
 	return (
 		<>
 			<div className="relative w-full flex justify-between">
-				<div className="w-[120px] h-[120px] bg-brand-black rounded-lg drop-shadow-[0_2px_4px_rgba(202,202,202,0.25)] flex justify-center items-center">
-					<p className="font-bold text-xs tracking-widest text-white">{domainName}</p>
+				<div className="w-[120px] h-[120px] bg-brand-black rounded-lg p-1 drop-shadow-[0_2px_4px_rgba(202,202,202,0.25)] flex justify-center items-center">
+					<p className="font-bold text-xs tracking-widest text-white text-nowrap">
+						{centerTruncateString(domainName, 14)}
+					</p>
 				</div>
 				<div className="w-[332px] flex justify-between items-start text-white font-primary font-normal ">
 					<div className="min-w-[109px] flex flex-col gap-2  ">
@@ -37,6 +40,7 @@ export default function CartItem({
 		</>
 	);
 }
+
 CartItem.TrashButton = TrashButton;
 
 function TrashButton(props: ComponentProps<typeof GhostButton>) {
@@ -48,3 +52,4 @@ function TrashButton(props: ComponentProps<typeof GhostButton>) {
 		</GhostButton>
 	);
 }
+

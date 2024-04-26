@@ -1,6 +1,6 @@
 export default function centerTruncateString(str: string, length: number,filler= "...") {
     if(str.length > length) {
-        const charsLength = str.length - length - filler.length;
+        const charsLength = length - filler.length;
         const firstPartLength = Math.floor(charsLength/2);
         const secondPartLength = charsLength - firstPartLength;
 

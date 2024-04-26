@@ -1,10 +1,10 @@
 import React from 'react';
 import * as CartActions from './CartActions';
 import * as AgreeToTerms from './AgreeToTerms';
-import  CartDetails from './CartDetails';
+import CartDetails from './CartDetails';
 import CartItem from './CartItem';
-import CartHeader from "./CartHeader";
-import CartRoot from "./CartRoot";
+import CartHeader from './CartHeader';
+import CartRoot from './CartRoot';
 
 export type CartProps = {
 	checkedOut?: boolean;
@@ -20,17 +20,18 @@ export type CartProps = {
 export const Demo = ({ checkedOut, isConnectWallet, domainName, years, price }: CartProps) => {
 	return (
 		<CartRoot>
-				<CartHeader/>
-
+			<CartHeader />
+			{!!(domainName && price && years) && (
 				<CartItem domainName={domainName} price={price} years={years} />
-				<CartDetails availableTokens={100} price={20} />
+			)}
+			<CartDetails availableTokens={100} price={20} />
 
-				{!checkedOut && (
-					<AgreeToTerms.Root>
-						<AgreeToTerms.Checkbox></AgreeToTerms.Checkbox>
-						<AgreeToTerms.Label>I agree to the terms and conditions</AgreeToTerms.Label>
-					</AgreeToTerms.Root>
-				)}
+			{!checkedOut && (
+				<AgreeToTerms.Root>
+					<AgreeToTerms.Checkbox></AgreeToTerms.Checkbox>
+					<AgreeToTerms.Label>I agree to the terms and conditions</AgreeToTerms.Label>
+				</AgreeToTerms.Root>
+			)}
 			<CartActions.Root>
 				<CartActions.BackButton></CartActions.BackButton>
 				<CartActions.CheckoutButton></CartActions.CheckoutButton>
@@ -38,4 +39,3 @@ export const Demo = ({ checkedOut, isConnectWallet, domainName, years, price }: 
 		</CartRoot>
 	);
 };
-
