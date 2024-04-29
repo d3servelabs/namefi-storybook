@@ -1,6 +1,6 @@
 {
 	"name": "@namefi/ui",
-	"version": "2.2.18",
+	"version": "2.2.19",
 	"engines": {
 		"node": ">=20 < 21",
 		"npm": ">=10 < 11"
@@ -120,7 +120,6 @@
 		"vite-plugin-svgr": "^4.2.0"
 	},
 	"peerDependencies": {
-
 		"@radix-ui/react-tooltip": "^1.0.7",
 		"@emotion/css": "^11.11.0",
 		"@types/react": "*",
