@@ -120,6 +120,8 @@
 		"vite-plugin-svgr": "^4.2.0"
 	},
 	"peerDependencies": {
+
+		"@radix-ui/react-tooltip": "^1.0.7",
 		"@emotion/css": "^11.11.0",
 		"@types/react": "*",
 		"@types/react-dom": "*",
