@@ -11,3 +11,4 @@ export { StepDiagram } from './StepDiagram';
 export { default as Form } from './Form';
 export * from './Buttons';
 export * from './icons';
+export { Balance } from './Balance';
