@@ -38,7 +38,7 @@ export default function CartDetails({
 							</div>
 							<NetworkLogo network={1} className={'w-5 h-5'} />
 							<div className={'text-xs text-primary '}>
-								<span className={'line-through'}>(0.007≈13.5$)</span>
+								<span className={'line-through'}>({networkFeeETH}≈{networkFeeUSD}$)</span>
 								<br />
 								<mark className={'text-xs bg-primary'}>Namefi Discount</mark>
 							</div>
