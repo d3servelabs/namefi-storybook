@@ -24,7 +24,7 @@ export const Demo = ({ checkedOut, isConnectWallet, domainName, years, price }: 
 			{!!(domainName && price && years) && (
 				<CartItem domainName={domainName} price={price} years={years} />
 			)}
-			<CartDetails availableTokens={100} price={20} />
+			<CartDetails availableTokens={100} price={20} networkFeeETH={0.001} networkFeeUSD={3.2} />
 
 			{!checkedOut && (
 				<AgreeToTerms.Root>

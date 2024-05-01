@@ -3,6 +3,8 @@ import { TrashIcon } from '@radix-ui/react-icons';
 import React, { ComponentProps } from 'react';
 import { cn } from '../../../../utils/cn';
 import centerTruncateString from '../../../../utils/centerTruncateString';
+import TokenIcon from "../../../Core/icons/TokenIcon";
+import {CheckCheck} from "lucide-react";
 
 export default function CartItem({
 	domainName,
@@ -27,10 +29,16 @@ export default function CartItem({
 					<div className="min-w-[109px] flex flex-col gap-2  ">
 						<p>{domainName}</p>
 						<p>{years} Year</p>
+						<div className={'flex items-center justify-start gap-0.5'}>
+							<CheckCheck className={'text-primary w-4 h-4'} />
+							<p className={"text-2.5lg text-[#D6D6D6] font-['Roboto']"}>
+								WHOIS Privacy, AutoPark™, AuthENS™
+							</p>
+						</div>
 					</div>
 					<div className="relative flex gap-6 items-center ">
 						<p className="flex gap-3 text-sm tracking-[0.02em]">
-							<span>{price}</span>
+							<TokenIcon className={'w-5.25 h-5.25'}/> <span>{price}</span>
 							<span>$NFSC</span>
 						</p>
 						{trashButton}
