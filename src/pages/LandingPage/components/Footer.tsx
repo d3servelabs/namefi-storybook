@@ -1,14 +1,14 @@
 import React, { ComponentProps } from 'react';
-import { SubscriptionFooter } from './Subscription';
+// import { SubscriptionFooter } from './Subscription';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
 
-import { SocialLinks } from './SocialLinks';
+// import { SocialLinks } from './SocialLinks';
 
 export type FooterProps = {
-	socialLinks: ComponentProps<typeof SocialLinks>;
+	// socialLinks: ComponentProps<typeof SocialLinks>;
 	children?: React.ReactNode;
 };
-export const Footer = ({ socialLinks, children }: FooterProps) => {
+export const Footer = ({ children }: FooterProps) => {
 	return (
 		<div className="w-full bg-[#24242480] flex justify-center items-center py-5 rounded-t-[30px] ">
 			<div className="w-[960px] xl:w-[1200px] h-[243px] flex flex-col justify-between">
@@ -22,7 +22,7 @@ export const Footer = ({ socialLinks, children }: FooterProps) => {
 						{/*<SubscriptionFooter />*/}
 					</div>
 					<div className="w-[336px] flex justify-between items-center">
-						<SocialLinks {...socialLinks} />
+						{/* <SocialLinks {...socialLinks} /> */}
 					</div>
 				</div>
 				<nav className="w-full flex justify-between items-center">

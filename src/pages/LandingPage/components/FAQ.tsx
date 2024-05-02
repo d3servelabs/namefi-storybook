@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction, useContext, useMemo, useState } from 'react';
-import { BaseButton, SolidButton } from './SolidButton';
+import { ArrowRight } from 'lucide-react';
+import { Button } from './Button';
 import pinSvg from '../../../../public/assets/pin.svg';
 import pinFillSvg from '../../../../public/assets/pin-fill.svg';
 import { cn } from '../../../utils/cn';
@@ -85,9 +86,14 @@ export const ItemFooter = ({ onYesClicked, onNoClicked }: any) => {
 			</p>
 			<div className="flex gap-5">
 				<div>
-					<SolidButton onClick={onYesClicked}>Yes</SolidButton>
+					<Button type="tonal" onClick={onYesClicked}>
+						Yes
+					</Button>
 				</div>
-				<BaseButton onClick={onNoClicked}>No, ask a Human</BaseButton>
+				<Button type="outlined" onClick={onNoClicked}>
+					<span>No, ask a Human</span>
+					<ArrowRight className="w-4.5 h-4.5 text-primary-500" />
+				</Button>
 			</div>
 		</div>
 	);

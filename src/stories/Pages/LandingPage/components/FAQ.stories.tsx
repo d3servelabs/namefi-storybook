@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Item, ItemFooter, List } from '../../../../pages/LandingPage/components/Faq';
+import { Item, ItemFooter, List } from '../../../../pages/LandingPage/components/FAQ';
 
 const meta = {
 	title: 'Pages/LandingPage/Components',
@@ -12,7 +12,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const FaqComponent: Story = {
+export const FAQ: Story = {
 	args: {
 		faqContent: [
 			{
