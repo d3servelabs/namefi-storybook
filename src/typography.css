@@ -32,7 +32,7 @@
 
 .h2-all {
     @inline .h2;
-	@inline .h2-letter-spacing;
+    @inline .h2-letter-spacing;
 }
 
 .h2-character-letter-spacing {
@@ -49,7 +49,7 @@
 
 .h2-character-all {
     @inline .h2-character;
-	@inline .h2-character-letter-spacing;
+    @inline .h2-character-letter-spacing;
 }
 
 /* endregion H2 */
@@ -68,7 +68,7 @@
 
 .h3-all {
     @inline .h3;
-	@inline .h3-letter-spacing;
+    @inline .h3-letter-spacing;
 }
 
 .h3-subtitle-letter-spacing {
@@ -85,7 +85,7 @@
 
 .h3-subtitle-all {
     @inline .h3-subtitle;
-	@inline .h3-subtith3-letter-spacing;
+    @inline .h3-subtith3-letter-spacing;
 }
 
 /* endregion H3 */
@@ -104,7 +104,7 @@
 
 .h4-all {
     @inline .h4;
-	@inline .h4-letter-spacing;
+    @inline .h4-letter-spacing;
 }
 
 .h4-subtitle-letter-spacing {
@@ -121,7 +121,7 @@
 
 .h4-subtitle-all {
     @inline .h4;
-	@inline .h4-letter-spacing;
+    @inline .h4-letter-spacing;
 }
 
 
@@ -139,7 +139,7 @@
 
 .h4-character-all {
     @inline .h4;
-	@inline .h4-letter-spacing;
+    @inline .h4-letter-spacing;
 }
 
 
@@ -157,7 +157,7 @@
 
 .h4-body-all {
     @inline .h4;
-	@inline .h4-letter-spacing;
+    @inline .h4-letter-spacing;
 }
 
 /* endregion H4 */
@@ -175,7 +175,7 @@
 
 .h5-all {
     @inline .h5;
-	@inline .h4-letter-spacing;
+    @inline .h4-letter-spacing;
 }
 
 .h5-subtitle-letter-spacing {
@@ -191,7 +191,7 @@
 
 .h5-subtitle-all {
     @inline .h5;
-	@inline .h4-letter-spacing;
+    @inline .h4-letter-spacing;
 }
 
 /* endregion H5 */
@@ -205,46 +205,58 @@
 }
 
 /* endregion H6 */
+.body-1-letter-spacing {
+    letter-spacing: calc(0.05 * 14rem / 16);
+}
+
 .body-1 {
     font-family: Roboto, sans-serif;
     font-size: calc(14rem / 16);
     font-style: normal;
     font-weight: 400;
     line-height: 180%;
-    letter-spacing: calc(0.05 * 14rem / 1);
+}
+
+.body-2-letter-spacing {
+    letter-spacing: calc(0.05 * 14rem / 16);
 }
 
 .body-2 {
     font-family: Roboto, sans-serif;
-    font-size: calc(14rem / 1);
+    font-size: calc(14rem / 16);
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
-    letter-spacing: calc(0.05 * 14rem / 1);
 }
 
 .body-3 {
     font-family: "Roboto Mono", sans-serif;
-    font-size: calc(14rem / 1);
+    font-size: calc(14rem / 16);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
+.subtitle-1-letter-spacing {
+    letter-spacing: calc(0.02 * 12rem / 16);
+}
+
 .subtitle-1 {
     font-family: "Roboto Mono", sans-serif;
-    font-size: calc(12rem / 1);
+    font-size: calc(12rem / 16);
     font-style: normal;
     font-weight: 400;
     line-height: 160%;
-    letter-spacing: calc(0.02 * 12rem / 1);
+}
+
+.subtitle-2-letter-spacing {
+    letter-spacing: calc(0.05 * 12rem / 16);
 }
 
 .subtitle-2 {
     font-family: Roboto, sans-serif;
-    font-size: calc(12rem / 1);
+    font-size: calc(12rem / 16);
     font-style: normal;
     font-weight: 400;
     line-height: 180%;
-    letter-spacing: calc(0.05 * 12rem / 1);
 }
