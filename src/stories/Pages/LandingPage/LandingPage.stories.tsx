@@ -19,6 +19,10 @@ import NFTFiMonoLogo from '../../../assets/supporting/NFTFi-Mono.svg';
 import TellerMonoLogo from '../../../assets/supporting/Teller-Mono.svg';
 import NFTAssetPreview from '../../../assets/previews/NFTAsset.svg';
 import NFSCAssetPreview from '../../../assets/previews/NFSCAsset.svg';
+import AlchemyLogo from '../../../assets/backed-by/alchemy.svg';
+import MaskLogo from '../../../assets/backed-by/mask.svg';
+import FoothillLogo from '../../../assets/backed-by/foothill.svg';
+import OrangedaoLogo from '../../../assets/backed-by/orangedao.svg';
 
 const meta = {
 	title: 'Pages/Landingpage',
@@ -137,6 +141,24 @@ export const FullPage: Story = {
 						</p>
 					</div>
 				),
+			},
+		],
+		backers: [
+			{
+				name: 'Alchemy',
+				logo: AlchemyLogo,
+			},
+			{
+				name: 'Mask',
+				logo: MaskLogo,
+			},
+			{
+				name: 'Foothill',
+				logo: FoothillLogo,
+			},
+			{
+				name: 'Orangedao',
+				logo: OrangedaoLogo,
 			},
 		],
 		faqComponentProps: {

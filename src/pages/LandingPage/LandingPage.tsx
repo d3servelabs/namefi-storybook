@@ -7,7 +7,7 @@ import { PoweredBy } from './sections/PoweredBy';
 import { Features } from './sections/Features';
 import { Supporting, type SupportingItem } from './sections/Supporting';
 import { Assets, type AssetItem } from'./sections/Assets';
-import { BackedBy } from './components/BackedBy';
+import { BackedBy, type BackerItem } from './sections/BackedBy';
 import { Footer } from './components/Footer';
 import { List as FaqList, FaqComponentProps } from './components/FAQ';
 
@@ -19,6 +19,7 @@ export type LandingPageProps = {
 	features: FeatureCardProps[];
 	supportings: SupportingItem[];
 	assets: AssetItem[];
+	backers: BackerItem[];
 	faqComponentProps: FaqComponentProps;
 };
 
@@ -30,6 +31,7 @@ export const LandingPage = ({
 	features = [],
 	supportings = [],
 	assets = [],
+	backers = [],
 	faqComponentProps,
 }: LandingPageProps) => {
 	return (
@@ -50,7 +52,7 @@ export const LandingPage = ({
 					<Features items={features} className="mb-16" />
 					<Supporting items={supportings} className="mb-24 md:mb-48" />
 					<Assets items={assets} className="mb-16 md:mb-48" />
-					<BackedBy />
+					<BackedBy items={backers} className="mb-20 md:mb-32" />
 					<div className="relative w-full md:w-[1200px] flex flex-col justify-center items-center gap-[40px] md:gap-[64px] ">
 						<h3 className="font-bold text-3xl text-primary-500 tracking-widest self-start ">
 							FAQs
