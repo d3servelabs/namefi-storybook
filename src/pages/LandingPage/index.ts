@@ -1,15 +1,21 @@
-export * as AssetsMessage from './components/AssetsMessage';
+export * from './components/Button';
+export * from './components/ViewFinder';
+export * from './components/SocialLinks';
+export * from './components/LaunchDAppButton';
+export * from './components/Subscription';
+export * from './components/AssetPreviews/NFSCAssetPreview';
+export * from './components/AssetPreviews/NFTAssetPreview';
+export * from './components/Header';
 export * from './components/FeatureCard';
-export { Header } from './components/Header';
-export { Footer } from './components/Footer';
-export { LaunchDAppButton } from './components/LaunchDAppButton';
-export { Button } from './components/Button';
-export { Subscription } from './components/Subscription';
+export * from './components/FAQCard';
 
+export * from './sections/Hero';
 export * from './sections/PoweredBy';
 export * from './sections/Features';
 export * from './sections/Supporting';
-export { BackedBy } from './sections/BackedBy';
-export * as FAQ from './components/FAQ';
+export * from './sections/Assets';
+export * from './sections/BackedBy';
+export * from './sections/FAQs';
+export * from './sections/Footer';
 
-export { LandingPage } from './LandingPage';
+export * from './LandingPage';
