@@ -3,8 +3,6 @@ import { Features } from '../../../../pages/LandingPage/sections/Features';
 import { FeatureSecureIcon } from '../../../../components/Core/icons/FeatureSecure';
 import { FeatureAIPotentialIcon } from '../../../../components/Core/icons/FeatureAIPotential';
 import { FeatureDeFiIcon } from '../../../../components/Core/icons/FeatureDeFi';
-import '../../../../index.css';
-import '../../../../App.css';
 
 const meta = {
 	title: 'Pages/LandingPage/Sections/Features',
