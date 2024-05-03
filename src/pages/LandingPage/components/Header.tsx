@@ -6,13 +6,13 @@ import { MenuIcon } from '../../../components/Core/icons/Menu';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
 import { cn } from '../../../utils/cn';
 
-export interface NavLink {
+export interface HeaderNavLink {
 	title: React.ReactNode;
 	href: string;
 }
 
 export interface HeaderProps {
-	navLinks?: NavLink[];
+	navLinks?: HeaderNavLink[];
 	socialLinks?: SocialLinkItem[];
 	onClickLaunchDApp?: () => void;
 	className?: string;

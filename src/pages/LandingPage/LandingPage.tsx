@@ -1,51 +1,79 @@
 import React from 'react';
 import { type SocialLinkItem } from './components/SocialLinks';
-import { Header, type NavLink } from './components/Header';
+import { Header, type HeaderNavLink } from './components/Header';
 import { type FeatureCardProps } from './components/FeatureCard';
+import { type SubscriptionInlineFormPayload } from './components/Subscription';
 import { Hero } from './sections/Hero';
 import { PoweredBy } from './sections/PoweredBy';
 import { Features } from './sections/Features';
 import { Supporting, type SupportingItem } from './sections/Supporting';
-import { Assets, type AssetItem } from'./sections/Assets';
+import { Assets, type AssetItem } from './sections/Assets';
 import { BackedBy, type BackerItem } from './sections/BackedBy';
 import { FAQs, type FAQItem } from './sections/FAQs';
-import { Footer } from './components/Footer';
+import { Footer, type FooterNavLink } from './sections/Footer';
 
 export type LandingPageProps = {
-	navLinks: NavLink[];
+	headerNavLinks: HeaderNavLink[];
 	socialLinks: SocialLinkItem[];
 	onClickLaunchDApp: () => void;
-	hero: React.ReactNode;
+	heroText: React.ReactNode;
+	heroSubscriptionLoading?: boolean;
+	heroSubscriptionSubmiited?: boolean;
+	onHeroSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
+	onClickJoinBetaTest?: () => void;
+	onClickInvestor?: () => void;
 	features: FeatureCardProps[];
 	supportings: SupportingItem[];
 	assets: AssetItem[];
 	backers: BackerItem[];
 	faqs: FAQItem[];
+	onClickAskHuman?: () => void;
+	footerNavLinks: FooterNavLink[];
+	footerSubscriptionLoading?: boolean;
+	footerSubscriptionSubmiited?: boolean;
+	onFooterSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
 };
 
 export const LandingPage = ({
-	navLinks,
-	socialLinks,
+	headerNavLinks = [],
+	socialLinks = [],
 	onClickLaunchDApp,
-	hero = 'Trading domains on chain.',
+	heroText = 'Trading domains on chain.',
+	heroSubscriptionLoading = false,
+	heroSubscriptionSubmiited = false,
+	onHeroSubscriptionSubmit,
+	onClickJoinBetaTest,
+	onClickInvestor,
 	features = [],
 	supportings = [],
 	assets = [],
 	backers = [],
-	faqs= [],
+	faqs = [],
+	onClickAskHuman,
+	footerNavLinks = [],
+	footerSubscriptionLoading = false,
+	footerSubscriptionSubmiited = false,
+	onFooterSubscriptionSubmit,
 }: LandingPageProps) => {
 	return (
 		<div className="relative w-full flex flex-col justify-center items-center bg-black-1000">
 			<div className="max-w-[1400px] w-full md:py-9 md:px-4 sticky top-0 z-50">
 				<Header
-					navLinks={navLinks}
+					navLinks={headerNavLinks}
 					socialLinks={socialLinks}
 					onClickLaunchDApp={onClickLaunchDApp}
 				/>
 			</div>
-			<div className="max-w-[1400px] w-full overflow-x-scroll">
-				<Hero socialLinks={socialLinks} className="">
-					{hero}
+			<div className="max-w-[1400px] w-full">
+				<Hero
+					socialLinks={socialLinks}
+					subscriptionLoading={heroSubscriptionLoading}
+					subscriptionSubmiited={heroSubscriptionSubmiited}
+					onSubscriptionSubmit={onHeroSubscriptionSubmit}
+					onClickJoinBetaTest={onClickJoinBetaTest}
+					onClickInvestor={onClickInvestor}
+					className="">
+					{heroText}
 				</Hero>
 				<div className="w-full flex flex-col justify-center items-center px-6">
 					<PoweredBy className="mt-12 mb-24 md:mb-32" />
@@ -53,10 +81,21 @@ export const LandingPage = ({
 					<Supporting items={supportings} className="mb-24 md:mb-48" />
 					<Assets items={assets} className="mb-16 md:mb-48" />
 					<BackedBy items={backers} className="mb-20 md:mb-32" />
-					<FAQs items={faqs} className="mb-20 md:mb-32" />
-					{/* <Footer socialLinks={{}} /> */}
+					<FAQs
+						items={faqs}
+						onClickAskHuman={onClickAskHuman}
+						className="mb-20 md:mb-32"
+					/>
 				</div>
 			</div>
+			<Footer
+				navLinks={footerNavLinks}
+				socialLinks={socialLinks}
+				subscriptionLoading={footerSubscriptionLoading}
+				subscriptionSubmiited={footerSubscriptionSubmiited}
+				onSubscriptionSubmit={onFooterSubscriptionSubmit}
+				className=""
+			/>
 		</div>
 	);
 };

@@ -1,19 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
 import { cn } from '../../../utils/cn';
 import { SocialLinks, type SocialLinkItem } from '../components/SocialLinks';
 import { Button } from '../components/Button';
-import { Subscription } from '../components/Subscription';
+import {
+	Subscription,
+	type SubscriptionInlineFormPayload,
+	type SubscriptionDisplay,
+} from '../components/Subscription';
 import { ScrollDownTip } from '../components/ScrollDownTip';
 
 export type HeroProps = {
 	socialLinks?: SocialLinkItem[];
+	subscriptionLoading?: boolean;
+	subscriptionSubmiited?: boolean;
+	onSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
+	onClickJoinBetaTest?: () => void;
+	onClickInvestor?: () => void;
 	children?: React.ReactNode;
 	className?: string;
 };
 
-export const Hero = ({ socialLinks = [], children, className }: HeroProps) => {
+export const Hero = ({
+	socialLinks = [],
+	subscriptionLoading = false,
+	subscriptionSubmiited = false,
+	onSubscriptionSubmit,
+	onClickJoinBetaTest,
+	onClickInvestor,
+	children,
+	className,
+}: HeroProps) => {
+	const [subscriptionEmail, setSubscriptionEmail] = useState('');
+	const [subscriptionDisplay, setSubscriptionDisplay] = useState<SubscriptionDisplay>('button');
+
+	// Note: If we reach a consensus to use a unified third-party hooks library, then we can directly call something like `useRequest` here, add Promise prop to this component like `subscribe: (payload: SubscriptionInlineFormPayload) => Promise<void>`，and deprecate forwarded props from `Subscription` component. That way, the APIs of this component will be more clear.
+
 	return (
 		<div
 			className={cn(
@@ -28,16 +51,28 @@ export const Hero = ({ socialLinks = [], children, className }: HeroProps) => {
 			</div>
 			<div className="flex flex-col md:flex-row justify-center gap-4 mt-16 w-full">
 				<div className="flex-1 hidden md:block md:w-[560px] max-w-full">
-					<Subscription className="w-full" />
+					<Subscription
+						display={subscriptionDisplay}
+						onDisplayChange={setSubscriptionDisplay}
+						email={subscriptionEmail}
+						onEmailChange={setSubscriptionEmail}
+						loading={subscriptionLoading}
+						submitted={subscriptionSubmiited}
+						onSubmit={onSubscriptionSubmit}
+						className="w-full"
+					/>
 				</div>
 				<div className="w-full md:hidden group">
-					<Button type="primary" className="h-14 px-8 w-full">
+					<Button
+						type="primary"
+						className="h-14 px-8 w-full"
+						onClick={onClickJoinBetaTest}>
 						<span>Join Beta Test</span>
 						<ArrowRight className="transition w-4.5 h-4.5 text-primary-500 group-hover:translate-x-2" />
 					</Button>
 				</div>
 				<div className="w-full md:w-auto">
-					<Button type="tonal" className="h-14 px-8 w-full">
+					<Button type="tonal" className="h-14 px-8 w-full" onClick={onClickInvestor}>
 						I'm an Investor
 					</Button>
 				</div>

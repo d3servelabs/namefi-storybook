@@ -1,6 +1,9 @@
+import { useState, useCallback } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { AsterismIcon } from '../../../components/Core/icons/Asterism';
-import { LandingPage as FullPageComponent } from '../../../pages/LandingPage/LandingPage';
+import { LandingPage } from '../../../pages/LandingPage/LandingPage';
+import { type SubscriptionInlineFormPayload } from '../../../pages/LandingPage/components/Subscription';
 import '../../../index.css';
 import '../../../App.css';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
@@ -26,18 +29,33 @@ import OrangedaoLogo from '../../../assets/LandingPage/backed-by/orangedao.svg';
 
 const meta = {
 	title: 'Pages/Landingpage',
-	component: FullPageComponent,
+	component: LandingPage,
 	parameters: {
 		layout: 'fullscreen',
 	},
-} satisfies Meta<typeof FullPageComponent>;
+} satisfies Meta<typeof LandingPage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const FullPage: Story = {
+	argTypes: {
+		socialLinks: { control: 'object' },
+		headerNavLinks: { control: 'object' },
+		onClickLaunchDApp: { action: 'onClickLaunchDApp' },
+		heroText: { control: 'object' },
+		onClickJoinBetaTest: { action: 'onClickJoinBetaTest' },
+		onClickInvestor: { action: 'onClickInvestor' },
+		features: { control: 'object' },
+		supportings: { control: 'object' },
+		assets: { control: 'object' },
+		backers: { control: 'object' },
+		faqs: { control: 'object' },
+		onClickAskHuman: { action: 'onClickAskHuman' },
+		footerNavLinks: { control: 'object' },
+	},
 	args: {
-		navLinks: [
+		headerNavLinks: [
 			{ title: 'Feature', href: '#feature' },
 			{ title: 'NFT & $NFSC', href: '#assets' },
 			{ title: 'FAQs', href: '#faq' },
@@ -51,7 +69,7 @@ export const FullPage: Story = {
 			{ icon: <LinkedInIcon />, href: '#' },
 			{ icon: <GitHubIcon />, href: '#' },
 		],
-		hero: (
+		heroText: (
 			<>
 				<div className="block md:hidden">
 					<div className="mb-3">
@@ -197,5 +215,48 @@ export const FullPage: Story = {
 				answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 			},
 		],
+		footerNavLinks: [
+			{ title: 'About us', href: '#' },
+			{ title: 'Career', href: '#' },
+			{ title: 'Contact us', href: '#' },
+			{ title: 'Terms and conditions', href: '#' },
+		],
+	},
+	render: (props) => {
+		const [isHeroSubscriptionLoading, setIsHeroSubscriptionLoading] = useState(false);
+		const [isHeroSubscriptionSubmitted, setIsHeroSubscriptionSubmitted] = useState(false);
+		const [isFooterSubscriptionLoading, setIsFooterSubscriptionLoading] = useState(false);
+		const [isFooterSubscriptionSubmitted, setIsFooterSubscriptionSubmitted] = useState(false);
+		const subscribeFromHero = useCallback(
+			async (payload: SubscriptionInlineFormPayload) => {
+				setIsHeroSubscriptionLoading(true);
+				action('onSubscribeFromHero')(payload);
+				await new Promise((resolve) => setTimeout(resolve, 2000));
+				setIsHeroSubscriptionSubmitted(true);
+				setIsHeroSubscriptionLoading(false);
+			},
+			[setIsHeroSubscriptionLoading, setIsHeroSubscriptionSubmitted],
+		);
+		const subscribeFromFooter = useCallback(
+			async (payload: SubscriptionInlineFormPayload) => {
+				setIsFooterSubscriptionLoading(true);
+				action('onSubscribeFromFooter')(payload);
+				await new Promise((resolve) => setTimeout(resolve, 2000));
+				setIsFooterSubscriptionSubmitted(true);
+				setIsFooterSubscriptionLoading(false);
+			},
+			[setIsFooterSubscriptionLoading, setIsFooterSubscriptionSubmitted],
+		);
+		return (
+			<LandingPage
+				{...props}
+				heroSubscriptionLoading={isHeroSubscriptionLoading}
+				heroSubscriptionSubmiited={isHeroSubscriptionSubmitted}
+				onHeroSubscriptionSubmit={subscribeFromHero}
+				footerSubscriptionLoading={isFooterSubscriptionLoading}
+				footerSubscriptionSubmiited={isFooterSubscriptionSubmitted}
+				onFooterSubscriptionSubmit={subscribeFromFooter}
+			/>
+		);
 	},
 };

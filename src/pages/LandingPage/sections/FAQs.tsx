@@ -6,10 +6,11 @@ export type FAQItem = Pick<FAQCardProps, 'question' | 'answer'>;
 
 export interface FAQProps {
 	items: FAQItem[];
+	onClickAskHuman?: () => void;
 	className?: string;
 }
 
-export const FAQs = ({ items, className }: FAQProps) => {
+export const FAQs = ({ items,onClickAskHuman, className }: FAQProps) => {
 	const [selected, setSelected] = useState<number | void>();
 
 	return (
@@ -26,6 +27,7 @@ export const FAQs = ({ items, className }: FAQProps) => {
 						expanded={selected === index}
 						onExpand={() => setSelected(index)}
 						onCollapse={() => setSelected(void 0)}
+						onClickAskHuman={onClickAskHuman}
 						className="max-w-[824px]"
 					/>
 				))}
