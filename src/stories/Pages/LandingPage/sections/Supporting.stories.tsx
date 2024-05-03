@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Supporting } from '../../../../pages/LandingPage/sections/Supporting';
-import OpenSeaMonoLogo from '../../../../assets/supporting/OpenSea-Mono.svg';
-import LooksrareMonoLogo from '../../../../assets/supporting/Looksrare-Mono.svg';
-import ENSMonoLogo from '../../../../assets/supporting/ENS-Mono.svg';
-import NFTFiMonoLogo from '../../../../assets/supporting/NFTFi-Mono.svg';
-import TellerMonoLogo from '../../../../assets/supporting/Teller-Mono.svg';
+import OpenSeaMonoLogo from '../../../../assets/LandingPage/supporting/OpenSea-Mono.svg';
+import LooksrareMonoLogo from '../../../../assets/LandingPage/supporting/Looksrare-Mono.svg';
+import ENSMonoLogo from '../../../../assets/LandingPage/supporting/ENS-Mono.svg';
+import NFTFiMonoLogo from '../../../../assets/LandingPage/supporting/NFTFi-Mono.svg';
+import TellerMonoLogo from '../../../../assets/LandingPage/supporting/Teller-Mono.svg';
 
 const meta = {
 	title: 'Pages/LandingPage/Sections/Supporting',
