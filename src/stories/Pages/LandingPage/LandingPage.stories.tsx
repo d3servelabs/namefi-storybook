@@ -15,6 +15,10 @@ import { GitHubIcon } from '../../../components/Core/icons/GitHub';
 import { FeatureSecureIcon } from '../../../components/Core/icons/FeatureSecure';
 import { FeatureAIPotentialIcon } from '../../../components/Core/icons/FeatureAIPotential';
 import { FeatureDeFiIcon } from '../../../components/Core/icons/FeatureDeFi';
+import EthereumLogo from '../../../assets/LandingPage/powered-by/ethereum.png';
+import SigninWithEthereumLogo from '../../../assets/LandingPage/powered-by/signin-with-ethereum.png';
+import GoogleCloudLogo from '../../../assets/LandingPage/powered-by/google-cloud.png';
+import AWSLogo from '../../../assets/LandingPage/powered-by/aws.png';
 import OpenSeaMonoLogo from '../../../assets/LandingPage/supporting/OpenSea-Mono.svg';
 import LooksrareMonoLogo from '../../../assets/LandingPage/supporting/Looksrare-Mono.svg';
 import ENSMonoLogo from '../../../assets/LandingPage/supporting/ENS-Mono.svg';
@@ -46,6 +50,7 @@ export const FullPage: Story = {
 		heroText: { control: 'object' },
 		onClickJoinBetaTest: { action: 'onClickJoinBetaTest' },
 		onClickInvestor: { action: 'onClickInvestor' },
+		poweredByItems: { control: 'object' },
 		features: { control: 'object' },
 		supportings: { control: 'object' },
 		assets: { control: 'object' },
@@ -87,6 +92,12 @@ export const FullPage: Story = {
 				<div className="hidden md:block">Trading domains on chain.</div>
 			</>
 		),
+		poweredByItems: [
+			{ logo: EthereumLogo, name: 'ethereum' },
+			{ logo: SigninWithEthereumLogo, name: 'sign in with ethereum' },
+			{ logo: GoogleCloudLogo, name: 'google cloud' },
+			{ logo: AWSLogo, name: 'aws' },
+		],
 		features: [
 			{
 				icon: <FeatureSecureIcon />,
