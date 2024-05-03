@@ -8,9 +8,9 @@ import { DiscordIcon } from '../../../components/Core/icons/Discord';
 import { TelegramIcon } from '../../../components/Core/icons/Telegram';
 import { LinkedInIcon } from '../../../components/Core/icons/LinkedIn';
 import { GitHubIcon } from '../../../components/Core/icons/GitHub';
-import { FasterIcon } from '../../../pages/LandingPage/components/icons/FasterIcon';
-import { SaferIcon } from '../../../pages/LandingPage/components/icons/SaferIcon';
-import { DefiIcon } from '../../../pages/LandingPage/components/icons/DefiIcon';
+import { FeatureSecureIcon } from '../../../components/Core/icons/FeatureSecure';
+import { FeatureAIPotentialIcon } from '../../../components/Core/icons/FeatureAIPotential';
+import { FeatureDeFiIcon } from '../../../components/Core/icons/FeatureDeFi';
 
 const meta = {
 	title: 'Pages/Landingpage',
@@ -50,11 +50,32 @@ export const LandingPage: Story = {
 							on-chain <AsterismIcon className="text-[#FEF55680] stroke-[0.01]" />,
 						</p>
 					</div>
-					<div className="text-primary text-sm font-light">100x more liquid, get paid in secs.</div>
+					<div className="text-primary text-sm font-light">
+						100x more liquid, get paid in secs.
+					</div>
 				</div>
 				<div className="hidden md:block">Trading domains on chain.</div>
 			</>
 		),
+		features: [
+			{
+				icon: <FeatureSecureIcon />,
+				title: 'Faster, Safer',
+				description: 'Transactions settle in secs, not days, in a decentralized database.',
+			},
+			{
+				icon: <FeatureAIPotentialIcon />,
+				title: 'AI Potential',
+				description:
+					'AI to reveal the true potential of domains you own, from description to designs.',
+			},
+			{
+				icon: <FeatureDeFiIcon />,
+				title: 'DeFi Ready',
+				description:
+					'Your domain as collateral, integrated to DeFi protocols, trading at NFT marketplaces.',
+			},
+		],
 		faqComponentProps: {
 			faqContent: [
 				{
@@ -105,33 +126,6 @@ export const LandingPage: Story = {
 						`ab quo quasi similique numquam in sit ipsam voluptatem consequatur tempore eligendi ex ullam?`,
 						`ab quo quasi similique numquam in sit ipsam voluptatem consequatur tempore eligendi ex ullam?`,
 					],
-				},
-			],
-		} as any,
-		featuredCardProps: {
-			cardContent: [
-				{
-					label: 'FASTER',
-					text: [
-						'transact in secs, not weeks',
-						'sellers get paid faster',
-						'buyers get domains faster',
-					],
-					img: <FasterIcon className={''} />,
-				},
-				{
-					label: 'SAFER',
-					text: ['safer than Auth-code', 'safer than centralized database'],
-					img: <SaferIcon className="" />,
-				},
-				{
-					label: 'Defi',
-					text: [
-						'domains as collateral',
-						'NFT marketplaces integration',
-						'DeFi protocols integration',
-					],
-					img: <DefiIcon className="" />,
 				},
 			],
 		} as any,

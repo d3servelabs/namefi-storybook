@@ -17,7 +17,7 @@ export const Hero = ({ socialLinks = [], children, className }: HeroProps) => {
 	return (
 		<div
 			className={cn(
-				'min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-152px-120px)] pt-5 pb-12 px-6 flex flex-col justify-around items-center min-gap-y-4',
+				'min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-152px-160px)] pt-5 pb-12 px-6 flex flex-col justify-around items-center min-gap-y-4',
 				className,
 			)}>
 			<div className="w-full flex md:hidden justify-end mb-5">
