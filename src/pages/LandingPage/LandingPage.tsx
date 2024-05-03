@@ -4,7 +4,7 @@ import { Header, type HeaderNavLink } from './components/Header';
 import { type FeatureCardProps } from './components/FeatureCard';
 import { type SubscriptionInlineFormPayload } from './components/Subscription';
 import { Hero } from './sections/Hero';
-import { PoweredBy } from './sections/PoweredBy';
+import { PoweredBy, type PoweredByItem } from './sections/PoweredBy';
 import { Features } from './sections/Features';
 import { Supporting, type SupportingItem } from './sections/Supporting';
 import { Assets, type AssetItem } from './sections/Assets';
@@ -22,6 +22,7 @@ export type LandingPageProps = {
 	onHeroSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
 	onClickJoinBetaTest?: () => void;
 	onClickInvestor?: () => void;
+	poweredByItems: PoweredByItem[];
 	features: FeatureCardProps[];
 	supportings: SupportingItem[];
 	assets: AssetItem[];
@@ -44,6 +45,7 @@ export const LandingPage = ({
 	onHeroSubscriptionSubmit,
 	onClickJoinBetaTest,
 	onClickInvestor,
+	poweredByItems = [],
 	features = [],
 	supportings = [],
 	assets = [],
@@ -76,7 +78,7 @@ export const LandingPage = ({
 					{heroText}
 				</Hero>
 				<div className="w-full flex flex-col justify-center items-center px-6">
-					<PoweredBy className="mt-12 mb-24 md:mb-32" />
+					<PoweredBy items={poweredByItems} className="mt-12 mb-24 md:mb-32" />
 					<Features items={features} className="mb-16" />
 					<Supporting items={supportings} className="mb-24 md:mb-48" />
 					<Assets items={assets} className="mb-16 md:mb-48" />
