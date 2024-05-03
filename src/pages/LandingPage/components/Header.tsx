@@ -29,7 +29,7 @@ export const Header = ({
 		<>
 			<header
 				className={cn(
-					'hidden md:flex namefi-header justify-between items-center h-20 rounded-full pl-6',
+					'hidden md:flex namefi-header justify-between items-center h-20 rounded-full pl-6 backdrop-blur-lg',
 					className,
 				)}>
 				<div className="ml-4 mr-10 text-primary-500 text-3xl flex items-center">

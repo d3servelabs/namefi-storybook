@@ -5,7 +5,7 @@ const meta = {
 	title: 'Pages/LandingPage/Sections/PoweredBy',
 	component: PoweredBy,
 	parameters: {
-		layout: 'centered',
+		layout: 'fullscreen',
 	},
 } satisfies Meta<typeof PoweredBy>;
 

@@ -5,7 +5,4 @@ export { default as PolygonNetwork } from './PolygonNetwork';
 export { default as StacksNetwork } from './StacksNetwork';
 export { default as CartIcon } from './CartIcon';
 export { default as CustomLoader } from './CustomLoader';
-export { default as LandingDefi } from './LandingDefi';
-export { default as LandingFaster } from './LandingFaster';
-export { default as LandingSafer } from './LandingSafer';
 export { default as TokenIcon } from './TokenIcon';
