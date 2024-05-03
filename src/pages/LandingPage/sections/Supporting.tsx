@@ -7,8 +7,8 @@ export interface SupportingItem {
 }
 
 export interface SupportingProps {
-	className?: string;
 	items: SupportingItem[];
+	className?: string;
 }
 
 export const Supporting = ({ items = [], className }: SupportingProps) => {

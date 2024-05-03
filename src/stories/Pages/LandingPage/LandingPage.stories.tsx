@@ -3,6 +3,7 @@ import { AsterismIcon } from '../../../components/Core/icons/Asterism';
 import { LandingPage as FullPageComponent } from '../../../pages/LandingPage/LandingPage';
 import '../../../index.css';
 import '../../../App.css';
+import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
 import { TwitterIcon } from '../../../components/Core/icons/Twitter';
 import { DiscordIcon } from '../../../components/Core/icons/Discord';
 import { TelegramIcon } from '../../../components/Core/icons/Telegram';
@@ -16,6 +17,8 @@ import LooksrareMonoLogo from '../../../assets/supporting/Looksrare-Mono.svg';
 import ENSMonoLogo from '../../../assets/supporting/ENS-Mono.svg';
 import NFTFiMonoLogo from '../../../assets/supporting/NFTFi-Mono.svg';
 import TellerMonoLogo from '../../../assets/supporting/Teller-Mono.svg';
+import NFTAssetPreview from '../../../assets/previews/NFTAsset.svg';
+import NFSCAssetPreview from '../../../assets/previews/NFSCAsset.svg';
 
 const meta = {
 	title: 'Pages/Landingpage',
@@ -87,6 +90,54 @@ export const FullPage: Story = {
 			{ name: 'ENS', logo: ENSMonoLogo },
 			{ name: 'NFTFi', logo: NFTFiMonoLogo },
 			{ name: 'Teller', logo: TellerMonoLogo },
+		],
+		assets: [
+			{
+				preview: <img src={NFTAssetPreview} />,
+				title: (
+					<span>
+						<NamefiBrandText className="text-[1em] font-bold">Namefi</NamefiBrandText>{' '}
+						NFT
+					</span>
+				),
+				description: (
+					<div>
+						<p>
+							Namefi NFT is a crypto asset issued to represent your DNS ownership on{' '}
+							the blockchain.
+						</p>
+						<br />
+						<p>
+							Your NFT is{' '}
+							<span className="text-brand-blue">minted when you import</span> and{' '}
+							<span className="text-brand-blue">burned when you export</span> your DNS{' '}
+							domain with us.
+						</p>
+					</div>
+				),
+			},
+			{
+				preview: <img src={NFSCAssetPreview} />,
+				title: '$NFSC',
+				description: (
+					<div>
+						<p>
+							$NFSC is a{' '}
+							<span className="text-brand-blue">
+								service credit issued by{' '}
+								<NamefiBrandText className="text-[1em]">Namefi</NamefiBrandText>{' '}
+							</span>
+							for you to purchase DNS domains. You can burn $USDC or $ETH to mint{' '}
+							$NFSC.
+						</p>
+						<br />
+						<p>
+							$NFSC is currently <span className="text-brand-blue">non-tradable</span>{' '}
+							and <span>non-transferrable</span>.
+						</p>
+					</div>
+				),
+			},
 		],
 		faqComponentProps: {
 			faqContent: [
