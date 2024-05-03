@@ -8,8 +8,8 @@ import { Features } from './sections/Features';
 import { Supporting, type SupportingItem } from './sections/Supporting';
 import { Assets, type AssetItem } from'./sections/Assets';
 import { BackedBy, type BackerItem } from './sections/BackedBy';
+import { FAQs, type FAQItem } from './sections/FAQs';
 import { Footer } from './components/Footer';
-import { List as FaqList, FaqComponentProps } from './components/FAQ';
 
 export type LandingPageProps = {
 	navLinks: NavLink[];
@@ -20,7 +20,7 @@ export type LandingPageProps = {
 	supportings: SupportingItem[];
 	assets: AssetItem[];
 	backers: BackerItem[];
-	faqComponentProps: FaqComponentProps;
+	faqs: FAQItem[];
 };
 
 export const LandingPage = ({
@@ -32,7 +32,7 @@ export const LandingPage = ({
 	supportings = [],
 	assets = [],
 	backers = [],
-	faqComponentProps,
+	faqs= [],
 }: LandingPageProps) => {
 	return (
 		<div className="relative w-full flex flex-col justify-center items-center bg-black-1000">
@@ -53,14 +53,7 @@ export const LandingPage = ({
 					<Supporting items={supportings} className="mb-24 md:mb-48" />
 					<Assets items={assets} className="mb-16 md:mb-48" />
 					<BackedBy items={backers} className="mb-20 md:mb-32" />
-					<div className="relative w-full md:w-[1200px] flex flex-col justify-center items-center gap-[40px] md:gap-[64px] ">
-						<h3 className="font-bold text-3xl text-primary-500 tracking-widest self-start ">
-							FAQs
-						</h3>
-						<div className="w-full h-auto flex flex-col justify-center items-center">
-							<FaqList {...faqComponentProps} />
-						</div>
-					</div>
+					<FAQs items={faqs} className="mb-20 md:mb-32" />
 					{/* <Footer socialLinks={{}} /> */}
 				</div>
 			</div>
