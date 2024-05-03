@@ -12,17 +12,17 @@ import { GitHubIcon } from '../../../components/Core/icons/GitHub';
 import { FeatureSecureIcon } from '../../../components/Core/icons/FeatureSecure';
 import { FeatureAIPotentialIcon } from '../../../components/Core/icons/FeatureAIPotential';
 import { FeatureDeFiIcon } from '../../../components/Core/icons/FeatureDeFi';
-import OpenSeaMonoLogo from '../../../assets/supporting/OpenSea-Mono.svg';
-import LooksrareMonoLogo from '../../../assets/supporting/Looksrare-Mono.svg';
-import ENSMonoLogo from '../../../assets/supporting/ENS-Mono.svg';
-import NFTFiMonoLogo from '../../../assets/supporting/NFTFi-Mono.svg';
-import TellerMonoLogo from '../../../assets/supporting/Teller-Mono.svg';
-import NFTAssetPreview from '../../../assets/previews/NFTAsset.svg';
-import NFSCAssetPreview from '../../../assets/previews/NFSCAsset.svg';
-import AlchemyLogo from '../../../assets/backed-by/alchemy.svg';
-import MaskLogo from '../../../assets/backed-by/mask.svg';
-import FoothillLogo from '../../../assets/backed-by/foothill.svg';
-import OrangedaoLogo from '../../../assets/backed-by/orangedao.svg';
+import OpenSeaMonoLogo from '../../../assets/LandingPage/supporting/OpenSea-Mono.svg';
+import LooksrareMonoLogo from '../../../assets/LandingPage/supporting/Looksrare-Mono.svg';
+import ENSMonoLogo from '../../../assets/LandingPage/supporting/ENS-Mono.svg';
+import NFTFiMonoLogo from '../../../assets/LandingPage/supporting/NFTFi-Mono.svg';
+import TellerMonoLogo from '../../../assets/LandingPage/supporting/Teller-Mono.svg';
+import NFTAssetPreview from '../../../assets/LandingPage/previews/NFTAsset.svg';
+import NFSCAssetPreview from '../../../assets/LandingPage/previews/NFSCAsset.svg';
+import AlchemyLogo from '../../../assets/LandingPage/backed-by/alchemy.svg';
+import MaskLogo from '../../../assets/LandingPage/backed-by/mask.svg';
+import FoothillLogo from '../../../assets/LandingPage/backed-by/foothill.svg';
+import OrangedaoLogo from '../../../assets/LandingPage/backed-by/orangedao.svg';
 
 const meta = {
 	title: 'Pages/Landingpage',

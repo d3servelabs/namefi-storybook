@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Assets } from '../../../../pages/LandingPage/sections/Assets';
-import NFTAssetPreview from '../../../../assets/previews/NFTAsset.svg'
-import NFSCAssetPreview from '../../../../assets/previews/NFSCAsset.svg'
+import NFTAssetPreview from '../../../../assets/LandingPage/previews/NFTAsset.svg'
+import NFSCAssetPreview from '../../../../assets/LandingPage/previews/NFSCAsset.svg'
 import { NamefiBrandText } from '../../../../components/Core/NamefiBrandText';
 
 const meta = {

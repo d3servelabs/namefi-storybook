@@ -1,8 +1,8 @@
 import React from 'react';
-import EthereumLogo from '../../../assets/powered-by/ethereum.png';
-import SigninWithEthereumLogo from '../../../assets/powered-by/signin-with-ethereum.png';
-import GoogleCloudLogo from '../../../assets/powered-by/google-cloud.png';
-import AWSLogo from '../../../assets/powered-by/aws.png';
+import EthereumLogo from '../../../assets/LandingPage/powered-by/ethereum.png';
+import SigninWithEthereumLogo from '../../../assets/LandingPage/powered-by/signin-with-ethereum.png';
+import GoogleCloudLogo from '../../../assets/LandingPage/powered-by/google-cloud.png';
+import AWSLogo from '../../../assets/LandingPage/powered-by/aws.png';
 import { cn } from '../../../utils/cn';
 
 const LOGOS: [src: string, alt: string][] = [
