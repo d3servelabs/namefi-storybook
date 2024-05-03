@@ -11,6 +11,11 @@ import { GitHubIcon } from '../../../components/Core/icons/GitHub';
 import { FeatureSecureIcon } from '../../../components/Core/icons/FeatureSecure';
 import { FeatureAIPotentialIcon } from '../../../components/Core/icons/FeatureAIPotential';
 import { FeatureDeFiIcon } from '../../../components/Core/icons/FeatureDeFi';
+import OpenSeaMonoLogo from '../../../assets/supporting/OpenSea-Mono.svg';
+import LooksrareMonoLogo from '../../../assets/supporting/Looksrare-Mono.svg';
+import ENSMonoLogo from '../../../assets/supporting/ENS-Mono.svg';
+import NFTFiMonoLogo from '../../../assets/supporting/NFTFi-Mono.svg';
+import TellerMonoLogo from '../../../assets/supporting/Teller-Mono.svg';
 
 const meta = {
 	title: 'Pages/Landingpage',
@@ -23,7 +28,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LandingPage: Story = {
+export const FullPage: Story = {
 	args: {
 		navLinks: [
 			{ title: 'Feature', href: '#feature' },
@@ -75,6 +80,13 @@ export const LandingPage: Story = {
 				description:
 					'Your domain as collateral, integrated to DeFi protocols, trading at NFT marketplaces.',
 			},
+		],
+		supportings: [
+			{ name: 'OpenSea', logo: OpenSeaMonoLogo },
+			{ name: 'Looksrare', logo: LooksrareMonoLogo },
+			{ name: 'ENS', logo: ENSMonoLogo },
+			{ name: 'NFTFi', logo: NFTFiMonoLogo },
+			{ name: 'Teller', logo: TellerMonoLogo },
 		],
 		faqComponentProps: {
 			faqContent: [

@@ -5,7 +5,7 @@ import { type FeatureCardProps } from './components/FeatureCard';
 import { Hero } from './sections/Hero';
 import { PoweredBy } from './sections/PoweredBy';
 import { Features } from './sections/Features';
-import { ProudlySupporting } from './components/ProudlySupporting';
+import { Supporting, type SupportingItem } from './sections/Supporting';
 import { BackedBy } from './components/BackedBy';
 import { Footer } from './components/Footer';
 import { Card1, Card2 } from './components/DomainCard';
@@ -21,6 +21,7 @@ export type LandingPageProps = {
 	onClickLaunchDApp: () => void;
 	hero: React.ReactNode;
 	features: FeatureCardProps[];
+	supportings: SupportingItem[];
 	faqComponentProps: FaqComponentProps;
 };
 
@@ -30,6 +31,7 @@ export const LandingPage = ({
 	onClickLaunchDApp,
 	hero = 'Trading domains on chain.',
 	features = [],
+	supportings = [],
 	faqComponentProps,
 }: LandingPageProps) => {
 	const [prev, setPrev] = useState(0);
@@ -49,8 +51,8 @@ export const LandingPage = ({
 				<div className="w-full flex flex-col justify-center items-center px-6">
 					<PoweredBy className="mt-12 mb-24 md:mb-32" />
 					<Features items={features} className="mb-16" />
-					<ProudlySupporting />
-					<div className=" w-full md:w-[1200px] h-[650px] md:h-[720px] flex flex-col justify-between ">
+					<Supporting items={supportings} className="mb-24 md:mb-46" />
+					<div className="w-full md:w-[1200px] h-[650px] md:h-[720px] flex flex-col justify-between">
 						<h3 className="font-bold tracking-wider font-primary text-primary-500 text-2xl md:text-3xl self-start ">
 							Our Assets
 						</h3>
