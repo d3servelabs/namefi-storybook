@@ -3,6 +3,7 @@ import React, { forwardRef, memo, Ref, SVGProps } from 'react';
 export const DiscordIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => {
 	return (
 		<svg
+			{...props}
 			ref={ref}
 			className={props.className}
 			width="60"
