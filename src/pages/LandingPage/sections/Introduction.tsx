@@ -50,7 +50,7 @@ export const Introduction = ({
 					))}
 				</div>
 			</ViewFinder>
-			<div className="bg-[#121212] rounded-2.5 py-6 md:py-12 px-8 md:px-16 mb-20">
+			<div className="bg-[#121212] rounded-2.5 md:rounded-5 py-6 md:py-12 px-8 md:px-16 mb-20 md:mb-0">
 				<div className="text-primary-500 text-lg md:text-3xl font-slab font-medium leading-loose mb-0 md:mb-2">
 					{title}
 				</div>
