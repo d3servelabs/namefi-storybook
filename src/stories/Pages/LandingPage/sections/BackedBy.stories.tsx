@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-// TODO: update optimize logo files
-import AlchemyLogo from '../../../../assets/LandingPage/backed-by/alchemy.svg';
-import MaskLogo from '../../../../assets/LandingPage/backed-by/mask.svg';
-import FoothillLogo from '../../../../assets/LandingPage/backed-by/foothill.svg';
-import OrangedaoLogo from '../../../../assets/LandingPage/backed-by/orangedao.svg';
+import AlchemyLogo from '../../../../assets/LandingPage/backed-by/Alchemy-Poly.png';
+import MaskLogo from '../../../../assets/LandingPage/backed-by/Mask-Poly.png';
+import FoothillLogo from '../../../../assets/LandingPage/backed-by/Foothill-Poly.png';
+import OrangedaoLogo from '../../../../assets/LandingPage/backed-by/OrangeDAO-Poly.png';
 import { BackedBy } from '../../../../pages/LandingPage/sections/BackedBy';
 
 const meta = {
