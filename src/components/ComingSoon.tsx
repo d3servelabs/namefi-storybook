@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { cn } from '../utils/cn';
+import DiscordIcon from "./Core/icons/DiscordIcon";
 
 export const ComingSoon = ({
 	onClickDiscord,
@@ -29,10 +30,8 @@ export const ComingSoon = ({
 			</div>
 			<div className="flex gap-4 items-center text-xs font-primary text-[#fff]">
 				Contact us for early access.{' '}
-				<img
+				<DiscordIcon
 					className="w-6 h-6 cursor-pointer"
-					src="/assets/discord.svg"
-					alt="discord"
 					onClick={handleClickDiscord}
 				/>
 			</div>
