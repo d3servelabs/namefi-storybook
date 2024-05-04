@@ -9,9 +9,6 @@ export const ComingSoon = ({
 	onClickDiscord?: () => void;
 	className?: string;
 }) => {
-	const handleClickDiscord = useCallback(() => {
-		onClickDiscord?.();
-	}, []);
 	return (
 		<div
 			className={cn(
@@ -32,7 +29,7 @@ export const ComingSoon = ({
 				Contact us for early access.{' '}
 				<DiscordIcon
 					className="w-6 h-6 cursor-pointer"
-					onClick={handleClickDiscord}
+					onClick={onClickDiscord}
 				/>
 			</div>
 		</div>
