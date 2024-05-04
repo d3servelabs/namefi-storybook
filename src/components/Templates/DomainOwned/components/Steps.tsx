@@ -30,7 +30,7 @@ export const Steps = ({items, current, pending, itemClassName, className}: Steps
                             )}>
                             <div
                                 className={cn(
-                                    'w-[28px] y-[28px] border border-primary-dark rounded-full flex items-center justify-center text-base font-semibold z-10',
+                                    'w-[28px] h-[28px] border border-primary-dark rounded-full flex items-center justify-center text-base font-semibold z-10',
                                     index === current
                                         ? 'text-[#313131] bg-primary-500'
                                         : 'text-primary-dark bg-black-900',
