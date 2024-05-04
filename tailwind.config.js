@@ -58,6 +58,7 @@ module.exports = {
 				primary: ['Roboto Mono', 'Serif'],
 				secondary: ['Nunito', 'Serif'],
 				third: ['Roboto Flex', 'Serif'],
+				slab: ['Roboto Slab', 'Serif'],	
 			},
 			colors: {
 				warning: {

@@ -15,6 +15,8 @@ import { GitHubIcon } from '../../../components/Core/icons/GitHub';
 import { FeatureSecureIcon } from '../../../components/Core/icons/FeatureSecure';
 import { FeatureAIPotentialIcon } from '../../../components/Core/icons/FeatureAIPotential';
 import { FeatureDeFiIcon } from '../../../components/Core/icons/FeatureDeFi';
+import RegistrationScreenshot from '../../../assets/LandingPage/introduction/screenshot-registration.png';
+import ManagementScreenshot from '../../../assets/LandingPage/introduction/screenshot-management.png';
 import EthereumLogo from '../../../assets/LandingPage/powered-by/ethereum.png';
 import SigninWithEthereumLogo from '../../../assets/LandingPage/powered-by/signin-with-ethereum.png';
 import GoogleCloudLogo from '../../../assets/LandingPage/powered-by/google-cloud.png';
@@ -50,6 +52,11 @@ export const FullPage: Story = {
 		heroText: { control: 'object' },
 		onClickJoinBetaTest: { action: 'onClickJoinBetaTest' },
 		onClickInvestor: { action: 'onClickInvestor' },
+		introductionTitle: { control: 'object' },
+		introductionSubtitle: { control: 'object' },
+		introductionDescription: { control: 'object' },
+		introductionStatistics: { control: 'object' },
+		introductionFlows: { control: 'object' },
 		poweredByItems: { control: 'object' },
 		features: { control: 'object' },
 		supportings: { control: 'object' },
@@ -92,6 +99,45 @@ export const FullPage: Story = {
 				<div className="hidden md:block">Trading domains on chain.</div>
 			</>
 		),
+		introductionTitle: 'Secure your DNS ownership',
+		introductionSubtitle: (
+			<>
+				<i className="font-extralight">on the blockchain</i>{' '}
+				<strong>
+					with <NamefiBrandText className="text-[1em]">Namefi</NamefiBrandText> NFTs.
+				</strong>
+			</>
+		),
+		introductionDescription: (
+			<>
+				Minted upon import and burned upon export, your domain's NFT ensuresverified and
+				visible ownership.
+			</>
+		),
+		introductionStatistics: [
+			{
+				value: 329,
+				// NOTE: In the future, please consider embedding stylesheets likes `strong { font-weight: 500, color: white; }` in components to avoid duplicating style codes in props.
+				label: (
+					<>
+						<span className="text-white font-medium">TLDs</span> Supported
+					</>
+				),
+			},
+			{
+				value: 574,
+				label: (
+					<>
+						<NamefiBrandText className="text-white text-[1em]">Namefi</NamefiBrandText>{' '}
+						<span className="text-white font-medium">NFTs</span> Minted
+					</>
+				),
+			},
+		],
+		introductionFlows: [
+			{ thumbnail: RegistrationScreenshot, label: 'Easy Registration - dApp v1.0' },
+			{ thumbnail: ManagementScreenshot, label: 'Manage everything - dApp v1.0' },
+		],
 		poweredByItems: [
 			{ logo: EthereumLogo, name: 'ethereum' },
 			{ logo: SigninWithEthereumLogo, name: 'sign in with ethereum' },
