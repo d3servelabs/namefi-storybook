@@ -15,7 +15,7 @@ export const FAQs = ({ items,onClickAskHuman, className }: FAQProps) => {
 
 	return (
 		<div className={cn('w-full', className)}>
-			<div className="text-primary-500 text-3xl font-primary font-bold tracking-widest mb-16">
+			<div className="text-primary-500 text-base md:text-3xl font-primary font-bold tracking-widest mb-6 md:mb-16">
 				FAQs
 			</div>
 			<div className="w-full flex flex-col items-center gap-y-3">
