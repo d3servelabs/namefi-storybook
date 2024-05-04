@@ -1,6 +1,6 @@
 {
 	"name": "@namefi/ui",
-	"version": "2.2.30",
+	"version": "2.2.31",
 	"engines": {
 		"node": ">=20 < 21",
 		"npm": ">=10 < 11"
