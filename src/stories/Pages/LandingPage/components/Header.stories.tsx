@@ -22,19 +22,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	argTypes: {
-		navLinks: {
-			control: {
-				type: 'object',
-			},
-		},
-		socialLinks: {
-			control: {
-				type: 'object',
-			},
-		},
-		onClickLaunchDApp: {
-			action: 'onClickLaunchDApp',
-		},
+		navLinks: { control: { type: 'object' } },
+		socialLinks: { control: { type: 'object' } },
+		onClickLaunchDApp: { action: 'onClickLaunchDApp' },
+		onClickJoinBetaTest: { action: 'onClickJoinBetaTest' },
 	},
 	args: {
 		navLinks: [
@@ -50,6 +41,6 @@ export const Default: Story = {
 			{ icon: <TelegramIcon />, href: '#' },
 			{ icon: <LinkedInIcon />, href: '#' },
 			{ icon: <GitHubIcon />, href: '#' },
-		]
+		],
 	},
 };

@@ -84,6 +84,7 @@ export const LandingPage = ({
 					navLinks={headerNavLinks}
 					socialLinks={socialLinks}
 					onClickLaunchDApp={onClickLaunchDApp}
+					onClickJoinBetaTest={onClickJoinBetaTest}
 				/>
 			</div>
 			<div className="max-w-[1400px] w-full">
