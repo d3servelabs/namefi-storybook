@@ -55,7 +55,7 @@ export const Header = ({
 					<LaunchDAppButton onClick={onClickLaunchDApp} />
 				</div>
 			</header>
-			<header className={cn('block md:hidden relative h-20', className)}>
+			<header className={cn('block md:hidden relative h-20 backdrop-blur-lg', className)}>
 				<div
 					className={cn(
 						'transition-all flex flex-col overflow-hidden absolute left-0 right-0',
