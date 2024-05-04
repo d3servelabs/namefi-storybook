@@ -15,6 +15,7 @@ export interface HeaderProps {
 	navLinks?: HeaderNavLink[];
 	socialLinks?: SocialLinkItem[];
 	onClickLaunchDApp?: () => void;
+	onClickJoinBetaTest?: () => void;
 	className?: string;
 }
 
@@ -22,6 +23,7 @@ export const Header = ({
 	navLinks = [],
 	socialLinks = [],
 	onClickLaunchDApp,
+	onClickJoinBetaTest,
 	className,
 }: HeaderProps) => {
 	const [collapsed, setCollapsed] = useState(true);
@@ -87,6 +89,7 @@ export const Header = ({
 						</ul>
 						<button
 							type="button"
+							onClick={onClickJoinBetaTest}	
 							className="px-12 py-4 bg-primary-500 text-base text-brand-black font-primary">
 							Join Beta Test
 						</button>
