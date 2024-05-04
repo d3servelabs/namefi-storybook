@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { ViewFinder } from '../components/ViewFinder';
+import { RisingNumber } from '../components/RisingNumber';
 import { cn } from '../../../utils/cn';
 
 export interface IntroductionStatisticItem {
@@ -34,19 +35,17 @@ export const Introduction = ({
 			<ViewFinder className="mb-10 md:mb-16">
 				<div className="flex justify-between items-center text-5xl md:text-8xl p-4 md:p-16">
 					{statistics.map((statistic, index) => (
-						<>
-							{index !== 0 && (
-								<div className="text-grey font-primary">,</div>
-							)}
-							<div
-								key={index}
-								className="flex flex-col items-center w-full flex-1 p-2.5 md:p-5">
+						<Fragment key={index}>
+							{index !== 0 && <div className="text-grey font-primary">,</div>}
+							<div className="flex flex-col items-center w-full flex-1 p-2.5 md:p-5">
 								<div className="text-primary-500 font-primary font-light leading-tight mb-1 md:mb-4">
-									{statistic.value}
+									<RisingNumber value={statistic.value} />
 								</div>
-								<div className="text-grey text-[10px] md:text-lg">{statistic.label}</div>
+								<div className="text-grey text-[10px] md:text-lg">
+									{statistic.label}
+								</div>
 							</div>
-						</>
+						</Fragment>
 					))}
 				</div>
 			</ViewFinder>
