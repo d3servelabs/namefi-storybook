@@ -61,6 +61,8 @@ export const FullPage: Story = {
 		features: { control: 'object' },
 		supportings: { control: 'object' },
 		assets: { control: 'object' },
+		smartContractAddress: { control: 'text' },
+		smartContractHref: { control: 'text' },
 		backers: { control: 'object' },
 		faqs: { control: 'object' },
 		onClickAskHuman: { action: 'onClickAskHuman' },
@@ -218,6 +220,8 @@ export const FullPage: Story = {
 				),
 			},
 		],
+    smartContractAddress: '0x0000000000cf80E7Cf8Fa4480907f692177f8e06',
+    smartContractHref: '#',
 		backers: [
 			{
 				name: 'Alchemy',

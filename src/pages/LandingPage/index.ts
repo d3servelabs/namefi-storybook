@@ -10,10 +10,12 @@ export * from './components/FeatureCard';
 export * from './components/FAQCard';
 
 export * from './sections/Hero';
+export * from './sections/Introduction';
 export * from './sections/PoweredBy';
 export * from './sections/Features';
 export * from './sections/Supporting';
 export * from './sections/Assets';
+export * from './sections/SmartContract';
 export * from './sections/BackedBy';
 export * from './sections/FAQs';
 export * from './sections/Footer';
