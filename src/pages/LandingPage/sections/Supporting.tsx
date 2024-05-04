@@ -19,8 +19,10 @@ export const Supporting = ({ items = [], className }: SupportingProps) => {
 			</div>
 			<div className="flex md:grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] flex-wrap justify-center gap-3 p-0 md:p-2.5 items-center">
 				{items.map(({ name, logo }, index) => (
-					<div className="flex justify-center items-center h-15 md:h-20 w-full md:w-auto">
-						<img key={index} className="w-60" src={logo} alt={name} />
+					<div
+						key={index}
+						className="flex justify-center items-center h-15 md:h-20 w-full md:w-auto">
+						<img className="w-60" src={logo} alt={name} />
 					</div>
 				))}
 			</div>
