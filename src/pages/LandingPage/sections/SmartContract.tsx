@@ -24,7 +24,7 @@ export const SmartContract = ({ address, href, className }: SmartContractProps) 
 						Tap to view &lt;/&gt;
 					</div>
 				</div>
-				<div className="text-white text-xs text-center font-primary font-light tracking-wider mb-8 md:text-xl md:mb-16">
+				<div className="text-white text-xs text-center font-primary font-light tracking-wider break-all mb-8 md:text-xl md:mb-16">
 					{address}
 				</div>
 				<div className="text-brand-light text-[10px] text-center font-primary md:text-lg">
