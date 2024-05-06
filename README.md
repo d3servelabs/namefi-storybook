@@ -50,8 +50,16 @@
   - SVG Assets should be added as JSX components with `Ract.memo` and the passing `React.ComponentProps<'svg'>`, check existing icons in `components/core/icons`
 - Images should be imported, ***DO NOT USE STATIC PATHS***
 ```typescript jsx
-import emapleImage from 'assets/example.png'; // Importing the image
+import exampleImage from 'assets/example.png'; // Importing the image
 ...
 ...
-<img src={emapleImage} />;
+<img src={exampleImage} />;
 ```
+
+### Release
+- Releasing a new version requires the following steps (given that you're already logged in NPM and have permissions):
+  - Clean the git working Dir.
+  - Bump version (default is patch) ``` VERSION_LEVEL=<level> npm run bump```
+  - Building the lib ``` npm run build:lib```
+  - publishing the lib ``` npm publish ```
+- These are combined in one command ``` VERSION_LEVEL=<level> npm run release```

@@ -43,7 +43,10 @@
 		"chromatic:full": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}  --force-rebuild",
 		"chromatic:incremental": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --only-changed",
 		"chromatic": "npm run chromatic:full",
-		"bump": "npm version patch && git push --follow-tags"
+		"bump": "npm version ${VERSION_LEVEL:-patch} && git push --follow-tags",
+		"release": "npm run bump && npm run build:lib && npm publish",
+		"release:minor": "VERSION_LEVEL=minor npm run release",
+		"release:major": "VERSION_LEVEL=minor npm run release"
 	},
 	"dependencies": {
 		"@emotion/css": "^11.11.0",
