@@ -18,7 +18,7 @@ import { BackedBy, type BackerItem } from './sections/BackedBy';
 import { FAQs, type FAQItem } from './sections/FAQs';
 import { Footer, type FooterNavLink } from './sections/Footer';
 
-export type LandingPageProps = {
+export type FullPageProps = {
 	headerNavLinks: HeaderNavLink[];
 	socialLinks: SocialLinkItem[];
 	onClickLaunchDApp: () => void;
@@ -48,7 +48,7 @@ export type LandingPageProps = {
 	onFooterSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
 };
 
-export const LandingPage = ({
+export const FullPage = ({
 	headerNavLinks = [],
 	socialLinks = [],
 	onClickLaunchDApp,
@@ -76,7 +76,7 @@ export const LandingPage = ({
 	footerSubscriptionLoading = false,
 	footerSubscriptionSubmiited = false,
 	onFooterSubscriptionSubmit,
-}: LandingPageProps) => {
+}: FullPageProps) => {
 	return (
 		<div className="relative w-full flex flex-col justify-center items-center bg-black-1000">
 			<div className="max-w-[1400px] w-full md:py-9 md:px-4 sticky top-0 z-50">

@@ -20,4 +20,4 @@ export * from './sections/BackedBy';
 export * from './sections/FAQs';
 export * from './sections/Footer';
 
-export * from './LandingPage';
+export * from './FullPage';
