@@ -31,7 +31,7 @@ export const Introduction = ({
 	className,
 }: IntroductionProps) => {
 	return (
-		<div className={cn('w-full', className)}>
+		<div id="introduction" className={cn('w-full', className)}>
 			<ViewFinder className="mb-10 md:mb-16">
 				<div className="flex justify-between items-center text-5xl md:text-8xl p-4 md:p-16">
 					{statistics.map((statistic, index) => (

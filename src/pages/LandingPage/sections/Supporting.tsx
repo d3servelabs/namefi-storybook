@@ -13,7 +13,7 @@ export interface SupportingProps {
 
 export const Supporting = ({ items = [], className }: SupportingProps) => {
 	return (
-		<div className={cn('w-full', className)}>
+		<div id="supporting" className={cn('w-full', className)}>
 			<div className="text-brand-300 text-[10px] md:text-lg text-center md:text-left font-normal font-primary tracking-wide mb-8 md:mb-4">
 				Proudly supporting
 			</div>

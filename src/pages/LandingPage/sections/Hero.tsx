@@ -39,6 +39,7 @@ export const Hero = ({
 
 	return (
 		<div
+			id="hero"
 			className={cn(
 				'min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-152px-80px)] pt-5 pb-12 px-6 flex flex-col justify-around items-center min-gap-y-4',
 				className,

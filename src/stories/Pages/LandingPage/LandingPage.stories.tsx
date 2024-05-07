@@ -71,9 +71,9 @@ export const FullPage: Story = {
 	},
 	args: {
 		headerNavLinks: [
-			{ title: 'Feature', href: '#feature' },
+			{ title: 'Feature', href: '#features' },
 			{ title: 'NFT & $NFSC', href: '#assets' },
-			{ title: 'FAQs', href: '#faq' },
+			{ title: 'FAQs', href: '#faqs' },
 			{ title: 'About us', href: '#about' },
 			{ title: 'Contact us', href: '#contact' },
 		],

@@ -10,7 +10,7 @@ export interface SmartContractProps {
 
 export const SmartContract = ({ address, href, className }: SmartContractProps) => {
 	return (
-		<div className={cn('w-full', className)}>
+		<div id="smart-contract" className={cn('w-full', className)}>
 			<a
 				className="transition block bg-[#121212] hover:bg-black-700 rounded-2.5 py-3 px-6 md:rounded-5 md:py-8 md:px-12"
 				href={href}

@@ -23,7 +23,7 @@ export const Assets = ({ items = [], className }: AssetsProps) => {
 		setCurrentIndex(currentIndex + 1);
 	}, [currentIndex, setCurrentIndex]);
 	return (
-		<div className={cn('w-full', className)}>
+		<div id="assets" className={cn('w-full', className)}>
 			<div className="text-primary-500 text-base md:text-3xl font-primary font-bold tracking-wider pb-6 md:pb-18">
 				Browse our assets
 			</div>

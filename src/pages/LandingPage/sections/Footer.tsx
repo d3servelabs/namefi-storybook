@@ -30,7 +30,7 @@ export const Footer = ({
 	// Notes: Check `./Hero.tsx` for more details on the following note.
 
 	return (
-		<div className={cn('w-full bg-[#242424] rounded-t-[30px] p-9', className)}>
+		<div id="footer" className={cn('w-full bg-[#242424] rounded-t-[30px] p-9', className)}>
 			<div className="w-full max-w-[1400px] flex flex-col mx-auto">
 				<div className="w-full flex flex-wrap justify-between items-center gap-x-8 gap-y-4 mb-4 order-1">
 					<NamefiBrandText className="text-white text-xl md:text-3xl font-bold tracking-widest">
