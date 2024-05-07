@@ -1,20 +1,21 @@
 import { useState, useCallback } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { AsterismIcon } from '../../../components/Core/icons/Asterism';
-import { LandingPage } from '../../../pages/LandingPage/LandingPage';
-import { type SubscriptionInlineFormPayload } from '../../../pages/LandingPage/components/Subscription';
 import '../../../index.css';
 import '../../../App.css';
-import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
-import { TwitterIcon } from '../../../components/Core/icons/Twitter';
-import { DiscordIcon } from '../../../components/Core/icons/Discord';
-import { TelegramIcon } from '../../../components/Core/icons/Telegram';
-import { LinkedInIcon } from '../../../components/Core/icons/LinkedIn';
-import { GitHubIcon } from '../../../components/Core/icons/GitHub';
-import { FeatureSecureIcon } from '../../../components/Core/icons/FeatureSecure';
-import { FeatureAIPotentialIcon } from '../../../components/Core/icons/FeatureAIPotential';
-import { FeatureDeFiIcon } from '../../../components/Core/icons/FeatureDeFi';
+import {
+	AsterismIcon,
+	TwitterIcon,
+	DiscordIcon,
+	TelegramIcon,
+	LinkedInIcon,
+	GitHubIcon,
+	FeatureSecureIcon,
+	FeatureAIPotentialIcon,
+	FeatureDeFiIcon,
+	NamefiBrandText,
+	LandingPage,
+} from '../../..';
 import RegistrationScreenshot from '../../../assets/LandingPage/introduction/screenshot-registration.png';
 import ManagementScreenshot from '../../../assets/LandingPage/introduction/screenshot-management.png';
 import EthereumLogo from '../../../assets/LandingPage/powered-by/ethereum.png';
@@ -35,11 +36,11 @@ import OrangedaoLogo from '../../../assets/LandingPage/backed-by/OrangeDAO-Poly.
 
 const meta = {
 	title: 'Pages/Landingpage',
-	component: LandingPage,
+	component: LandingPage.FullPage,
 	parameters: {
 		layout: 'fullscreen',
 	},
-} satisfies Meta<typeof LandingPage>;
+} satisfies Meta<typeof LandingPage.FullPage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -220,8 +221,8 @@ export const FullPage: Story = {
 				),
 			},
 		],
-    smartContractAddress: '0x0000000000cf80E7Cf8Fa4480907f692177f8e06',
-    smartContractHref: '#',
+		smartContractAddress: '0x0000000000cf80E7Cf8Fa4480907f692177f8e06',
+		smartContractHref: '#',
 		backers: [
 			{
 				name: 'Alchemy',
@@ -289,7 +290,7 @@ export const FullPage: Story = {
 		const [isFooterSubscriptionLoading, setIsFooterSubscriptionLoading] = useState(false);
 		const [isFooterSubscriptionSubmitted, setIsFooterSubscriptionSubmitted] = useState(false);
 		const subscribeFromHero = useCallback(
-			async (payload: SubscriptionInlineFormPayload) => {
+			async (payload: LandingPage.SubscriptionInlineFormPayload) => {
 				setIsHeroSubscriptionLoading(true);
 				action('onSubscribeFromHero')(payload);
 				await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -299,7 +300,7 @@ export const FullPage: Story = {
 			[setIsHeroSubscriptionLoading, setIsHeroSubscriptionSubmitted],
 		);
 		const subscribeFromFooter = useCallback(
-			async (payload: SubscriptionInlineFormPayload) => {
+			async (payload: LandingPage.SubscriptionInlineFormPayload) => {
 				setIsFooterSubscriptionLoading(true);
 				action('onSubscribeFromFooter')(payload);
 				await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -309,7 +310,7 @@ export const FullPage: Story = {
 			[setIsFooterSubscriptionLoading, setIsFooterSubscriptionSubmitted],
 		);
 		return (
-			<LandingPage
+			<LandingPage.FullPage
 				{...props}
 				heroSubscriptionLoading={isHeroSubscriptionLoading}
 				heroSubscriptionSubmiited={isHeroSubscriptionSubmitted}
