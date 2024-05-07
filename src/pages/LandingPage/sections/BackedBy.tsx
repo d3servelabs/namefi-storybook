@@ -12,6 +12,7 @@ export interface BackedByProps {
 export const BackedBy = ({ items = [], className }: BackedByProps) => {
 	return (
 		<div
+			id="backed-by"
 			className={cn(
 				'w-full bg-[#121212] rounded-5 pt-3 md:pt-6 pb-6 md:pb-15 px-5 md:px-12',
 				className,

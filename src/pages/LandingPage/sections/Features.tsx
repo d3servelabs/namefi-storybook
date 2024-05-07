@@ -10,11 +10,9 @@ export interface FeatureProps {
 
 export const Features = ({ items, className }: FeatureProps) => {
 	return (
-		<div className={cn('relative w-full pl-14 md:pl-45', className)}>
+		<div id="features" className={cn('relative w-full pl-14 md:pl-45', className)}>
 			<div className="absolute z-10 top-6 md:top-12 left-0 md:left-12 font-bold tracking-wider flex items-center justify-start text-primary-500">
-				<NamefiBrandText className="text-2xl md:text-5xl">
-					Namefi
-				</NamefiBrandText>
+				<NamefiBrandText className="text-2xl md:text-5xl">Namefi</NamefiBrandText>
 				<span className="ml-[0.5em] text-lg md:text-4xl">Features</span>
 			</div>
 			<div className="rounded-5 bg-[#121212] p-9 md:p-15">

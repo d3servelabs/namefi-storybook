@@ -10,11 +10,11 @@ export interface FAQProps {
 	className?: string;
 }
 
-export const FAQs = ({ items,onClickAskHuman, className }: FAQProps) => {
+export const FAQs = ({ items, onClickAskHuman, className }: FAQProps) => {
 	const [selected, setSelected] = useState<number | void>();
 
 	return (
-		<div className={cn('w-full', className)}>
+		<div id="faqs" className={cn('w-full', className)}>
 			<div className="text-primary-500 text-base md:text-3xl font-primary font-bold tracking-widest mb-6 md:mb-16">
 				FAQs
 			</div>

@@ -12,7 +12,7 @@ export interface PoweredByProps {
 
 export const PoweredBy = ({ items, className }: PoweredByProps) => {
 	return (
-		<div className={cn('w-full', className)}>
+		<div id="powered-by" className={cn('w-full', className)}>
 			<div className="text-brand-300 text-[10px] md:text-lg font-normal font-primary tracking-wide mb-3">
 				Powered by
 			</div>
