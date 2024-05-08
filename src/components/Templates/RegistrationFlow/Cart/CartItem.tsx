@@ -6,7 +6,7 @@ import centerTruncateString from '../../../../utils/centerTruncateString';
 import TokenIcon from "../../../Core/icons/TokenIcon";
 import {CheckCheck} from "lucide-react";
 
-export default function CartItem({
+function CartItem({
 	domainName,
 	years,
 	price,
@@ -61,3 +61,4 @@ function TrashButton(props: ComponentProps<typeof GhostButton>) {
 	);
 }
 
+export default CartItem;
