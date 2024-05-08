@@ -81,7 +81,7 @@ export const Header = ({
 								<li key={index}>
 									<a
 										className="transition-all block px-12 py-4 text-base text-black-200 font-primary hover:text-brand-light"
-										href={href}>
+										href={href} onClick={() => setCollapsed(true)}>
 										{title}
 									</a>
 								</li>
