@@ -33,7 +33,7 @@ export const FAQCard = ({
 			<div
 				onClick={expanded ? onCollapse : onExpand}
 				className={cn(
-					'w-full min-h-12 md:min-h-20 flex items-center justify-between py-6 gap-x-6 text-brand-light hover:text-white transition cursor-pointer',
+					'w-full min-h-12 md:min-h-20 flex items-center justify-between py-3.5 gap-x-3.5 md:py-6 md:gap-x-6 text-brand-light hover:text-white transition cursor-pointer',
 					expanded && 'text-primary-500 hover:text-primary-500',
 				)}>
 				<span className="font-semibold text-sm md:text-xl tracking-widest">{question}</span>
