@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
 import { cn } from '../../../utils/cn';
@@ -34,6 +34,13 @@ export const Hero = ({
 }: HeroProps) => {
 	const [subscriptionEmail, setSubscriptionEmail] = useState('');
 	const [subscriptionDisplay, setSubscriptionDisplay] = useState<SubscriptionDisplay>('button');
+	const handleSubscriptionDisplayChange = useCallback((display: SubscriptionDisplay) => {
+		if (!onSubscriptionSubmit) {
+			onClickJoinBetaTest?.();
+			return
+		}
+		setSubscriptionDisplay(display);
+	}, [])
 
 	// Note: If we reach a consensus to use a unified third-party hooks library, then we can directly call something like `useRequest` here, add Promise prop to this component like `subscribe: (payload: SubscriptionInlineFormPayload) => Promise<void>`，and deprecate forwarded props from `Subscription` component. That way, the APIs of this component will be more clear.
 
@@ -54,7 +61,7 @@ export const Hero = ({
 				<div className="flex-1 hidden md:block md:w-[560px] max-w-full">
 					<Subscription
 						display={subscriptionDisplay}
-						onDisplayChange={setSubscriptionDisplay}
+						onDisplayChange={handleSubscriptionDisplayChange}
 						email={subscriptionEmail}
 						onEmailChange={setSubscriptionEmail}
 						loading={subscriptionLoading}
@@ -72,11 +79,13 @@ export const Hero = ({
 						<ArrowRight className="transition w-4.5 h-4.5 text-primary-500 group-hover:translate-x-2" />
 					</Button>
 				</div>
-				<div className="w-full md:w-auto">
-					<Button type="tonal" className="h-14 px-8 w-full" onClick={onClickInvestor}>
-						I'm an Investor
-					</Button>
-				</div>
+				{onClickInvestor && (
+					<div className="w-full md:w-auto">
+						<Button type="tonal" className="h-14 px-8 w-full" onClick={onClickInvestor}>
+							I'm an Investor
+						</Button>
+					</div>
+				)}
 			</div>
 			<ScrollDownTip className="block md:hidden mt-12 py-3 text-sm font-normal tracking-wide">
 				Why <NamefiBrandText className="text-sm">Namefi</NamefiBrandText>?
