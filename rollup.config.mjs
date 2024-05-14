@@ -25,6 +25,7 @@ import svgr from "vite-plugin-svgr";
 import postcssImport from "postcss-import";
 import autoprefixer from "autoprefixer";
 import postcssInline from "@sector-labs/postcss-inline-class";
+import {cssModules} from 'rollup-plugin-css-modules';
 
 export default [
 	{
@@ -59,6 +60,7 @@ export default [
 				})
 			),
 			svgr({icon: true, memo: true, exportType: "default",}),
+			cssModules(),
 			postcss({
 				extensions: ['.css'],
 				plugins: [

@@ -12,3 +12,5 @@ export { default as Form } from './Form';
 export * from './Buttons';
 export * from './icons';
 export { Balance } from './Balance';
+export { ScrollDownTip } from './ScrollDownTip';
+export type { ScrollDownTipProps } from './ScrollDownTip';
