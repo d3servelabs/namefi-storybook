@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { marked } from 'marked';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 import StyledDiv from "../../../Core/StyledDiv";
 import {css} from "@emotion/css";
 
