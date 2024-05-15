@@ -1,11 +1,8 @@
 export { default as AvalancheNetwork } from './AvalancheNetwork';
-export { default as AvalancheNetworkBwIcon } from './AvalancheNetworkBwIcon';
 export { default as BaseNetwork } from './BaseNetwork';
-export { default as BaseNetworkBwIcon } from './BaseNetworkBwIcon';
-export { default as EthNetworkBwIcon } from './EthNetworkBwIcon';
 export { default as EthNetwork } from './EthNetwork';
+export { default as MetamaskWalletInputIcon } from './MetamaskWalletInputIcon';
 export { default as PolygonNetwork } from './PolygonNetwork';
-export { default as PolygonNetworkBwIcon } from './PolygonNetworkBwIcon';
 export { default as StacksNetwork } from './StacksNetwork';
 export { default as CartIcon } from './CartIcon';
 export { default as CustomLoader } from './CustomLoader';
