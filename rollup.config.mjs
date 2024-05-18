@@ -5,6 +5,7 @@ import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 import image from '@rollup/plugin-image';
+import raw from './build/rollup-plugin-raw.mjs'
 import {fileURLToPath} from 'url';
 // This is required to read package.json file when
 // using Native ES modules in Node.js
@@ -59,6 +60,7 @@ export default [
 					}
 				})
 			),
+			raw(),
 			svgr({icon: true, memo: true, exportType: "default",}),
 			cssModules(),
 			postcss({
