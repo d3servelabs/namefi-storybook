@@ -14,10 +14,9 @@ export function Chip({ selected,
     className,
     ...props
 }: ChipProps) {
-    let chipStyling = selected ? 'py-2.5 md:py-2.5 px-6.25 md:px-6.25 flex justify-center items-center border-primary-500 border border-2 rounded-3xl font-primary text-2.5 md:text-lg cursor-pointer bg-black-900 text-white' : 'transition py-2.5 md:py-2.5 px-6.25 md:px-6.25 flex justify-center items-center border-[#4a4a4a] border bg-[#1c1c1c] rounded-3xl font-primary text-2.5 md:text-lg text-[#d2d2d2] cursor-pointer hover:ring-primary-500 hover:ring-2 hover:ring-inset hover:bg-black-900 hover:text-white';
     return (
         <div
-            className={cn(chipStyling, className)} onClick={onSelect} {...props}>
+            className={cn('py-2.5 px-6.25 flex justify-center items-center border-2 rounded-3xl font-primary text-2.5 md:text-lg cursor-pointer', selected ? 'border-primary-500 bg-black-900 text-white' : 'transition border-[#4a4a4a] bg-[#1c1c1c] text-[#d2d2d2] hover:ring-primary-500 hover:ring-2 hover:ring-inset hover:bg-black-900 hover:text-white', className)} onClick={onSelect} {...props}>
             {children}
         </div>
     );
