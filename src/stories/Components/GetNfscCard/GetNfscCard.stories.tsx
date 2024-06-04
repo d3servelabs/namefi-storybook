@@ -15,6 +15,15 @@ type Story = StoryObj<typeof GetNfscCard>
 
 export const BlankGetNfscCard: Story = {
     args: {
-        onClickChip: null
+        onClickChip: null,
+        chipValues: [20, 50, 100]
+    }
+}
+
+export const SelectedGetNfscCard: Story = {
+    args: {
+        onClickChip: null,
+        chipValues: [20, 50, 100],
+        selectedValue: 20
     }
 }
