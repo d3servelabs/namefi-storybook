@@ -35,7 +35,7 @@
 		"build": "vite build",
 		"build:lib": "rimraf lib && NODE_ENV=production rollup -c",
 		"build:local": "npm run build:lib && npm pack",
-		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+		"lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
@@ -46,7 +46,8 @@
 		"bump": "npm version ${VERSION_LEVEL:-patch} && git push --follow-tags",
 		"release": "npm run bump && npm run build:lib && npm publish",
 		"release:minor": "VERSION_LEVEL=minor npm run release",
-		"release:major": "VERSION_LEVEL=major npm run release"
+		"release:major": "VERSION_LEVEL=major npm run release",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@emotion/css": "^11.11.0",
@@ -96,16 +97,21 @@
 		"@vitejs/plugin-react": "^4.2.1",
 		"autoprefixer": "^10.4.17",
 		"chromatic": "^11.0.0",
-		"isomorphic-dompurify": "^2.10.0",
 		"eslint": "^8.55.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.5",
 		"eslint-plugin-storybook": "^0.6.15",
+		"husky": "^9.0.11",
+		"isomorphic-dompurify": "^2.10.0",
+		"lint-staged": "^15.2.5",
 		"marked": "^12.0.0",
 		"postcss": "^8.4.35",
 		"postcss-import": "^16.1.0",
 		"postcss-nested": "^6.0.1",
+		"prettier": "3.3.0",
 		"punycode": "^1.4.1",
 		"rimraf": "^5.0.5",
 		"rollup": "^4.12.0",
@@ -132,5 +138,8 @@
 		"punycode": "^1.4.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0"
+	},
+	"lint-staged": {
+		"*.{js,jsx,tsx,ts}": "eslint --cache --fix"
 	}
 }
