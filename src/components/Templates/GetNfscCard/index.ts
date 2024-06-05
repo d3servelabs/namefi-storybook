@@ -1,1 +1,1 @@
-export * as GetNfscCard from "./GetNfscCard"
+export * as GetNfscCard from './GetNfscCard';
