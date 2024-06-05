@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { cn } from '../../utils/cn';
 
-interface OTPInputFieldProps {
+export interface OTPInputFieldProps {
 	fieldLength: number;
 	onValueChange: (value: string) => void;
 	allowedChars?: RegExp;
