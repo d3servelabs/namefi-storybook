@@ -2,6 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import OwnedDomains from '../../components/Templates/OwnedDomains';
 import { useSet } from '@uidotdev/usehooks';
 import { useCallback } from 'react';
+import { DomainCard } from '../../components';
+import { DomainStatusEnum } from '../../components/Templates/DomainCard/DomainStatus';
+import centerTruncateString from "../../utils/centerTruncateString";
 
 const meta = {
 	title: 'Components/OwnedDomains',
@@ -27,9 +30,9 @@ export const Default: Story = {
 			'example-02.com',
 			'example-02.org',
 			'example-02.net',
-		]
+		],
 	} as any,
-	render(props:any) {
+	render(props: any) {
 		const set = useSet<string>();
 		const handleTldClicked = useCallback(
 			(tld) => {
@@ -44,26 +47,39 @@ export const Default: Story = {
 					<OwnedDomains.Root>
 						<OwnedDomains.Filter title={'You Also Own'}>
 							<p>DNS</p>
-							{['.com', '.net','.org'].map((value) => (
-								<OwnedDomains.Filter.Chip onClick={()=>handleTldClicked(value)} selected={set.has(value)}>
+							{['.com', '.net', '.org'].map((value) => (
+								<OwnedDomains.Filter.Chip
+									onClick={() => handleTldClicked(value)}
+									selected={set.has(value)}>
 									{value}
 								</OwnedDomains.Filter.Chip>
 							))}
 						</OwnedDomains.Filter>
 						<OwnedDomains.Grid.Root>
-							{props.domains.filter((domain)=>{
-								if(!set.size) return  true;
-								for(const tld of set.values()){
-									if(domain.endsWith(tld)){
-										return true
+							{props.domains
+								.filter((domain) => {
+									if (!set.size) return true;
+									for (const tld of set.values()) {
+										if (domain.endsWith(tld)) {
+											return true;
+										}
 									}
-								}
-								return false
-							}).map((domain, index) => (
-									<OwnedDomains.Grid.Tile
-										domainName={domain}
-										status={'AVAILABLE'}
-										expirationDate={new Date()}></OwnedDomains.Grid.Tile>
+									return false;
+								})
+								.map((domain, index) => (
+									<DomainCard.Root small>
+										<DomainCard.Header>
+											<DomainCard.Status
+												status={DomainStatusEnum.AVAILABLE}
+											/>
+										</DomainCard.Header>
+										<DomainCard.Body>{centerTruncateString(domain,24,'*')}</DomainCard.Body>
+										<DomainCard.Footer>
+											<DomainCard.ExpirationAndLock
+												expirationDate={new Date()}
+											/>
+										</DomainCard.Footer>
+									</DomainCard.Root>
 								))}
 						</OwnedDomains.Grid.Root>
 					</OwnedDomains.Root>
