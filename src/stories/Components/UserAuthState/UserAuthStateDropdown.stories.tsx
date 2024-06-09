@@ -1,14 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import  UserAuthStateDropDown from '../../../components/Templates/UserAuthState/Dropdown';
+import UserAuthStateDropDown from '../../../components/Templates/UserAuthState/Dropdown';
 import React from 'react';
-import ShortAddress from "../../../components/Core/ShortAddress";
-import * as Footer from "../../../components/Templates/UserAuthState/Dropdown/Footer";
-import {cn} from "../../../utils/cn";
-import Root from "../../../components/Templates/UserAuthState/Dropdown/Body/Root";
-import NavList from "../../../components/Templates/UserAuthState/Dropdown/Nav/List";
-import NavItem from "../../../components/Templates/UserAuthState/Dropdown/Nav/Item";
-import {BorderSplitIcon, PersonIcon} from "@radix-ui/react-icons";
-import BalanceTile from "../../../components/Templates/UserAuthState/Dropdown/Body/BalanceTile";
+import ShortAddress from '../../../components/Core/ShortAddress';
+import { cn } from '../../../utils/cn';
+import { BorderSplitIcon, PersonIcon } from '@radix-ui/react-icons';
+import { CopyIconButton } from '../../../components';
 
 const meta = {
 	title: 'Components/UserAuthState/Dropdown',
@@ -19,7 +15,7 @@ const meta = {
 	},
 	argTypes: {
 		userAddress: { type: 'string' },
-		userLoading: { type: 'boolean' }, 
+		userLoading: { type: 'boolean' },
 	},
 } as Meta<typeof UserAuthStateDropDown.Root>;
 
@@ -35,18 +31,25 @@ export const Loading: Story = {
 	render: ({ userAddress, userLoading, balance = 10.32 }: any) => {
 		return (
 			<UserAuthStateDropDown.Root>
-				<UserAuthStateDropDown.Header.Root userAddress={userAddress}>
-					<UserAuthStateDropDown.Header.UserAvatarRoot>
-						<img src={'/assets/maskuser.svg'}/>
-					</UserAuthStateDropDown.Header.UserAvatarRoot>
-					<UserAuthStateDropDown.Header.UserLabel>
-						<ShortAddress address={userAddress} loading={userLoading}/>
-					</UserAuthStateDropDown.Header.UserLabel>
-					<UserAuthStateDropDown.Header.NetworkLogo chainId={1}/>
-					<UserAuthStateDropDown.Header.ConnectionStatus loading={userLoading} connected={!!userAddress}>
-						{userAddress? "connected":"disconnected"}
-					</UserAuthStateDropDown.Header.ConnectionStatus>
+				<UserAuthStateDropDown.Header.Root>
+					<>
+						<UserAuthStateDropDown.Header.UserAvatarRoot>
+							<img src={'/assets/maskuser.svg'} />
+						</UserAuthStateDropDown.Header.UserAvatarRoot>
+						<UserAuthStateDropDown.Header.UserLabel>
+							<ShortAddress address={userAddress} loading={userLoading} />
+						</UserAuthStateDropDown.Header.UserLabel>
+						<CopyIconButton value={userAddress} />
+					</>
 
+					<>
+						<UserAuthStateDropDown.Header.NetworkLogo chainId={1} />
+						<UserAuthStateDropDown.Header.ConnectionStatus
+							loading={userLoading}
+							connected={!!userAddress}>
+							{userAddress ? 'connected' : 'disconnected'}
+						</UserAuthStateDropDown.Header.ConnectionStatus>
+					</>
 				</UserAuthStateDropDown.Header.Root>
 				{/*<UserAuthStateDropDown.Body />*/}
 
@@ -60,7 +63,6 @@ export const Loading: Story = {
 					)}
 					{/*{userAddress && <Footer.ExistButton>{signedIn ? 'SignOut' : 'Disconnect'}</Footer.ExistButton>}*/}
 				</UserAuthStateDropDown.Footer.Root>
-
 			</UserAuthStateDropDown.Root>
 		);
 	},
@@ -75,16 +77,17 @@ export const Connected: Story = {
 			<UserAuthStateDropDown.Root>
 				<UserAuthStateDropDown.Header.Root userAddress={userAddress}>
 					<UserAuthStateDropDown.Header.UserAvatarRoot>
-						<img src={'/assets/maskuser.svg'}/>
+						<img src={'/assets/maskuser.svg'} />
 					</UserAuthStateDropDown.Header.UserAvatarRoot>
 					<UserAuthStateDropDown.Header.UserLabel>
-						<ShortAddress address={userAddress} loading={userLoading}/>
+						<ShortAddress address={userAddress} loading={userLoading} />
 					</UserAuthStateDropDown.Header.UserLabel>
-					<UserAuthStateDropDown.Header.NetworkLogo chainId={1}/>
-					<UserAuthStateDropDown.Header.ConnectionStatus loading={userLoading} connected={!!userAddress}>
-						{userAddress? "connected":"disconnected"}
+					<UserAuthStateDropDown.Header.NetworkLogo chainId={1} />
+					<UserAuthStateDropDown.Header.ConnectionStatus
+						loading={userLoading}
+						connected={!!userAddress}>
+						{userAddress ? 'connected' : 'disconnected'}
 					</UserAuthStateDropDown.Header.ConnectionStatus>
-
 				</UserAuthStateDropDown.Header.Root>
 				{/*<UserAuthStateDropDown.Body />*/}
 
@@ -96,7 +99,11 @@ export const Connected: Story = {
 							Switch Wallet
 						</UserAuthStateDropDown.Footer.SwitchButton>
 					)}
-					{userAddress && <UserAuthStateDropDown.Footer.ExitButton>{'Disconnect'}</UserAuthStateDropDown.Footer.ExitButton>}
+					{userAddress && (
+						<UserAuthStateDropDown.Footer.ExitButton>
+							{'Disconnect'}
+						</UserAuthStateDropDown.Footer.ExitButton>
+					)}
 				</UserAuthStateDropDown.Footer.Root>
 			</UserAuthStateDropDown.Root>
 		);
@@ -112,16 +119,17 @@ export const Disconnected: Story = {
 			<UserAuthStateDropDown.Root>
 				<UserAuthStateDropDown.Header.Root userAddress={userAddress}>
 					<UserAuthStateDropDown.Header.UserAvatarRoot>
-						<img src={'/assets/maskuser.svg'}/>
+						<img src={'/assets/maskuser.svg'} />
 					</UserAuthStateDropDown.Header.UserAvatarRoot>
 					<UserAuthStateDropDown.Header.UserLabel>
-						<ShortAddress address={userAddress} loading={userLoading}/>
+						<ShortAddress address={userAddress} loading={userLoading} />
 					</UserAuthStateDropDown.Header.UserLabel>
-					<UserAuthStateDropDown.Header.NetworkLogo chainId={1}/>
-					<UserAuthStateDropDown.Header.ConnectionStatus loading={userLoading} connected={!!userAddress}>
-						{userAddress? "connected":"disconnected"}
+					<UserAuthStateDropDown.Header.NetworkLogo chainId={1} />
+					<UserAuthStateDropDown.Header.ConnectionStatus
+						loading={userLoading}
+						connected={!!userAddress}>
+						{userAddress ? 'connected' : 'disconnected'}
 					</UserAuthStateDropDown.Header.ConnectionStatus>
-
 				</UserAuthStateDropDown.Header.Root>
 				{/*<UserAuthStateDropDown.Body></UserAuthStateDropDown.Body>*/}
 				{/*<UserAuthStateDropDown.Footer userAddress={userAddress} loading={userLoading} />*/}
@@ -129,8 +137,6 @@ export const Disconnected: Story = {
 		);
 	},
 };
-
-
 
 export const SignedIn: Story = {
 	args: {
@@ -141,16 +147,17 @@ export const SignedIn: Story = {
 			<UserAuthStateDropDown.Root>
 				<UserAuthStateDropDown.Header.Root userAddress={userAddress}>
 					<UserAuthStateDropDown.Header.UserAvatarRoot>
-						<img src={'/assets/maskuser.svg'}/>
+						<img src={'/assets/maskuser.svg'} />
 					</UserAuthStateDropDown.Header.UserAvatarRoot>
 					<UserAuthStateDropDown.Header.UserLabel>
-						<ShortAddress address={userAddress} loading={userLoading}/>
+						<ShortAddress address={userAddress} loading={userLoading} />
 					</UserAuthStateDropDown.Header.UserLabel>
-					<UserAuthStateDropDown.Header.NetworkLogo chainId={1}/>
-					<UserAuthStateDropDown.Header.ConnectionStatus loading={userLoading} connected={!!userAddress}>
+					<UserAuthStateDropDown.Header.NetworkLogo chainId={1} />
+					<UserAuthStateDropDown.Header.ConnectionStatus
+						loading={userLoading}
+						connected={!!userAddress}>
 						Signed In
 					</UserAuthStateDropDown.Header.ConnectionStatus>
-
 				</UserAuthStateDropDown.Header.Root>
 				<UserAuthStateDropDown.Body.Root>
 					{!!userAddress && (
@@ -158,18 +165,24 @@ export const SignedIn: Story = {
 							<UserAuthStateDropDown.Nav.Item
 								icon={<BorderSplitIcon width={24} height={24} />}
 								href={'#'}
-								onClick={() => {}}>
+								onClick={() => {
+									alert('Dashboard clicked');
+								}}>
 								Dashboard
 							</UserAuthStateDropDown.Nav.Item>
 							<UserAuthStateDropDown.Nav.Item
 								icon={<PersonIcon width={24} height={24} />}
 								href={'#'}
-								onClick={() => {}}>
+								onClick={() => {
+									alert('Whois clicked');
+								}}>
 								WHOIS Profile
 							</UserAuthStateDropDown.Nav.Item>
 						</UserAuthStateDropDown.Nav.List>
 					)}
-					{!!userAddress && !!balance && <UserAuthStateDropDown.Body.BalanceTile balance={balance} />}
+					{!!userAddress && !!balance && (
+						<UserAuthStateDropDown.Body.BalanceTile balance={balance} />
+					)}
 				</UserAuthStateDropDown.Body.Root>
 
 				<UserAuthStateDropDown.Footer.Root>
@@ -180,7 +193,11 @@ export const SignedIn: Story = {
 							Switch Wallet
 						</UserAuthStateDropDown.Footer.SwitchButton>
 					)}
-					{userAddress && <UserAuthStateDropDown.Footer.ExitButton>{'Disconnect'}</UserAuthStateDropDown.Footer.ExitButton>}
+					{userAddress && (
+						<UserAuthStateDropDown.Footer.ExitButton>
+							{'Disconnect'}
+						</UserAuthStateDropDown.Footer.ExitButton>
+					)}
 				</UserAuthStateDropDown.Footer.Root>
 			</UserAuthStateDropDown.Root>
 		);
