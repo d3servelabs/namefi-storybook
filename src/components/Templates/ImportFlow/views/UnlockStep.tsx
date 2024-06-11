@@ -69,7 +69,7 @@ export const UnlockStep = ({
 				<ImportFlowLayout.Main
 					icon={<UnlockIcon />}
 					title="Domain is still locked."
-					description="Refresh to verify again."
+					description="If you have uncloked it in your current registrar, click to refresh to verify again."
 					steps={steps}
 					onBack={onBack}
 					className={className}>
