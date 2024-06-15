@@ -5,8 +5,8 @@ export const UserBalanceCardBalance = (balanceProps: Partial<BalanceProps>) => {
 	return (
 		<Balance
 			color="#48e59b"
-			fontSizeP="38.4px"
-			fontSizeSpan="28.8px"
+			fontSizeP="2.4rem"
+			fontSizeSpan="1.75rem"
 			approxBalance={true}
 			{...balanceProps}
 		/>

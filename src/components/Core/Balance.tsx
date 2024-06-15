@@ -37,7 +37,7 @@ export const Balance = ({
 	return (
 		<>
 			{fullTruncatedBalance && (
-				<div className={cn(horizontal && "flex flex-row gap-0.5 items-center")}>
+				<div className={cn(horizontal && 'flex flex-row gap-0.5 items-center')}>
 					<p
 						className={cn(
 							'text-lg text-white tracking-wide font-normal font-primary',
