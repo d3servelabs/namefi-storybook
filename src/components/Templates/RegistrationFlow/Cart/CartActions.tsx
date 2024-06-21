@@ -5,12 +5,15 @@ import { cn } from '../../../../utils/cn';
 
 export function Root({ className, children, ...props }: ComponentProps<'div'>) {
 	return (
-		<div className="relative w-[500px] h-12 flex justify-between items-center">
+		<div
+			{...props}
+			className={cn(
+				'relative max-w-[500px] h-12 flex justify-between items-center',
+				className,
+			)}>
 			<div>{children?.[0] || children}</div>
 
-			<div>
-				{children?.[1]}
-			</div>
+			<div>{children?.[1]}</div>
 		</div>
 	);
 }
@@ -27,7 +30,11 @@ export function BackButton({ className, children, ...props }: ComponentProps<typ
 	);
 }
 
-export function CheckoutButton({ className, children, ...props }: ComponentProps<typeof SolidButton>) {
+export function CheckoutButton({
+	className,
+	children,
+	...props
+}: ComponentProps<typeof SolidButton>) {
 	return (
 		<SolidButton {...props} className={cn('w-auto', className)}>
 			{children || (
