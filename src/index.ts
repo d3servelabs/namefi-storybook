@@ -8,3 +8,4 @@ export * as LandingPage from './pages/LandingPage';
 import './lib.css';
 
 export * from './components';
+export * from './hooks';

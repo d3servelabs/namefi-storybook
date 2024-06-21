@@ -17,3 +17,4 @@ export type { ScrollDownTipProps } from './ScrollDownTip';
 export { LoadingAnimation } from './LoadingAnimation';
 export { Chip } from './Chip';
 export { type ChipProps } from './Chip';
+export * from './Checkbox';
