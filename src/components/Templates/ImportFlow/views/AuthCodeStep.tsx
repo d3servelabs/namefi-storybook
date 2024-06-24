@@ -6,7 +6,7 @@ import { DoneIcon } from '../../../Core/icons/Done';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
 import { ActionButton } from '../components/ActionButton';
 import { Spinner } from '../components/Spinner';
-import {Steps} from "../../DomainOwned/components/Steps";
+import { Steps } from '../../DomainOwned/components/Steps';
 
 export type AuthCodeStepStatus = 'INPUT' | 'LOADING' | 'FAILED' | 'VERIFIED';
 
@@ -51,10 +51,11 @@ export const AuthCodeStep = ({
 	const form = (
 		<div className="mt-8 mb-9">
 			{status === 'VERIFIED' ? (
-				<CodeInputField value={authCode} status="SUBMITTED" />
+				<CodeInputField className={'min-w-[275px]'} value={authCode} status="SUBMITTED" />
 			) : (
 				<CodeInputField
 					value={authCode}
+					className={'min-w-[275px]'}
 					onValueChanged={onAuthCodeChange}
 					incorrectAuthCode={!!authCodeError}
 					status={status === 'FAILED' && authCodeError ? 'SUBMITTED' : 'NOTSUBMITTED'}

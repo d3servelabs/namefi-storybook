@@ -4,15 +4,17 @@ import ClipboardPasteSVG from '../../../public/assets/Clipboard-Paste.svg';
 import DoneSVG from '../../../public/assets/Done.svg';
 import EyeOpenSVG from '../../../public/assets/eye-open.svg';
 import EyeNoneSVG from '../../../public/assets/Eye-None.svg';
+import { cn } from '../../utils/cn';
 
-export type InputComponentProps = {
+export interface InputComponentProps {
 	incorrectAuthCode?: boolean;
 	onPasteClicked?: () => any;
 	onSubmit?: () => any;
 	value?: string;
 	onValueChanged?: (value: string) => any;
 	status?: 'SUBMITTED' | 'NOTSUBMITTED';
-};
+	className?: string;
+}
 
 export const CodeInputField = ({
 	status,
@@ -21,6 +23,7 @@ export const CodeInputField = ({
 	onSubmit,
 	onPasteClicked,
 	onValueChanged,
+	className,
 }: InputComponentProps) => {
 	const [isVisible, setIsVisible] = useState(false);
 	const buttonKey = useId();
@@ -31,7 +34,7 @@ export const CodeInputField = ({
 	}, [onValueChanged, onPasteClicked]);
 
 	return (
-		<form className="w-[300px] max-h-[75px] flex flex-col justify-between ">
+		<form className={cn('max-h-[75px] flex flex-col justify-between ', className)}>
 			<div className="w-full h-[55px] rounded-[10px] px-3.5 bg-[#313131] flex">
 				<label
 					className="w-full flex-1"
