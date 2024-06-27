@@ -24,21 +24,25 @@ export const Default: Story = {
 		current: { control: 'number' },
 		items: { control: 'object' },
 		pending: { control: 'object' },
+		vertical: { control: 'boolean' },
 		itemClassName: { control: 'text' },
 		className: { control: 'text' },
 	},
 	args: {
 		current: 0,
 		items: [
-			<StepButton icon={<UnlockIcon />}>Unlock</StepButton>,
-			<StepButton icon={<ReverseLeftIcon />} disabled>
+			<StepButton key={0} icon={<UnlockIcon />}>
+				Unlock
+			</StepButton>,
+			<StepButton key={1} icon={<ReverseLeftIcon />} disabled>
 				Transfer
 			</StepButton>,
-			<StepButton icon={<DoneIcon />} disabled>
+			<StepButton key={2} icon={<DoneIcon />} disabled>
 				Done
 			</StepButton>,
 		],
 		pending: '',
+		vertical: false,
 		itemClassName: '',
 		className: '',
 	},
@@ -55,6 +59,7 @@ export const PlainText: Story = {
 		current: 0,
 		items: ['1', '2', '3'],
 		pending: '',
+		vertical: false,
 		itemClassName: 'w-38',
 		className: '',
 	},
@@ -73,9 +78,12 @@ export const Pending: Story = {
 		pending: (
 			<div className="text-primary-500 relative p-1">
 				<GlobeIcon className="w-5 h-5 bg-black-background" />
-				<div className="absolute text-[10px] font-medium leading-4 bottom-full">Your Registrar</div>
+				<div className="absolute text-[10px] font-medium leading-4 bottom-full">
+					Your Registrar
+				</div>
 			</div>
 		),
+		vertical: false,
 		itemClassName: 'w-38',
 		className: '',
 	},
