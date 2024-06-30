@@ -51,7 +51,8 @@ export const Steps = ({
 						</div>
 						<div
 							className={cn(
-								'flex justify-center text-xs tracking-wide whitespace-nowrap',
+								'flex text-xs tracking-wide whitespace-nowrap',
+								vertical ? 'items-center min-h-14' : 'justify-center min-w-14',
 								index === current ? 'text-white font-medium' : 'text-grey',
 								itemClassName,
 							)}>
