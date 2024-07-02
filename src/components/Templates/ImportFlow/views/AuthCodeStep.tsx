@@ -5,8 +5,8 @@ import { RefreshIcon } from '../../../Core/icons/Refresh';
 import { DoneIcon } from '../../../Core/icons/Done';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
 import { ActionButton } from '../components/ActionButton';
-import { Spinner } from '../components/Spinner';
 import { Steps } from '../../DomainOwned/components/Steps';
+import { NamefiSpinner } from '../../../Core';
 
 export type AuthCodeStepStatus = 'INPUT' | 'LOADING' | 'FAILED' | 'VERIFIED';
 
@@ -92,7 +92,7 @@ export const AuthCodeStep = ({
 					steps={steps}
 					onBack={onBack}
 					className={className}>
-					<Spinner />
+					<NamefiSpinner />
 				</ImportFlowLayout.Main>
 			);
 		}

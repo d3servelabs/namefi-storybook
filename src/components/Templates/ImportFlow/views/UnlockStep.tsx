@@ -3,9 +3,9 @@ import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { RefreshIcon } from '../../../Core/icons/Refresh';
 import { UnlockIcon } from '../../../Core/icons/Unlock';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import {Steps} from "../../DomainOwned/components/Steps";
+import { Steps } from '../../DomainOwned/components/Steps';
 import { ActionButton } from '../components/ActionButton';
-import { Spinner } from '../components/Spinner';
+import { NamefiSpinner } from '../../../Core';
 
 export type UnlockStepStatus = 'DEFAULT' | 'LOADING' | 'LOCKED' | 'UNLOCKED';
 
@@ -60,7 +60,7 @@ export const UnlockStep = ({
 					steps={steps}
 					onBack={onBack}
 					className={className}>
-					<Spinner />
+					<NamefiSpinner />
 				</ImportFlowLayout.Main>
 			);
 		}
