@@ -13,7 +13,7 @@ export const ProcessingOrders = () => {
 					<p className="font-normal text-brand-300 text-sm">Please wait a sec...</p>
 				</div>
 			</div>
-			<div className="relative w-[120px] h-[120px]  ">
+			<div className="relative w-30 h-30  ">
 				<NamefiSpinner />
 			</div>
 		</div>

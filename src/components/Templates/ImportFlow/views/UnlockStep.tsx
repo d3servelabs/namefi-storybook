@@ -60,7 +60,9 @@ export const UnlockStep = ({
 					steps={steps}
 					onBack={onBack}
 					className={className}>
-					<NamefiSpinner />
+					<div className="relative w-30 h-30  ">
+						<NamefiSpinner />
+					</div>
 				</ImportFlowLayout.Main>
 			);
 		}
