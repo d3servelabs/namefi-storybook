@@ -18,3 +18,4 @@ export { LoadingAnimation } from './LoadingAnimation';
 export { Chip } from './Chip';
 export { type ChipProps } from './Chip';
 export * from './Checkbox';
+export { NamefiSpinner } from './NamefiSpinner';
