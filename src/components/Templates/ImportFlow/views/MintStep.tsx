@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
 import { Steps } from '../../DomainOwned/components/Steps';
 import { ActionButton } from '../components/ActionButton';
 import NamefiBrandText from '../../../Core/NamefiBrandText';
 
 export interface MintStepProps {
-	icon?: React.ReactNode;
-	progressDescription?: React.ReactNode;
+	icon?: ReactNode;
+	progressDescription?: ReactNode;
 	progressURL?: string;
 	onClickImportAnother?: () => void;
 	onBack?: () => void;

@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import {Steps} from "../../DomainOwned/components/Steps";
+import { Steps } from '../../DomainOwned/components/Steps';
 import { ActionButton } from '../components/ActionButton';
 
 export interface CompletedProps {
@@ -46,9 +46,7 @@ export const Completed = ({
 				className="mt-6 mb-9"
 			/>
 			<ImportFlowLayout.Actions>
-				<ActionButton
-					icon={<ArrowRightIcon />}
-					onClick={handleClickViewDomain}>
+				<ActionButton icon={<ArrowRightIcon />} onClick={handleClickViewDomain}>
 					Go to domain
 				</ActionButton>
 			</ImportFlowLayout.Actions>
