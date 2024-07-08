@@ -3,9 +3,9 @@ import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { Balance } from '../../../Core/Balance';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
 import { ActionButton } from '../components/ActionButton';
-import { NetworkSelect, type NetworkOption } from '../components/NetworkSelect';
-import NamefiBrandText from "../../../Core/NamefiBrandText";
-import TokenIcon from "../../../Core/icons/TokenIcon";
+import { type NetworkOption, NetworkSelect } from '../components/NetworkSelect';
+import NamefiBrandText from '../../../Core/NamefiBrandText';
+import TokenIcon from '../../../Core/icons/TokenIcon';
 
 export type { NetworkOption };
 

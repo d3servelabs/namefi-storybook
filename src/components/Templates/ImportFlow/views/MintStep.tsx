@@ -1,8 +1,8 @@
 import React from 'react';
 import { ImportFlowLayout } from '../components/ImportFlowLayout';
-import {Steps} from "../../DomainOwned/components/Steps";
+import { Steps } from '../../DomainOwned/components/Steps';
 import { ActionButton } from '../components/ActionButton';
-import NamefiBrandText from "../../../Core/NamefiBrandText";
+import NamefiBrandText from '../../../Core/NamefiBrandText';
 
 export interface MintStepProps {
 	icon?: React.ReactNode;
@@ -48,9 +48,7 @@ export const MintStep = ({
 				className="mt-6 mb-14"
 			/>
 			<ImportFlowLayout.Actions>
-				<ActionButton onClick={onClickImportAnother}>
-					Import another one
-				</ActionButton>
+				<ActionButton onClick={onClickImportAnother}>Import another one</ActionButton>
 			</ImportFlowLayout.Actions>
 		</ImportFlowLayout.Main>
 	);
