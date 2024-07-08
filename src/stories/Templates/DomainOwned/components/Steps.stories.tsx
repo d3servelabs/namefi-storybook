@@ -24,6 +24,7 @@ export const Default: Story = {
 		current: { control: 'number' },
 		items: { control: 'object' },
 		pending: { control: 'object' },
+		size: { control: 'text' },
 		vertical: { control: 'boolean' },
 		itemClassName: { control: 'text' },
 		className: { control: 'text' },
@@ -42,6 +43,7 @@ export const Default: Story = {
 			</StepButton>,
 		],
 		pending: '',
+		size: '',
 		vertical: false,
 		itemClassName: '',
 		className: '',
@@ -59,6 +61,7 @@ export const PlainText: Story = {
 		current: 0,
 		items: ['1', '2', '3'],
 		pending: '',
+		size: '',
 		vertical: false,
 		itemClassName: 'w-38',
 		className: '',
@@ -83,6 +86,7 @@ export const Pending: Story = {
 				</div>
 			</div>
 		),
+		size: '',
 		vertical: false,
 		itemClassName: 'w-38',
 		className: '',
