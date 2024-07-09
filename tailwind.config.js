@@ -1,4 +1,5 @@
-const colors = require('tailwindcss/colors');
+import colors from 'tailwindcss/colors';
+import tailwindScrollbar from 'tailwind-scrollbar';
 
 /**
  * @template T
@@ -58,7 +59,7 @@ module.exports = {
 				primary: ['Roboto Mono', 'Serif'],
 				secondary: ['Nunito', 'Serif'],
 				third: ['Roboto Flex', 'Serif'],
-				slab: ['Roboto Slab', 'Serif'],	
+				slab: ['Roboto Slab', 'Serif'],
 			},
 			colors: {
 				warning: {
@@ -179,9 +180,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [
-		require('tailwind-scrollbar')({
-			nocompatible: true,
-		}),
-	],
+	plugins: [tailwindScrollbar({ nocompatible: true })],
 };
