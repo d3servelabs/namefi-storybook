@@ -1,0 +1,31 @@
+{
+  "name": "@namefi/tailwind-config",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.mjs",
+  "files": [
+    "index.mjs",
+    "postcss.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.15",
+    "tailwind-merge": "^1.14.0",
+    "postcss": "^8.4.35",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^6.0.1",
+    "@sector-labs/postcss-inline-class": "^0.0.6"
+  },
+  "devDependencies": {
+    "@namefi/tsconfig": "workspace:*",
+    "@types/node": "^18.18.3"
+  },
+  "prettier": "@namefi/prettier-config"
+}

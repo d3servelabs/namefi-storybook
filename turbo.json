@@ -1,0 +1,61 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": [
+		"**/.env.local"
+	],
+	"tasks": {
+		"topo": {
+			"dependsOn": [
+				"^topo"
+			]
+		},
+		"build": {
+			"dependsOn": [
+				"^build"
+			],
+			"outputs": ["dist/**"]
+		},
+		"check-types": {
+			"dependsOn": ["^check-types"]
+		},
+		"dev": {
+			"persistent": true,
+			"cache": false
+		},
+
+		"clean": {
+			"cache": false
+		},
+		"//#clean": {
+			"cache": false
+		},
+
+		"format": {
+			"outputs": [
+				"node_modules/.cache/.prettiercache"
+			]
+		},
+		"lint": {
+			"dependsOn": [
+				"^topo"
+			],
+			"outputs": [
+				"node_modules/.cache/.eslintcache"
+			]
+		},
+		"chromatic": {},
+		"test": {},
+		"test:watch": {
+			"cache": false
+		},
+		"typecheck": {
+			"dependsOn": [
+				"^topo"
+			],
+			"outputs": [
+				"node_modules/.cache/tsbuildinfo.json"
+			]
+		}
+	},
+	"globalEnv": []
+}
