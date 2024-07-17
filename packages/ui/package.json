@@ -1,6 +1,6 @@
 {
 	"name": "@namefi/ui",
-	"version": "2.4.0-alpha.14",
+	"version": "2.4.0",
 	"engines": {
 		"node": ">=20 < 21",
 		"npm": ">=10 < 11"
@@ -8,24 +8,25 @@
 	"files": [
 		"dist/**"
 	],
-	"main": "dist/cjs/bundle.js",
-	"module": "dist/esm/bundle.js",
-	"style": "dist/esm/bundle.css",
+	"type": "module",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"style": "dist/style.css",
 	"exports": {
 		".": {
 			"require": {
-				"types": "./dist/cjs/types/index.d.ts",
-				"default": "./dist/cjs/bundle.js"
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.cjs"
 			},
 			"import": {
-				"types": "./dist/esm/types/index.d.ts",
-				"default": "./dist/esm/bundle.js"
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
 			}
 		},
 		"./styles.css": {
-			"import": "./dist/esm/bundle.css",
-			"require": "./dist/esm/bundle.css",
-			"default": "./dist/cjs/bundle.css"
+			"import": "./dist/style.css",
+			"require": "./dist/style.css",
+			"default": "./dist/style.css"
 		}
 	},
 	"vite": {
@@ -76,12 +77,19 @@
 	"scripts": {
 		"clean": "git clean -xdf .turbo node_modules out dist lib storybook-static",
 		"gen:icons": "svgr --ignore-existing --memo --ref --typescript --no-dimensions --ext tsx --out-dir src/components/Core/icons -- src/assets/svg",
-		"dev": "run-p dev:* --print-label",
-		"dev:rollup": "rollup -w --config rollup-dev.config.mjs --configPlugin typescript",
-		"dev:serve": "serve -l 5713 ./public",
-		"build": "rimraf dist && NODE_ENV=production rollup --config rollup.config.mjs --configPlugin typescript",
-		"build:vite": "tsc && vite build",
+
+		"dev:vite": "pnpm vite dev",
+		"dev:rollup": "run-p dev:rollup:* --print-label",
+		"dev:rollup:buildWatch": "rollup -w --config rollup-dev.config.mjs --configPlugin typescript",
+		"dev:rollup:serve": "serve -l 5713 ./public",
+		"dev": "pnpm dev:vite",
+
+		"prebuild": "rimraf dist",
+		"build:rollup": "rimraf dist && NODE_ENV=production rollup --config rollup.config.mjs --configPlugin typescript",
+		"build": "NODE_ENV=production pnpm build:vite",
+		"build:vite": "vite build",
 		"build:local": "npm run build && npm pack",
+
 		"lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"bump": "npm version ${VERSION_LEVEL:-patch} && git push --follow-tags",
 		"release": "npm run bump && npm run build && npm publish",
@@ -132,6 +140,7 @@
 		"isomorphic-dompurify": "^2.10.0",
 		"lint-staged": "^15.2.5",
 		"marked": "^12.0.0",
+		"mini-svg-data-uri": "^1.4.4",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.4.35",
 		"postcss-import": "^16.1.0",
@@ -154,6 +163,7 @@
 		"url": "^0.11.3",
 		"vite": "^5.3.3",
 		"vite-plugin-dts": "^3.9.1",
+		"vite-plugin-lib-inject-css": "^2.1.1",
 		"vite-plugin-svgr": "^4.2.0"
 	},
 	"peerDependencies": {
