@@ -6,6 +6,36 @@
 ## Reference
 - TODO: Use tailwind prettier plugin: https://github.com/tailwindlabs/prettier-plugin-tailwindcss
 
+## Repo
+- We are using `turborepo` to manage the monorepo.
+- The ui library is found in `packages/ui` and the storybook is found in `apps/storybook`
+- In pnpm workspaces you can run commands for a specific package or app by using `--filter` option or by `cd`ing into the package directory and running hte command
+- Some commands are run from the project dir and turbo will run them for all the packages either on parallel or in the correct order depending on the dependency between the packages
+  - Like `pnpm clean:workspaces` which is used to purge the node_modules and tmp build files.
+- `apps/storybook` depends on `packages/ui`, so once you develop the package run the build command then you go to `apps/storybook` to create the stories for it.
+  - this is done automatically if you run `pnpm dev` from the main project dir, turbo will build the library and then run the storybook.
+- To Test the changes to components while working on them in `packages/ui`, you can run `pnpm --filter=ui dev` anduse `packages/ui/src/dev/App.tsx` to test your component.
+
+### Important conventions
+- Due to some differences between how provided plugins from Vite and rollup handle modules and imports, We had to implement our own plugins to allow existing code from rollup to work with Vite.
+- However we'd like to completely remove these plugins, so there are some conventions that we need to follow when it comes to asset imports:
+  - When Importing an Image if you want the raw contents (this is usually needed for svg in css), you have to import the default from the image like this  
+```ts
+    import RawSvg from ".../image.svg?raw"
+```
+  - When you want to import the image as a Base64 URI to use directly in the `<img src={placeholder}/>` then you have to import the default export from the image directly
+```ts
+    import ImageUri from ".../image" 
+```
+  - When you want to import and Svg image as a react component then you have to import the default export from the image directly from `image-dir?react` 
+```ts
+    import ImageElement from ".../image?react" 
+```
+  - Currently, in the App Svg Icons are imported using named export (this is deprecated)
+```ts
+    import { default as ImageUri, ReactComponent as ImageElement } from ".../image" 
+```
+
 ## Structure
 
 - In this Repo We'll attempt to follow a structure similar to Atomic Design

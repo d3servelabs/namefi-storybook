@@ -5,12 +5,23 @@ declare module '*?raw' {
 
 declare module '*.svg' {
 	const content: string;
+	/**
+	 * @deprecated
+	 */
 	const ReactComponent: React.FunctionComponent<
 		React.SVGProps<SVGSVGElement> & { title?: string }
 	>;
 
 	export { ReactComponent };
 	export default content;
+}
+
+declare module '*.svg?react' {
+	const ReactComponent: React.FunctionComponent<
+		React.SVGProps<SVGSVGElement> & { title?: string }
+	>;
+
+	export default ReactComponent;
 }
 
 declare module '*.png' {
