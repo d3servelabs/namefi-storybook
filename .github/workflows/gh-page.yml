@@ -27,16 +27,28 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.deployment_status.state == 'success'
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.5.0
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
-        run: npm ci
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-      - name: Run Storybook tests
-        run: npm run test-storybook
+        run: pnpm install
+      - name: Install Playwright Browsers
+        run: pnpm --filter=storybook exec playwright install --with-deps
+      - name: Build Storybook
+        run: pnpm build
+      - name: Serve Storybook and run tests
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npx http-server apps/storybook/storybook-static --port 6006 --silent" \
+            "npx wait-on tcp:6006 && pnpm test-storybook"
         env:
           TARGET_URL: '${{ github.event.deployment_status.target_url }}'
   # Single deploy job since we're just deploying
@@ -46,20 +58,27 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.5.0
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-      - run: npm ci
-      - run: npm run build-storybook
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build Storybook
+        run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "./storybook-static"
+          path: "./apps/storybook/storybook-static"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
