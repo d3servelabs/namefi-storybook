@@ -22,10 +22,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  test:
-    timeout-minutes: 10
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    if: github.event.deployment_status.state == 'success'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -51,28 +52,6 @@ jobs:
             "npx wait-on tcp:6006 && pnpm test-storybook"
         env:
           TARGET_URL: '${{ github.event.deployment_status.target_url }}'
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9.5.0
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build Storybook
-        run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
