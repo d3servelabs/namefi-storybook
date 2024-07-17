@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { cn } from '../../../utils/cn'
+import  { cn }  from "@namefi/utils"
  
 export interface ContentProps extends React.ComponentProps<'div'> {
     children: ReactNode;

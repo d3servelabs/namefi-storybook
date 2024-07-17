@@ -1,4 +1,4 @@
-import { cn } from '../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import React, { ReactElement } from 'react';
 import { ChevronRightIcon } from '@radix-ui/react-icons';
 

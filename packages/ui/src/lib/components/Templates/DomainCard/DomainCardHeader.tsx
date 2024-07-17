@@ -1,5 +1,5 @@
 import React from 'react';
-import {cn} from '../../../utils/cn';
+import  {cn}  from "@namefi/utils"
 
 function DomainCardHeader({children, className,small, ...props}: React.ComponentProps<'div'>& {small?:boolean}) {
     return (

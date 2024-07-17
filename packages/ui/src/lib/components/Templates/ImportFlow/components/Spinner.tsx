@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import LoaderSVG from '../../../../assets/loader.svg';
 
 export interface SpinnerProps {

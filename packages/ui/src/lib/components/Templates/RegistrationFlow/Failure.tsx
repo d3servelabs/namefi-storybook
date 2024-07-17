@@ -1,7 +1,7 @@
 import { Button, ButtonProps } from '../../Core/Buttons/Button';
 import React, { ComponentProps, ReactNode } from 'react';
 import PurpleCat from '../../../assets/purple-cat.png';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { LinkIcon } from '../../Core/icons/Link';
 
 export type Props = ComponentProps<'div'> & { children?: ReactNode };

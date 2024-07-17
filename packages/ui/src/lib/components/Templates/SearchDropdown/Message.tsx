@@ -1,5 +1,5 @@
 import React, { ComponentProps, ReactElement, ReactNode } from 'react'
-import { cn } from '../../../utils/cn'
+import  { cn }  from "@namefi/utils"
 import { DoneIcon } from '../../Core/icons/Done';
 import { ExclamationTri } from '../../Core/icons/ExclamationTri';
 

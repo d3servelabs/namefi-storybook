@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export default function OwnedDomainsRoot({ children, className }: React.ComponentProps<'div'>) {
 	return (

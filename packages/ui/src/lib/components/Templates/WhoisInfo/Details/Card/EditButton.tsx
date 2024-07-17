@@ -1,7 +1,7 @@
 import { Pencil2Icon } from '@radix-ui/react-icons';
 import React, { ComponentProps } from 'react';
 import { GhostButton } from '../../../../Core';
-import { cn } from '../../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 const EditButton: React.FC<ComponentProps<typeof GhostButton>> = ({ className, ...props }) => {
 	return (

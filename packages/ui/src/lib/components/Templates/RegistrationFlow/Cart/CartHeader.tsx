@@ -1,5 +1,5 @@
 import React, {ComponentProps} from 'react';
-import {cn} from '../../../../utils/cn';
+import  {cn}  from "@namefi/utils"
 import CartIcon from '../../../Core/icons/CartIcon';
 
 export default function CartHeader({className, children, ...props}: ComponentProps<'div'>) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export type DropdownRootProps = React.HTMLAttributes<HTMLDivElement>;
 export type DropdownHeaderProps = React.HTMLAttributes<HTMLDivElement>;

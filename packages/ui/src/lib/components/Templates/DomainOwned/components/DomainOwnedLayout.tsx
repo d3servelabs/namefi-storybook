@@ -3,7 +3,7 @@ import {
 	IconCircleButton,
 	type IconCircleButtonProps,
 } from '../../../Core/Buttons/IconCircleButton';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { LinkChip, type LinkChipProps } from './LinkChip';
 import { ProgressBar } from './ProgressBar';
 import { LinkIcon } from '../../../Core/icons/Link';

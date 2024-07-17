@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { cn } from '../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export type CheckboxProps = Omit<React.ComponentProps<'input'>, 'type'| 'value'>
 export const Checkbox = ({  className, ...props }: CheckboxProps) => {

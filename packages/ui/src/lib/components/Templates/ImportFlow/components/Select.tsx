@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export interface Option<T extends unknown = string> {
 	value: T;

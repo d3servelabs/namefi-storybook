@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import FormHelperText from "./FormControl/FormHelperText";
 
 export interface TextInputProps extends React.ComponentProps<'input'> {

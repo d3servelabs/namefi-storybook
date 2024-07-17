@@ -1,7 +1,7 @@
 import { Surface } from '../../../Core';
 import { Checkbox } from '../../../Core/Checkbox';
 import React, { ComponentProps } from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 function AgreeToTermsRoot({ className, children, ...props }: ComponentProps<typeof Surface>) {
 	return (

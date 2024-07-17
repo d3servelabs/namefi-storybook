@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { PhoneMockup } from './PhoneMockup';
 import { Markdown } from './Markdown';
 import { css } from '@emotion/css';

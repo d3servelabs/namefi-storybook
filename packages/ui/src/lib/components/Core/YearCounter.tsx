@@ -1,6 +1,6 @@
 import React from 'react';
 import { PlusIcon, MinusIcon } from '@radix-ui/react-icons';
-import {cn} from "../../utils/cn";
+import  {cn}  from "@namefi/utils"
 
 export type YearCounterProps = {
 	onYearsChanged?: (year: number) => void;

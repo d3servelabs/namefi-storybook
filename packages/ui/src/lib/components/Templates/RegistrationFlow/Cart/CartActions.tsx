@@ -1,7 +1,7 @@
 import { Button, GhostButton, SolidButton } from '../../../Core';
 import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 import React, { ComponentProps } from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export function Root({ className, children, ...props }: ComponentProps<'div'>) {
 	return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, SolidButton } from '../lib/components';
+import { centerTruncateString } from '@namefi/utils';
 import iPhoneMaskSVG from '../lib/assets/iPhoneMask.svg?raw';
 import { default as Done, ReactComponent as DoneIcon } from '../lib/assets/Done.svg';
 // import { default as Done2Icon } from '../lib/assets/Done.svg?react';
@@ -22,6 +23,7 @@ function App() {
 					});
 				}}>
 				TestingApp 2 <img src={Done} />
+				{centerTruncateString('testinfsdgsdfgsfdgsdfg', 12)}
 			</Button>
 		</h1>
 	);

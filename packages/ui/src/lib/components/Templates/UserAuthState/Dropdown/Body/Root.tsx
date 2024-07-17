@@ -3,7 +3,7 @@ import NavItem from '../Nav/Item';
 import List from '../Nav/List';
 import { BorderSplitIcon, PersonIcon } from '@radix-ui/react-icons';
 import BalanceTile from "./BalanceTile";
-import {cn} from "../../../../../utils/cn";
+import  {cn}  from "@namefi/utils"
 
 function Root({className,children,...props}:ComponentProps<'div'>) {
 

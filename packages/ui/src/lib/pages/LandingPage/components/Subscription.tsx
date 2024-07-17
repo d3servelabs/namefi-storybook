@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { UpdateIcon } from '@radix-ui/react-icons';
 import { CornerDownLeft, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export interface SubscriptionInlineFormPayload {
 	email: string;

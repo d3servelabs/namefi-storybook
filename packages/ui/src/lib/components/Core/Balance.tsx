@@ -1,5 +1,5 @@
 import React, { ComponentProps, useMemo } from 'react';
-import { cn } from '../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export type BalanceProps = {
 	balance?: number;

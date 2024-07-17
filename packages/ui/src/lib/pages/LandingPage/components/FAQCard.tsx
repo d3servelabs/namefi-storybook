@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './Button';
 import { DrawingPinFilledIcon, DrawingPinIcon } from '@radix-ui/react-icons';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export interface FAQCardProps {
 	question: React.ReactNode;

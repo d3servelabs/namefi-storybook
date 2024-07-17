@@ -1,7 +1,7 @@
 import React, { ComponentProps } from 'react';
 import { ExitIcon } from '@radix-ui/react-icons';
 import { SolidButton } from '../../../../Core';
-import { cn } from '../../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 function ExitButton(
 	{ className, children, ...props }: ComponentProps<typeof SolidButton>,

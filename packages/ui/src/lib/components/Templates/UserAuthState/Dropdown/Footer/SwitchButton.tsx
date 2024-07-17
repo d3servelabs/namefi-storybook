@@ -1,7 +1,7 @@
 import React, { ComponentProps } from 'react';
 import {DoubleArrowRightIcon, ExitIcon} from '@radix-ui/react-icons';
 import { GhostButton, SolidButton } from '../../../../Core';
-import { cn } from '../../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 function SwitchButton(
 	{ className, children, ...props }: ComponentProps<typeof GhostButton>,
