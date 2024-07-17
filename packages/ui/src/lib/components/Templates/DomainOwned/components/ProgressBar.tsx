@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 const PROGRESS_WIDTH_MAXIMUM = 100;
 const PROGRESS_WIDTH_MINIMUM = 5;

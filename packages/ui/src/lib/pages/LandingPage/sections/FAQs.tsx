@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FAQCard, type FAQCardProps } from '../components/FAQCard';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export type FAQItem = Pick<FAQCardProps, 'question' | 'answer'>;
 

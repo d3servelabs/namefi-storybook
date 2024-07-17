@@ -3,7 +3,7 @@
 import React from 'react';
 import ScrollDownSVG from '../../../assets/ScrollDown.svg';
 import styles from './styles.module.css';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export interface ScrollDownTipProps {
 	children: React.ReactNode;

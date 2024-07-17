@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import moment from 'moment';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 const usePrettyDate = (date: Date) =>
 	useMemo(() => {

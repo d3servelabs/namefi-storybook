@@ -1,5 +1,5 @@
 import React, { ComponentProps, useState } from 'react';
-import { cn } from '../../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { ArrowRight } from 'lucide-react';
 
 function NavItem({

@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react'
-import { cn } from '../../../../utils/cn'
+import  { cn }  from "@namefi/utils"
 
 
 const Root: React.FC<ComponentProps<'div'>> = ({children, className, ...props}) => {

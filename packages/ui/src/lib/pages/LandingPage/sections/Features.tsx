@@ -1,7 +1,7 @@
 import React from 'react';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
 import { FeatureCard, type FeatureCardProps } from '../components/FeatureCard';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export interface FeatureProps {
 	items: FeatureCardProps[];

@@ -1,0 +1,14 @@
+{
+	"extends": "@namefi/tsconfig/base.json",
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.js",
+		"src/**/*.jsx",
+		"src/**/*.css",
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}

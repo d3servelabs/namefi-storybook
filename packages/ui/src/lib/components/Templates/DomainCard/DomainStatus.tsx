@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import NamefiBrandText from '../../Core/NamefiBrandText';
 
 export default function DomainStatus({

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { cn } from '../../../utils/cn'
+import  { cn }  from "@namefi/utils"
 import { SwitchIcon } from '../../Core/icons/SwitchIcon'
 
 export const TryAnother = ({children}:{children: ReactNode}) => {

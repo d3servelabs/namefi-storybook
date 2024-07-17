@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { Tabs, type Tab } from '../../Core/Tabs';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export type DNSSettingsTabKey = 'records' | 'forward' | 'ns';
 

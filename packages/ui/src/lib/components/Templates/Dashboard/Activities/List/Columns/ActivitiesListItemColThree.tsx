@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import { cn } from '../../../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { LoadingAnimation } from '../../../../../Core/LoadingAnimation';
 import LinkIcon from '../../../../../../assets/link.svg';
 import {GlobeIcon} from "lucide-react";

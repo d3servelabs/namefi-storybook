@@ -1,6 +1,6 @@
 import React from 'react';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export interface SmartContractProps {
 	address: string;

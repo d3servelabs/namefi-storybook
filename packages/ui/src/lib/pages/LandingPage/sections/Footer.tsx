@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { Subscription, type SubscriptionInlineFormPayload } from '../components/Subscription';
 import { SocialLinks, type SocialLinkItem } from '../components/SocialLinks';
 

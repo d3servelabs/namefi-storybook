@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import iPhoneMaskSVG from '../../../../assets/iPhoneMask.svg?raw';
 import iPhoneMaskFullSVG from '../../../../assets/iPhoneMaskFull.svg?raw';
 import iPhoneSVG from '../../../../assets/iPhone.svg?raw';

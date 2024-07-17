@@ -1,4 +1,4 @@
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 function GetNfscCardHeader({ children, className, ...props }: React.ComponentProps<'h2'>) {
 	return (

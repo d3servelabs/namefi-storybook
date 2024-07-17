@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import ShortAddress from '../../Core/ShortAddress';
 
 export default function DomainOwner({

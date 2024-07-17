@@ -1,5 +1,5 @@
 import React, { useId, useMemo } from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export interface StepsProps extends StepsWithOrientationProps {
 	vertical?: boolean;

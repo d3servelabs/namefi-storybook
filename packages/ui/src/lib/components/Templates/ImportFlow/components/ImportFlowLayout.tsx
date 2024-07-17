@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowLeftIcon } from '@radix-ui/react-icons';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import {
 	DomainOwnedLayout,
 	type DomainOwnedLayoutProgressProps,

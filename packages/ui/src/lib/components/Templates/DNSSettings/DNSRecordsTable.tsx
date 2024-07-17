@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { Checkbox } from '../../Core/Checkbox';
 import { IconCircleButton } from '../../Core/Buttons/IconCircleButton';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { AddIcon } from '../../Core/icons/Add';
 import { DownloadIcon } from '../../Core/icons/Download';
 import { DeleteIcon } from '../../Core/icons/Delete';

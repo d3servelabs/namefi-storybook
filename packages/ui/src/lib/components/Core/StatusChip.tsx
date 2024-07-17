@@ -1,6 +1,6 @@
 import React, { ComponentProps, useMemo } from 'react';
 import { AlertTriangle, CheckCheck, Info, X } from 'lucide-react';
-import { cn } from '../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export type StatusChipProps = ComponentProps<'div'> & {
 	color: ('info' | 'warning' | 'error' | 'success') | string;

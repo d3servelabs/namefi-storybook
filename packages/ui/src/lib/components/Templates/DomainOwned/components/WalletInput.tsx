@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import MetamaskSVG from '../../../../assets/metamask.svg';
 import { PasteIcon } from '../../../Core/icons/Paste';
 

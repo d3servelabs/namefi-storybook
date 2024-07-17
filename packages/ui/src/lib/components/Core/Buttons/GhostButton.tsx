@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button, ButtonProps} from "./Button";
-import {cn} from "../../../utils/cn";
+import  {cn}  from "@namefi/utils"
 
 export const GhostButton = ({disabled,className,children,...props}: ButtonProps) => {
   return (

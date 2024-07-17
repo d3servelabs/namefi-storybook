@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { NamefiBrandText } from '../../../Core/NamefiBrandText';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { useShortAddress } from '../hooks/useShortAddress';
 import { usePunycode } from '../hooks/usePunycode';
 import ChatSVG from '../../../../assets/Chat.svg';

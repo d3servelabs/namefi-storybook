@@ -2,7 +2,7 @@ import ShortAddress from '../../../Core/ShortAddress';
 import { EthEmblem } from '../../../Core/icons/EthEmblem';
 import React, { useCallback, useState } from 'react';
 import { CheckIcon, ClipboardCopyIcon } from '@radix-ui/react-icons';
-import { cn } from '../../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 
 export default function DomainSettingsCopyAddress({
 	address,

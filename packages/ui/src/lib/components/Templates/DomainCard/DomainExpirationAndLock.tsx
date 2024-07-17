@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../../../utils/cn';
+import  { cn }  from "@namefi/utils"
 import { LockClosedIcon, LockOpen1Icon } from '@radix-ui/react-icons';
 import moment from 'moment';
 
