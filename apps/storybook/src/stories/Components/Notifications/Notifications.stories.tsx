@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { NotificationsDropdown, type NotificationData } from '@namefi/ui';
+import { Notifications, type NotificationData } from '@namefi/ui';
 import { LinkIcon } from '@namefi/ui';
 
 const meta = {
-	title: 'Components/Notifications/NotificationsDropdown',
-	component: NotificationsDropdown,
+	title: 'Components/Notifications/Notifications',
+	component: Notifications,
 	parameters: {
 		layout: 'centered',
 	},
 	tags: ['autodocs'],
-} satisfies Meta<typeof NotificationsDropdown>;
+} satisfies Meta<typeof Notifications>;
 
 export default meta;
 

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import moment from 'moment';
-import  { cn }  from "@namefi/utils"
+import { cn } from '@namefi/utils';
 
 const usePrettyDate = (date: Date) =>
 	useMemo(() => {
@@ -40,14 +40,16 @@ export const NotificationItem = ({
 			onClick={onClick}>
 			<div className="flex flex-col gap-y-1">
 				<div className="font-primary text-base text-primary-500">[ {title} ]</div>
-				<div className="font-primary text-sm text-black-500">{children}</div>
+				<div className="font-primary text-sm text-black-500 w-full">{children}</div>
 			</div>
 			<div className="flex flex-col items-center gap-y-1">
-				<div className="flex h-6 items-center">
-					<div className="flex min-w-5 items-center justify-center rounded-full bg-primary-light p-1 font-primary text-xs leading-none text-brand-black">
-						{count}
+				{!!count && (
+					<div className="flex h-6 items-center">
+						<div className="flex min-w-5 items-center justify-center rounded-full bg-primary-light p-1 font-primary text-xs leading-none text-brand-black">
+							{count}
+						</div>
 					</div>
-				</div>
+				)}
 				<div className="font-primary text-sm text-black-500">{prettyDatetime}</div>
 			</div>
 		</div>

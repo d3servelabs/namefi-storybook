@@ -3,7 +3,7 @@ import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { Button, SolidButton } from '../../Core/Buttons';
 import { BellIcon } from '../../Core/icons/Bell';
 import { NotificationItem } from './components/NotificationItem';
-import { Dropdown } from './components/Dropdown';
+import { NotificationsDropdown } from './components/NotificationsDropdown';
 
 export interface NotificationData {
 	id: string;
@@ -22,7 +22,7 @@ export interface NotificationsDropdownProps {
 	className: string;
 }
 
-export const NotificationsDropdown = ({
+export const Notifications = ({
 	unreadTotal,
 	notifications,
 	onClickItem,
@@ -31,15 +31,15 @@ export const NotificationsDropdown = ({
 	className,
 }: NotificationsDropdownProps) => {
 	return (
-		<Dropdown.Root className={className}>
-			<Dropdown.Header>
+		<NotificationsDropdown.Root className={className}>
+			<NotificationsDropdown.Header>
 				<BellIcon className="mr-2 text-primary-500" />
 				<span className="tracking-wide text-white">Notifications</span>{' '}
 				{unreadTotal && (
 					<span className="ml-2 inline-block text-primary-500">({unreadTotal})</span>
 				)}
-			</Dropdown.Header>
-			<Dropdown.Body className="flex flex-col gap-y-2 py-4">
+			</NotificationsDropdown.Header>
+			<NotificationsDropdown.Body className="flex flex-col gap-y-2 py-4">
 				{notifications.map((notification) => (
 					<NotificationItem
 						key={notification?.id}
@@ -50,8 +50,8 @@ export const NotificationsDropdown = ({
 						{notification?.message}
 					</NotificationItem>
 				))}
-			</Dropdown.Body>
-			<Dropdown.Footer>
+			</NotificationsDropdown.Body>
+			<NotificationsDropdown.Footer>
 				<Button
 					className="w-auto border-white font-primary text-sm text-white"
 					onClick={onClickClear}>
@@ -60,7 +60,7 @@ export const NotificationsDropdown = ({
 				<SolidButton className="w-auto font-primary text-base" onClick={onClickActivities}>
 					View Activities <ArrowRightIcon />
 				</SolidButton>
-			</Dropdown.Footer>
-		</Dropdown.Root>
+			</NotificationsDropdown.Footer>
+		</NotificationsDropdown.Root>
 	);
 };

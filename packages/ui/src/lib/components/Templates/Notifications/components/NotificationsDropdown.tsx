@@ -46,7 +46,7 @@ const DropdownFooter = ({ className, ...props }: DropdownFooterProps) => {
 	);
 };
 
-export const Dropdown = {
+export const NotificationsDropdown = {
 	Root: DropdownRoot,
 	Header: DropdownHeader,
 	Body: DropdownBody,

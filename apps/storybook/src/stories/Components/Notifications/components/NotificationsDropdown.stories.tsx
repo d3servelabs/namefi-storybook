@@ -1,15 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
-import { Button, SolidButton } from '@namefi/ui';
-import { Dropdown } from '@namefi/ui';
+import { Button, NotificationsDropdown, SolidButton } from '@namefi/ui';
 
 const meta = {
-	title: 'Components/Notifications/Components/Dropdown',
+	title: 'Components/Notifications/Components/NotificationsDropdown',
 	parameters: {
 		layout: 'centered',
 	},
 	tags: ['autodocs'],
-} satisfies Meta<typeof Dropdown>;
+} satisfies Meta<typeof NotificationsDropdown>;
 
 export default meta;
 
@@ -19,18 +18,22 @@ export const Default: Story = {
 	args: {} as any,
 	render: () => {
 		return (
-			<Dropdown.Root className="w-[480px]">
-				<Dropdown.Header className="text-white">Header</Dropdown.Header>
-				<Dropdown.Body className="p-4 text-white">Body</Dropdown.Body>
-				<Dropdown.Footer>
+			<NotificationsDropdown.Root className="w-[480px]">
+				<NotificationsDropdown.Header className="text-white">
+					Header
+				</NotificationsDropdown.Header>
+				<NotificationsDropdown.Body className="p-4 text-white">
+					Body
+				</NotificationsDropdown.Body>
+				<NotificationsDropdown.Footer>
 					<Button className="w-auto border-white font-primary text-sm text-white">
 						Cancel
 					</Button>
 					<SolidButton className="w-auto font-primary text-base">
 						Submit <ArrowRightIcon />
 					</SolidButton>
-				</Dropdown.Footer>
-			</Dropdown.Root>
+				</NotificationsDropdown.Footer>
+			</NotificationsDropdown.Root>
 		);
 	},
 };

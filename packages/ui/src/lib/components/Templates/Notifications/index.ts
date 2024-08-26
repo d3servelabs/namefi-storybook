@@ -1,3 +1,3 @@
-export * from './NotificationsDropdown';
-export * from './components/Dropdown';
+export * from './Notifications';
+export * from './components/NotificationsDropdown';
 export * from './components/NotificationItem';
