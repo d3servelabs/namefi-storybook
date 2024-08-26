@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 import { SocialLinks, type SocialLinkItem } from '../components/SocialLinks';
 import { Button } from '../components/Button';
 import {

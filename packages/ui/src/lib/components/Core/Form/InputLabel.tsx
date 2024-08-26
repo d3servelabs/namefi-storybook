@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { ComponentProps } from 'react';
-import  {cn}  from "@namefi/utils"
+import {cn} from "../../../utils/cn";
 
 export interface LabelProps extends ComponentProps<'label'> {
 	labelName?: string;

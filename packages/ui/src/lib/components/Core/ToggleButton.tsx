@@ -1,5 +1,5 @@
 import React, {useId} from 'react'
-import  {cn}  from "@namefi/utils"
+import {cn} from "../../utils/cn";
 import {ClassNameValue} from "tailwind-merge";
 
 export type ToggleButtonProps = React.ComponentProps<'input'> & {

@@ -1,5 +1,5 @@
 import React from 'react';
-import  { Tuple }  from "@namefi/utils"
+import { Tuple } from '../../../../../utils/Tuple';
 
 export default function Root({ children }: { children: Tuple<React.ReactNode, 2> }) {
 	return (

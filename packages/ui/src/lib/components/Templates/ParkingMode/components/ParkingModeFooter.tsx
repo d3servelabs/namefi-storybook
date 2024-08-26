@@ -1,5 +1,5 @@
 import React from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 import { NamefiBrandText } from '../../../Core/NamefiBrandText';
 
 export interface ParkingModeFooterLink {

@@ -1,5 +1,5 @@
 import React from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 import { SolidButton } from '../../Core/Buttons/SolidButton';
 
 export const OtherTldSelector = ({

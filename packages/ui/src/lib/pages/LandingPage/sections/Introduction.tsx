@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { ViewFinder } from '../components/ViewFinder';
 import { RisingNumber } from '../components/RisingNumber';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 
 export interface IntroductionStatisticItem {
 	value: number;

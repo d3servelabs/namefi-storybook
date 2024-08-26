@@ -1,8 +1,8 @@
 import { GhostButton } from '../../../Core/Buttons/GhostButton';
 import { TrashIcon } from '@radix-ui/react-icons';
 import React, { ComponentProps } from 'react';
-import  { cn }  from "@namefi/utils"
-import  { centerTruncateString }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
+import centerTruncateString from '../../../../utils/centerTruncateString';
 import TokenIcon from '../../../Core/icons/TokenIcon';
 import { CheckCheck } from 'lucide-react';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 import NamefiLogo from '../../../Core/icons/NamefiLogo';
 import { DiscordIcon } from '../../../Core/icons/Discord';
 import { TwitterIcon } from '../../../Core/icons/Twitter';

@@ -1,7 +1,7 @@
 import React, { ComponentProps } from 'react';
 import TokenIcon from '../../../../assets/tokenicon.svg';
 import InfoIcon from '../../../../assets/notification.svg';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 
 export type DomainCreditCardProps = ComponentProps<'div'> & {
 	username?: string;

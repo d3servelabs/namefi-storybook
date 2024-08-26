@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { ViewFinder } from '../components/ViewFinder';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 
 export interface AssetItem {
 	preview: React.ReactNode;

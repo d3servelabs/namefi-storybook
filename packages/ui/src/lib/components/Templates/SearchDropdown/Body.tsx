@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn'
 
 export const Body = ({children}:{children: ReactNode}) => {
   return (

@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
 import {FlowStep} from './FlowStep';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../utils/cn';
 
 export type StepDiagramProps = {stepCount:number, currentStep:number, className?:string}
 

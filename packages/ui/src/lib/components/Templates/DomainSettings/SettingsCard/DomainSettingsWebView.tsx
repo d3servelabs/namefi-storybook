@@ -1,4 +1,4 @@
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 import React from 'react';
 import { OpenInNewWindowIcon } from '@radix-ui/react-icons'
 

@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 import NamefiLogo from "../../Core/icons/NamefiLogo";
-import  {cn}  from "@namefi/utils"
+import {cn} from "../../../utils/cn";
 type AppLayoutHeaderProps = React.ComponentProps<'header'> & {
 	content?: ReactNode | undefined;
 	endSlot?: ReactNode;

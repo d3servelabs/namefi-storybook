@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../utils/cn';
 
 export interface OTPInputFieldProps {
 	fieldLength: number;

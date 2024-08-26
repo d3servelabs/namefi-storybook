@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../utils/cn';
 import DiscordIcon from "./Core/icons/DiscordIcon";
 
 export const ComingSoon = ({

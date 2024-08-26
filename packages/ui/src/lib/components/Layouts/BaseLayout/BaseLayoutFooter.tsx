@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode } from 'react';
 import BaseLayoutFooterLink from './BaseLayoutFooterLink';
 import NamefiWhiteLogo from "../../Core/icons/NamefiWhiteLogo";
-import  {cn}  from "@namefi/utils"
+import {cn} from "../../../utils/cn";
 
 type AppLayoutFooterProps = React.ComponentProps<'div'> & {
 	lowKey?:boolean

@@ -1,5 +1,5 @@
 import React, { ComponentProps, useMemo, useState } from 'react';
-import  {cn}  from "@namefi/utils"
+import {cn} from "../../../../../utils/cn";
 
 function List({ children,className,...props }: ComponentProps<'div'>) {
 	// const count = useMemo(() => {

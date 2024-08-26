@@ -1,4 +1,4 @@
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 import React, { useId } from 'react';
 
 export default function DomainSettingsToggle({

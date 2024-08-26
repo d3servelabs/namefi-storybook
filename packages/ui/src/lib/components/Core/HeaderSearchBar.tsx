@@ -1,6 +1,6 @@
 import React, {ComponentProps} from 'react'
 import {MagnifyingGlassIcon} from "@radix-ui/react-icons";
-import  {cn}  from "@namefi/utils"
+import {cn} from "../../utils/cn";
 
 export type HeaderSearchBarProps = ComponentProps<'form'> &{
     placeholderText?: string

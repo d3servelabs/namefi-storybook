@@ -1,6 +1,6 @@
 import React, { ComponentProps } from 'react';
-import  { ReactSingleNode }  from "@namefi/utils"
-import  { cn }  from "@namefi/utils"
+import { ReactSingleNode } from '../../../../../../utils/React';
+import { cn } from '../../../../../../utils/cn';
 
 export default function ActivitiesListItemColTwo({
 	className,

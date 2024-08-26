@@ -4,7 +4,7 @@ import { SocialLinks, type SocialLinkItem } from './SocialLinks';
 import { LaunchDAppButton } from './LaunchDAppButton';
 import { MenuIcon } from '../../../components/Core/icons/Menu';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 
 export interface HeaderNavLink {
 	title: React.ReactNode;

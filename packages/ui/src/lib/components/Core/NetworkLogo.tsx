@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../utils/cn';
 import PolygonNetwork from './icons/PolygonNetwork';
 import BaseNetwork from './icons/BaseNetwork';
 import EthNetwork from './icons/EthNetwork';

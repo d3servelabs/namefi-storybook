@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { css, keyframes } from '@emotion/css';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 import ScrollDownSVG from '../../../assets/ScrollDown.svg';
 
 const bounce = keyframes`

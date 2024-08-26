@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 
 export interface SocialLinkItem {
 	icon: React.ReactNode;

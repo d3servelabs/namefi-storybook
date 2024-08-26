@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../../utils/cn';
 
 export default function ActivitiesHeaderTitle({ children, className, ...props }: ComponentProps<'h3'>){
 	return (

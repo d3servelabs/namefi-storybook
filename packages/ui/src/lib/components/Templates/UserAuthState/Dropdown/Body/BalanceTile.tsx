@@ -1,7 +1,7 @@
 import { Balance } from '../../../../Core/Balance';
 import TokenIcon from '../../../../Core/icons/TokenIcon';
 import React,{ ComponentProps } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../../utils/cn';
 
 function BalanceTile({ balance,approxBalance = true, loading, className, children, ...props }: ComponentProps<'div'> & {balance:number,approxBalance?:boolean, loading?:boolean}) {
 	return (

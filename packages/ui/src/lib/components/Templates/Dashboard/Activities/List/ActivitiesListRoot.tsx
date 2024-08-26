@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../../utils/cn';
 import clsx from 'clsx';
 
 export default function ActivitiesListRoot({

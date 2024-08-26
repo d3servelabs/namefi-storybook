@@ -1,5 +1,5 @@
 import { SolidButton } from '../../../Core/Buttons/SolidButton';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 import React from "react";
 
 export default function DomainSettingsNormalButton({

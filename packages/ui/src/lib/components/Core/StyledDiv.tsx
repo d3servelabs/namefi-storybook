@@ -1,5 +1,5 @@
 import React, { ComponentProps, forwardRef, useMemo } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../utils/cn';
 import { css } from '@emotion/css';
 
 export default function StyledDiv(classes: ReturnType<typeof css>) {

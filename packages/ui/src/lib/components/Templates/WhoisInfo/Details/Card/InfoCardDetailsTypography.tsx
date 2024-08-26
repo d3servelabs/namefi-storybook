@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../../utils/cn';
 
 const Name: React.FC<ComponentProps<'h2'>> = ({ className, children, ...props }) => {
 	return (

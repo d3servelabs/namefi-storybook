@@ -2,7 +2,7 @@ import { usePriceFormatter } from '../../../../hooks/UsePriceFormatter';
 import { NetworkLogo } from '../../../Core';
 import TokenIcon from '../../../Core/icons/TokenIcon';
 import React, { ComponentProps, ReactNode } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 import { isNil } from 'ramda';
 
 export type CardDetailsProps = ComponentProps<'div'> & {

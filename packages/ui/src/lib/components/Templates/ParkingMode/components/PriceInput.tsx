@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useCallback, forwardRef } from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 
 export interface PriceInputProps {
 	value: number | null;

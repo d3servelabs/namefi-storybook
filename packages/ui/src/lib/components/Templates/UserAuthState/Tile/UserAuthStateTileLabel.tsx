@@ -1,5 +1,5 @@
 import React from 'react';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 
 type UserAuthStateTileLabelProps = React.ComponentProps<'p'>;
 const UserAuthStateTileLabel = ({ children, ...props }: UserAuthStateTileLabelProps) => {

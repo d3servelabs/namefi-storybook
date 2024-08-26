@@ -1,6 +1,6 @@
 import React from 'react';
 import { RefreshIcon } from '../../../Core/icons/Refresh';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
 import {Button} from "../../../Core/Buttons";
 
 export interface StepButtonProps {

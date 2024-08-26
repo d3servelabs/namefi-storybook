@@ -1,5 +1,5 @@
 import { Chip } from '../../Core';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 
 function GetNfscCardChips({
 	onClickChip,

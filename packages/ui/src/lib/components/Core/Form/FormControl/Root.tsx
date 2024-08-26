@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import FormHelperText from './FormHelperText';
-import  { cn }  from "@namefi/utils"
-import  {ReactSingleNode}  from "@namefi/utils"
+import { cn } from '../../../../utils/cn';
+import {ReactSingleNode} from "../../../../utils/React";
 
 export interface FormControlRootProps extends React.ComponentProps<'div'> {
 	error?: any;

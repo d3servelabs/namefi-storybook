@@ -1,4 +1,4 @@
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 
 function GetNfscCardRoot({ children, className, ...props }: React.ComponentProps<'div'>) {
 	return (

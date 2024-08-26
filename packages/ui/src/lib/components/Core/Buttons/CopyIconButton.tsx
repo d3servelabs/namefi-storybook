@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 
 import { useCopyToClipboard } from '@uidotdev/usehooks';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../../utils/cn';
 import { CheckIcon, ClipboardIcon } from '@radix-ui/react-icons';
 
 export function CopyIconButton({ value }: { value: string }) {

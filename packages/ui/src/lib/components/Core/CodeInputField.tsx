@@ -4,7 +4,7 @@ import ClipboardPasteSVG from '../../assets/Clipboard-Paste.svg';
 import DoneSVG from '../../assets/Done.svg';
 import EyeOpenSVG from '../../assets/eye-open.svg';
 import EyeNoneSVG from '../../assets/Eye-None.svg';
-import  { cn }  from "@namefi/utils"
+import { cn } from '../../utils/cn';
 
 export interface InputComponentProps {
 	incorrectAuthCode?: boolean;

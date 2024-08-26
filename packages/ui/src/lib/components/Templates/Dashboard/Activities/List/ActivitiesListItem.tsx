@@ -1,6 +1,6 @@
 import React, { ComponentProps, ReactNode } from 'react';
-import  { Tuple }  from "@namefi/utils"
-import  { cn }  from "@namefi/utils"
+import { Tuple } from '../../../../../utils/Tuple';
+import { cn } from '../../../../../utils/cn';
 
 function ActivitiesListItem({
 	className,
