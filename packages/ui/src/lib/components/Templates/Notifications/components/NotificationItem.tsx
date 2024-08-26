@@ -38,7 +38,7 @@ export const NotificationItem = ({
 				className,
 			)}
 			onClick={onClick}>
-			<div className="flex flex-col gap-y-1">
+			<div className="flex flex-col gap-y-1 w-full">
 				<div className="font-primary text-base text-primary-500">[ {title} ]</div>
 				<div className="font-primary text-sm text-black-500 w-full">{children}</div>
 			</div>
