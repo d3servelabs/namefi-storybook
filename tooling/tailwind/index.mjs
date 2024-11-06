@@ -1,6 +1,5 @@
 import tailwindScrollbar from 'tailwind-scrollbar';
 
-
 /**
  * @template T
  * @param {number} start
@@ -183,4 +182,4 @@ const config = {
 	},
 	plugins: [tailwindScrollbar({ nocompatible: true })],
 };
-export default config
+export default config;

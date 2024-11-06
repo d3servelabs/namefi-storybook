@@ -17,7 +17,7 @@ export const Default: Story = {
 	args: {
 		activeIndex: 2,
 	},
-	render(props) {
+	render() {
 		return (
 			<BreadCrumbsRoot>
 				<BreadCrumbsRoot.Crumb href={'#'}>...</BreadCrumbsRoot.Crumb>

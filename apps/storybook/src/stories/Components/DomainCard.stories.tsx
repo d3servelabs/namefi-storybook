@@ -9,7 +9,7 @@ const meta = {
 	argTypes: {
 		onSettingsClicked: { action: 'onSettingsClicked' },
 		small: { type: 'boolean' },
-	} as any,
+	},
 	parameters: {
 		layout: 'centered',
 	},

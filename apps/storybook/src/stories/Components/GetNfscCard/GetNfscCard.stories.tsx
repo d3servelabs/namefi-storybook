@@ -20,13 +20,13 @@ export const Default: Story = {
 		onClickChip: { type: 'any' },
 		chipValues: { type: 'number[]' },
 		selectedValue: { type: 'number' },
-	} as any,
+	},
 	args: {
 		onClickChip: fn(),
 		chipValues: [20, 50, 100],
 		selectedValue: 0,
-	} as any,
-	render: ({ onClickChip, chipValues, selectedValue }: any) => {
+	},
+	render: ({ onClickChip, chipValues, selectedValue }) => {
 		return (
 			<GetNfscCard.Root>
 				<GetNfscCard.Header>

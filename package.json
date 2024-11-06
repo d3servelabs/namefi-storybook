@@ -11,27 +11,28 @@
 		"format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache'",
 		"lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg fix",
 		"lint": "turbo lint --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
+		"cleanup": "pnpm format:fix && pnpm lint:fix && pnpm typecheck",
 		"test": "turbo run test",
 		"test:watch": "turbo run test:watch",
 		"typecheck": "turbo typecheck",
+		"bootstrap": "pnpm install && pnpm cleanup",
 		"prepare": "husky",
 		"chromatic": "turbo run chromatic",
 		"test-storybook": "pnpm --filter=storybook test",
 		"build-storybook": "pnpm --filter=storybook build"
 	},
-	"dependencies": {},
-	"devDependencies": {
+	"dependencies": {
+		"@manypkg/cli": "0.22.0",
 		"@namefi/prettier-config": "workspace:*",
 		"dotenv-cli": "^7.3.0",
+		"eslint": "^8.57.0",
 		"husky": "^9.0.11",
+		"lint-staged": "^15.2.5",
 		"prettier": "3.3.0",
 		"turbo": "^2.0.6",
 		"type-fest": "^3.13.1",
-		"typescript": "^5.4.5",
-		"eslint": "^8.57.0",
-		"lint-staged": "^15.2.5"
+		"typescript": "^5.4.5"
 	},
-
 	"lint-staged": {
 		"*.{js,jsx,tsx,ts}": "eslint --cache --fix"
 	}

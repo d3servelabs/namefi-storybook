@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { HeaderSearchBar } from '@namefi/ui';
 
 const meta = {
@@ -11,8 +11,6 @@ const meta = {
 } satisfies Meta<typeof HeaderSearchBar>;
 
 export default meta;
-
-type Story = StoryObj<typeof meta>;
 
 export const HeaderSearchBarStory = {
 	args: {

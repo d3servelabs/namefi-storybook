@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { OtpInputField } from '@namefi/ui';
-import { useState } from 'react';
+import { noop, OtpInputField } from '@namefi/ui';
+import { FC, useState } from 'react';
 
 const meta = {
 	title: 'Components/OTPInputField',
@@ -13,6 +13,7 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
 export const OTPInput: Story = {
 	argTypes: {
 		fieldLength: { type: 'number' },
@@ -22,13 +23,13 @@ export const OTPInput: Story = {
 	args: {
 		fieldLength: 6,
 		otpValue: '',
-		onValueChange: () => {},
-	} as any,
-	render: ({ fieldLength, otpValue }: any) => {
-		const [otp, setOtp] = useState(otpValue);
-		const onValueChange = (value: string) => setOtp(value);
-		return (
-			<OtpInputField otpValue={otp} fieldLength={fieldLength} onValueChange={onValueChange} />
-		);
+		onValueChange: noop,
 	},
+	render: (props) => <Demo {...props} />,
+};
+
+const Demo: FC<{ fieldLength: number; otpValue: string }> = ({ fieldLength, otpValue }) => {
+	const [otp, setOtp] = useState(otpValue);
+	const onValueChange = (value: string) => setOtp(value);
+	return <OtpInputField otpValue={otp} fieldLength={fieldLength} onValueChange={onValueChange} />;
 };
