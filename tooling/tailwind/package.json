@@ -9,18 +9,17 @@
 	],
 	"scripts": {
 		"clean": "rm -rf .turbo node_modules",
-		"format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore",
-		"typecheck": "tsc --noEmit"
+		"format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore"
 	},
 	"dependencies": {
-		"@sector-labs/postcss-inline-class": "^0.0.6",
-		"autoprefixer": "^10.4.17",
-		"postcss": "^8.4.35",
-		"postcss-import": "^16.1.0",
-		"postcss-nested": "^6.0.1",
+		"@sector-labs/postcss-inline-class": "0.0.8",
+		"autoprefixer": "10.4.20",
+		"postcss": "8.4.47",
+		"postcss-import": "16.1.0",
+		"postcss-nested": "7.0.2",
 		"tailwind-merge": "2.5.4",
-		"tailwind-scrollbar": "^3.1.0",
-		"tailwindcss": "^3.4.1"
+		"tailwind-scrollbar": "3.1.0",
+		"tailwindcss": "3.4.14"
 	},
 	"devDependencies": {
 		"@namefi/tsconfig": "workspace:*",

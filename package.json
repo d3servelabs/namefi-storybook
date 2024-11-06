@@ -1,7 +1,7 @@
 {
 	"name": "@namefi/ui-monorepo",
 	"private": true,
-	"packageManager": "pnpm@9.5.0",
+	"packageManager": "pnpm@9.12.3",
 	"scripts": {
 		"build": "turbo build",
 		"clean:workspaces": "turbo clean",
@@ -24,14 +24,14 @@
 	"dependencies": {
 		"@manypkg/cli": "0.22.0",
 		"@namefi/prettier-config": "workspace:*",
-		"dotenv-cli": "^7.3.0",
-		"eslint": "^8.57.0",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.5",
-		"prettier": "3.3.0",
-		"turbo": "^2.0.6",
-		"type-fest": "^3.13.1",
-		"typescript": "^5.4.5"
+		"dotenv-cli": "7.4.2",
+		"eslint": "8.57.1",
+		"husky": "9.1.6",
+		"lint-staged": "15.2.10",
+		"prettier": "3.3.3",
+		"turbo": "2.2.3",
+		"type-fest": "4.26.1",
+		"typescript": "5.6.3"
 	},
 	"lint-staged": {
 		"*.{js,jsx,tsx,ts}": "eslint --cache --fix"
