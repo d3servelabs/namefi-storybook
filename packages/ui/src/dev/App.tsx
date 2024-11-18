@@ -7,6 +7,8 @@ import image from '../lib/assets/purple-cat.png';
 
 import './index.css';
 
+import { Footer } from '../lib/components/Layouts/V3Footer/Index';
+
 function App() {
 	return (
 		<h1>
@@ -23,6 +25,7 @@ function App() {
 				}}>
 				TestingApp 2 <img src={Done} />
 			</Button>
+			<Footer />
 		</h1>
 	);
 }
