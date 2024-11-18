@@ -4,3 +4,4 @@ export * from './ComingSoon';
 export * from './Cart';
 export * from './RedirectLinkButton';
 export * from './TldButtons';
+export * from './Confetti';
