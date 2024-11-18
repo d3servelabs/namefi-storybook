@@ -77,19 +77,16 @@
 	"scripts": {
 		"clean": "git clean -xdf .turbo node_modules out dist lib storybook-static",
 		"gen:icons": "svgr --ignore-existing --memo --ref --typescript --no-dimensions --ext tsx --out-dir src/components/Core/icons -- src/assets/svg",
-
 		"dev:vite": "pnpm vite dev",
 		"dev:rollup": "run-p dev:rollup:* --print-label",
 		"dev:rollup:buildWatch": "rollup -w --config rollup-dev.config.mjs --configPlugin typescript",
 		"dev:rollup:serve": "serve -l 5713 ./public",
 		"dev": "pnpm dev:vite",
-
 		"prebuild": "rimraf dist",
 		"build:rollup": "rimraf dist && NODE_ENV=production rollup --config rollup.config.mjs --configPlugin typescript",
 		"build": "NODE_ENV=production pnpm build:vite",
 		"build:vite": "vite build",
 		"build:local": "npm run build && npm pack",
-
 		"lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"bump": "npm version ${VERSION_LEVEL:-patch} && git push --follow-tags",
 		"release": "npm run bump && npm run build && npm publish",
@@ -107,7 +104,8 @@
 		"ramda": "^0.29.1",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
-		"tailwind-merge": "^2.2.1"
+		"tailwind-merge": "^2.2.1",
+		"validator": "^13.12.0"
 	},
 	"license": "UNLICENSED",
 	"devDependencies": {
