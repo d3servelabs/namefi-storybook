@@ -30,7 +30,6 @@ const baseUnitX = Object.fromEntries(
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-	important: 'namefi-ui',
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	darkMode: 'class',
 	safelist: [{ pattern: /(primary|brand|error|secondary)/ }],
