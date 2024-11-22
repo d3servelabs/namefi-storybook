@@ -1,19 +1,18 @@
 {
-  "name": "@namefi/prettier-config",
-  "private": true,
-  "version": "0.1.0",
-  "main": "index.mjs",
-  "scripts": {
-    "clean": "rm -rf .turbo node_modules",
-    "format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@namefi/tailwind-config": "workspace:*",
-    "@namefi/tsconfig": "workspace:*",
-    "prettier": "3.3.0",
-    "prettier-plugin-tailwindcss": "^0.6.5"
-  },
-  "prettier": "@namefi/prettier-config"
+	"name": "@namefi/prettier-config",
+	"private": true,
+	"version": "0.1.0",
+	"main": "index.mjs",
+	"scripts": {
+		"clean": "rm -rf .turbo node_modules",
+		"format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@namefi/tailwind-config": "workspace:*",
+		"@namefi/tsconfig": "workspace:*",
+		"prettier": "3.3.3",
+		"prettier-plugin-tailwindcss": "0.6.9"
+	},
+	"prettier": "@namefi/prettier-config"
 }

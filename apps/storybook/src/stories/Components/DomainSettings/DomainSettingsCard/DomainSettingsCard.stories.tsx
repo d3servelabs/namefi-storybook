@@ -18,16 +18,16 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	argTypes: {
 		domainName: { type: 'string' },
-	} as any,
+	},
 	args: {
 		domainName: 'namefi.io',
-	} as any,
-	render: ({ domainName }: any) => {
+	},
+	render: ({ domainName }) => {
 		return <Demo domainName={domainName} />;
 	},
 };
 
-function Demo({ domainName }: any) {
+function Demo({ domainName }: { domainName: string }) {
 	const [years, setYears] = useState(0);
 	const [isExtending, setIsExtending] = useState(false);
 	const handleExtend = useCallback(() => {

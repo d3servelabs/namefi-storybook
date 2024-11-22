@@ -1,23 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UserAuthState } from '@namefi/ui';
 import { ShortAddress } from '@namefi/ui';
+
 const UserAuthStateTile = UserAuthState.Tile;
+
 const meta = {
 	title: 'Components/UserAuthState/Tile',
-
+	component: UserAuthStateTile.Root,
 	tags: ['autodocs'],
 	parameters: {
 		layout: 'centered',
 	},
-	argTypes: {},
-} satisfies Meta<{ userAddress?: string; userLoading?: boolean }>;
+	argTypes: {
+		userAddress: { type: 'string' },
+		userLoading: { type: 'boolean' },
+	},
+} satisfies Meta<typeof UserAuthStateTile.Root>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const LoggedOut: Story = {
-	render: (props) => {
+	render: () => {
 		return (
 			<UserAuthStateTile.Root backgroundColor={'#111111b3'}>
 				<UserAuthStateTile.Network network={1} />
@@ -40,10 +45,13 @@ export const LoggedOut: Story = {
 };
 
 export const LoggedIn: Story = {
+	argTypes: {
+		userAddress: { type: 'string' },
+	},
 	args: {
 		userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
-	} as any,
-	render: ({ userAddress }: any) => {
+	},
+	render: ({ userAddress }) => {
 		return (
 			<UserAuthStateTile.Root backgroundColor={'#111'}>
 				<UserAuthStateTile.Network network={1} />
@@ -63,10 +71,13 @@ export const LoggedIn: Story = {
 	},
 };
 export const Loading: Story = {
+	argTypes: {
+		userLoading: { type: 'boolean' },
+	},
 	args: {
 		userLoading: true,
-	} as any,
-	render: (props) => {
+	},
+	render: () => {
 		return (
 			<UserAuthStateTile.Root backgroundColor={'#111'}>
 				<UserAuthStateTile.Network network={1} />
@@ -76,7 +87,7 @@ export const Loading: Story = {
 	},
 };
 export const NetworkError: Story = {
-	render: (props) => {
+	render: () => {
 		return (
 			<UserAuthStateTile.Root backgroundColor={'#111'}>
 				<UserAuthStateTile.Network network={0} />

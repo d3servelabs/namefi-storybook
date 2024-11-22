@@ -1,5 +1,4 @@
-import React from 'react';
-import { Button, SolidButton } from '../lib/components';
+import { Button } from '../lib/components';
 import iPhoneMaskSVG from '../lib/assets/iPhoneMask.svg?raw';
 import { default as Done, ReactComponent as DoneIcon } from '../lib/assets/Done.svg';
 // import { default as Done2Icon } from '../lib/assets/Done.svg?react';

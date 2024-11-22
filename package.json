@@ -1,7 +1,7 @@
 {
 	"name": "@namefi/ui-monorepo",
 	"private": true,
-	"packageManager": "pnpm@9.5.0",
+	"packageManager": "pnpm@9.14.2",
 	"scripts": {
 		"build": "turbo build",
 		"clean:workspaces": "turbo clean",
@@ -11,27 +11,28 @@
 		"format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache'",
 		"lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg fix",
 		"lint": "turbo lint --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
+		"cleanup": "pnpm format:fix && pnpm lint:fix && pnpm typecheck",
 		"test": "turbo run test",
 		"test:watch": "turbo run test:watch",
 		"typecheck": "turbo typecheck",
+		"bootstrap": "pnpm install && pnpm cleanup",
 		"prepare": "husky",
 		"chromatic": "turbo run chromatic",
 		"test-storybook": "pnpm --filter=storybook test",
 		"build-storybook": "pnpm --filter=storybook build"
 	},
-	"dependencies": {},
-	"devDependencies": {
+	"dependencies": {
+		"@manypkg/cli": "0.23.0",
 		"@namefi/prettier-config": "workspace:*",
-		"dotenv-cli": "^7.3.0",
-		"husky": "^9.0.11",
-		"prettier": "3.3.0",
-		"turbo": "^2.0.6",
-		"type-fest": "^3.13.1",
-		"typescript": "^5.4.5",
-		"eslint": "^8.57.0",
-		"lint-staged": "^15.2.5"
+		"dotenv-cli": "7.4.4",
+		"eslint": "8.57.1",
+		"husky": "9.1.7",
+		"lint-staged": "15.2.10",
+		"prettier": "3.3.3",
+		"turbo": "2.3.1",
+		"type-fest": "4.27.0",
+		"typescript": "5.6.3"
 	},
-
 	"lint-staged": {
 		"*.{js,jsx,tsx,ts}": "eslint --cache --fix"
 	}

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { DomainCard } from '@namefi/ui';
 
 export type DomainCardProps = {
@@ -14,6 +14,7 @@ export type DomainCardProps = {
 			showOwner?: boolean;
 			showSettings?: boolean;
 			sameOwner?: boolean;
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			onSettingsClicked?: () => any;
 			status: 'TAKEN'; // shouldn't be derived from ownerAddress in case the user doesn't want to pass the owner address
 	  }
@@ -35,7 +36,7 @@ export const DomainCardDemo = (props: DomainCardProps) => {
 		}
 		return {};
 	}, [props]);
-	const { domainName, loading, href, showExpiration, expirationDate, status } = props;
+	const { domainName, showExpiration, expirationDate, status } = props;
 
 	return (
 		<DomainCard.Root small={props.small}>
