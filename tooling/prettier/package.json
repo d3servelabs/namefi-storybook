@@ -12,7 +12,7 @@
 		"@namefi/tailwind-config": "workspace:*",
 		"@namefi/tsconfig": "workspace:*",
 		"prettier": "3.3.3",
-		"prettier-plugin-tailwindcss": "0.6.8"
+		"prettier-plugin-tailwindcss": "0.6.9"
 	},
 	"prettier": "@namefi/prettier-config"
 }
