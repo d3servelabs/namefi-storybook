@@ -9,7 +9,9 @@
 	],
 	"scripts": {
 		"clean": "rm -rf .turbo node_modules",
-		"format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore"
+		"lint": "eslint .",
+		"format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore",
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@sector-labs/postcss-inline-class": "0.0.8",

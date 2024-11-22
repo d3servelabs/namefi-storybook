@@ -9,7 +9,7 @@ import tailwindScrollbar from 'tailwind-scrollbar';
  * @returns {T[]}
  */
 const arrayRange = (start, stop, step, converter) =>
-	Array.from({ length: (stop - start) / step + 1 }, (value, index) => {
+	Array.from({ length: (stop - start) / step + 1 }, (_, index) => {
 		const output = start + index * step;
 		if (!converter) return output;
 		else return converter(output, index);
@@ -18,7 +18,7 @@ const arrayRange = (start, stop, step, converter) =>
 const grayscale = Object.fromEntries(
 	Array(99)
 		.fill(0)
-		.map((value, index, array) => [index + 1, `${index + 1}%`]),
+		.map((_, index) => [index + 1, `${index + 1}%`]),
 );
 
 const baseUnit = Object.fromEntries(
@@ -32,17 +32,7 @@ const baseUnitX = Object.fromEntries(
 const config = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	darkMode: 'class',
-	safelist: [
-		{ pattern: /(primary|brand|error|secondary)/ },
-		// {
-		// 	pattern: /(grid|cols|row|span|items|align|justify|place|order)/,
-		// 	variants: ['xl','lg','md','sm','xs']
-		// },
-		// {
-		// 	pattern: /(block|hidden)/,
-		// 	variants: ['xl','lg','md','sm','xs']
-		// },
-	],
+	safelist: [{ pattern: /(primary|brand|error|secondary)/ }],
 	theme: {
 		extend: {
 			borderRadius: baseUnit,

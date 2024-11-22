@@ -1,4 +1,3 @@
-
 import baseConfig from '@namefi/tailwind-config';
 
 export default {
