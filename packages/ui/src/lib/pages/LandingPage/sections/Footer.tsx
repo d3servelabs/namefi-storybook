@@ -13,7 +13,7 @@ export type FooterProps = {
 	navLinks: FooterNavLink[];
 	socialLinks: SocialLinkItem[];
 	subscriptionLoading?: boolean;
-	subscriptionSubmiited?: boolean;
+	subscriptionSubmitted?: boolean;
 	onSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
 	className?: string;
 };
@@ -21,7 +21,7 @@ export const Footer = ({
 	navLinks = [],
 	socialLinks = [],
 	subscriptionLoading = false,
-	subscriptionSubmiited = false,
+	subscriptionSubmitted = false,
 	onSubscriptionSubmit,
 	className,
 }: FooterProps) => {
@@ -42,7 +42,7 @@ export const Footer = ({
 							email={subscriptionEmail}
 							onEmailChange={setSubscriptionEmail}
 							loading={subscriptionLoading}
-							submitted={subscriptionSubmiited}
+							submitted={subscriptionSubmitted}
 							onSubmit={onSubscriptionSubmit}
 						/>
 					</div>

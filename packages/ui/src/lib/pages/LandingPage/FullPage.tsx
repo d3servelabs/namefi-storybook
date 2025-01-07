@@ -44,7 +44,7 @@ export type FullPageProps = {
 	onClickAskHuman?: () => void;
 	footerNavLinks: FooterNavLink[];
 	footerSubscriptionLoading?: boolean;
-	footerSubscriptionSubmiited?: boolean;
+	footerSubscriptionSubmitted?: boolean;
 	onFooterSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
 };
 
@@ -74,7 +74,7 @@ export const FullPage = ({
 	onClickAskHuman,
 	footerNavLinks = [],
 	footerSubscriptionLoading = false,
-	footerSubscriptionSubmiited = false,
+	footerSubscriptionSubmitted = false,
 	onFooterSubscriptionSubmit,
 }: FullPageProps) => {
 	return (
@@ -91,7 +91,7 @@ export const FullPage = ({
 				<Hero
 					socialLinks={socialLinks}
 					subscriptionLoading={heroSubscriptionLoading}
-					subscriptionSubmiited={heroSubscriptionSubmitted}
+					subscriptionSubmitted={heroSubscriptionSubmitted}
 					onSubscriptionSubmit={onHeroSubscriptionSubmit}
 					onClickJoinBetaTest={onClickJoinBetaTest}
 					onClickInvestor={onClickInvestor}
@@ -124,7 +124,7 @@ export const FullPage = ({
 				navLinks={footerNavLinks}
 				socialLinks={socialLinks}
 				subscriptionLoading={footerSubscriptionLoading}
-				subscriptionSubmiited={footerSubscriptionSubmiited}
+				subscriptionSubmitted={footerSubscriptionSubmitted}
 				onSubscriptionSubmit={onFooterSubscriptionSubmit}
 				className=""
 			/>
