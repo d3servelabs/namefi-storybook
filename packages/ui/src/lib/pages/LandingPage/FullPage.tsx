@@ -24,7 +24,7 @@ export type FullPageProps = {
 	onClickLaunchDApp: () => void;
 	heroText: React.ReactNode;
 	heroSubscriptionLoading?: boolean;
-	heroSubscriptionSubmiited?: boolean;
+	heroSubscriptionSubmitted?: boolean;
 	onHeroSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
 	onClickJoinBetaTest?: () => void;
 	onClickInvestor?: () => void;
@@ -54,7 +54,7 @@ export const FullPage = ({
 	onClickLaunchDApp,
 	heroText = 'Trading domains on chain.',
 	heroSubscriptionLoading = false,
-	heroSubscriptionSubmiited = false,
+	heroSubscriptionSubmitted = false,
 	onHeroSubscriptionSubmit,
 	onClickJoinBetaTest,
 	onClickInvestor,
@@ -91,7 +91,7 @@ export const FullPage = ({
 				<Hero
 					socialLinks={socialLinks}
 					subscriptionLoading={heroSubscriptionLoading}
-					subscriptionSubmiited={heroSubscriptionSubmiited}
+					subscriptionSubmiited={heroSubscriptionSubmitted}
 					onSubscriptionSubmit={onHeroSubscriptionSubmit}
 					onClickJoinBetaTest={onClickJoinBetaTest}
 					onClickInvestor={onClickInvestor}
