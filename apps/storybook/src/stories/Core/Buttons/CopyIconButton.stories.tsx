@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	argTypes: {
-		value: { value: 'string' },
+		value: { control: 'string' },
 	},
 	args: {
 		value: 'This text is copied from Copy button',
