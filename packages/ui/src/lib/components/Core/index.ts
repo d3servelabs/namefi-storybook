@@ -24,3 +24,4 @@ export * from './Card';
 export * from './Tabs';
 export * from './OtpInputField';
 export * from './StepDiagram';
+export * from './Input';
