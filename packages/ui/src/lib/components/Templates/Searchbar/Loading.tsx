@@ -1,7 +1,7 @@
 import { Circle } from 'lucide-react';
 import NamefiLogo from './NamefiLogo';
 
-export default function Loading({ value }) {
+export default function Loading({ value }: { value: string }) {
 	return (
 		<div className="flex h-100">
 			<div className="m-auto">
