@@ -1,11 +1,10 @@
 import { ArrowRight, SearchIcon } from 'lucide-react';
 import AvailableOptionTypes from './AvailableOptionTypes';
 import Suggestion from './Suggestion';
-import { useSearchbarContext } from './SearchbarContext';
-import { results } from './mockData';
+import { useSearchBarContext } from './SearchBarContext';
 
 export default function Result() {
-	const { value, selectedFilters } = useSearchbarContext();
+	const { value, selectedFilters, results } = useSearchBarContext();
 
 	let activeFilter = selectedFilters.find((filter) => filter.active);
 

@@ -1,8 +1,9 @@
 import { ArrowRight, Clock, SearchIcon, X } from 'lucide-react';
-import { useSearchbarContext } from './SearchbarContext';
+import { useSearchBarContext } from './SearchBarContext';
+import { Badge } from '../../Core/Badge';
 
 export default function Option({ option }) {
-	const { value } = useSearchbarContext();
+	const { value } = useSearchBarContext();
 
 	const highlightMatch = (text, highlight) => {
 		if (!highlight) return text;
@@ -35,19 +36,19 @@ export default function Option({ option }) {
 				</span>
 				<div className="flex space-x-1">
 					{option.offer && (
-						<span className="rounded-1 bg-[#48E59B14] px-4 text-lg text-primary-500">
+						<Badge variant={'success'} className="font-normal">
 							{option.offer}
-						</span>
+						</Badge>
 					)}
 					{option.onSale && (
-						<span className="rounded-1 bg-[#FFAA0112] px-4 text-lg text-[#FFBA1A]">
+						<Badge variant={'warning'} className="font-normal">
 							Sale
-						</span>
+						</Badge>
 					)}
 					{option.taken && (
-						<span className="rounded-1 bg-[#FFFFFF1F] px-4 text-lg text-[#FFFFFF4D]">
-							Taken
-						</span>
+						<Badge variant={'disabled'} className="font-normal">
+							Sale
+						</Badge>
 					)}
 				</div>
 			</div>

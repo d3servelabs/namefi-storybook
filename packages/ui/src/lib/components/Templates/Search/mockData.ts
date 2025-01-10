@@ -1,10 +1,26 @@
-export const results = {
+import { AvailableOption } from './AvailableOptionTypes';
+
+export type Result = {
+	type: string;
+	name: string;
+	price: string;
+	taken: boolean;
+	offer: string;
+	onSale: boolean;
+};
+
+export type SearchResult = {
+	popular: Result[];
+	suggested: Result[];
+};
+
+export const resultsMock: SearchResult = {
 	popular: [
 		{
 			type: '.com',
 			name: 'domain.com',
 			price: 'Starting at $9.99 USD',
-			taken: false,
+			taken: true,
 			offer: '',
 			onSale: false,
 		},
@@ -101,7 +117,7 @@ export const results = {
 	],
 };
 
-export const suggestions = {
+export const suggestionsMock: SearchResult = {
 	popular: [
 		{
 			type: '.com',
@@ -157,7 +173,7 @@ export const suggestions = {
 	],
 };
 
-export const defaultOptions = [
+export const defaultOptions: AvailableOption[] = [
 	{ name: '.com', active: false },
 	{ name: '.net', active: false },
 	{ name: '.xyz', active: false },
