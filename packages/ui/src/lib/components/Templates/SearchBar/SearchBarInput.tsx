@@ -1,12 +1,11 @@
-import { Search } from 'lucide-react';
+import { Circle, Search } from 'lucide-react';
 import React from 'react';
-import { Button, ButtonText, Input } from '../../Core';
+import { Button, ButtonText, IconCircleButton, Input } from '../../Core';
 import { useSearchBarContext } from './SearchBarContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { debounce } from '../../../utils';
-import { resultsMock } from './mockData';
 
-export default function SearchBarInput() {
+export default function SearchBarInput({ setSearchString }) {
 	const textOptions = ['available domains...', '.com', '.net', '.org', '.tech'];
 	const { setOpen, setValue, setLoading, setResults } = useSearchBarContext();
 	const [visibleText, setVisibleText] = React.useState(0);
@@ -24,21 +23,8 @@ export default function SearchBarInput() {
 				try {
 					// Replace with actual API call
 					await new Promise((resolve) => setTimeout(resolve, 500));
-
-					const filteredPopular = resultsMock.popular.filter((result) =>
-						result.name.toLowerCase().includes(newVal.toLowerCase()),
-					);
-					const filteredSuggested = resultsMock.suggested.filter((result) =>
-						result.name.toLowerCase().includes(newVal.toLowerCase()),
-					);
-
-					const filteredResults = {
-						popular: filteredPopular,
-						suggested: filteredSuggested,
-					};
-
 					setValue(newVal);
-					setResults(filteredResults);
+					setSearchString(newVal);
 				} catch (error) {
 					console.error('Error during API call:', error);
 				} finally {
@@ -90,7 +76,12 @@ export default function SearchBarInput() {
 				)}
 			</div>
 
-			<Button className="absolute right-[6px] top-[6px] h-11 w-auto cursor-pointer bg-primary-500 px-12 py-3 ring-0 transition-all duration-200 ease-in-out enabled:hover:bg-[#2BEF91FF] enabled:active:bg-primary-500/30">
+			<IconCircleButton
+				icon={<Search className="h-5 w-5 text-[#000000CC]" />}
+				className="absolute right-[6px] top-[6px] block bg-primary-500 p-3 enabled:hover:bg-[#2BEF91FF] enabled:active:bg-primary-500/30 md:hidden"
+			/>
+
+			<Button className="absolute right-[6px] top-[6px] my-auto hidden h-11 w-auto cursor-pointer bg-primary-500 px-12 py-3 leading-5 ring-0 transition-all duration-200 ease-in-out enabled:hover:bg-[#2BEF91FF] enabled:active:bg-primary-500/30 md:block">
 				<ButtonText className="text-[16px] font-medium text-[#000000CC]">Search</ButtonText>
 			</Button>
 		</div>

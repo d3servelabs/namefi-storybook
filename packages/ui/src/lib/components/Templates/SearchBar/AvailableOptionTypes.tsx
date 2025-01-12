@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { cn } from '../../../utils';
 import { useSearchBarContext } from './SearchBarContext';
 
@@ -8,7 +7,7 @@ export type AvailableOption = {
 };
 
 export default function AvailableOptions() {
-	const { value, selectedFilters, setSelectedFilters } = useSearchBarContext();
+	const { selectedFilters, setSelectedFilters } = useSearchBarContext();
 
 	const handleClick = (name) => {
 		setSelectedFilters((prevOptions) => {

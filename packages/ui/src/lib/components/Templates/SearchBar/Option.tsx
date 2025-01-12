@@ -31,29 +31,38 @@ export default function Option({ option }) {
 					<SearchIcon className="my-auto h-[18px] w-[18px] cursor-pointer text-[#E9FDF370]" />
 				)}
 
-				<span className="my-auto cursor-pointer font-primary text-lg font-medium text-white">
-					{highlightMatch(option.name, value)}
-				</span>
-				<div className="flex space-x-1">
-					{option.offer && (
-						<Badge variant={'success'} className="font-normal">
-							{option.offer}
-						</Badge>
-					)}
-					{option.onSale && (
-						<Badge variant={'warning'} className="font-normal">
-							Sale
-						</Badge>
-					)}
-					{option.taken && (
-						<Badge variant={'disabled'} className="font-normal">
-							Sale
-						</Badge>
-					)}
+				<div className="space-y-2">
+					<div className="flex flex-row space-x-2">
+						<span className="my-auto cursor-pointer font-primary text-lg font-medium text-white">
+							{highlightMatch(option.name, value)}
+						</span>
+
+						<div className="flex space-x-1">
+							{option.offer && (
+								<Badge variant={'success'} className="font-normal">
+									{option.offer}
+								</Badge>
+							)}
+							{option.onSale && (
+								<Badge variant={'warning'} className="font-normal">
+									Sale
+								</Badge>
+							)}
+							{option.taken && (
+								<Badge variant={'disabled'} className="font-normal">
+									Sale
+								</Badge>
+							)}
+						</div>
+					</div>
+					<span className="my-auto block font-primary text-[16px] text-[#E9FDF370] md:hidden">
+						{option.price}
+					</span>
 				</div>
 			</div>
+
 			<div className="flex flex-row space-x-5">
-				<span className="my-auto font-primary text-[16px] text-[#E9FDF370]">
+				<span className="my-auto hidden font-primary text-[16px] text-[#E9FDF370] md:block">
 					{option.price}
 				</span>
 				{option.taken ? (

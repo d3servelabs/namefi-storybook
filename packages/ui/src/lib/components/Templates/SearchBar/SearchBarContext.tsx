@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { defaultOptions, resultsMock, SearchResult, suggestionsMock } from './mockData';
+import { defaultOptions, SearchResult } from './mockData';
 import { AvailableOption } from './AvailableOptionTypes';
 
 type SearchBarContextType = {
@@ -13,8 +13,9 @@ type SearchBarContextType = {
 	setValue: React.Dispatch<React.SetStateAction<string>>;
 	selectedFilters: AvailableOption[];
 	setSelectedFilters: React.Dispatch<React.SetStateAction<AvailableOption[]>>;
-	suggestions: SearchResult;
-	results: SearchResult;
+	suggestions: SearchResult | {};
+	setSuggestions: React.Dispatch<React.SetStateAction<SearchResult>>;
+	results: SearchResult | {};
 	setResults: React.Dispatch<React.SetStateAction<SearchResult>>;
 };
 
@@ -25,8 +26,8 @@ export const SearchBarProvider = ({ children }: { children: ReactNode }) => {
 	const [loading, setLoading] = useState<boolean>(false);
 	const [value, setValue] = useState<string>('');
 	const [selectedFilters, setSelectedFilters] = useState<AvailableOption[]>(defaultOptions);
-	const [suggestions, setSuggestions] = useState<SearchResult>(suggestionsMock);
-	const [results, setResults] = useState<SearchResult>(resultsMock);
+	const [suggestions, setSuggestions] = useState<SearchResult | {}>({});
+	const [results, setResults] = useState<SearchResult | {}>({});
 
 	// Effect to reset selectedFilters when value changes to an empty string
 	useEffect(() => {
@@ -47,6 +48,7 @@ export const SearchBarProvider = ({ children }: { children: ReactNode }) => {
 				selectedFilters,
 				setSelectedFilters,
 				suggestions,
+				setSuggestions,
 				results,
 				setResults,
 			}}>

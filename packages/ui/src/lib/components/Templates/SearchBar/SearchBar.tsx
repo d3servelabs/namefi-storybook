@@ -5,10 +5,17 @@ import ResultCard from './ResultCard';
 import SearchBarInput from './SearchBarInput';
 import { useSearchBarContext } from './SearchBarContext';
 
-export default function SearchBar() {
+export default function SearchBar({
+	results,
+	suggestions,
+	setSearchString,
+	availableDomainTypes,
+	setActiveDomainType,
+}) {
 	const inputRef = React.useRef<HTMLInputElement | null>(null);
 
-	const { open, setOpen } = useSearchBarContext();
+	const { open, selectedFilters, setOpen, setResults, setSuggestions, setSelectedFilters } =
+		useSearchBarContext();
 
 	const handleBlur = (event: React.FocusEvent<HTMLDivElement>) => {
 		// Check if the related target (next focused element) is inside the container
@@ -17,17 +24,30 @@ export default function SearchBar() {
 		}
 	};
 
+	React.useEffect(() => {
+		setResults(results);
+	}, [results]);
+
+	React.useEffect(() => {
+		setSuggestions(suggestions);
+	}, [suggestions]);
+
+	React.useEffect(() => {
+		setSelectedFilters(availableDomainTypes);
+	}, [availableDomainTypes]);
+
+	React.useEffect(() => {
+		setActiveDomainType(selectedFilters.find((filter) => filter.active)?.name ?? '');
+	}, [selectedFilters]);
+
 	return (
-		<div className="mx-auto my-auto w-full max-w-5xl space-y-4">
-			<div
-				ref={inputRef}
-				tabIndex={-1} // Allow the div to receive focus
-				onBlur={handleBlur}>
-				<div className="relative mt-5">
-					<SearchBarInput />
-				</div>
-				<ResultCard inputRef={inputRef} />
-			</div>
+		<div
+			className="relative space-y-4"
+			ref={inputRef}
+			tabIndex={-1} // Allow the div to receive focus
+			onBlur={handleBlur}>
+			<SearchBarInput setSearchString={setSearchString} />
+			<ResultCard />
 		</div>
 	);
 }
