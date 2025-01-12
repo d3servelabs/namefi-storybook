@@ -1,4 +1,5 @@
 import { cn } from '../../../utils';
+import { Badge } from '../../Core';
 import { useSearchBarContext } from './SearchBarContext';
 
 export type AvailableOption = {
@@ -21,7 +22,8 @@ export default function AvailableOptions() {
 	return (
 		<div className="space-x-2.5">
 			{selectedFilters.map(({ name, active }) => (
-				<span
+				<Badge
+					variant={"success"}
 					key={name}
 					onClick={() => handleClick(name)}
 					className={cn(
@@ -29,7 +31,7 @@ export default function AvailableOptions() {
 						active ? 'bg-[#48E59B3D]' : '',
 					)}>
 					{name}
-				</span>
+				</Badge>
 			))}
 		</div>
 	);
