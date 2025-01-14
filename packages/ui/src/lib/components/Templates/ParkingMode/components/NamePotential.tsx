@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { cn } from '../../../../utils/cn';
 import { PhoneMockup } from './PhoneMockup';
 import { Markdown } from './Markdown';
@@ -6,7 +6,7 @@ import { css } from '@emotion/css';
 
 export interface NamePotentialProps {
 	name: string;
-	description: string;
+	description: ReactNode;
 	preview?: React.ReactNode;
 	previewRef?: React.RefObject<HTMLDivElement>;
 	children?: React.ReactNode;
