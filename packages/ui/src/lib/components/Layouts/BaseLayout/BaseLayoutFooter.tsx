@@ -15,7 +15,7 @@ export default function BaseLayoutFooter({lowKey = true, links,className,...prop
 				<div className="flex-col justify-start items-start gap-9 inline-flex">
 					{lowKey ||<NamefiWhiteLogo className={'h-9'} />}
 				</div>
-				<div className="text-neutral-300 text-base text-[16px] font-normal font-['Roboto'] leading-relaxed tracking-tight">
+				<div className="text-neutral-300 text-base text-base font-normal font-['Roboto'] leading-relaxed tracking-tight">
 					D3SERVE LABS, Inc. All Rights Reserved.
 				</div>
 			</div>

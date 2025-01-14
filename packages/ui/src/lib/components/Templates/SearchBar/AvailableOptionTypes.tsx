@@ -27,7 +27,7 @@ export default function AvailableOptions() {
 					key={name}
 					onClick={() => handleClick(name)}
 					className={cn(
-						'cursor-pointer rounded-full bg-[#A9F2CE0A] px-4 py-2.5 font-primary text-[16px] text-primary-500 transition-all duration-200 ease-in-out active:bg-[#102d1f29]',
+						'cursor-pointer rounded-full bg-[#A9F2CE0A] px-4 py-2.5 font-primary text-base text-primary-500 transition-all duration-200 ease-in-out active:bg-[#102d1f29]',
 						active ? 'bg-[#48E59B3D]' : '',
 					)}>
 					{name}

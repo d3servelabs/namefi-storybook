@@ -55,14 +55,14 @@ export default function Option({ option }) {
 							)}
 						</div>
 					</div>
-					<span className="my-auto block font-primary text-[16px] text-[#E9FDF370] md:hidden">
+					<span className="my-auto block font-primary text-base text-[#E9FDF370] md:hidden">
 						{option.price}
 					</span>
 				</div>
 			</div>
 
 			<div className="flex flex-row space-x-5">
-				<span className="my-auto hidden font-primary text-[16px] text-[#E9FDF370] md:block">
+				<span className="my-auto hidden font-primary text-base text-[#E9FDF370] md:block">
 					{option.price}
 				</span>
 				{option.taken ? (

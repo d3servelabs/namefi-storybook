@@ -82,7 +82,7 @@ export default function SearchBarInput({ setSearchString }) {
 			/>
 
 			<Button className="absolute right-[6px] top-[6px] my-auto hidden h-11 w-auto cursor-pointer bg-primary-500 px-12 py-3 leading-5 ring-0 transition-all duration-200 ease-in-out enabled:hover:bg-[#2BEF91FF] enabled:active:bg-primary-500/30 md:block">
-				<ButtonText className="text-[16px] font-medium text-[#000000CC]">Search</ButtonText>
+				<ButtonText className="text-base font-medium text-[#000000CC]">Search</ButtonText>
 			</Button>
 		</div>
 	);
