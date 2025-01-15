@@ -14,12 +14,14 @@ export interface NetworkSelectProps {
 	options: NetworkOption[];
 	placeholder?: React.ReactNode;
 	className?: string;
+	disabled?: boolean;
 }
 
 export const NetworkSelect = ({
 	value,
 	options: networkOptions,
 	placeholder = 'Select Network',
+	disabled,
 	...props
 }: NetworkSelectProps) => {
 	const options = useMemo(() => {
@@ -51,6 +53,7 @@ export const NetworkSelect = ({
 			options={options}
 			placeholder={placeholder}
 			addon={addon}
+			disabled={disabled}
 			{...props}
 		/>
 	);
