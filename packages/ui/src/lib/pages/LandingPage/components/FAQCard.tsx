@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Button } from './Button';
+import { ActionButton } from './ActionButton';
 import { DrawingPinFilledIcon, DrawingPinIcon } from '@radix-ui/react-icons';
 import { cn } from '../../../utils/cn';
 
@@ -67,14 +67,14 @@ const FAQCardFooter = ({ onClickYes, onClickNo }: FAQCardFooterProps) => {
 			</p>
 			<div className="flex gap-5">
 				<div>
-					<Button type="tonal" onClick={onClickYes} className="text-[10px] md:text-base">
+					<ActionButton type="tonal" onClick={onClickYes} className="text-[10px] md:text-base">
 						Yes
-					</Button>
+					</ActionButton>
 				</div>
-				<Button type="outlined" onClick={onClickNo} className="text-[10px] md:text-base">
+				<ActionButton type="outlined" onClick={onClickNo} className="text-[10px] md:text-base">
 					<span>No, ask a Human</span>
 					<ArrowRight className="w-2.5 md:w-4.5 h-2.5 md:h-4.5 text-primary-500" />
-				</Button>
+				</ActionButton>
 			</div>
 		</div>
 	);

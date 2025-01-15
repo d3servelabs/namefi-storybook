@@ -1,4 +1,4 @@
-export * from './components/Button';
+export * from './components/ActionButton';
 export * from './components/ViewFinder';
 export * from './components/SocialLinks';
 export * from './components/LaunchDAppButton';

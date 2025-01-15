@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { NamefiBrandText } from '../../../components/Core/NamefiBrandText';
 import { cn } from '../../../utils/cn';
 import { SocialLinks, type SocialLinkItem } from '../components/SocialLinks';
-import { Button } from '../components/Button';
+import { ActionButton } from '../components/ActionButton';
 import {
 	Subscription,
 	type SubscriptionInlineFormPayload,
@@ -71,19 +71,19 @@ export const Hero = ({
 					/>
 				</div>
 				<div className="w-full md:hidden group">
-					<Button
+					<ActionButton
 						type="primary"
 						className="h-14 px-8 w-full"
 						onClick={onClickJoinBetaTest}>
 						<span>Join Beta Test</span>
 						<ArrowRight className="transition w-4.5 h-4.5 text-primary-500 group-hover:translate-x-2" />
-					</Button>
+					</ActionButton>
 				</div>
 				{onClickInvestor && (
 					<div className="w-full md:w-auto">
-						<Button type="tonal" className="h-14 px-8 w-full" onClick={onClickInvestor}>
+						<ActionButton type="tonal" className="h-14 px-8 w-full" onClick={onClickInvestor}>
 							I'm an Investor
-						</Button>
+						</ActionButton>
 					</div>
 				)}
 			</div>
