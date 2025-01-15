@@ -6,6 +6,7 @@ import { ActionButton } from '../components/ActionButton';
 import { NetworkSelect, type NetworkOption } from '../components/NetworkSelect';
 import NamefiBrandText from "../../../Core/NamefiBrandText";
 import TokenIcon from "../../../Core/icons/TokenIcon";
+import { cn } from '../../../../utils/cn';
 
 export type { NetworkOption };
 
@@ -18,6 +19,7 @@ export interface GetStartedProps {
 	onClickStart?: () => void;
 	onBack?: () => void;
 	className?: string;
+	disabled?: boolean;
 }
 
 export const GetStarted = ({
@@ -29,6 +31,7 @@ export const GetStarted = ({
 	onClickStart,
 	onBack,
 	className,
+	disabled = false,
 }: GetStartedProps) => {
 	return (
 		<ImportFlowLayout.Main
@@ -39,7 +42,7 @@ export const GetStarted = ({
 			}
 			description="Mint your domain NFT and start trading it hassle-free."
 			onBack={onBack}
-			className={className}>
+			className={cn(className, disabled && 'opacity-50')}>
 			<div className="mt-6 mb-12">
 				<ImportFlowLayout.Field
 					label="Import costs"
@@ -58,6 +61,7 @@ export const GetStarted = ({
 							value={network}
 							onChange={onChangeNetwork}
 							options={networkOptions}
+							disabled={disabled}
 						/>
 					</ImportFlowLayout.Field>
 				)}
@@ -67,7 +71,7 @@ export const GetStarted = ({
 					icon={<ArrowRightIcon />}
 					className="w-auto"
 					onClick={onClickStart}
-					disabled={!!networkOptions?.length && !network}>
+					disabled={disabled || (!!networkOptions?.length && !network)}>
 					Start Import
 				</ActionButton>
 			</ImportFlowLayout.Actions>

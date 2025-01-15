@@ -15,6 +15,7 @@ export interface SelectProps<T extends unknown = string> {
 	placeholder?: React.ReactNode;
 	addon?: React.ReactNode;
 	className?: string;
+	disabled?: boolean;
 }
 
 export const Select = <T extends unknown = string>({
@@ -24,6 +25,7 @@ export const Select = <T extends unknown = string>({
 	placeholder,
 	addon,
 	className,
+	disabled = false,
 }: SelectProps<T>) => {
 	const [isSelecting, setIsSelecting] = useState(false);
 	const current = useMemo(() => {
@@ -33,8 +35,9 @@ export const Select = <T extends unknown = string>({
 		return options.find((option) => option.value === value);
 	}, [value, options]);
 	const handleClick = useCallback(() => {
+		if (disabled) return;
 		setIsSelecting(!isSelecting);
-	}, [isSelecting]);
+	}, [isSelecting, disabled]);
 	const handleSelect = useCallback(
 		(option: Option<T>) => {
 			setIsSelecting(false);
@@ -50,6 +53,7 @@ export const Select = <T extends unknown = string>({
 				className={cn(
 					'flex justify-between items-center text-sm text-black-500 font-primary bg-black-brand rounded-1 px-2.5 py-1.5 cursor-pointer min-h-9 ring-primary-500 hover:ring-1',
 					isSelecting && 'ring-1',
+					disabled && 'opacity-50 cursor-not-allowed hover:ring-0',
 					className,
 				)}>
 				<div className="flex-1 flex justify-between items-center">
