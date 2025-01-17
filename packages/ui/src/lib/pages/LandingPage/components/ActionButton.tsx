@@ -10,7 +10,7 @@ export interface ButtonProps {
 	disabled?: boolean;
 }
 
-export const Button = ({
+export const ActionButton = ({
 	children,
 	className,
 	type = 'primary',

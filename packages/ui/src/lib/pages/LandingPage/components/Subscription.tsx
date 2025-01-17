@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { UpdateIcon } from '@radix-ui/react-icons';
 import { CornerDownLeft, ArrowRight } from 'lucide-react';
-import { Button } from './Button';
+import { ActionButton } from './ActionButton';
 import { cn } from '../../../utils/cn';
 
 export interface SubscriptionInlineFormPayload {
@@ -136,7 +136,7 @@ export const Subscription = ({
 	return display === 'inline-form' ? (
 		<SubscriptionInlineForm {...props} className={className} />
 	) : (
-		<Button
+		<ActionButton
 			type="primary"
 			className={cn(
 				'h-14 px-8 text-lg font-third tracking-widest select-none group',
@@ -145,6 +145,6 @@ export const Subscription = ({
 			onClick={handleClickButton}>
 			{buttonText}
 			<ArrowRight className="transition w-4.5 h-4.5 text-primary-500 group-hover:translate-x-2" />
-		</Button>
+		</ActionButton>
 	);
 };

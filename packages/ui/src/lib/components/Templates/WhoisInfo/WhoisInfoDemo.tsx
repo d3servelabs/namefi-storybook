@@ -48,9 +48,9 @@ export const WhoisInfoDemo = () => {
 						</Details.RightFrame.VerifyText.Typography.Paragraph>
 					</Details.RightFrame.VerifyText.Root>
 					<OtpInputField fieldLength={6} onValueChange={(value)=>setState(value)} otpValue={state}/>
-					<Details.RightFrame.Button>
+					<Details.RightFrame.VerifyButton>
 						Send Code
-					</Details.RightFrame.Button>
+					</Details.RightFrame.VerifyButton>
 				</Details.RightFrame.Body>
 			</Details.RightFrame.Root>
 		</Details.Root>
