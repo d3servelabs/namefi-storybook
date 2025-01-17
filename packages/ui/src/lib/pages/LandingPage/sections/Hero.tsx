@@ -14,7 +14,7 @@ import { ScrollDownTip } from '../components/ScrollDownTip';
 export type HeroProps = {
 	socialLinks?: SocialLinkItem[];
 	subscriptionLoading?: boolean;
-	subscriptionSubmiited?: boolean;
+	subscriptionSubmitted?: boolean;
 	onSubscriptionSubmit?: (payload: SubscriptionInlineFormPayload) => void;
 	onClickJoinBetaTest?: () => void;
 	onClickInvestor?: () => void;
@@ -25,7 +25,7 @@ export type HeroProps = {
 export const Hero = ({
 	socialLinks = [],
 	subscriptionLoading = false,
-	subscriptionSubmiited = false,
+	subscriptionSubmitted = false,
 	onSubscriptionSubmit,
 	onClickJoinBetaTest,
 	onClickInvestor,
@@ -65,7 +65,7 @@ export const Hero = ({
 						email={subscriptionEmail}
 						onEmailChange={setSubscriptionEmail}
 						loading={subscriptionLoading}
-						submitted={subscriptionSubmiited}
+						submitted={subscriptionSubmitted}
 						onSubmit={onSubscriptionSubmit}
 						className="w-full"
 					/>
