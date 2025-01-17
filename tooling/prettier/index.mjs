@@ -19,8 +19,14 @@ const config = {
 
 	plugins: [
 		'prettier-plugin-tailwindcss',
+		'prettier-plugin-organize-imports', // Plugin for organizing and sorting imports
+		'prettier-plugin-organize-attributes', // Plugin for sorting attributes in JSX/HTML
+
 	],
 	tailwindConfig: pathName,
+	// Sorting options for attributes
+	attributeGroups: ['^class$', '^(id|name)$', '$DEFAULT', '^data-', '^aria-'],
+	attributeSort: 'ASC', // Alphabetical sorting of attributes
 };
 
 export default config;

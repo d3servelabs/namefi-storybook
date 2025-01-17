@@ -8,11 +8,12 @@
     "format": "prettier --check \"**/*.{mjs,ts,md,json}\" --ignore-path=../../.gitignore",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {},
   "devDependencies": {
     "@namefi/tailwind-config": "workspace:*",
     "@namefi/tsconfig": "workspace:*",
     "prettier": "3.3.0",
+    "prettier-plugin-organize-attributes": "^1.0.0",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.5"
   },
   "prettier": "@namefi/prettier-config"

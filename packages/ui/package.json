@@ -87,7 +87,8 @@
     "bump": "npm version ${VERSION_LEVEL:-patch} && git push --follow-tags",
     "release": "npm run bump && npm run build && npm publish",
     "release:minor": "VERSION_LEVEL=minor npm run release",
-    "release:major": "VERSION_LEVEL=major npm run release"
+    "release:major": "VERSION_LEVEL=major npm run release",
+    "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path=../../.gitignore"
   },
   "dependencies": {
     "@emotion/css": "^11.11.0",
