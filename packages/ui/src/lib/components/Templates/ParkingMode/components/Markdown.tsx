@@ -1,8 +1,6 @@
-import React, { useMemo } from 'react';
-import { marked } from 'marked';
-import DOMPurify from 'isomorphic-dompurify';
+import React, { ReactNode } from 'react';
 import StyledDiv from "../../../Core/StyledDiv";
-import {css} from "@emotion/css";
+import { css } from "@emotion/css";
 
 const MarkdownContent = StyledDiv(css`
 	color: #d6d6d6;
@@ -18,18 +16,14 @@ const MarkdownContent = StyledDiv(css`
 `);
 
 export interface MarkdownProps {
-	content?: string;
+	content?: ReactNode;
 	className?: string;
 }
 
-export const Markdown = ({ content = '', className }: MarkdownProps) => {
-	const contentHTML = useMemo(
-		() => ({ __html: DOMPurify.sanitize(marked.parse(content) as string) }),
-		[content],
-	);
+export const Markdown = ({ content = null, className }: MarkdownProps) => {
 	return (
 		<MarkdownContent className={className}>
-			<div dangerouslySetInnerHTML={contentHTML}></div>
+			{content}
 		</MarkdownContent>
 	);
 };
