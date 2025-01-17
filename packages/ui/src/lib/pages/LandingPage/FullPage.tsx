@@ -1,6 +1,6 @@
 import React from 'react';
 import { type SocialLinkItem } from './components/SocialLinks';
-import { Header, type HeaderNavLink } from './components/Header';
+import { PageHeader, type HeaderNavLink } from './components/PageHeader';
 import { type FeatureCardProps } from './components/FeatureCard';
 import { type SubscriptionInlineFormPayload } from './components/Subscription';
 import { Hero } from './sections/Hero';
@@ -80,7 +80,7 @@ export const FullPage = ({
 	return (
 		<div className="relative w-full flex flex-col justify-center items-center bg-black-1000">
 			<div className="max-w-[1400px] w-full md:py-9 md:px-4 sticky top-0 z-50">
-				<Header
+				<PageHeader
 					navLinks={headerNavLinks}
 					socialLinks={socialLinks}
 					onClickLaunchDApp={onClickLaunchDApp}
