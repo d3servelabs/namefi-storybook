@@ -27,6 +27,7 @@ const config = {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     '@typescript-eslint/no-explicit-any': ['warn'],
     '@typescript-eslint/no-unused-vars': ['warn'],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
   },
 };
 module.exports = config;
