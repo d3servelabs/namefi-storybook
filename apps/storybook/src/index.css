@@ -3,3 +3,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* below css add because z-index, absolute get override by storybook preview css */
+.sbdocs-preview {
+	overflow: visible !important;
+}
+.sbdocs-preview > .docs-story {
+	overflow: visible !important;
+}
+.sbdocs-preview > div:first-child > div:first-child {
+	overflow: visible !important;
+}
+.sbdocs-preview > div:nth-child(2) > div:first-child {
+	overflow: visible !important;
+}
+.sbdocs-preview > div:first-child > div:first-child > div:first-child {
+	transform: none !important;
+}
+.sbdocs-preview > div:nth-child(2) > div:first-child > div:first-child {
+	transform: none !important;
+}

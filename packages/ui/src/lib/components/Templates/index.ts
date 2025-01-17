@@ -12,3 +12,4 @@ export * as ParkingMode from './ParkingMode';
 export { default as GetNfscCard } from './GetNfscCard';
 export * from './DNSSettings';
 export * from './Notifications';
+export * from './SearchBar';

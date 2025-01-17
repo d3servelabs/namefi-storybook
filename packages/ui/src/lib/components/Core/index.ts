@@ -24,3 +24,6 @@ export * from './Card';
 export * from './Tabs';
 export * from './OtpInputField';
 export * from './StepDiagram';
+export * from './Input';
+export * from './Badge';
+export * from './Spinner';
