@@ -5,6 +5,7 @@ import { GhostButton } from '@namefi/ui';
 import { ButtonLoadingContent } from '@namefi/ui';
 import { Button } from '@namefi/ui';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
+import { ChevronRight } from 'lucide-react';
 
 const meta = {
 	title: 'Core/Buttons/BaseButton/Variants',
@@ -74,6 +75,61 @@ export const LoadingButton: Story = {
 				loadingContent={<ButtonLoadingContent>{loadingLabel}</ButtonLoadingContent>}>
 				<ButtonText>{content}</ButtonText>{' '}
 				<ArrowRightIcon className={'h-6 w-6 stroke-2 text-emerald-500'} />
+			</Button>
+		);
+	},
+};
+
+export const SecondaryButton: Story = {
+	args: {
+		content: 'Button',
+		className: 'ring-[#48E59B]',
+	},
+	render: ({ content, ...props }) => {
+		return (
+			<Button {...props}>
+				<ButtonText className="text-[#48E59B]">{content}</ButtonText>
+			</Button>
+		);
+	},
+};
+
+export const SecondaryButtonWithIcon: Story = {
+	args: {
+		content: 'Button',
+		className: 'ring-[#48E59B]',
+	},
+	render: ({ content, ...props }) => {
+		return (
+			<Button {...props}>
+				<ButtonText className="text-[#48E59B]">{content}</ButtonText>
+				<ArrowRightIcon className={'h-6 w-6 stroke-2 text-emerald-500'} />
+			</Button>
+		);
+	},
+};
+
+export const SecondaryButtonOnlyIcon: Story = {
+	args: {
+		className: 'rounded-full p-[14px] ring-[#48E59B]',
+	},
+	render: ({ ...props }) => {
+		return (
+			<Button {...props}>
+				<ChevronRight className={'h-6 w-6 stroke-2 text-[#48E59B]'} />
+			</Button>
+		);
+	},
+};
+
+export const SecondaryButtonDisabled: Story = {
+	args: {
+		content: 'Button',
+	},
+	render: ({ content }) => {
+		return (
+			<Button className="ring-[#48E59B]" disabled={true}>
+				<ButtonText className="text-[#48E59B]">{content}</ButtonText>
 			</Button>
 		);
 	},
