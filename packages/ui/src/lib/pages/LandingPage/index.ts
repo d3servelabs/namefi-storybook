@@ -5,7 +5,7 @@ export * from './components/LaunchDAppButton';
 export * from './components/Subscription';
 export * from './components/AssetPreviews/NFSCAssetPreview';
 export * from './components/AssetPreviews/NFTAssetPreview';
-export * from './components/Header';
+export * from './components/PageHeader';
 export * from './components/FeatureCard';
 export * from './components/FAQCard';
 

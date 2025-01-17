@@ -1,9 +1,9 @@
-import { Header } from './Header';
+import { LayoutHeader } from './LayoutHeader';
 
 export function PageLayout({ children }) {
 	return (
 		<>
-			<Header />
+			<LayoutHeader />
 			<main>{children}</main>
 		</>
 	);

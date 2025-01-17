@@ -1,4 +1,4 @@
-import Header from './Header';
+import Header from './ActivitiesHeader';
 import Root from './ActivitiesRoot';
 import List from './List';
 

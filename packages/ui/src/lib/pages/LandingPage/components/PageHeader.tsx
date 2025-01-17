@@ -19,7 +19,7 @@ export interface HeaderProps {
 	className?: string;
 }
 
-export const Header = ({
+export const PageHeader = ({
 	navLinks = [],
 	socialLinks = [],
 	onClickLaunchDApp,
@@ -89,7 +89,7 @@ export const Header = ({
 						</ul>
 						<button
 							type="button"
-							onClick={onClickJoinBetaTest}	
+							onClick={onClickJoinBetaTest}
 							className="px-12 py-4 bg-primary-500 text-base text-brand-black font-primary">
 							Join Beta Test
 						</button>
