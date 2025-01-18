@@ -21,8 +21,8 @@ export const Default: Story = {
 		backgroundColor: '#111',
 		borderColor: '#fff',
 		content: 'Button',
-	} as any,
-	render: ({ content, ...props }: any) => {
+	},
+	render: ({ content }) => {
 		return (
 			<Component>
 				<ButtonText>{content}</ButtonText>

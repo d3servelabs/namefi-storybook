@@ -29,9 +29,9 @@ export const LoggedIn: Story = {
 			userAddress: '0xfdB5929A4a3e5a98D70c76E86681cFfdfbf47Fe4',
 			balanceProps: {
 				balance: 20.134,
-			} as any,
+			},
 			onLogin: () => true,
-		} as any,
+		},
 
 		headerSearchProps: {
 			placeholderText: 'Search another domain',

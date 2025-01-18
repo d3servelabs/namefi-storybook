@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ShortAddress, CopyIconButton, UserAuthState } from '@namefi/ui';
 import { BorderSplitIcon, PersonIcon } from '@radix-ui/react-icons';
 
-// @ts-ignore
 const UserAuthStateDropDown = UserAuthState.Dropdown;
 
 const meta = {
@@ -26,8 +25,8 @@ export const Loading: Story = {
 	args: {
 		userAddress: undefined,
 		userLoading: true,
-	} as any,
-	render: ({ userAddress, userLoading, balance = 10.32 }: any) => {
+	},
+	render: ({ userAddress, userLoading }) => {
 		return (
 			<UserAuthStateDropDown.Root>
 				<UserAuthStateDropDown.Header.Root>
@@ -70,8 +69,8 @@ export const Loading: Story = {
 export const Connected: Story = {
 	args: {
 		userAddress: '0xC90a7048D663EbADccbCb50930778ddDaeb72385',
-	} as any,
-	render: ({ userAddress, userLoading }: any) => {
+	},
+	render: ({ userAddress, userLoading }) => {
 		return (
 			<UserAuthStateDropDown.Root>
 				<UserAuthStateDropDown.Header.Root>
@@ -116,8 +115,8 @@ export const Connected: Story = {
 export const Disconnected: Story = {
 	args: {
 		userAddress: undefined,
-	} as any,
-	render: ({ userAddress, userLoading }: any) => {
+	},
+	render: ({ userAddress, userLoading }) => {
 		return (
 			<UserAuthStateDropDown.Root>
 				<UserAuthStateDropDown.Header.Root>
@@ -148,8 +147,8 @@ export const Disconnected: Story = {
 export const SignedIn: Story = {
 	args: {
 		userAddress: '0xC90a7048D663EbADccbCb50930778ddDaeb72385',
-	} as any,
-	render: ({ userAddress, userLoading, balance = 10.32 }: any) => {
+	},
+	render: ({ userAddress, userLoading, balance = 10.32 }) => {
 		return (
 			<UserAuthStateDropDown.Root>
 				<UserAuthStateDropDown.Header.Root userAddress={userAddress}>

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SolidButton } from '@namefi/ui';
+import { noop, SolidButton } from '@namefi/ui';
 import { ButtonText } from '@namefi/ui';
 import { GhostButton } from '@namefi/ui';
 import { ButtonLoadingContent } from '@namefi/ui';
@@ -26,12 +26,12 @@ type Story = StoryObj<typeof meta>;
 export const Solid: Story = {
 	argTypes: {
 		content: { type: 'string' },
-	} as any,
+	},
 	args: {
-		onClick: () => {},
+		onClick: noop,
 		content: 'Button',
-	} as any,
-	render: ({ content, ...props }: any) => {
+	},
+	render: ({ content, ...props }) => {
 		return (
 			<SolidButton {...props}>
 				<ButtonText>{content}</ButtonText>
@@ -43,12 +43,12 @@ export const Solid: Story = {
 export const Ghost: Story = {
 	argTypes: {
 		content: { type: 'string' },
-	} as any,
+	},
 	args: {
-		onClick: () => {},
+		onClick: noop,
 		content: 'Button',
-	} as any,
-	render: ({ content, ...props }: any) => {
+	},
+	render: ({ content, ...props }) => {
 		return (
 			<GhostButton {...props}>
 				<ButtonText>{content}</ButtonText>
@@ -61,13 +61,13 @@ export const LoadingButton: Story = {
 	argTypes: {
 		loadingLabel: { type: 'string' },
 		content: { type: 'string' },
-	} as any,
+	},
 	args: {
-		onClick: () => {},
+		onClick: noop,
 		loadingLabel: 'Loading',
 		content: 'Button',
-	} as any,
-	render: ({ loadingLabel, content, ...props }: any) => {
+	},
+	render: ({ loadingLabel, content, ...props }) => {
 		return (
 			<Button
 				{...props}

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card, CardHeader } from '@namefi/ui';
+import { Card, CardHeader, noop } from '@namefi/ui';
 import { ComingSoon } from '@namefi/ui';
 import {
 	DNSSettingsTabs,
@@ -102,17 +102,22 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	argTypes: {
 		records: { control: 'object' },
+		className: { control: 'text' },
+		tableClassName: { control: 'text' },
 		onAddRecord: { action: 'onAddRecord' },
 		onDownloadRecords: { action: 'onDownloadRecords' },
 		onDeleteRecords: { action: 'onDeleteRecords' },
 		onBack: { action: 'onBack' },
 		onSave: { action: 'onSave' },
-		className: { control: 'text' },
-		tableClassName: { control: 'text' },
 	},
 	args: {
 		records: DNS_RECORD_DATAS,
 		className: 'w-[613px] min-h-[472px]',
 		tableClassName: 'max-h-[280px]',
+		onAddRecord: noop,
+		onDownloadRecords: noop,
+		onDeleteRecords: noop,
+		onBack: noop,
+		onSave: noop,
 	},
 };
