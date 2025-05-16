@@ -93,3 +93,8 @@ import exampleImage from 'assets/example.png'; // Importing the image
   - Building the lib ``` npm run build:lib```
   - publishing the lib ``` npm publish ```
 - These are combined in one command ``` VERSION_LEVEL=<level> npm run release```
+
+## The following repositories still use @namefi/ui
+- namefi-home
+- namefi-park
+- namefi-app
